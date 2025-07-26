@@ -78,6 +78,28 @@ namespace PuertsStaticWrap
             }
         }
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void M__GetAccessibilityConfigurationWarnings(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
+        
+                {
+            
+                    {
+
+                        var result = obj._GetAccessibilityConfigurationWarnings ();
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         internal static void M__GetConfigurationWarnings(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
@@ -89,6 +111,28 @@ namespace PuertsStaticWrap
                     {
 
                         var result = obj._GetConfigurationWarnings ();
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void M__GetFocusedAccessibilityElement(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
+        
+                {
+            
+                    {
+
+                        var result = obj._GetFocusedAccessibilityElement ();
 
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                     }
@@ -291,6 +335,27 @@ namespace PuertsStaticWrap
             }
         }
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void F_GetOrphanNodeIds(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+        
+                {
+            
+                    {
+
+                        var result = Godot.Node.GetOrphanNodeIds ();
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         internal static void M_AddSibling(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
@@ -345,18 +410,30 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
         
+                if (paramLen == 1)
                 {
             
                     IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                     object argobj0 = null;
-                    ;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.StringName), false, false, v8Value0, ref argobj0, ref argType0))
+                    {
+                        Godot.StringName arg0 = argobj0 != null ? (Godot.StringName)argobj0 : StaticTranslate<Godot.StringName>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+
+                        obj.SetName (arg0);
+
+                        return;
+                    }
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value0, ref argobj0, ref argType0))
                     {
                         string arg0 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value0, false);
 
                         obj.SetName (arg0);
 
+                        return;
                     }
                 }
+                Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to SetName");
             }
             catch (Exception e)
             {
@@ -2281,6 +2358,49 @@ namespace PuertsStaticWrap
             }
         }
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void M_QueueAccessibilityUpdate(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
+        
+                {
+            
+                    {
+
+                        obj.QueueAccessibilityUpdate ();
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void M_GetAccessibilityElement(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
+        
+                {
+            
+                    {
+
+                        var result = obj.GetAccessibilityElement ();
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         internal static void M_SetDisplayFolded(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
@@ -2572,6 +2692,28 @@ namespace PuertsStaticWrap
                         var result = obj.GetAutoTranslateMode ();
 
                         Puerts.PuertsDLL.ReturnBigInt(isolate, info, (long)result);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void M_CanAutoTranslate(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
+        
+                {
+            
+                    {
+
+                        var result = obj.CanAutoTranslate ();
+
+                        Puerts.PuertsDLL.ReturnBoolean(isolate, info, result);
                     }
                 }
             }
@@ -3110,7 +3252,7 @@ namespace PuertsStaticWrap
             }
         }
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
-        internal static void M_GetRpcConfig(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        internal static void M_GetNodeRpcConfig(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try
             {
@@ -3120,7 +3262,7 @@ namespace PuertsStaticWrap
             
                     {
 
-                        var result = obj.GetRpcConfig ();
+                        var result = obj.GetNodeRpcConfig ();
 
                         Puerts.ResultHelper.Set((int)data, isolate, info, result);
                     }
@@ -3670,6 +3812,28 @@ namespace PuertsStaticWrap
 
                         obj.NotifyThreadSafe (arg0);
 
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void M_GetRpcConfig(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.Node;
+        
+                {
+            
+                    {
+
+                        var result = obj.GetRpcConfig ();
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
                     }
                 }
             }
@@ -4667,6 +4831,32 @@ namespace PuertsStaticWrap
             try
             {
                 var result = Godot.Node.NotificationTextServerChanged;
+                Puerts.PuertsDLL.ReturnBigInt(isolate, info, result);
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void G_NotificationAccessibilityUpdate(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var result = Godot.Node.NotificationAccessibilityUpdate;
+                Puerts.PuertsDLL.ReturnBigInt(isolate, info, result);
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void G_NotificationAccessibilityInvalidate(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+                var result = Godot.Node.NotificationAccessibilityInvalidate;
                 Puerts.PuertsDLL.ReturnBigInt(isolate, info, result);
             }
             catch (Exception e)

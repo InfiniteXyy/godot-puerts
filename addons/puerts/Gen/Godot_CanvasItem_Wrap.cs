@@ -2350,6 +2350,61 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.CanvasItem;
         
+                if (paramLen == 11)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(isolate, info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                    IntPtr v8Value4 = PuertsDLL.GetArgumentValue(isolate, info, 4);
+                    object argobj4 = null;
+                    JsValueType argType4 = JsValueType.Invalid;
+                    IntPtr v8Value5 = PuertsDLL.GetArgumentValue(isolate, info, 5);
+                    object argobj5 = null;
+                    JsValueType argType5 = JsValueType.Invalid;
+                    IntPtr v8Value6 = PuertsDLL.GetArgumentValue(isolate, info, 6);
+                    object argobj6 = null;
+                    JsValueType argType6 = JsValueType.Invalid;
+                    IntPtr v8Value7 = PuertsDLL.GetArgumentValue(isolate, info, 7);
+                    object argobj7 = null;
+                    JsValueType argType7 = JsValueType.Invalid;
+                    IntPtr v8Value8 = PuertsDLL.GetArgumentValue(isolate, info, 8);
+                    object argobj8 = null;
+                    JsValueType argType8 = JsValueType.Invalid;
+                    IntPtr v8Value9 = PuertsDLL.GetArgumentValue(isolate, info, 9);
+                    object argobj9 = null;
+                    JsValueType argType9 = JsValueType.Invalid;
+                    IntPtr v8Value10 = PuertsDLL.GetArgumentValue(isolate, info, 10);
+                    object argobj10 = null;
+                    JsValueType argType10 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.Font), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(Godot.Vector2), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.HorizontalAlignment), false, false, v8Value3, ref argobj3, ref argType3) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value4, ref argobj4, ref argType4) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value5, ref argobj5, ref argType5) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.Nullable<Godot.Color>), false, false, v8Value6, ref argobj6, ref argType6) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.JustificationFlag), false, false, v8Value7, ref argobj7, ref argType7) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Direction), false, false, v8Value8, ref argobj8, ref argType8) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Orientation), false, false, v8Value9, ref argobj9, ref argType9) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value10, ref argobj10, ref argType10))
+                    {
+                        Godot.Font arg0 = argobj0 != null ? (Godot.Font)argobj0 : StaticTranslate<Godot.Font>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
+                        Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
+                        float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
+                        int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
+                        System.Nullable<Godot.Color> arg6 = argobj6 != null ? (System.Nullable<Godot.Color>)argobj6 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value6, false);;
+                        Godot.TextServer.JustificationFlag arg7 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value7, false);
+                        Godot.TextServer.Direction arg8 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
+                        Godot.TextServer.Orientation arg9 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
+                        float arg10 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value10, false);
+
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+
+                        return;
+                    }
+                }
                 if (paramLen == 10)
                 {
             
@@ -2396,7 +2451,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.Direction arg8 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
                         Godot.TextServer.Orientation arg9 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, 0f);
 
                         return;
                     }
@@ -2443,7 +2498,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.JustificationFlag arg7 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value7, false);
                         Godot.TextServer.Direction arg8 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2486,7 +2541,7 @@ namespace PuertsStaticWrap
                         System.Nullable<Godot.Color> arg6 = argobj6 != null ? (System.Nullable<Godot.Color>)argobj6 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value6, false);;
                         Godot.TextServer.JustificationFlag arg7 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value7, false);
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2525,7 +2580,7 @@ namespace PuertsStaticWrap
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
                         System.Nullable<Godot.Color> arg6 = argobj6 != null ? (System.Nullable<Godot.Color>)argobj6 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value6, false);;
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2560,7 +2615,7 @@ namespace PuertsStaticWrap
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, arg5, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2591,7 +2646,7 @@ namespace PuertsStaticWrap
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, 16, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, arg3, arg4, 16, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2618,7 +2673,7 @@ namespace PuertsStaticWrap
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
 
-                        obj.DrawString (arg0, arg1, arg2, arg3, -1f, 16, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, arg3, -1f, 16, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2641,7 +2696,7 @@ namespace PuertsStaticWrap
                         Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
 
-                        obj.DrawString (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawString (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2660,6 +2715,69 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.CanvasItem;
         
+                if (paramLen == 13)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(isolate, info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                    IntPtr v8Value4 = PuertsDLL.GetArgumentValue(isolate, info, 4);
+                    object argobj4 = null;
+                    JsValueType argType4 = JsValueType.Invalid;
+                    IntPtr v8Value5 = PuertsDLL.GetArgumentValue(isolate, info, 5);
+                    object argobj5 = null;
+                    JsValueType argType5 = JsValueType.Invalid;
+                    IntPtr v8Value6 = PuertsDLL.GetArgumentValue(isolate, info, 6);
+                    object argobj6 = null;
+                    JsValueType argType6 = JsValueType.Invalid;
+                    IntPtr v8Value7 = PuertsDLL.GetArgumentValue(isolate, info, 7);
+                    object argobj7 = null;
+                    JsValueType argType7 = JsValueType.Invalid;
+                    IntPtr v8Value8 = PuertsDLL.GetArgumentValue(isolate, info, 8);
+                    object argobj8 = null;
+                    JsValueType argType8 = JsValueType.Invalid;
+                    IntPtr v8Value9 = PuertsDLL.GetArgumentValue(isolate, info, 9);
+                    object argobj9 = null;
+                    JsValueType argType9 = JsValueType.Invalid;
+                    IntPtr v8Value10 = PuertsDLL.GetArgumentValue(isolate, info, 10);
+                    object argobj10 = null;
+                    JsValueType argType10 = JsValueType.Invalid;
+                    IntPtr v8Value11 = PuertsDLL.GetArgumentValue(isolate, info, 11);
+                    object argobj11 = null;
+                    JsValueType argType11 = JsValueType.Invalid;
+                    IntPtr v8Value12 = PuertsDLL.GetArgumentValue(isolate, info, 12);
+                    object argobj12 = null;
+                    JsValueType argType12 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.Font), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(Godot.Vector2), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.HorizontalAlignment), false, false, v8Value3, ref argobj3, ref argType3) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value4, ref argobj4, ref argType4) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value5, ref argobj5, ref argType5) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value6, ref argobj6, ref argType6) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.Nullable<Godot.Color>), false, false, v8Value7, ref argobj7, ref argType7) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.LineBreakFlag), false, false, v8Value8, ref argobj8, ref argType8) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.JustificationFlag), false, false, v8Value9, ref argobj9, ref argType9) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Direction), false, false, v8Value10, ref argobj10, ref argType10) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Orientation), false, false, v8Value11, ref argobj11, ref argType11) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value12, ref argobj12, ref argType12))
+                    {
+                        Godot.Font arg0 = argobj0 != null ? (Godot.Font)argobj0 : StaticTranslate<Godot.Font>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
+                        Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
+                        float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
+                        int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
+                        int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
+                        System.Nullable<Godot.Color> arg7 = argobj7 != null ? (System.Nullable<Godot.Color>)argobj7 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value7, false);;
+                        Godot.TextServer.LineBreakFlag arg8 = (Godot.TextServer.LineBreakFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
+                        Godot.TextServer.JustificationFlag arg9 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
+                        Godot.TextServer.Direction arg10 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
+                        Godot.TextServer.Orientation arg11 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value11, false);
+                        float arg12 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value12, false);
+
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
+
+                        return;
+                    }
+                }
                 if (paramLen == 12)
                 {
             
@@ -2714,7 +2832,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.Direction arg10 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
                         Godot.TextServer.Orientation arg11 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value11, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, 0f);
 
                         return;
                     }
@@ -2769,7 +2887,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.JustificationFlag arg9 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
                         Godot.TextServer.Direction arg10 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2820,7 +2938,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.LineBreakFlag arg8 = (Godot.TextServer.LineBreakFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
                         Godot.TextServer.JustificationFlag arg9 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2867,7 +2985,7 @@ namespace PuertsStaticWrap
                         System.Nullable<Godot.Color> arg7 = argobj7 != null ? (System.Nullable<Godot.Color>)argobj7 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value7, false);;
                         Godot.TextServer.LineBreakFlag arg8 = (Godot.TextServer.LineBreakFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2910,7 +3028,7 @@ namespace PuertsStaticWrap
                         int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
                         System.Nullable<Godot.Color> arg7 = argobj7 != null ? (System.Nullable<Godot.Color>)argobj7 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value7, false);;
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2949,7 +3067,7 @@ namespace PuertsStaticWrap
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
                         int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, arg6, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -2984,7 +3102,7 @@ namespace PuertsStaticWrap
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, arg5, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3015,7 +3133,7 @@ namespace PuertsStaticWrap
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, 16, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, arg4, 16, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3042,7 +3160,7 @@ namespace PuertsStaticWrap
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, -1f, 16, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, arg3, -1f, 16, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3065,7 +3183,7 @@ namespace PuertsStaticWrap
                         Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
 
-                        obj.DrawMultilineString (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineString (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, -1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3084,6 +3202,65 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.CanvasItem;
         
+                if (paramLen == 12)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(isolate, info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                    IntPtr v8Value4 = PuertsDLL.GetArgumentValue(isolate, info, 4);
+                    object argobj4 = null;
+                    JsValueType argType4 = JsValueType.Invalid;
+                    IntPtr v8Value5 = PuertsDLL.GetArgumentValue(isolate, info, 5);
+                    object argobj5 = null;
+                    JsValueType argType5 = JsValueType.Invalid;
+                    IntPtr v8Value6 = PuertsDLL.GetArgumentValue(isolate, info, 6);
+                    object argobj6 = null;
+                    JsValueType argType6 = JsValueType.Invalid;
+                    IntPtr v8Value7 = PuertsDLL.GetArgumentValue(isolate, info, 7);
+                    object argobj7 = null;
+                    JsValueType argType7 = JsValueType.Invalid;
+                    IntPtr v8Value8 = PuertsDLL.GetArgumentValue(isolate, info, 8);
+                    object argobj8 = null;
+                    JsValueType argType8 = JsValueType.Invalid;
+                    IntPtr v8Value9 = PuertsDLL.GetArgumentValue(isolate, info, 9);
+                    object argobj9 = null;
+                    JsValueType argType9 = JsValueType.Invalid;
+                    IntPtr v8Value10 = PuertsDLL.GetArgumentValue(isolate, info, 10);
+                    object argobj10 = null;
+                    JsValueType argType10 = JsValueType.Invalid;
+                    IntPtr v8Value11 = PuertsDLL.GetArgumentValue(isolate, info, 11);
+                    object argobj11 = null;
+                    JsValueType argType11 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.Font), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(Godot.Vector2), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.HorizontalAlignment), false, false, v8Value3, ref argobj3, ref argType3) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value4, ref argobj4, ref argType4) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value5, ref argobj5, ref argType5) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value6, ref argobj6, ref argType6) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.Nullable<Godot.Color>), false, false, v8Value7, ref argobj7, ref argType7) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.JustificationFlag), false, false, v8Value8, ref argobj8, ref argType8) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Direction), false, false, v8Value9, ref argobj9, ref argType9) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Orientation), false, false, v8Value10, ref argobj10, ref argType10) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value11, ref argobj11, ref argType11))
+                    {
+                        Godot.Font arg0 = argobj0 != null ? (Godot.Font)argobj0 : StaticTranslate<Godot.Font>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
+                        Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
+                        float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
+                        int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
+                        int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
+                        System.Nullable<Godot.Color> arg7 = argobj7 != null ? (System.Nullable<Godot.Color>)argobj7 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value7, false);;
+                        Godot.TextServer.JustificationFlag arg8 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
+                        Godot.TextServer.Direction arg9 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
+                        Godot.TextServer.Orientation arg10 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
+                        float arg11 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value11, false);
+
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+
+                        return;
+                    }
+                }
                 if (paramLen == 11)
                 {
             
@@ -3134,7 +3311,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.Direction arg9 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
                         Godot.TextServer.Orientation arg10 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, 0f);
 
                         return;
                     }
@@ -3185,7 +3362,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.JustificationFlag arg8 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
                         Godot.TextServer.Direction arg9 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3232,7 +3409,7 @@ namespace PuertsStaticWrap
                         System.Nullable<Godot.Color> arg7 = argobj7 != null ? (System.Nullable<Godot.Color>)argobj7 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value7, false);;
                         Godot.TextServer.JustificationFlag arg8 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value8, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3275,7 +3452,7 @@ namespace PuertsStaticWrap
                         int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
                         System.Nullable<Godot.Color> arg7 = argobj7 != null ? (System.Nullable<Godot.Color>)argobj7 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value7, false);;
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3314,7 +3491,7 @@ namespace PuertsStaticWrap
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
                         int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3349,7 +3526,7 @@ namespace PuertsStaticWrap
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3380,7 +3557,7 @@ namespace PuertsStaticWrap
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, 16, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, arg4, 16, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3407,7 +3584,7 @@ namespace PuertsStaticWrap
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, -1f, 16, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, arg3, -1f, 16, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3430,7 +3607,7 @@ namespace PuertsStaticWrap
                         Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
 
-                        obj.DrawStringOutline (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawStringOutline (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3449,6 +3626,73 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.CanvasItem;
         
+                if (paramLen == 14)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(isolate, info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                    IntPtr v8Value4 = PuertsDLL.GetArgumentValue(isolate, info, 4);
+                    object argobj4 = null;
+                    JsValueType argType4 = JsValueType.Invalid;
+                    IntPtr v8Value5 = PuertsDLL.GetArgumentValue(isolate, info, 5);
+                    object argobj5 = null;
+                    JsValueType argType5 = JsValueType.Invalid;
+                    IntPtr v8Value6 = PuertsDLL.GetArgumentValue(isolate, info, 6);
+                    object argobj6 = null;
+                    JsValueType argType6 = JsValueType.Invalid;
+                    IntPtr v8Value7 = PuertsDLL.GetArgumentValue(isolate, info, 7);
+                    object argobj7 = null;
+                    JsValueType argType7 = JsValueType.Invalid;
+                    IntPtr v8Value8 = PuertsDLL.GetArgumentValue(isolate, info, 8);
+                    object argobj8 = null;
+                    JsValueType argType8 = JsValueType.Invalid;
+                    IntPtr v8Value9 = PuertsDLL.GetArgumentValue(isolate, info, 9);
+                    object argobj9 = null;
+                    JsValueType argType9 = JsValueType.Invalid;
+                    IntPtr v8Value10 = PuertsDLL.GetArgumentValue(isolate, info, 10);
+                    object argobj10 = null;
+                    JsValueType argType10 = JsValueType.Invalid;
+                    IntPtr v8Value11 = PuertsDLL.GetArgumentValue(isolate, info, 11);
+                    object argobj11 = null;
+                    JsValueType argType11 = JsValueType.Invalid;
+                    IntPtr v8Value12 = PuertsDLL.GetArgumentValue(isolate, info, 12);
+                    object argobj12 = null;
+                    JsValueType argType12 = JsValueType.Invalid;
+                    IntPtr v8Value13 = PuertsDLL.GetArgumentValue(isolate, info, 13);
+                    object argobj13 = null;
+                    JsValueType argType13 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.Font), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(Godot.Vector2), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.HorizontalAlignment), false, false, v8Value3, ref argobj3, ref argType3) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value4, ref argobj4, ref argType4) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value5, ref argobj5, ref argType5) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value6, ref argobj6, ref argType6) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value7, ref argobj7, ref argType7) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.Nullable<Godot.Color>), false, false, v8Value8, ref argobj8, ref argType8) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.LineBreakFlag), false, false, v8Value9, ref argobj9, ref argType9) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.JustificationFlag), false, false, v8Value10, ref argobj10, ref argType10) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Direction), false, false, v8Value11, ref argobj11, ref argType11) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.TextServer.Orientation), false, false, v8Value12, ref argobj12, ref argType12) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value13, ref argobj13, ref argType13))
+                    {
+                        Godot.Font arg0 = argobj0 != null ? (Godot.Font)argobj0 : StaticTranslate<Godot.Font>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
+                        Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
+                        float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
+                        int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
+                        int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
+                        int arg7 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value7, false);
+                        System.Nullable<Godot.Color> arg8 = argobj8 != null ? (System.Nullable<Godot.Color>)argobj8 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value8, false);;
+                        Godot.TextServer.LineBreakFlag arg9 = (Godot.TextServer.LineBreakFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
+                        Godot.TextServer.JustificationFlag arg10 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
+                        Godot.TextServer.Direction arg11 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value11, false);
+                        Godot.TextServer.Orientation arg12 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value12, false);
+                        float arg13 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value13, false);
+
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
+
+                        return;
+                    }
+                }
                 if (paramLen == 13)
                 {
             
@@ -3507,7 +3751,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.Direction arg11 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value11, false);
                         Godot.TextServer.Orientation arg12 = (Godot.TextServer.Orientation)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value12, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, 0f);
 
                         return;
                     }
@@ -3566,7 +3810,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.JustificationFlag arg10 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
                         Godot.TextServer.Direction arg11 = (Godot.TextServer.Direction)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value11, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3621,7 +3865,7 @@ namespace PuertsStaticWrap
                         Godot.TextServer.LineBreakFlag arg9 = (Godot.TextServer.LineBreakFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
                         Godot.TextServer.JustificationFlag arg10 = (Godot.TextServer.JustificationFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value10, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3672,7 +3916,7 @@ namespace PuertsStaticWrap
                         System.Nullable<Godot.Color> arg8 = argobj8 != null ? (System.Nullable<Godot.Color>)argobj8 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value8, false);;
                         Godot.TextServer.LineBreakFlag arg9 = (Godot.TextServer.LineBreakFlag)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value9, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3719,7 +3963,7 @@ namespace PuertsStaticWrap
                         int arg7 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value7, false);
                         System.Nullable<Godot.Color> arg8 = argobj8 != null ? (System.Nullable<Godot.Color>)argobj8 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value8, false);;
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3762,7 +4006,7 @@ namespace PuertsStaticWrap
                         int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
                         int arg7 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value7, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3801,7 +4045,7 @@ namespace PuertsStaticWrap
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
                         int arg6 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3836,7 +4080,7 @@ namespace PuertsStaticWrap
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
                         int arg5 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, arg5, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3867,7 +4111,7 @@ namespace PuertsStaticWrap
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
                         float arg4 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, 16, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, arg4, 16, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3894,7 +4138,7 @@ namespace PuertsStaticWrap
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
                         Godot.HorizontalAlignment arg3 = (Godot.HorizontalAlignment)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value3, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, -1f, 16, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, arg3, -1f, 16, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3917,7 +4161,7 @@ namespace PuertsStaticWrap
                         Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
 
-                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0));
+                        obj.DrawMultilineStringOutline (arg0, arg1, arg2, (Godot.HorizontalAlignment)(0), -1f, 16, -1, 1, default(System.Nullable<Godot.Color>), (Godot.TextServer.LineBreakFlag)(3), (Godot.TextServer.JustificationFlag)(3), (Godot.TextServer.Direction)(0), (Godot.TextServer.Orientation)(0), 0f);
 
                         return;
                     }
@@ -3936,6 +4180,41 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.CanvasItem;
         
+                if (paramLen == 6)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(isolate, info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                    IntPtr v8Value4 = PuertsDLL.GetArgumentValue(isolate, info, 4);
+                    object argobj4 = null;
+                    JsValueType argType4 = JsValueType.Invalid;
+                    IntPtr v8Value5 = PuertsDLL.GetArgumentValue(isolate, info, 5);
+                    object argobj5 = null;
+                    JsValueType argType5 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.Font), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(Godot.Vector2), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value3, ref argobj3, ref argType3) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.Nullable<Godot.Color>), false, false, v8Value4, ref argobj4, ref argType4) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value5, ref argobj5, ref argType5))
+                    {
+                        Godot.Font arg0 = argobj0 != null ? (Godot.Font)argobj0 : StaticTranslate<Godot.Font>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
+                        int arg3 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
+                        System.Nullable<Godot.Color> arg4 = argobj4 != null ? (System.Nullable<Godot.Color>)argobj4 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value4, false);;
+                        float arg5 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value5, false);
+
+                        obj.DrawChar (arg0, arg1, arg2, arg3, arg4, arg5);
+
+                        return;
+                    }
+                }
                 if (paramLen == 5)
                 {
             
@@ -3962,7 +4241,7 @@ namespace PuertsStaticWrap
                         int arg3 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
                         System.Nullable<Godot.Color> arg4 = argobj4 != null ? (System.Nullable<Godot.Color>)argobj4 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value4, false);;
 
-                        obj.DrawChar (arg0, arg1, arg2, arg3, arg4);
+                        obj.DrawChar (arg0, arg1, arg2, arg3, arg4, 0f);
 
                         return;
                     }
@@ -3989,7 +4268,7 @@ namespace PuertsStaticWrap
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
                         int arg3 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
 
-                        obj.DrawChar (arg0, arg1, arg2, arg3, default(System.Nullable<Godot.Color>));
+                        obj.DrawChar (arg0, arg1, arg2, arg3, default(System.Nullable<Godot.Color>), 0f);
 
                         return;
                     }
@@ -4012,7 +4291,7 @@ namespace PuertsStaticWrap
                         Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
 
-                        obj.DrawChar (arg0, arg1, arg2, 16, default(System.Nullable<Godot.Color>));
+                        obj.DrawChar (arg0, arg1, arg2, 16, default(System.Nullable<Godot.Color>), 0f);
 
                         return;
                     }
@@ -4031,6 +4310,45 @@ namespace PuertsStaticWrap
             {
                 var obj = Puerts.Utils.GetSelf((int)data, self) as Godot.CanvasItem;
         
+                if (paramLen == 7)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    IntPtr v8Value3 = PuertsDLL.GetArgumentValue(isolate, info, 3);
+                    object argobj3 = null;
+                    JsValueType argType3 = JsValueType.Invalid;
+                    IntPtr v8Value4 = PuertsDLL.GetArgumentValue(isolate, info, 4);
+                    object argobj4 = null;
+                    JsValueType argType4 = JsValueType.Invalid;
+                    IntPtr v8Value5 = PuertsDLL.GetArgumentValue(isolate, info, 5);
+                    object argobj5 = null;
+                    JsValueType argType5 = JsValueType.Invalid;
+                    IntPtr v8Value6 = PuertsDLL.GetArgumentValue(isolate, info, 6);
+                    object argobj6 = null;
+                    JsValueType argType6 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(Godot.Font), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NativeObject, typeof(Godot.Vector2), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.String, typeof(string), false, false, v8Value2, ref argobj2, ref argType2) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value3, ref argobj3, ref argType3) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(int), false, false, v8Value4, ref argobj4, ref argType4) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(System.Nullable<Godot.Color>), false, false, v8Value5, ref argobj5, ref argType5) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.Number, typeof(float), false, false, v8Value6, ref argobj6, ref argType6))
+                    {
+                        Godot.Font arg0 = argobj0 != null ? (Godot.Font)argobj0 : StaticTranslate<Godot.Font>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
+                        int arg3 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
+                        int arg4 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
+                        System.Nullable<Godot.Color> arg5 = argobj5 != null ? (System.Nullable<Godot.Color>)argobj5 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value5, false);;
+                        float arg6 = (float)PuertsDLL.GetNumberFromValue(isolate, v8Value6, false);
+
+                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+
+                        return;
+                    }
+                }
                 if (paramLen == 6)
                 {
             
@@ -4061,7 +4379,7 @@ namespace PuertsStaticWrap
                         int arg4 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
                         System.Nullable<Godot.Color> arg5 = argobj5 != null ? (System.Nullable<Godot.Color>)argobj5 : StaticTranslate<System.Nullable<Godot.Color>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value5, false);;
 
-                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, arg4, arg5);
+                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, arg4, arg5, 0f);
 
                         return;
                     }
@@ -4092,7 +4410,7 @@ namespace PuertsStaticWrap
                         int arg3 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
                         int arg4 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value4, false);
 
-                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, arg4, default(System.Nullable<Godot.Color>));
+                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, arg4, default(System.Nullable<Godot.Color>), 0f);
 
                         return;
                     }
@@ -4119,7 +4437,7 @@ namespace PuertsStaticWrap
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
                         int arg3 = (int)PuertsDLL.GetNumberFromValue(isolate, v8Value3, false);
 
-                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, -1, default(System.Nullable<Godot.Color>));
+                        obj.DrawCharOutline (arg0, arg1, arg2, arg3, -1, default(System.Nullable<Godot.Color>), 0f);
 
                         return;
                     }
@@ -4142,7 +4460,7 @@ namespace PuertsStaticWrap
                         Godot.Vector2 arg1 = argobj1 != null ? (Godot.Vector2)argobj1 : StaticTranslate<Godot.Vector2>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
                         string arg2 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value2, false);
 
-                        obj.DrawCharOutline (arg0, arg1, arg2, 16, -1, default(System.Nullable<Godot.Color>));
+                        obj.DrawCharOutline (arg0, arg1, arg2, 16, -1, default(System.Nullable<Godot.Color>), 0f);
 
                         return;
                     }

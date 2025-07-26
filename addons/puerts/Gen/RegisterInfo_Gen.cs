@@ -140,6 +140,21 @@ namespace PuertsStaticWrap
                     , Method = Godot_GD_Wrap.F_TypeToVariantType
 #endif
                     }},
+                    {"Compress_static", new MemberRegisterInfo { Name = "Compress", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_GD_Wrap.F_Compress
+#endif
+                    }},
+                    {"Decompress_static", new MemberRegisterInfo { Name = "Decompress", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_GD_Wrap.F_Decompress
+#endif
+                    }},
+                    {"DecompressDynamic_static", new MemberRegisterInfo { Name = "DecompressDynamic", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_GD_Wrap.F_DecompressDynamic
+#endif
+                    }},
                     {"IsEmpty_static", new MemberRegisterInfo { Name = "IsEmpty", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , Method = Godot_GD_Wrap.F_IsEmpty
@@ -184,9 +199,19 @@ namespace PuertsStaticWrap
                     , Method = Godot_Node_Wrap.M__ExitTree
 #endif
                     }},
+                    {"_GetAccessibilityConfigurationWarnings", new MemberRegisterInfo { Name = "_GetAccessibilityConfigurationWarnings", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.M__GetAccessibilityConfigurationWarnings
+#endif
+                    }},
                     {"_GetConfigurationWarnings", new MemberRegisterInfo { Name = "_GetConfigurationWarnings", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , Method = Godot_Node_Wrap.M__GetConfigurationWarnings
+#endif
+                    }},
+                    {"_GetFocusedAccessibilityElement", new MemberRegisterInfo { Name = "_GetFocusedAccessibilityElement", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.M__GetFocusedAccessibilityElement
 #endif
                     }},
                     {"_Input", new MemberRegisterInfo { Name = "_Input", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -559,6 +584,16 @@ namespace PuertsStaticWrap
                     , Method = Godot_Node_Wrap.M_GetProcessThreadGroupOrder
 #endif
                     }},
+                    {"QueueAccessibilityUpdate", new MemberRegisterInfo { Name = "QueueAccessibilityUpdate", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.M_QueueAccessibilityUpdate
+#endif
+                    }},
+                    {"GetAccessibilityElement", new MemberRegisterInfo { Name = "GetAccessibilityElement", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.M_GetAccessibilityElement
+#endif
+                    }},
                     {"SetDisplayFolded", new MemberRegisterInfo { Name = "SetDisplayFolded", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , Method = Godot_Node_Wrap.M_SetDisplayFolded
@@ -622,6 +657,11 @@ namespace PuertsStaticWrap
                     {"GetAutoTranslateMode", new MemberRegisterInfo { Name = "GetAutoTranslateMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , Method = Godot_Node_Wrap.M_GetAutoTranslateMode
+#endif
+                    }},
+                    {"CanAutoTranslate", new MemberRegisterInfo { Name = "CanAutoTranslate", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.M_CanAutoTranslate
 #endif
                     }},
                     {"SetTranslationDomainInherited", new MemberRegisterInfo { Name = "SetTranslationDomainInherited", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -724,9 +764,9 @@ namespace PuertsStaticWrap
                     , Method = Godot_Node_Wrap.M_RpcConfig
 #endif
                     }},
-                    {"GetRpcConfig", new MemberRegisterInfo { Name = "GetRpcConfig", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GetNodeRpcConfig", new MemberRegisterInfo { Name = "GetNodeRpcConfig", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Method = Godot_Node_Wrap.M_GetRpcConfig
+                    , Method = Godot_Node_Wrap.M_GetNodeRpcConfig
 #endif
                     }},
                     {"SetEditorDescription", new MemberRegisterInfo { Name = "SetEditorDescription", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -802,6 +842,11 @@ namespace PuertsStaticWrap
                     {"NotifyThreadSafe", new MemberRegisterInfo { Name = "NotifyThreadSafe", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , Method = Godot_Node_Wrap.M_NotifyThreadSafe
+#endif
+                    }},
+                    {"GetRpcConfig", new MemberRegisterInfo { Name = "GetRpcConfig", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.M_GetRpcConfig
 #endif
                     }},
                     {"add_Ready", new MemberRegisterInfo { Name = "add_Ready", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
@@ -992,6 +1037,11 @@ namespace PuertsStaticWrap
                     {"PrintOrphanNodes_static", new MemberRegisterInfo { Name = "PrintOrphanNodes", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , Method = Godot_Node_Wrap.F_PrintOrphanNodes
+#endif
+                    }},
+                    {"GetOrphanNodeIds_static", new MemberRegisterInfo { Name = "GetOrphanNodeIds", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Node_Wrap.F_GetOrphanNodeIds
 #endif
                     }},
                     {"NotificationEnterTree_static", new MemberRegisterInfo { Name = "NotificationEnterTree", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
@@ -1207,6 +1257,16 @@ namespace PuertsStaticWrap
                     {"NotificationTextServerChanged_static", new MemberRegisterInfo { Name = "NotificationTextServerChanged", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
                     , PropertyGetter = Godot_Node_Wrap.G_NotificationTextServerChanged
+#endif
+                    }},
+                    {"NotificationAccessibilityUpdate_static", new MemberRegisterInfo { Name = "NotificationAccessibilityUpdate", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Node_Wrap.G_NotificationAccessibilityUpdate
+#endif
+                    }},
+                    {"NotificationAccessibilityInvalidate_static", new MemberRegisterInfo { Name = "NotificationAccessibilityInvalidate", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Node_Wrap.G_NotificationAccessibilityInvalidate
 #endif
                     }},
                 }

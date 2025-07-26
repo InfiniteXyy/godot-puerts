@@ -882,6 +882,169 @@ namespace PuertsStaticWrap
             }
         }
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void F_Compress(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+        
+                if (paramLen == 2)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(byte[]), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.FileAccess.CompressionMode), false, false, v8Value1, ref argobj1, ref argType1))
+                    {
+                        byte[] arg0 = argobj0 != null ? (byte[])argobj0 : StaticTranslate<byte[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        Godot.FileAccess.CompressionMode arg1 = (Godot.FileAccess.CompressionMode)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);
+
+                        var result = Godot.GD.Compress (arg0, arg1);
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        return;
+                    }
+                }
+                if (paramLen == 1)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(byte[]), false, false, v8Value0, ref argobj0, ref argType0))
+                    {
+                        byte[] arg0 = argobj0 != null ? (byte[])argobj0 : StaticTranslate<byte[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+
+                        var result = Godot.GD.Compress (arg0, (Godot.FileAccess.CompressionMode)(0));
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        return;
+                    }
+                }
+                Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to Compress");
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void F_Decompress(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+        
+                if (paramLen == 3)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(byte[]), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(long), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.FileAccess.CompressionMode), false, false, v8Value2, ref argobj2, ref argType2))
+                    {
+                        byte[] arg0 = argobj0 != null ? (byte[])argobj0 : StaticTranslate<byte[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        long arg1 = (long)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        Godot.FileAccess.CompressionMode arg2 = (Godot.FileAccess.CompressionMode)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value2, false);
+
+                        var result = Godot.GD.Decompress (arg0, arg1, arg2);
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        return;
+                    }
+                }
+                if (paramLen == 2)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(byte[]), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(long), false, false, v8Value1, ref argobj1, ref argType1))
+                    {
+                        byte[] arg0 = argobj0 != null ? (byte[])argobj0 : StaticTranslate<byte[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        long arg1 = (long)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);;
+
+                        var result = Godot.GD.Decompress (arg0, arg1, (Godot.FileAccess.CompressionMode)(0));
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        return;
+                    }
+                }
+                Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to Decompress");
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
+        internal static void F_DecompressDynamic(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
+        {
+            try
+            {
+        
+                if (paramLen == 3)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    IntPtr v8Value2 = PuertsDLL.GetArgumentValue(isolate, info, 2);
+                    object argobj2 = null;
+                    JsValueType argType2 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(byte[]), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(long), false, false, v8Value1, ref argobj1, ref argType1) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(Godot.FileAccess.CompressionMode), false, false, v8Value2, ref argobj2, ref argType2))
+                    {
+                        byte[] arg0 = argobj0 != null ? (byte[])argobj0 : StaticTranslate<byte[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        long arg1 = (long)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        Godot.FileAccess.CompressionMode arg2 = (Godot.FileAccess.CompressionMode)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value2, false);
+
+                        var result = Godot.GD.DecompressDynamic (arg0, arg1, arg2);
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        return;
+                    }
+                }
+                if (paramLen == 2)
+                {
+            
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    JsValueType argType0 = JsValueType.Invalid;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    JsValueType argType1 = JsValueType.Invalid;
+                    if (ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.NullOrUndefined | Puerts.JsValueType.NativeObject, typeof(byte[]), false, false, v8Value0, ref argobj0, ref argType0) && ArgHelper.IsMatch((int)data, isolate, Puerts.JsValueType.BigInt, typeof(long), false, false, v8Value1, ref argobj1, ref argType1))
+                    {
+                        byte[] arg0 = argobj0 != null ? (byte[])argobj0 : StaticTranslate<byte[]>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        long arg1 = (long)StaticTranslate<long>.Get((int)data, isolate, Puerts.NativeValueApi.GetValueFromArgument, v8Value1, false);;
+
+                        var result = Godot.GD.DecompressDynamic (arg0, arg1, (Godot.FileAccess.CompressionMode)(0));
+
+                        Puerts.ResultHelper.Set((int)data, isolate, info, result);
+                        return;
+                    }
+                }
+                Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to DecompressDynamic");
+            }
+            catch (Exception e)
+            {
+                Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
+            }
+        }
+        [Puerts.MonoPInvokeCallback(typeof(Puerts.V8FunctionCallback))]
         internal static void F_IsEmpty(IntPtr isolate, IntPtr info, IntPtr self, int paramLen, long data)
         {
             try

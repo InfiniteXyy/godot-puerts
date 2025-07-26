@@ -650,6 +650,9 @@
             * @returns The  for the given .
             */
             public static TypeToVariantType ($type: System.Type) : Godot.Variant.Type
+            public static Compress ($instance: System.Array$1<number>, $compressionMode?: Godot.FileAccess.CompressionMode) : System.Array$1<number>
+            public static Decompress ($instance: System.Array$1<number>, $bufferSize: bigint, $compressionMode?: Godot.FileAccess.CompressionMode) : System.Array$1<number>
+            public static DecompressDynamic ($instance: System.Array$1<number>, $maxOutputSize: bigint, $compressionMode?: Godot.FileAccess.CompressionMode) : System.Array$1<number>
             /** Returns true if this byte array is empty or doesn't exist.
             * @param $instance The byte array check.
             * @returns Whether or not the array is empty.
@@ -2249,6 +2252,12 @@
             /**  is changed.
             */
             public static NotificationTextServerChanged : bigint
+            /** Notification received when an accessibility information update is required.
+            */
+            public static NotificationAccessibilityUpdate : bigint
+            /** Notification received when accessibility elements are invalidated. All node accessibility elements are automatically deleted after receiving this message, therefore all existing references to such elements should be discarded.
+            */
+            public static NotificationAccessibilityInvalidate : bigint
             public get _ImportPath(): Godot.NodePath;
             public set _ImportPath(value: Godot.NodePath);
             /**
@@ -2307,8 +2316,10 @@
             public get ProcessThreadMessages(): Godot.Node.ProcessThreadMessagesEnum;
             public set ProcessThreadMessages(value: Godot.Node.ProcessThreadMessagesEnum);
             /**
-            *  for the global setting.
             * .
+            * By default, nodes inherit the physics interpolation mode from their parent. This property can enable or disable physics interpolation individually for each node, regardless of their parents' physics interpolation mode.
+            *  have physics interpolation disabled by default, as they rely on their own custom solution.
+            *  moving the node. This avoids creating a visual streak between the old and new positions.
             */
             public get PhysicsInterpolationMode(): Godot.Node.PhysicsInterpolationModeEnum;
             public set PhysicsInterpolationMode(value: Godot.Node.PhysicsInterpolationModeEnum);
@@ -2333,6 +2344,11 @@
             */
             public _ExitTree () : void
             /**
+            *  script, and accessibility warnings are enabled in the editor settings.
+            * Returning an empty array produces no warnings.
+            */
+            public _GetAccessibilityConfigurationWarnings () : System.Array$1<string>
+            /**
             *  script.
             * Returning an empty array produces no warnings.
             *  when the warnings need to be updated for this node.
@@ -2348,6 +2364,9 @@
             return []
             */
             public _GetConfigurationWarnings () : System.Array$1<string>
+            /** .
+            */
+            public _GetFocusedAccessibilityElement () : Godot.Rid
             /**
             * Called when there is an input event. The input event propagates up through the node tree until a node consumes it.
             * .
@@ -2412,13 +2431,18 @@
             */
             public static PrintOrphanNodes () : void
             /**
+            * ). Used for debugging.
+            *  will return an empty array.
+            */
+            public static GetOrphanNodeIds () : Godot.Collections.Array$1<number>
+            /**
             *  node to this node's parent, and moves the added sibling right below this node.
             *  in both situations.
             *  instead of this method if you don't need the child node to be added below a specific node in the list of children.
             *  parameter).
             */
             public AddSibling ($sibling: Godot.Node, $forceReadableName?: boolean) : void
-            public SetName ($name: string) : void
+            public SetName ($name: Godot.StringName) : void
             public GetName () : Godot.StringName
             public AddChild ($node: Godot.Node, $forceReadableName?: boolean, $internal?: Godot.Node.InternalMode) : void
             /**
@@ -2731,6 +2755,14 @@
             public GetProcessThreadMessages () : Godot.Node.ProcessThreadMessagesEnum
             public SetProcessThreadGroupOrder ($order: number) : void
             public GetProcessThreadGroupOrder () : number
+            /** Queues an accessibility information update for this node.
+            */
+            public QueueAccessibilityUpdate () : void
+            /**
+            * Returns main accessibility element RID.
+            * ).
+            */
+            public GetAccessibilityElement () : Godot.Rid
             /** .
             */
             public SetDisplayFolded ($fold: boolean) : void
@@ -2775,6 +2807,9 @@
             public ResetPhysicsInterpolation () : void
             public SetAutoTranslateMode ($mode: Godot.Node.AutoTranslateModeEnum) : void
             public GetAutoTranslateMode () : Godot.Node.AutoTranslateModeEnum
+            /** .
+            */
+            public CanAutoTranslate () : boolean
             /**
             * Makes this node inherit the translation domain from its parent node. If this node has no parent, the main translation domain will be used.
             *  disables this behavior.
@@ -2799,7 +2834,7 @@
             */
             public CreateTween () : Godot.Tween
             /**
-            * ).
+            * ). Internal nodes are not duplicated.
             * .
             */
             public Duplicate ($flags?: number) : Godot.Node
@@ -2862,9 +2897,11 @@
             *  tutorial.
             */
             public RpcConfig ($method: Godot.StringName, $config: Godot.Variant) : void
-            /** .
+            /**
+            * .
+            * .
             */
-            public GetRpcConfig () : Godot.Variant
+            public GetNodeRpcConfig () : Godot.Variant
             public SetEditorDescription ($editorDescription: string) : void
             public GetEditorDescription () : string
             public SetUniqueNameInOwner ($enable: boolean) : void
@@ -2917,6 +2954,8 @@
             /** , but for notifications.
             */
             public NotifyThreadSafe ($what: number) : void
+            public GetRpcConfig () : Godot.Variant
+            public SetName ($name: string) : void
             public add_Ready ($value: System.Action) : void
             public remove_Ready ($value: System.Action) : void
             public add_Renamed ($value: System.Action) : void
@@ -3088,6 +3127,22 @@
         {
             protected [__keep_incompatibility]: never;
         }
+        /**
+        * The RID type is used to access a low-level resource by its unique ID.
+        * RIDs are opaque, which means they do not grant access to the resource
+        * by themselves. They are used by the low-level server classes, such as
+        * ,
+        * ,
+        * , etc.
+        * A low-level resource may correspond to a high-level
+        * ,
+        * such as
+        * or
+        */
+        class Rid extends System.ValueType implements System.IEquatable$1<Godot.Rid>
+        {
+            protected [__keep_incompatibility]: never;
+        }
         /** .
         */
         class InputEvent extends Godot.Resource implements System.IDisposable
@@ -3182,7 +3237,7 @@
         Tween tween = CreateTween();
         foreach (Node sprite in GetChildren())
         tween.TweenProperty(sprite, "position", Vector2.Zero, 1.0f);
-        * In the example above, all children of a node are moved one after another to position (0, 0).
+        * .
         *  to a variable:
         * 
         private Tween _tween;
@@ -3213,16 +3268,22 @@
         class CanvasItem extends Godot.Node implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
-            /** .
+            /**
+            * .
+            *  automatically enable this in order to function correctly.
             */
             public static NotificationTransformChanged : bigint
-            /** .
+            /**
+            * .
+            *  automatically enable this in order to function correctly.
             */
             public static NotificationLocalTransformChanged : bigint
             /** ).
             */
             public static NotificationDraw : bigint
-            /** 's visibility has changed.
+            /**
+            * ).
+            *  signal.
             */
             public static NotificationVisibilityChanged : bigint
             /**  has entered the canvas.
@@ -3231,7 +3292,7 @@
             /**  has exited the canvas.
             */
             public static NotificationExitCanvas : bigint
-            /**  changed.
+            /** ).
             */
             public static NotificationWorld2DChanged : bigint
             /**
@@ -3246,11 +3307,11 @@
             public set Modulate(value: Godot.Color);
             /**
             *  which affects both the node itself and its children.
-            *  and other similar methods).
+            * .
             */
             public get SelfModulate(): Godot.Color;
             public set SelfModulate(value: Godot.Color);
-            /** , the object draws behind its parent.
+            /** , this node draws behind its parent.
             */
             public get ShowBehindParent(): boolean;
             public set ShowBehindParent(value: boolean);
@@ -3259,7 +3320,7 @@
             public get TopLevel(): boolean;
             public set TopLevel(value: boolean);
             /**
-            * Allows the current node to clip child nodes, essentially acting as a mask.
+            * The mode in which this node clips its children, acting as a mask.
             *  to avoid unexpected behavior.
             */
             public get ClipChildren(): Godot.CanvasItem.ClipChildrenMode;
@@ -3274,11 +3335,13 @@
             public set VisibilityLayer(value: number);
             /**
             *  (inclusive).
-            *  only affects the drawing order, not the order in which input events are handled. This can be useful to implement certain UI animations, e.g. a menu where hovered items are scaled and should overlap others.
+            *  nodes.
             */
             public get ZIndex(): number;
             public set ZIndex(value: number);
-            /** , the node's Z index is relative to its parent's Z index. If this node's Z index is 2 and its parent's effective Z index is 3, then this node's effective Z index will be 2 + 3 = 5.
+            /**
+            * , this node's final Z index is relative to its parent's Z index.
+            * ).
             */
             public get ZAsRelative(): boolean;
             public set ZAsRelative(value: boolean);
@@ -3289,11 +3352,13 @@
             */
             public get YSortEnabled(): boolean;
             public set YSortEnabled(value: boolean);
-            /** .
+            /** 's texture(s).
             */
             public get TextureFilter(): Godot.CanvasItem.TextureFilterEnum;
             public set TextureFilter(value: Godot.CanvasItem.TextureFilterEnum);
-            /** .
+            /**
+            *  UV points outside the texture.
+            * , as it uses its own texture repeating implementation.
             */
             public get TextureRepeat(): Godot.CanvasItem.TextureRepeatEnum;
             public set TextureRepeat(value: Godot.CanvasItem.TextureRepeatEnum);
@@ -3301,7 +3366,7 @@
             */
             public get Material(): Godot.Material;
             public set Material(value: Godot.Material);
-            /**  property is used as this one's material.
+            /**  is used as this node's material.
             */
             public get UseParentMaterial(): boolean;
             public set UseParentMaterial(value: boolean);
@@ -3310,7 +3375,7 @@
             * .
             */
             public _Draw () : void
-            /**  for this item.
+            /**  for this node.
             */
             public GetCanvasItem () : Godot.Rid
             public SetVisible ($visible: boolean) : void
@@ -3321,7 +3386,9 @@
             * , the node might end up not being rendered.
             */
             public IsVisibleInTree () : boolean
-            /**  functions instead.
+            /**
+            * .
+            *  functions instead.
             */
             public Show () : void
             /** .
@@ -3330,9 +3397,7 @@
             /**  per frame, even if this method has been called multiple times.
             */
             public QueueRedraw () : void
-            /**
-            * Moves this node to display on top of its siblings.
-            * Internally, the node is moved to the bottom of parent's child list. The method has no effect on nodes without a parent.
+            /** .
             */
             public MoveToFront () : void
             public SetAsTopLevel ($enable: boolean) : void
@@ -3431,12 +3496,12 @@
             * @param $uvs If the parameter is null, then the default value is Array.Empty<Vector2>().
             */
             public DrawColoredPolygon ($points: System.Array$1<Godot.Vector2>, $color: Godot.Color, $uvs?: System.Array$1<Godot.Vector2>, $texture?: Godot.Texture2D) : void
-            public DrawString ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $modulate?: Godot.Color | null, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation) : void
-            public DrawMultilineString ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $maxLines?: number, $modulate?: Godot.Color | null, $brkFlags?: Godot.TextServer.LineBreakFlag, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation) : void
-            public DrawStringOutline ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $size?: number, $modulate?: Godot.Color | null, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation) : void
-            public DrawMultilineStringOutline ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $maxLines?: number, $size?: number, $modulate?: Godot.Color | null, $brkFlags?: Godot.TextServer.LineBreakFlag, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation) : void
-            public DrawChar ($font: Godot.Font, $pos: Godot.Vector2, $char: string, $fontSize?: number, $modulate?: Godot.Color | null) : void
-            public DrawCharOutline ($font: Godot.Font, $pos: Godot.Vector2, $char: string, $fontSize?: number, $size?: number, $modulate?: Godot.Color | null) : void
+            public DrawString ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $modulate?: Godot.Color | null, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation, $oversampling?: number) : void
+            public DrawMultilineString ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $maxLines?: number, $modulate?: Godot.Color | null, $brkFlags?: Godot.TextServer.LineBreakFlag, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation, $oversampling?: number) : void
+            public DrawStringOutline ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $size?: number, $modulate?: Godot.Color | null, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation, $oversampling?: number) : void
+            public DrawMultilineStringOutline ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment?: Godot.HorizontalAlignment, $width?: number, $fontSize?: number, $maxLines?: number, $size?: number, $modulate?: Godot.Color | null, $brkFlags?: Godot.TextServer.LineBreakFlag, $justificationFlags?: Godot.TextServer.JustificationFlag, $direction?: Godot.TextServer.Direction, $orientation?: Godot.TextServer.Orientation, $oversampling?: number) : void
+            public DrawChar ($font: Godot.Font, $pos: Godot.Vector2, $char: string, $fontSize?: number, $modulate?: Godot.Color | null, $oversampling?: number) : void
+            public DrawCharOutline ($font: Godot.Font, $pos: Godot.Vector2, $char: string, $fontSize?: number, $size?: number, $modulate?: Godot.Color | null, $oversampling?: number) : void
             public DrawMesh ($mesh: Godot.Mesh, $texture: Godot.Texture2D, $transform?: Godot.Transform2D | null, $modulate?: Godot.Color | null) : void
             /**  for related documentation.
             */
@@ -3451,7 +3516,7 @@
             /** , this function can be used to revert drawing to its default state (all subsequent drawing commands will be visible). If you don't care about this particular use case, usage of this function after submitting the slices is not required.
             */
             public DrawEndAnimation () : void
-            /** Returns the transform matrix of this item.
+            /** .
             */
             public GetTransform () : Godot.Transform2D
             /**  enabled.
@@ -3460,13 +3525,13 @@
             /** s coordinate system.
             */
             public GetGlobalTransformWithCanvas () : Godot.Transform2D
-            /** s embedders coordinate system.
+            /** .
             */
             public GetViewportTransform () : Godot.Transform2D
             /** .
             */
             public GetViewportRect () : Godot.Rect2
-            /** s coordinate system.
+            /** .
             */
             public GetCanvasTransform () : Godot.Transform2D
             /**
@@ -3478,17 +3543,19 @@
             */
             public GetLocalMousePosition () : Godot.Vector2
             /**
-            * .
+            *  that contains this node.
             * .
             */
             public GetGlobalMousePosition () : Godot.Vector2
-            /**  canvas where this item is in.
+            /** .
             */
             public GetCanvas () : Godot.Rid
             /** .
             */
             public GetCanvasLayerNode () : Godot.CanvasLayer
-            /**  where this item is in.
+            /**
+            *  this node is registered to.
+            * ).
             */
             public GetWorld2D () : Godot.World2D
             public SetMaterial ($material: Godot.Material) : void
@@ -3504,19 +3571,25 @@
             public GetInstanceShaderParameter ($name: Godot.StringName) : Godot.Variant
             public SetUseParentMaterial ($enable: boolean) : void
             public GetUseParentMaterial () : boolean
-            /**  when its local transform changes.
+            /**
+            *  whenever its local transform changes.
+            *  automatically enable this in order to function correctly.
             */
             public SetNotifyLocalTransform ($enable: boolean) : void
-            /**  if local transform notifications are communicated to children.
+            /** .
             */
             public IsLocalTransformNotificationEnabled () : boolean
-            /**  when its global transform changes.
+            /**
+            *  whenever global transform changes.
+            *  automatically enable this in order to function correctly.
             */
             public SetNotifyTransform ($enable: boolean) : void
-            /**  if global transform notifications are communicated to children.
+            /** .
             */
             public IsTransformNotificationEnabled () : boolean
-            /** Forces the transform to update. Transform changes in physics are not instant for performance reasons. Transforms are accumulated and then set. Use this if you need an up-to-date transform when doing physics operations.
+            /**
+            * .
+            *  children, as well. Therefore, use this method only when you need an up-to-date transform (such as during physics operations).
             */
             public ForceUpdateTransform () : void
             /**
@@ -3526,7 +3599,7 @@
             var viewport_point = get_global_transform_with_canvas() * local_point
             */
             public MakeCanvasPositionLocal ($viewportPoint: Godot.Vector2) : Godot.Vector2
-            /** 's inputs are applied in local space instead of global space.
+            /**  unchanged.
             */
             public MakeInputLocal ($event: Godot.InputEvent) : Godot.InputEvent
             public SetVisibilityLayer ($layer: number) : void
@@ -3534,7 +3607,7 @@
             /** 's visibility layer.
             */
             public SetVisibilityLayerBit ($layer: number, $enabled: boolean) : void
-            /** Returns an individual bit on the rendering visibility layer.
+            /** .
             */
             public GetVisibilityLayerBit ($layer: number) : boolean
             public SetTextureFilter ($mode: Godot.CanvasItem.TextureFilterEnum) : void
@@ -3579,6 +3652,12 @@
             * .
             */
             public DrawCircle ($position: Godot.Vector2, $radius: number, $color: Godot.Color) : void
+            public DrawCharOutline ($font: Godot.Font, $pos: Godot.Vector2, $char: string, $fontSize: number, $size: number, $modulate: Godot.Color | null) : void
+            public DrawChar ($font: Godot.Font, $pos: Godot.Vector2, $char: string, $fontSize: number, $modulate: Godot.Color | null) : void
+            public DrawMultilineStringOutline ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment: Godot.HorizontalAlignment, $width: number, $fontSize: number, $maxLines: number, $size: number, $modulate: Godot.Color | null, $brkFlags: Godot.TextServer.LineBreakFlag, $justificationFlags: Godot.TextServer.JustificationFlag, $direction: Godot.TextServer.Direction, $orientation: Godot.TextServer.Orientation) : void
+            public DrawStringOutline ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment: Godot.HorizontalAlignment, $width: number, $fontSize: number, $size: number, $modulate: Godot.Color | null, $justificationFlags: Godot.TextServer.JustificationFlag, $direction: Godot.TextServer.Direction, $orientation: Godot.TextServer.Orientation) : void
+            public DrawMultilineString ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment: Godot.HorizontalAlignment, $width: number, $fontSize: number, $maxLines: number, $modulate: Godot.Color | null, $brkFlags: Godot.TextServer.LineBreakFlag, $justificationFlags: Godot.TextServer.JustificationFlag, $direction: Godot.TextServer.Direction, $orientation: Godot.TextServer.Orientation) : void
+            public DrawString ($font: Godot.Font, $pos: Godot.Vector2, $text: string, $alignment: Godot.HorizontalAlignment, $width: number, $fontSize: number, $modulate: Godot.Color | null, $justificationFlags: Godot.TextServer.JustificationFlag, $direction: Godot.TextServer.Direction, $orientation: Godot.TextServer.Orientation) : void
             public add_Draw ($value: System.Action) : void
             public remove_Draw ($value: System.Action) : void
             public add_VisibilityChanged ($value: System.Action) : void
@@ -3730,7 +3809,7 @@
         class CollisionObject2D extends Godot.Node2D implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
-            /**  for more details about the different modes.
+            /** .
             */
             public get DisableMode(): Godot.CollisionObject2D.DisableModeEnum;
             public set DisableMode(value: Godot.CollisionObject2D.DisableModeEnum);
@@ -3884,7 +3963,7 @@
             */
             public get Priority(): number;
             public set Priority(value: number);
-            /**  for possible values.
+            /** Override mode for gravity calculations within this area.
             */
             public get GravitySpaceOverride(): Godot.Area2D.SpaceOverride;
             public set GravitySpaceOverride(value: Godot.Area2D.SpaceOverride);
@@ -3910,7 +3989,7 @@
             */
             public get Gravity(): number;
             public set Gravity(value: number);
-            /**  for possible values.
+            /** Override mode for linear damping calculations within this area.
             */
             public get LinearDampSpaceOverride(): Godot.Area2D.SpaceOverride;
             public set LinearDampSpaceOverride(value: Godot.Area2D.SpaceOverride);
@@ -3920,7 +3999,7 @@
             */
             public get LinearDamp(): number;
             public set LinearDamp(value: number);
-            /**  for possible values.
+            /** Override mode for angular damping calculations within this area.
             */
             public get AngularDampSpaceOverride(): Godot.Area2D.SpaceOverride;
             public set AngularDampSpaceOverride(value: Godot.Area2D.SpaceOverride);
@@ -4017,22 +4096,6 @@
             public remove_AreaExited ($value: Godot.Area2D.AreaExitedEventHandler) : void
             public constructor ()
         }
-        /**
-        * The RID type is used to access a low-level resource by its unique ID.
-        * RIDs are opaque, which means they do not grant access to the resource
-        * by themselves. They are used by the low-level server classes, such as
-        * ,
-        * ,
-        * , etc.
-        * A low-level resource may correspond to a high-level
-        * ,
-        * such as
-        * or
-        */
-        class Rid extends System.ValueType implements System.IEquatable$1<Godot.Rid>
-        {
-            protected [__keep_incompatibility]: never;
-        }
         /** A node that displays a 2D texture. The texture displayed can be a region from a larger atlas texture, or a frame from a sprite sheet animation.
         */
         class Sprite2D extends Godot.Node2D implements System.IDisposable
@@ -4048,7 +4111,9 @@
             */
             public get Centered(): boolean;
             public set Centered(value: boolean);
-            /** The texture's drawing offset.
+            /**
+            * The texture's drawing offset.
+            * .y in Sprite2D, the sprite moves downward on screen (i.e., +Y is down).
             */
             public get Offset(): Godot.Vector2;
             public set Offset(value: Godot.Vector2);
@@ -4513,6 +4578,10 @@
         }
         var TypeFilter: { new (func: (m: System.Type, filterCriteria: any) => boolean): TypeFilter; }
     }
+    namespace Godot.FileAccess {
+        enum CompressionMode
+        { Fastlz = 0, Deflate = 1, Zstd = 2, GZip = 3, Brotli = 4 }
+    }
     namespace Godot.Node {
         enum ProcessModeEnum
         { Inherit = 0, Pausable = 1, WhenPaused = 2, Always = 3, Disabled = 4 }
@@ -4675,7 +4744,7 @@
         enum Orientation
         { Horizontal = 0, Vertical = 1 }
         enum LineBreakFlag
-        { None = 0, Mandatory = 1, WordBound = 2, GraphemeBound = 4, Adaptive = 8, TrimEdgeSpaces = 16, TrimIndent = 32 }
+        { None = 0, Mandatory = 1, WordBound = 2, GraphemeBound = 4, Adaptive = 8, TrimEdgeSpaces = 16, TrimIndent = 32, TrimStartEdgeSpaces = 64, TrimEndEdgeSpaces = 128 }
     }
         class JsComponent extends Godot.Sprite2D implements System.IDisposable
         {
