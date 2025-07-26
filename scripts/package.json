@@ -1,0 +1,12 @@
+{
+  "name": "scripts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
