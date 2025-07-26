@@ -6,5 +6,6 @@
 - [x] Use ts to define component
 - [x] Share jsMachine between nodes
 - [x] Hot Reload
+- [x] Generate tres files for js script
 - [ ] Hot Reload on demand
 - [ ] Create addon
