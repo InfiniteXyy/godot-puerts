@@ -5,7 +5,7 @@ console.log = GD.Print
 
 export function defineComponent<T extends CS.Godot.Node>(
   getConfig: (this: T) => {
-    onReady?: (this: T) => void
+    onReady?: (this: T) => void | (() => void)
     onProcess?: (this: T, delta: number) => void
     onPhysicsProcess?: (this: T, delta: number) => void
     onExitTree?: (this: T) => void
@@ -16,10 +16,27 @@ export function defineComponent<T extends CS.Godot.Node>(
     const component = self as unknown as T
     const config = getConfig.call(component)
 
-    config.onPhysicsProcess && (self.JsOnPhysicsProcess = config.onPhysicsProcess.bind(component))
-    config.onReady && (self.JsOnReady = config.onReady.bind(component))
-    config.onProcess && (self.JsOnProcess = config.onProcess.bind(component))
-    config.onExitTree && (self.JsOnExitTree = config.onExitTree.bind(component))
-    config.onInput && (self.JsOnInput = config.onInput.bind(component))
+    let cleanup: (() => void) | void
+
+    self.JsOnReady = () => {
+      cleanup = config.onReady?.call(component)
+    }
+
+    self.JsOnExitTree = () => {
+      cleanup?.()
+      config.onExitTree?.call(component)
+    }
+
+    if (config.onProcess) {
+      self.JsOnProcess = config.onProcess.bind(component)
+    }
+
+    if (config.onPhysicsProcess) {
+      self.JsOnPhysicsProcess = config.onPhysicsProcess.bind(component)
+    }
+
+    if (config.onInput) {
+      self.JsOnInput = config.onInput.bind(component)
+    }
   }
 }

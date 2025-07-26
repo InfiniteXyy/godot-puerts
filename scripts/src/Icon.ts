@@ -20,30 +20,40 @@ export default defineComponent<CS.Godot.Sprite2D>(() => {
     },
     onInput(event) {
       if (event instanceof Godot.InputEventMouseButton) {
-        if (event.IsPressed() && isHovered) {
+        if (isHovered && event.IsPressed()) {
           isDragging = true
           textLabel.Text = `Ready to drag from ${event.Position}`
           count$.value += 1
         }
-        if (event.IsReleased()) {
+        if (isDragging && event.IsReleased()) {
           isDragging = false
+          this.QueueFree()
         }
       }
     },
     onReady() {
-      setInterval(() => (isMovingRight = !isMovingRight), 1000)
+      const interval = setInterval(() => (isMovingRight = !isMovingRight), 1000)
+
       const area = this.GetNode(new Godot.NodePath('Area2D')) as CS.Godot.CollisionObject2D
-
-      this.AddChild(textLabel)
-
-      area.add_MouseEntered(() => {
+      const onHovered = () => {
         this.Modulate = new Godot.Color(1, 0, 0, 1) // Change color to red
         isHovered = true
-      })
-      area.add_MouseExited(() => {
+      }
+      const onUnHovered = () => {
         this.Modulate = new Godot.Color(1, 1, 1, 1) // Change color back to white
         isHovered = false
-      })
+      }
+
+      this.AddChild(textLabel)
+      area.add_MouseEntered(onHovered)
+      area.add_MouseExited(onUnHovered)
+      return () => {
+        area.remove_MouseEntered(onHovered)
+        area.remove_MouseExited(onUnHovered)
+        this.RemoveChild(textLabel)
+
+        clearInterval(interval)
+      }
     },
   }
 })
