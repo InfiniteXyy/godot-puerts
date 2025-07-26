@@ -14,6 +14,10 @@ public class PuerTSConfig
       return new List<Type>()
             {
                 typeof(Godot.GD),
+                typeof(Godot.StringName),
+                typeof(Godot.NodePath),
+                typeof(Godot.Input),
+                typeof(Godot.InputEvent),
                 typeof(Godot.Node),
                 typeof(Godot.Node2D),
                 typeof(Godot.Vector2),
@@ -24,7 +28,6 @@ public class PuerTSConfig
                 typeof(Godot.Texture),
                 typeof(Godot.Texture2D),
                 typeof(Godot.Color),
-                typeof(Godot.NodePath),
                 typeof(Godot.CanvasItem),
                 typeof(JsComponent)
             };

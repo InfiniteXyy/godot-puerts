@@ -1,5 +1,5 @@
 const { Godot } = CS;
-const { GD } = Godot;
+const { GD, Input } = Godot;
 
 console.log = GD.Print;
 
@@ -25,6 +25,10 @@ export default defineComponent<CS.Godot.Sprite2D>(() => {
         this.Position.X + (isMovingRight ? 100 : -100) * delta,
         this.Position.Y
       );
+
+      if (Input.IsActionJustPressed(new Godot.StringName("ui_accept"))) {
+        console.log("Button pressed!");
+      }
     },
     onReady() {
       setInterval(() => (isMovingRight = !isMovingRight), 1000);
@@ -32,6 +36,7 @@ export default defineComponent<CS.Godot.Sprite2D>(() => {
       const area = this.GetNode(
         new Godot.NodePath("Area2D")
       ) as CS.Godot.CollisionObject2D;
+
       area.add_MouseEntered(() => {
         this.Modulate = new Godot.Color(1, 0, 0, 1); // Change color to red
         console.log("Mouse entered the area!");

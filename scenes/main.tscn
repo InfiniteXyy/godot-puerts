@@ -12,6 +12,7 @@ size = Vector2(128, 126)
 position = Vector2(484, 329)
 texture = ExtResource("1_o5qli")
 script = ExtResource("1_0wfyh")
+generatePuerTSCode = true
 
 [node name="Area2D" type="Area2D" parent="Icon"]
 

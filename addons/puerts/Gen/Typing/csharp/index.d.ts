@@ -309,7 +309,7 @@
         {
             protected [__keep_incompatibility]: never;
         }
-        class ReadOnlySpan$1<T> extends System.ValueType
+        class Nullable$1<T> extends System.ValueType
         {
             protected [__keep_incompatibility]: never;
         }
@@ -323,16 +323,16 @@
         Invoke?: (...args:any[]) => any;
         }
         var MulticastDelegate: { new (func: (...args:any[]) => any): MulticastDelegate; }
+        class ReadOnlySpan$1<T> extends System.ValueType
+        {
+            protected [__keep_incompatibility]: never;
+        }
         interface Action
         { 
         () : void; 
         Invoke?: () => void;
         }
         var Action: { new (func: () => void): Action; }
-        class Nullable$1<T> extends System.ValueType
-        {
-            protected [__keep_incompatibility]: never;
-        }
         interface Action$1<T>
         { 
         (obj: T) : void; 
@@ -2055,6 +2055,543 @@
             protected [__keep_incompatibility]: never;
         }
         /**
+        * StringNames are immutable strings designed for general-purpose representation of unique names.
+        * StringName ensures that only one instance of a given name exists (so two StringNames with the
+        * same value are the same object).
+        * Comparing them is much faster than with regular strings, because only the pointers are compared,
+        * not the whole strings.
+        */
+        class StringName extends System.Object implements System.IDisposable, System.IEquatable$1<Godot.StringName>
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            * Check whether this
+            * is empty.
+            * @returns If the  is empty.
+            */
+            public get IsEmpty(): boolean;
+            /**
+            * Disposes of this
+            * .
+            */
+            public Dispose () : void
+            public Dispose ($disposing: boolean) : void
+            public static op_Implicit ($from: string) : Godot.StringName
+            public static op_Implicit ($from: Godot.StringName) : string
+            public static op_Equality ($left: Godot.StringName, $right: Godot.StringName) : boolean
+            public static op_Inequality ($left: Godot.StringName, $right: Godot.StringName) : boolean
+            public Equals ($other: Godot.StringName) : boolean
+            public static op_Equality ($left: Godot.StringName, $right: $Ref<Godot.NativeInterop.godot_string_name>) : boolean
+            public static op_Inequality ($left: Godot.StringName, $right: $Ref<Godot.NativeInterop.godot_string_name>) : boolean
+            public static op_Equality ($left: $Ref<Godot.NativeInterop.godot_string_name>, $right: Godot.StringName) : boolean
+            public static op_Inequality ($left: $Ref<Godot.NativeInterop.godot_string_name>, $right: Godot.StringName) : boolean
+            public Equals ($other: $Ref<Godot.NativeInterop.godot_string_name>) : boolean
+            public Equals ($obj: any) : boolean
+            public constructor ()
+            public constructor ($name: string)
+        }
+        /**
+        * A pre-parsed relative or absolute path in a scene tree,
+        * for use with
+        * and similar functions.
+        * It can reference a node, a resource within a node, or a property
+        * of a node or resource.
+        * For instance,
+        * "Path2D/PathFollow2D/Sprite2D:texture:size"
+        * would refer to the
+        * size
+        * property of the
+        * texture
+        * resource on the node named
+        * "Sprite2D"
+        * which is a child of
+        * the other named nodes in the path.
+        * You will usually just pass a string to
+        * and it will be automatically converted, but you may occasionally
+        * want to parse a path ahead of time with NodePath.
+        * Exporting a NodePath variable will give you a node selection widget
+        * in the properties panel of the editor, which can often be useful.
+        * A NodePath is composed of a list of slash-separated node names
+        * (like a filesystem path) and an optional colon-separated list of
+        * "subnames" which can be resources or properties.
+        * Note: In the editor, NodePath properties are automatically updated when moving,
+        * renaming or deleting a node in the scene tree, but they are never updated at runtime.
+        */
+        class NodePath extends System.Object implements System.IDisposable, System.IEquatable$1<Godot.NodePath>
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            * Returns
+            * if the node path is empty.
+            * @returns If the  is empty.
+            */
+            public get IsEmpty(): boolean;
+            /**
+            * Disposes of this
+            * .
+            */
+            public Dispose () : void
+            public Dispose ($disposing: boolean) : void
+            public static op_Implicit ($from: string) : Godot.NodePath
+            public static op_Implicit ($from: Godot.NodePath) : string
+            /**
+            * Returns a node path with a colon character (
+            * :
+            * ) prepended,
+            * transforming it to a pure property path with no node name (defaults
+            * to resolving from the current node).
+            * @returns The  as a pure property path.
+            */
+            public GetAsPropertyPath () : Godot.NodePath
+            /**
+            * Returns all names concatenated with a slash character (
+            * /
+            * ).
+            * @returns The names concatenated with /.
+            */
+            public GetConcatenatedNames () : string
+            /**
+            * Returns all subnames concatenated with a colon character (
+            * :
+            * )
+            * as separator, i.e. the right side of the first colon in a node path.
+            * @returns The subnames concatenated with :.
+            */
+            public GetConcatenatedSubNames () : string
+            /**
+            * Gets the node name indicated by
+            * (0 to
+            * ).
+            * @param $idx The name index.
+            * @returns The name at the given index .
+            */
+            public GetName ($idx: number) : string
+            /**
+            * Gets the number of node names which make up the path.
+            * Subnames (see
+            * ) are not included.
+            * For example,
+            * "Path2D/PathFollow2D/Sprite2D"
+            * has 3 names.
+            * @returns The number of node names which make up the path.
+            */
+            public GetNameCount () : number
+            /**
+            * Gets the resource or property name indicated by
+            * (0 to
+            * ).
+            * @param $idx The subname index.
+            * @returns The subname at the given index .
+            */
+            public GetSubName ($idx: number) : string
+            /**
+            * Gets the number of resource or property names ("subnames") in the path.
+            * Each subname is listed after a colon character (
+            * :
+            * ) in the node path.
+            * For example,
+            * "Path2D/PathFollow2D/Sprite2D:texture:load_path"
+            * has 2 subnames.
+            * @returns The number of subnames in the path.
+            */
+            public GetSubNameCount () : number
+            /**
+            * Returns
+            * if the node path is absolute (as opposed to relative),
+            * which means that it starts with a slash character (
+            * /
+            * ). Absolute node paths can
+            * be used to access the root node (
+            * "/root"
+            * ) or autoloads (e.g.
+            * "/global"
+            * if a "global" autoload was registered).
+            * @returns If the  is an absolute path.
+            */
+            public IsAbsolute () : boolean
+            public static op_Equality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
+            public static op_Inequality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
+            public Equals ($other: Godot.NodePath) : boolean
+            public Equals ($obj: any) : boolean
+            public constructor ()
+            public constructor ($path: string)
+        }
+        /**
+        *  class.
+        * .
+        */
+        class Input extends System.Object
+        {
+            protected [__keep_incompatibility]: never;
+            /** Controls the mouse mode.
+            */
+            public static get MouseMode(): Godot.Input.MouseModeEnum;
+            public static set MouseMode(value: Godot.Input.MouseModeEnum);
+            /**
+            * , similar input events sent by the operating system are accumulated. When input accumulation is enabled, all input events generated during a frame will be merged and emitted when the frame is done rendering. Therefore, this limits the number of input method calls per second to the rendering FPS.
+            * Input accumulation can be disabled to get slightly more precise/reactive input at the cost of increased CPU usage. In applications where drawing freehand lines is required, input accumulation should generally be disabled while the user is drawing the line to get results that closely follow the actual input.
+            *  by default.
+            */
+            public static get UseAccumulatedInput(): boolean;
+            public static set UseAccumulatedInput(value: boolean);
+            /** .
+            */
+            public static get EmulateMouseFromTouch(): boolean;
+            public static set EmulateMouseFromTouch(value: boolean);
+            /** .
+            */
+            public static get EmulateTouchFromMouse(): boolean;
+            public static set EmulateTouchFromMouse(value: boolean);
+            public static get Singleton(): Godot.InputInstance;
+            /** .
+            */
+            public static IsAnythingPressed () : boolean
+            /**
+            *  constant.
+            * .
+            *  in the documentation for more information.
+            */
+            public static IsKeyPressed ($keycode: Godot.Key) : boolean
+            /**
+            *  constant.
+            * .
+            *  in the documentation for more information.
+            */
+            public static IsPhysicalKeyPressed ($keycode: Godot.Key) : boolean
+            /**  constant or any Unicode character code.
+            */
+            public static IsKeyLabelPressed ($keycode: Godot.Key) : boolean
+            /** .
+            */
+            public static IsMouseButtonPressed ($button: Godot.MouseButton) : boolean
+            /** .
+            */
+            public static IsJoyButtonPressed ($device: number, $button: Godot.JoyButton) : boolean
+            /**
+            *  if you are pressing the action event.
+            *  events.
+            *  in the documentation for more information.
+            */
+            public static IsActionPressed ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            *  on the frame or tick that the user pressed down the button.
+            * This is useful for code that needs to run only once when an action is pressed, instead of every frame while it's pressed.
+            *  events.
+            *  will still be returned so as not to miss input.
+            *  in the documentation for more information.
+            *  instead to query the action state of the current event.
+            */
+            public static IsActionJustPressed ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            *  on the frame or tick that the user releases the button.
+            *  will still be returned so as not to miss input.
+            *  events.
+            *  instead to query the action state of the current event.
+            */
+            public static IsActionJustReleased ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            * Returns a value between 0 and 1 representing the intensity of the given action. In a joypad, for example, the further away the axis (analog sticks or L2, R2 triggers) is from the dead zone, the closer the value will be to 1. If the action is mapped to a control that has no axis such as the keyboard, the value returned will be 0 or 1.
+            *  events.
+            */
+            public static GetActionStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
+            /**
+            *  instead.
+            *  events.
+            */
+            public static GetActionRawStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
+            /**
+            * Get axis input by specifying two actions, one negative and one positive.
+            * .
+            */
+            public static GetAxis ($negativeAction: Godot.StringName, $positiveAction: Godot.StringName) : number
+            /**
+            * Gets an input vector by specifying four actions for the positive and negative X and Y axes.
+            * This method is useful when getting vector input, such as from a joystick, directional pad, arrows, or WASD. The vector has its length limited to 1 and has a circular deadzone, which is useful for using vector input as movement.
+            * By default, the deadzone is automatically calculated from the average of the action deadzones. However, you can override the deadzone to be whatever you want (on the range of 0 to 1).
+            */
+            public static GetVector ($negativeX: Godot.StringName, $positiveX: Godot.StringName, $negativeY: Godot.StringName, $positiveY: Godot.StringName, $deadzone?: number) : Godot.Vector2
+            /** Adds a new mapping entry (in SDL2 format) to the mapping database. Optionally update already connected devices.
+            */
+            public static AddJoyMapping ($mapping: string, $updateExisting?: boolean) : void
+            /**
+            * Removes all mappings from the internal database that match the given GUID. All currently connected joypads that use this GUID will become unmapped.
+            * On Android, Godot will map to an internal fallback mapping.
+            */
+            public static RemoveJoyMapping ($guid: string) : void
+            /**  if the system knows the specified device. This means that it sets all button and axis indices. Unknown joypads are not expected to match these constants, but you can still retrieve events from them.
+            */
+            public static IsJoyKnown ($device: number) : boolean
+            /** .
+            */
+            public static GetJoyAxis ($device: number, $axis: Godot.JoyAxis) : number
+            /**  to determine gamepad names.
+            */
+            public static GetJoyName ($device: number) : string
+            /**
+            *  to determine gamepad names and mappings based on this GUID.
+            * , because their mappings are the same.
+            */
+            public static GetJoyGuid ($device: number) : string
+            /**
+            * Returns a dictionary with extra platform-specific information about the device, e.g. the raw gamepad name from the OS or the Steam Input index.
+            * On Windows, the dictionary contains the following fields:
+            * : The index of the controller in the XInput system. Undefined for DirectInput devices.
+            * : The USB vendor ID of the device.
+            * : The USB product ID of the device.
+            * On Linux:
+            * : The name of the controller as it came from the OS, before getting renamed by the godot controller database.
+            * : The USB vendor ID of the device.
+            * : The USB product ID of the device.
+            * : The Steam Input gamepad index, if the device is not a Steam Input device this key won't be present.
+            *  The returned dictionary is always empty on Web, iOS, Android, and macOS.
+            */
+            public static GetJoyInfo ($device: number) : Godot.Collections.Dictionary
+            /**
+            *  for more information.
+            *  creates virtual devices from physical devices for remapping purposes. To avoid handling the same input device twice, the original device is added to the ignore list.
+            */
+            public static ShouldIgnoreDevice ($vendorId: number, $productId: number) : boolean
+            /**  containing the device IDs of all currently connected joypads.
+            */
+            public static GetConnectedJoypads () : Godot.Collections.Array$1<number>
+            /** Returns the strength of the joypad vibration: x is the strength of the weak motor, and y is the strength of the strong motor.
+            */
+            public static GetJoyVibrationStrength ($device: number) : Godot.Vector2
+            /** Returns the duration of the current vibration effect in seconds.
+            */
+            public static GetJoyVibrationDuration ($device: number) : number
+            /**
+            * .
+            *  Not every hardware is compatible with long effect durations; it is recommended to restart an effect if it has to be played for more than a few seconds.
+            *  For macOS, vibration is only supported in macOS 11 and later.
+            */
+            public static StartJoyVibration ($device: number, $weakMagnitude: number, $strongMagnitude: number, $duration?: number) : void
+            /** .
+            */
+            public static StopJoyVibration ($device: number) : void
+            /**
+            * Vibrate the handheld device for the specified duration in milliseconds.
+            * , the default vibration strength of the device is used.
+            *  This method is implemented on Android, iOS, and Web. It has no effect on other platforms.
+            *  will have no effect.
+            *  For iOS, specifying the duration is only supported in iOS 13 and later.
+            *  For Web, the amplitude cannot be changed.
+            * .
+            */
+            public static VibrateHandheld ($durationMs?: number, $amplitude?: number) : void
+            /**
+            * .
+            * .
+            *  must be enabled.
+            */
+            public static GetGravity () : Godot.Vector3
+            /**
+            * .
+            *  when running from the editor even when your device has an accelerometer. You must export your project to a supported device to read values from the accelerometer.
+            * .
+            *  must be enabled.
+            */
+            public static GetAccelerometer () : Godot.Vector3
+            /**
+            * .
+            * .
+            *  must be enabled.
+            */
+            public static GetMagnetometer () : Godot.Vector3
+            /**
+            * .
+            * .
+            *  must be enabled.
+            */
+            public static GetGyroscope () : Godot.Vector3
+            /**
+            * Sets the gravity value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetGravity ($value: Godot.Vector3) : void
+            /**
+            * Sets the acceleration value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetAccelerometer ($value: Godot.Vector3) : void
+            /**
+            * Sets the value of the magnetic field of the magnetometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetMagnetometer ($value: Godot.Vector3) : void
+            /**
+            * Sets the value of the rotation rate of the gyroscope sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetGyroscope ($value: Godot.Vector3) : void
+            /** Returns the last mouse velocity. To provide a precise and jitter-free velocity, mouse velocity is only calculated every 0.1s. Therefore, mouse velocity will lag mouse movements.
+            */
+            public static GetLastMouseVelocity () : Godot.Vector2
+            /** Returns the last mouse velocity in screen coordinates. To provide a precise and jitter-free velocity, mouse velocity is only calculated every 0.1s. Therefore, mouse velocity will lag mouse movements.
+            */
+            public static GetLastMouseScreenVelocity () : Godot.Vector2
+            /** .
+            */
+            public static GetMouseButtonMask () : Godot.MouseButtonMask
+            public static SetMouseMode ($mode: Godot.Input.MouseModeEnum) : void
+            public static GetMouseMode () : Godot.Input.MouseModeEnum
+            /**
+            * Sets the mouse position to the specified vector, provided in pixels and relative to an origin at the upper left corner of the currently focused Window Manager game window.
+            * .
+            *  is only supported on Windows, macOS and Linux. It has no effect on Android, iOS and Web.
+            */
+            public static WarpMouse ($position: Godot.Vector2) : void
+            /**
+            * This will simulate pressing the specified action.
+            * The strength can be used for non-boolean actions, it's ranged between 0 and 1 representing the intensity of the given action.
+            *  instead.
+            */
+            public static ActionPress ($action: Godot.StringName, $strength?: number) : void
+            /** If the specified action is already pressed, this will release it.
+            */
+            public static ActionRelease ($action: Godot.StringName) : void
+            public static SetDefaultCursorShape ($shape?: Godot.Input.CursorShape) : void
+            /** Returns the currently assigned cursor shape.
+            */
+            public static GetCurrentCursorShape () : Godot.Input.CursorShape
+            public static SetCustomMouseCursor ($image: Godot.Resource, $shape?: Godot.Input.CursorShape, $hotspot?: Godot.Vector2 | null) : void
+            /**
+            *  calls.
+            * 
+            var cancelEvent = new InputEventAction();
+            cancelEvent.Action = "ui_cancel";
+            cancelEvent.Pressed = true;
+            Input.ParseInputEvent(cancelEvent);
+            *  won't toggle between active windows.
+            */
+            public static ParseInputEvent ($event: Godot.InputEvent) : void
+            public static SetUseAccumulatedInput ($enable: boolean) : void
+            public static IsUsingAccumulatedInput () : boolean
+            /**
+            * ).
+            * The engine will already do this itself at key execution points (at least once per frame). However, this can be useful in advanced cases where you want precise control over the timing of event handling.
+            */
+            public static FlushBufferedEvents () : void
+            public static SetEmulateMouseFromTouch ($enable: boolean) : void
+            public static IsEmulatingMouseFromTouch () : boolean
+            public static SetEmulateTouchFromMouse ($enable: boolean) : void
+            public static IsEmulatingTouchFromMouse () : boolean
+            /**
+            * Vibrate the handheld device for the specified duration in milliseconds.
+            * , the default vibration strength of the device is used.
+            *  This method is implemented on Android, iOS, and Web. It has no effect on other platforms.
+            *  will have no effect.
+            *  For iOS, specifying the duration is only supported in iOS 13 and later.
+            *  For Web, the amplitude cannot be changed.
+            * .
+            */
+            public static VibrateHandheld ($durationMs: number) : void
+            public static add_JoyConnectionChanged ($value: Godot.Input.JoyConnectionChangedEventHandler) : void
+            public static remove_JoyConnectionChanged ($value: Godot.Input.JoyConnectionChangedEventHandler) : void
+        }
+        /**
+        *  class.
+        * .
+        */
+        class InputInstance extends Godot.GodotObject implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        enum Key
+        { None = 0, Special = 4194304, Escape = 4194305, Tab = 4194306, Backtab = 4194307, Backspace = 4194308, Enter = 4194309, KpEnter = 4194310, Insert = 4194311, Delete = 4194312, Pause = 4194313, Print = 4194314, Sysreq = 4194315, Clear = 4194316, Home = 4194317, End = 4194318, Left = 4194319, Up = 4194320, Right = 4194321, Down = 4194322, Pageup = 4194323, Pagedown = 4194324, Shift = 4194325, Ctrl = 4194326, Meta = 4194327, Alt = 4194328, Capslock = 4194329, Numlock = 4194330, Scrolllock = 4194331, F1 = 4194332, F2 = 4194333, F3 = 4194334, F4 = 4194335, F5 = 4194336, F6 = 4194337, F7 = 4194338, F8 = 4194339, F9 = 4194340, F10 = 4194341, F11 = 4194342, F12 = 4194343, F13 = 4194344, F14 = 4194345, F15 = 4194346, F16 = 4194347, F17 = 4194348, F18 = 4194349, F19 = 4194350, F20 = 4194351, F21 = 4194352, F22 = 4194353, F23 = 4194354, F24 = 4194355, F25 = 4194356, F26 = 4194357, F27 = 4194358, F28 = 4194359, F29 = 4194360, F30 = 4194361, F31 = 4194362, F32 = 4194363, F33 = 4194364, F34 = 4194365, F35 = 4194366, KpMultiply = 4194433, KpDivide = 4194434, KpSubtract = 4194435, KpPeriod = 4194436, KpAdd = 4194437, Kp0 = 4194438, Kp1 = 4194439, Kp2 = 4194440, Kp3 = 4194441, Kp4 = 4194442, Kp5 = 4194443, Kp6 = 4194444, Kp7 = 4194445, Kp8 = 4194446, Kp9 = 4194447, Menu = 4194370, Hyper = 4194371, Help = 4194373, Back = 4194376, Forward = 4194377, Stop = 4194378, Refresh = 4194379, Volumedown = 4194380, Volumemute = 4194381, Volumeup = 4194382, Mediaplay = 4194388, Mediastop = 4194389, Mediaprevious = 4194390, Medianext = 4194391, Mediarecord = 4194392, Homepage = 4194393, Favorites = 4194394, Search = 4194395, Standby = 4194396, Openurl = 4194397, Launchmail = 4194398, Launchmedia = 4194399, Launch0 = 4194400, Launch1 = 4194401, Launch2 = 4194402, Launch3 = 4194403, Launch4 = 4194404, Launch5 = 4194405, Launch6 = 4194406, Launch7 = 4194407, Launch8 = 4194408, Launch9 = 4194409, Launcha = 4194410, Launchb = 4194411, Launchc = 4194412, Launchd = 4194413, Launche = 4194414, Launchf = 4194415, Globe = 4194416, Keyboard = 4194417, JisEisu = 4194418, JisKana = 4194419, Unknown = 8388607, Space = 32, Exclam = 33, Quotedbl = 34, Numbersign = 35, Dollar = 36, Percent = 37, Ampersand = 38, Apostrophe = 39, Parenleft = 40, Parenright = 41, Asterisk = 42, Plus = 43, Comma = 44, Minus = 45, Period = 46, Slash = 47, Key0 = 48, Key1 = 49, Key2 = 50, Key3 = 51, Key4 = 52, Key5 = 53, Key6 = 54, Key7 = 55, Key8 = 56, Key9 = 57, Colon = 58, Semicolon = 59, Less = 60, Equal = 61, Greater = 62, Question = 63, At = 64, A = 65, B = 66, C = 67, D = 68, E = 69, F = 70, G = 71, H = 72, I = 73, J = 74, K = 75, L = 76, M = 77, N = 78, O = 79, P = 80, Q = 81, R = 82, S = 83, T = 84, U = 85, V = 86, W = 87, X = 88, Y = 89, Z = 90, Bracketleft = 91, Backslash = 92, Bracketright = 93, Asciicircum = 94, Underscore = 95, Quoteleft = 96, Braceleft = 123, Bar = 124, Braceright = 125, Asciitilde = 126, Yen = 165, Section = 167 }
+        enum MouseButton
+        { None = 0, Left = 1, Right = 2, Middle = 3, WheelUp = 4, WheelDown = 5, WheelLeft = 6, WheelRight = 7, Xbutton1 = 8, Xbutton2 = 9 }
+        enum JoyButton
+        { Invalid = -1, A = 0, B = 1, X = 2, Y = 3, Back = 4, Guide = 5, Start = 6, LeftStick = 7, RightStick = 8, LeftShoulder = 9, RightShoulder = 10, DpadUp = 11, DpadDown = 12, DpadLeft = 13, DpadRight = 14, Misc1 = 15, Paddle1 = 16, Paddle2 = 17, Paddle3 = 18, Paddle4 = 19, Touchpad = 20, SdlMax = 21, Max = 128 }
+        enum JoyAxis
+        { Invalid = -1, LeftX = 0, LeftY = 1, RightX = 2, RightY = 3, TriggerLeft = 4, TriggerRight = 5, SdlMax = 6, Max = 10 }
+        enum MouseButtonMask
+        { Left = 1, Right = 2, Middle = 4, MbXbutton1 = 128, MbXbutton2 = 256 }
+        /** .
+        */
+        class InputEvent extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** Device ID used for emulated mouse input from a touchscreen, or for emulated touch input from a mouse. This can be used to distinguish emulated mouse input from physical mouse input, or emulated touch input from physical touch input.
+            */
+            public static DeviceIdEmulation : bigint
+            /**
+            * The event's device ID.
+            * .
+            */
+            public get Device(): number;
+            public set Device(value: number);
+            public SetDevice ($device: number) : void
+            public GetDevice () : number
+            /**
+            *  if this input event matches a pre-defined action of any type.
+            *  events.
+            */
+            public IsAction ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            * .
+            *  events.
+            *  in the documentation for more information.
+            */
+            public IsActionPressed ($action: Godot.StringName, $allowEcho?: boolean, $exactMatch?: boolean) : boolean
+            /**
+            * .
+            *  events.
+            */
+            public IsActionReleased ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            * .
+            *  events.
+            */
+            public GetActionStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
+            /**  if this input event has been canceled.
+            */
+            public IsCanceled () : boolean
+            /**
+            * .
+            *  in the documentation for more information.
+            */
+            public IsPressed () : boolean
+            /** .
+            */
+            public IsReleased () : boolean
+            /**
+            * .
+            *  The rate at which echo events are sent is typically around 20 events per second (after holding down the key for roughly half a second). However, the key repeat delay/speed can be changed by the user or disabled entirely in the operating system settings. To ensure your project works correctly on all configurations, do not assume the user has a specific key repeat configuration in your project's behavior.
+            */
+            public IsEcho () : boolean
+            /**  representation of the event.
+            */
+            public AsText () : string
+            /**
+            * ) events.
+            *  events.
+            * .
+            */
+            public IsMatch ($event: Godot.InputEvent, $exactMatch?: boolean) : boolean
+            /**  if this input event's type is one that can be assigned to an input action.
+            */
+            public IsActionType () : boolean
+            /**
+            * ).
+            *  is a sum of both events. Both events' modifiers have to be identical.
+            */
+            public Accumulate ($withEvent: Godot.InputEvent) : boolean
+            public XformedBy ($xform: Godot.Transform2D, $localOfs?: Godot.Vector2 | null) : Godot.InputEvent
+        }
+        /**
+        * 2×3 matrix (2 rows, 3 columns) used for 2D linear transformations.
+        * It can represent transformations such as translation, rotation, or scaling.
+        * It consists of a three
+        * values: x, y, and the origin.
+        * For more information, read this documentation article:
+        * https://docs.godotengine.org/en/latest/tutorials/math/matrices_and_transforms.html
+        */
+        class Transform2D extends System.ValueType implements System.IEquatable$1<Godot.Transform2D>
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
         * Nodes are Godot's building blocks. They can be assigned as the child of another node, resulting in a tree arrangement. A given node can contain any number of nodes as children with the requirement that all siblings (direct children of a node) should have unique names.
         * . Scenes can be saved to the disk and then instantiated into other scenes. This allows for very high flexibility in the architecture and data model of Godot projects.
         *  callback of a parent node will be triggered before its child's.
@@ -2981,143 +3518,6 @@
             public constructor ()
         }
         /**
-        * A pre-parsed relative or absolute path in a scene tree,
-        * for use with
-        * and similar functions.
-        * It can reference a node, a resource within a node, or a property
-        * of a node or resource.
-        * For instance,
-        * "Path2D/PathFollow2D/Sprite2D:texture:size"
-        * would refer to the
-        * size
-        * property of the
-        * texture
-        * resource on the node named
-        * "Sprite2D"
-        * which is a child of
-        * the other named nodes in the path.
-        * You will usually just pass a string to
-        * and it will be automatically converted, but you may occasionally
-        * want to parse a path ahead of time with NodePath.
-        * Exporting a NodePath variable will give you a node selection widget
-        * in the properties panel of the editor, which can often be useful.
-        * A NodePath is composed of a list of slash-separated node names
-        * (like a filesystem path) and an optional colon-separated list of
-        * "subnames" which can be resources or properties.
-        * Note: In the editor, NodePath properties are automatically updated when moving,
-        * renaming or deleting a node in the scene tree, but they are never updated at runtime.
-        */
-        class NodePath extends System.Object implements System.IDisposable, System.IEquatable$1<Godot.NodePath>
-        {
-            protected [__keep_incompatibility]: never;
-            /**
-            * Returns
-            * if the node path is empty.
-            * @returns If the  is empty.
-            */
-            public get IsEmpty(): boolean;
-            /**
-            * Disposes of this
-            * .
-            */
-            public Dispose () : void
-            public Dispose ($disposing: boolean) : void
-            public static op_Implicit ($from: string) : Godot.NodePath
-            public static op_Implicit ($from: Godot.NodePath) : string
-            /**
-            * Returns a node path with a colon character (
-            * :
-            * ) prepended,
-            * transforming it to a pure property path with no node name (defaults
-            * to resolving from the current node).
-            * @returns The  as a pure property path.
-            */
-            public GetAsPropertyPath () : Godot.NodePath
-            /**
-            * Returns all names concatenated with a slash character (
-            * /
-            * ).
-            * @returns The names concatenated with /.
-            */
-            public GetConcatenatedNames () : string
-            /**
-            * Returns all subnames concatenated with a colon character (
-            * :
-            * )
-            * as separator, i.e. the right side of the first colon in a node path.
-            * @returns The subnames concatenated with :.
-            */
-            public GetConcatenatedSubNames () : string
-            /**
-            * Gets the node name indicated by
-            * (0 to
-            * ).
-            * @param $idx The name index.
-            * @returns The name at the given index .
-            */
-            public GetName ($idx: number) : string
-            /**
-            * Gets the number of node names which make up the path.
-            * Subnames (see
-            * ) are not included.
-            * For example,
-            * "Path2D/PathFollow2D/Sprite2D"
-            * has 3 names.
-            * @returns The number of node names which make up the path.
-            */
-            public GetNameCount () : number
-            /**
-            * Gets the resource or property name indicated by
-            * (0 to
-            * ).
-            * @param $idx The subname index.
-            * @returns The subname at the given index .
-            */
-            public GetSubName ($idx: number) : string
-            /**
-            * Gets the number of resource or property names ("subnames") in the path.
-            * Each subname is listed after a colon character (
-            * :
-            * ) in the node path.
-            * For example,
-            * "Path2D/PathFollow2D/Sprite2D:texture:load_path"
-            * has 2 subnames.
-            * @returns The number of subnames in the path.
-            */
-            public GetSubNameCount () : number
-            /**
-            * Returns
-            * if the node path is absolute (as opposed to relative),
-            * which means that it starts with a slash character (
-            * /
-            * ). Absolute node paths can
-            * be used to access the root node (
-            * "/root"
-            * ) or autoloads (e.g.
-            * "/global"
-            * if a "global" autoload was registered).
-            * @returns If the  is an absolute path.
-            */
-            public IsAbsolute () : boolean
-            public static op_Equality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
-            public static op_Inequality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
-            public Equals ($other: Godot.NodePath) : boolean
-            public Equals ($obj: any) : boolean
-            public constructor ()
-            public constructor ($path: string)
-        }
-        /**
-        * StringNames are immutable strings designed for general-purpose representation of unique names.
-        * StringName ensures that only one instance of a given name exists (so two StringNames with the
-        * same value are the same object).
-        * Comparing them is much faster than with regular strings, because only the pointers are compared,
-        * not the whole strings.
-        */
-        class StringName extends System.Object implements System.IDisposable, System.IEquatable$1<Godot.StringName>
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
         * .
         *  has a reference to an implementation of this class and uses it to provide multiplayer capabilities (i.e. RPCs) across the whole scene.
         *  method, effectively allowing to run both client and server in the same scene.
@@ -3140,12 +3540,6 @@
         * or
         */
         class Rid extends System.ValueType implements System.IEquatable$1<Godot.Rid>
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /** .
-        */
-        class InputEvent extends Godot.Resource implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
         }
@@ -3789,18 +4183,6 @@
             */
             public GetRelativeTransformToParent ($parent: Godot.Node) : Godot.Transform2D
             public constructor ()
-        }
-        /**
-        * 2×3 matrix (2 rows, 3 columns) used for 2D linear transformations.
-        * It can represent transformations such as translation, rotation, or scaling.
-        * It consists of a three
-        * values: x, y, and the origin.
-        * For more information, read this documentation article:
-        * https://docs.godotengine.org/en/latest/tutorials/math/matrices_and_transforms.html
-        */
-        class Transform2D extends System.ValueType implements System.IEquatable$1<Godot.Transform2D>
-        {
-            protected [__keep_incompatibility]: never;
         }
         /**
         *  methods.
@@ -4495,6 +4877,16 @@
         interface IReadOnlyCollection$1<T> extends System.Collections.Generic.IEnumerable$1<T>, System.Collections.IEnumerable
         {
         }
+        interface IDictionary$2<TKey, TValue> extends System.Collections.Generic.ICollection$1<System.Collections.Generic.KeyValuePair$2<TKey, TValue>>, System.Collections.Generic.IEnumerable$1<System.Collections.Generic.KeyValuePair$2<TKey, TValue>>, System.Collections.IEnumerable
+        {
+        }
+        class KeyValuePair$2<TKey, TValue> extends System.ValueType
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        interface IReadOnlyDictionary$2<TKey, TValue> extends System.Collections.Generic.IReadOnlyCollection$1<System.Collections.Generic.KeyValuePair$2<TKey, TValue>>, System.Collections.Generic.IEnumerable$1<System.Collections.Generic.KeyValuePair$2<TKey, TValue>>, System.Collections.IEnumerable
+        {
+        }
     }
     namespace System.Reflection {
         class MemberInfo extends System.Object implements System.Reflection.ICustomAttributeProvider
@@ -4582,6 +4974,63 @@
         enum CompressionMode
         { Fastlz = 0, Deflate = 1, Zstd = 2, GZip = 3, Brotli = 4 }
     }
+    namespace Godot.NativeInterop {
+        class godot_string_name extends System.ValueType
+        {
+            protected [__keep_incompatibility]: never;
+        }
+    }
+    namespace Godot.Input {
+        enum MouseModeEnum
+        { Visible = 0, Hidden = 1, Captured = 2, Confined = 3, ConfinedHidden = 4, Max = 5 }
+        enum CursorShape
+        { Arrow = 0, Ibeam = 1, PointingHand = 2, Cross = 3, Wait = 4, Busy = 5, Drag = 6, CanDrop = 7, Forbidden = 8, Vsize = 9, Hsize = 10, Bdiagsize = 11, Fdiagsize = 12, Move = 13, Vsplit = 14, Hsplit = 15, Help = 16 }
+        interface JoyConnectionChangedEventHandler
+        { 
+        (device: bigint, connected: boolean) : void; 
+        Invoke?: (device: bigint, connected: boolean) => void;
+        }
+        var JoyConnectionChangedEventHandler: { new (func: (device: bigint, connected: boolean) => void): JoyConnectionChangedEventHandler; }
+    }
+    namespace Godot.Collections {
+        /**
+        * Wrapper around Godot's Dictionary class, a dictionary of Variant
+        * typed elements allocated in the engine in C++. Useful when
+        * interfacing with the engine.
+        */
+        class Dictionary extends System.Object implements System.Collections.Generic.IDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.ICollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.Generic.IEnumerable$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.IReadOnlyCollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        class Array$1<T> extends System.Object implements System.Collections.Generic.IList$1<T>, System.Collections.Generic.ICollection$1<T>, System.Collections.Generic.IEnumerable$1<T>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyList$1<T>, System.Collections.Generic.IReadOnlyCollection$1<T>, Godot.Collections.IGenericGodotArray
+        {
+            protected [__keep_incompatibility]: never;
+            public [Symbol.iterator]() : IterableIterator<T>
+        }
+        interface IGenericGodotArray
+        {
+        }
+        /**
+        * Wrapper around Godot's Array class, an array of Variant
+        * typed elements allocated in the engine in C++. Useful when
+        * interfacing with the engine. Otherwise prefer .NET collections
+        * such as
+        * or
+        * .
+        */
+        class Array extends System.Object implements System.Collections.Generic.IList$1<Godot.Variant>, System.Collections.Generic.ICollection$1<Godot.Variant>, System.Collections.Generic.IEnumerable$1<Godot.Variant>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyList$1<Godot.Variant>, System.Collections.Generic.IReadOnlyCollection$1<Godot.Variant>, System.Collections.ICollection, System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+    }
+    namespace System.Runtime.Serialization {
+        interface ISerializable
+        {
+        }
+        interface IDeserializationCallback
+        {
+        }
+    }
     namespace Godot.Node {
         enum ProcessModeEnum
         { Inherit = 0, Pausable = 1, WhenPaused = 2, Always = 3, Disabled = 4 }
@@ -4619,36 +5068,6 @@
         Invoke?: (node: Godot.Node) => void;
         }
         var EditorDescriptionChangedEventHandler: { new (func: (node: Godot.Node) => void): EditorDescriptionChangedEventHandler; }
-    }
-    namespace Godot.Collections {
-        class Array$1<T> extends System.Object implements System.Collections.Generic.IList$1<T>, System.Collections.Generic.ICollection$1<T>, System.Collections.Generic.IEnumerable$1<T>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyList$1<T>, System.Collections.Generic.IReadOnlyCollection$1<T>, Godot.Collections.IGenericGodotArray
-        {
-            protected [__keep_incompatibility]: never;
-            public [Symbol.iterator]() : IterableIterator<T>
-        }
-        interface IGenericGodotArray
-        {
-        }
-        /**
-        * Wrapper around Godot's Array class, an array of Variant
-        * typed elements allocated in the engine in C++. Useful when
-        * interfacing with the engine. Otherwise prefer .NET collections
-        * such as
-        * or
-        * .
-        */
-        class Array extends System.Object implements System.Collections.Generic.IList$1<Godot.Variant>, System.Collections.Generic.ICollection$1<Godot.Variant>, System.Collections.Generic.IEnumerable$1<Godot.Variant>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyList$1<Godot.Variant>, System.Collections.Generic.IReadOnlyCollection$1<Godot.Variant>, System.Collections.ICollection, System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-    }
-    namespace System.Runtime.Serialization {
-        interface ISerializable
-        {
-        }
-        interface IDeserializationCallback
-        {
-        }
     }
     namespace Godot.Vector2 {
         enum Axis
