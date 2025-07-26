@@ -4822,6 +4822,131 @@
             public constructor ()
         }
         /**
+        * The Time singleton allows converting time between various formats and also getting time information from the system.
+        * , etc.
+        * Conversion methods assume "the same timezone", and do not handle timezone conversions or DST automatically. Leap seconds are also not handled, they must be done manually if desired. Suffixes such as "Z" are not handled, you need to strip them away manually.
+        * .
+        *  for precise time calculation instead, since they are guaranteed to be monotonic (i.e. never decrease).
+        */
+        class Time extends System.Object
+        {
+            protected [__keep_incompatibility]: never;
+            public static get Singleton(): Godot.TimeInstance;
+            /**
+            * .
+            *  if the Unix timestamp is the current time, with the exception of Daylight Savings Time as it cannot be determined from the epoch.
+            */
+            public static GetDatetimeDictFromUnixTime ($unixTimeVal: bigint) : Godot.Collections.Dictionary
+            /** .
+            */
+            public static GetDateDictFromUnixTime ($unixTimeVal: bigint) : Godot.Collections.Dictionary
+            /** .
+            */
+            public static GetTimeDictFromUnixTime ($unixTimeVal: bigint) : Godot.Collections.Dictionary
+            /**
+            * Converts the given Unix timestamp to an ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS).
+            * , the date and time bits are separated by an empty space character instead of the letter T.
+            */
+            public static GetDatetimeStringFromUnixTime ($unixTimeVal: bigint, $useSpace?: boolean) : string
+            /** Converts the given Unix timestamp to an ISO 8601 date string (YYYY-MM-DD).
+            */
+            public static GetDateStringFromUnixTime ($unixTimeVal: bigint) : string
+            /** Converts the given Unix timestamp to an ISO 8601 time string (HH:MM:SS).
+            */
+            public static GetTimeStringFromUnixTime ($unixTimeVal: bigint) : string
+            /**
+            * .
+            *  entry is excluded (the calculation is relatively expensive).
+            *  Any decimal fraction in the time string will be ignored silently.
+            */
+            public static GetDatetimeDictFromDatetimeString ($datetime: string, $weekday: boolean) : Godot.Collections.Dictionary
+            /**
+            * Converts the given dictionary of keys to an ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS).
+            * ) are ignored.
+            *  is returned. If some keys are omitted, they default to the equivalent values for the Unix epoch timestamp 0 (1970-01-01 at 00:00:00).
+            * , the date and time bits are separated by an empty space character instead of the letter T.
+            */
+            public static GetDatetimeStringFromDatetimeDict ($datetime: Godot.Collections.Dictionary, $useSpace: boolean) : string
+            /**
+            * Converts a dictionary of time values to a Unix timestamp.
+            * ) are ignored.
+            *  is returned. If some keys are omitted, they default to the equivalent values for the Unix epoch timestamp 0 (1970-01-01 at 00:00:00).
+            *  directly into this function and get the same as what was put in.
+            *  Unix timestamps are often in UTC. This method does not do any timezone conversion, so the timestamp will be in the same timezone as the given datetime dictionary.
+            */
+            public static GetUnixTimeFromDatetimeDict ($datetime: Godot.Collections.Dictionary) : bigint
+            /**
+            * Converts the given ISO 8601 date and/or time string to a Unix timestamp. The string can contain a date only, a time only, or both.
+            *  Unix timestamps are often in UTC. This method does not do any timezone conversion, so the timestamp will be in the same timezone as the given datetime string.
+            *  Any decimal fraction in the time string will be ignored silently.
+            */
+            public static GetUnixTimeFromDatetimeString ($datetime: string) : bigint
+            /** Converts the given timezone offset in minutes to a timezone offset string. For example, -480 returns "-08:00", 345 returns "+05:45", and 0 returns "+00:00".
+            */
+            public static GetOffsetStringFromOffsetMinutes ($offsetMinutes: bigint) : string
+            /**  (Daylight Savings Time).
+            */
+            public static GetDatetimeDictFromSystem ($utc?: boolean) : Godot.Collections.Dictionary
+            /**
+            * .
+            * , otherwise they are in UTC.
+            */
+            public static GetDateDictFromSystem ($utc?: boolean) : Godot.Collections.Dictionary
+            /**
+            * .
+            * , otherwise they are in UTC.
+            */
+            public static GetTimeDictFromSystem ($utc?: boolean) : Godot.Collections.Dictionary
+            /**
+            * Returns the current date and time as an ISO 8601 date and time string (YYYY-MM-DDTHH:MM:SS).
+            * , otherwise they are in UTC.
+            * , the date and time bits are separated by an empty space character instead of the letter T.
+            */
+            public static GetDatetimeStringFromSystem ($utc?: boolean, $useSpace?: boolean) : string
+            /**
+            * Returns the current date as an ISO 8601 date string (YYYY-MM-DD).
+            * , otherwise they are in UTC.
+            */
+            public static GetDateStringFromSystem ($utc?: boolean) : string
+            /**
+            * Returns the current time as an ISO 8601 time string (HH:MM:SS).
+            * , otherwise they are in UTC.
+            */
+            public static GetTimeStringFromSystem ($utc?: boolean) : string
+            /**
+            * .
+            *  is the offset from UTC in minutes, since not all time zones are multiples of an hour from UTC.
+            *  is the localized name of the time zone, according to the OS locale settings of the current user.
+            */
+            public static GetTimeZoneFromSystem () : Godot.Collections.Dictionary
+            /**
+            * .
+            *  for sub-second precision.
+            */
+            public static GetUnixTimeFromSystem () : number
+            /**
+            * Returns the amount of time passed in milliseconds since the engine started.
+            * Will always be positive or 0 and uses a 64-bit value (it will wrap after roughly 500 million years).
+            */
+            public static GetTicksMsec () : bigint
+            /**
+            * Returns the amount of time passed in microseconds since the engine started.
+            * Will always be positive or 0 and uses a 64-bit value (it will wrap after roughly half a million years).
+            */
+            public static GetTicksUsec () : bigint
+        }
+        /**
+        * The Time singleton allows converting time between various formats and also getting time information from the system.
+        * , etc.
+        * Conversion methods assume "the same timezone", and do not handle timezone conversions or DST automatically. Leap seconds are also not handled, they must be done manually if desired. Suffixes such as "Z" are not handled, you need to strip them away manually.
+        * .
+        *  for precise time calculation instead, since they are guaranteed to be monotonic (i.e. never decrease).
+        */
+        class TimeInstance extends Godot.GodotObject implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
         * .
         *  has a reference to an implementation of this class and uses it to provide multiplayer capabilities (i.e. RPCs) across the whole scene.
         *  method, effectively allowing to run both client and server in the same scene.

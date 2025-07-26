@@ -1,5 +1,5 @@
 import { defineConfig } from 'tsdown'
-import { writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, statSync } from 'node:fs'
 import { globSync } from 'glob'
 
 const createResYaml = (jsPath: string) => `[gd_resource type="Resource" script_class="JsSource" load_steps=2 format=3]

@@ -1,7 +1,7 @@
 import { count$ } from './CountLabel'
 import { defineComponent, Godot } from './utils'
 
-export default defineComponent<CS.Godot.Sprite2D>(() => {
+export default defineComponent<CS.Godot.Sprite2D>(function () {
   let isMovingRight = true
   let isDragging = false
   let isHovered = false
@@ -9,10 +9,14 @@ export default defineComponent<CS.Godot.Sprite2D>(() => {
   const textLabel = new Godot.Label()
   textLabel.Text = 'Hello, Godot with JS!'
 
+  const originalPosition = this.Position
+
+  let passedTime = 0
   return {
     onProcess(delta) {
       if (!isHovered) {
-        this.Position = new Godot.Vector2(this.Position.X + (isMovingRight ? 100 : -100) * delta, this.Position.Y)
+        passedTime += delta
+        this.Position = new Godot.Vector2(originalPosition.X + Math.sin(passedTime * 2) * 100, this.Position.Y)
       }
       if (isDragging) {
         this.Position = this.GetViewport().GetMousePosition()

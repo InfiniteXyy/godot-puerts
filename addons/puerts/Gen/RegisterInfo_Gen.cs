@@ -1796,6 +1796,130 @@ namespace PuertsStaticWrap
                 }
             };
         }
+        public static RegisterInfo GetRegisterInfo_Godot_Time_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {"GetDatetimeDictFromUnixTime_static", new MemberRegisterInfo { Name = "GetDatetimeDictFromUnixTime", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDatetimeDictFromUnixTime
+#endif
+                    }},
+                    {"GetDateDictFromUnixTime_static", new MemberRegisterInfo { Name = "GetDateDictFromUnixTime", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDateDictFromUnixTime
+#endif
+                    }},
+                    {"GetTimeDictFromUnixTime_static", new MemberRegisterInfo { Name = "GetTimeDictFromUnixTime", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTimeDictFromUnixTime
+#endif
+                    }},
+                    {"GetDatetimeStringFromUnixTime_static", new MemberRegisterInfo { Name = "GetDatetimeStringFromUnixTime", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDatetimeStringFromUnixTime
+#endif
+                    }},
+                    {"GetDateStringFromUnixTime_static", new MemberRegisterInfo { Name = "GetDateStringFromUnixTime", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDateStringFromUnixTime
+#endif
+                    }},
+                    {"GetTimeStringFromUnixTime_static", new MemberRegisterInfo { Name = "GetTimeStringFromUnixTime", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTimeStringFromUnixTime
+#endif
+                    }},
+                    {"GetDatetimeDictFromDatetimeString_static", new MemberRegisterInfo { Name = "GetDatetimeDictFromDatetimeString", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDatetimeDictFromDatetimeString
+#endif
+                    }},
+                    {"GetDatetimeStringFromDatetimeDict_static", new MemberRegisterInfo { Name = "GetDatetimeStringFromDatetimeDict", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDatetimeStringFromDatetimeDict
+#endif
+                    }},
+                    {"GetUnixTimeFromDatetimeDict_static", new MemberRegisterInfo { Name = "GetUnixTimeFromDatetimeDict", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetUnixTimeFromDatetimeDict
+#endif
+                    }},
+                    {"GetUnixTimeFromDatetimeString_static", new MemberRegisterInfo { Name = "GetUnixTimeFromDatetimeString", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetUnixTimeFromDatetimeString
+#endif
+                    }},
+                    {"GetOffsetStringFromOffsetMinutes_static", new MemberRegisterInfo { Name = "GetOffsetStringFromOffsetMinutes", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetOffsetStringFromOffsetMinutes
+#endif
+                    }},
+                    {"GetDatetimeDictFromSystem_static", new MemberRegisterInfo { Name = "GetDatetimeDictFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDatetimeDictFromSystem
+#endif
+                    }},
+                    {"GetDateDictFromSystem_static", new MemberRegisterInfo { Name = "GetDateDictFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDateDictFromSystem
+#endif
+                    }},
+                    {"GetTimeDictFromSystem_static", new MemberRegisterInfo { Name = "GetTimeDictFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTimeDictFromSystem
+#endif
+                    }},
+                    {"GetDatetimeStringFromSystem_static", new MemberRegisterInfo { Name = "GetDatetimeStringFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDatetimeStringFromSystem
+#endif
+                    }},
+                    {"GetDateStringFromSystem_static", new MemberRegisterInfo { Name = "GetDateStringFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetDateStringFromSystem
+#endif
+                    }},
+                    {"GetTimeStringFromSystem_static", new MemberRegisterInfo { Name = "GetTimeStringFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTimeStringFromSystem
+#endif
+                    }},
+                    {"GetTimeZoneFromSystem_static", new MemberRegisterInfo { Name = "GetTimeZoneFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTimeZoneFromSystem
+#endif
+                    }},
+                    {"GetUnixTimeFromSystem_static", new MemberRegisterInfo { Name = "GetUnixTimeFromSystem", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetUnixTimeFromSystem
+#endif
+                    }},
+                    {"GetTicksMsec_static", new MemberRegisterInfo { Name = "GetTicksMsec", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTicksMsec
+#endif
+                    }},
+                    {"GetTicksUsec_static", new MemberRegisterInfo { Name = "GetTicksUsec", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Time_Wrap.F_GetTicksUsec
+#endif
+                    }},
+                    {"Singleton_static", new MemberRegisterInfo { Name = "Singleton", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Time_Wrap.G_Singleton
+#endif
+                    }},
+                }
+            };
+        }
         public static RegisterInfo GetRegisterInfo_Godot_Node_Wrap() 
         {
             return new RegisterInfo 
@@ -5821,6 +5945,7 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.InputEvent), GetRegisterInfo_Godot_InputEvent_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.InputEventMouse), GetRegisterInfo_Godot_InputEventMouse_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.InputEventMouseButton), GetRegisterInfo_Godot_InputEventMouseButton_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Time), GetRegisterInfo_Godot_Time_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Node), GetRegisterInfo_Godot_Node_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Node2D), GetRegisterInfo_Godot_Node2D_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Vector2), GetRegisterInfo_Godot_Vector2_Wrap);

@@ -1,63 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://ca3tpbomkekmx"]
+[gd_scene load_steps=5 format=3 uid="uid://ca3tpbomkekmx"]
 
-[ext_resource type="Texture2D" uid="uid://1aj8cngpv4hl" path="res://icon.svg" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://d8lc442qasvd" path="res://scripts/helper/JsComponentSprite2D.cs" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://db3glh6wnd8sr" path="res://scenes/icon.tscn" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://b6vlvfr4d4p3u" path="res://scripts/helper/JsComponentLabel.cs" id="3_jyhfs"]
-[ext_resource type="Resource" path="res://scripts/dist/Icon.tres" id="3_tefeu"]
-[ext_resource type="Script" uid="uid://c0yaadnl7vcqk" path="res://scripts/helper/JsMachine.cs" id="4_jyhfs"]
 [ext_resource type="Resource" path="res://scripts/dist/CountLabel.tres" id="5_o6xl0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
-size = Vector2(128, 126)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wfyh"]
 font_size = 40
 
 [node name="Main" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" parent="." instance=ExtResource("1_sugp2")]
 position = Vector2(484, 329)
-texture = ExtResource("1_o5qli")
-script = ExtResource("2_sugp2")
-jsSource = ExtResource("3_tefeu")
 
-[node name="Area2D" type="Area2D" parent="Icon"]
+[node name="Icon2" parent="." instance=ExtResource("1_sugp2")]
+position = Vector2(200, 502)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
-shape = SubResource("RectangleShape2D_0wfyh")
+[node name="Icon3" parent="." instance=ExtResource("1_sugp2")]
+position = Vector2(224, 166)
 
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(165, 491)
-texture = ExtResource("1_o5qli")
-script = ExtResource("2_sugp2")
-jsSource = ExtResource("3_tefeu")
-
-[node name="Area2D" type="Area2D" parent="Icon2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon2/Area2D"]
-shape = SubResource("RectangleShape2D_0wfyh")
-
-[node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(856, 428)
-texture = ExtResource("1_o5qli")
-script = ExtResource("2_sugp2")
-jsSource = ExtResource("3_tefeu")
-
-[node name="Area2D" type="Area2D" parent="Icon3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon3/Area2D"]
-shape = SubResource("RectangleShape2D_0wfyh")
-
-[node name="Icon4" type="Sprite2D" parent="."]
-position = Vector2(192, 120)
-texture = ExtResource("1_o5qli")
-script = ExtResource("2_sugp2")
-jsSource = ExtResource("3_tefeu")
-
-[node name="Area2D" type="Area2D" parent="Icon4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon4/Area2D"]
-shape = SubResource("RectangleShape2D_0wfyh")
+[node name="Icon4" parent="." instance=ExtResource("1_sugp2")]
+position = Vector2(818, 247)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 28.0
@@ -68,6 +30,3 @@ text = "Has dragged 0 icon"
 label_settings = SubResource("LabelSettings_0wfyh")
 script = ExtResource("3_jyhfs")
 jsSource = ExtResource("5_o6xl0")
-
-[node name="JsMachine" type="Node" parent="."]
-script = ExtResource("4_jyhfs")

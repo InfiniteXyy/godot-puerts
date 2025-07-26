@@ -21,6 +21,7 @@ public class PuerTSConfig
                 typeof(Godot.InputEvent),
                 typeof(Godot.InputEventMouse),
                 typeof(Godot.InputEventMouseButton),
+                typeof(Godot.Time),
                 typeof(Godot.Node),
                 typeof(Godot.Node2D),
                 typeof(Godot.Vector2),

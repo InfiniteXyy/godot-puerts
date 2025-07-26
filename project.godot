@@ -15,6 +15,10 @@ run/main_scene="uid://ca3tpbomkekmx"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+JsMachine="*res://scripts/helper/JsMachine.cs"
+
 [dotnet]
 
 project/assembly_name="godot-puerts"
