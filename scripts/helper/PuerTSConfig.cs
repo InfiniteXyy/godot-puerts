@@ -24,7 +24,6 @@ public class PuerTSConfig
                 typeof(Godot.Node),
                 typeof(Godot.Node2D),
                 typeof(Godot.Vector2),
-                typeof(Godot.Vector2),
                 typeof(Godot.Area2D),
                 typeof(Godot.Sprite2D),
                 typeof(Godot.CollisionObject2D),
@@ -32,7 +31,8 @@ public class PuerTSConfig
                 typeof(Godot.Texture2D),
                 typeof(Godot.Color),
                 typeof(Godot.CanvasItem),
-                typeof(JsComponent)
+                typeof(Godot.Label),
+                typeof(IJsComponent)
             };
     }
   }

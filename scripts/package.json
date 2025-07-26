@@ -2,10 +2,13 @@
   "name": "scripts",
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@preact/signals-core": "^1.11.0",
+    "tsdown": "^0.13.0"
+  },
   "peerDependencies": {
     "typescript": "^5"
   },
@@ -13,5 +16,6 @@
     "printWidth": 120,
     "singleQuote": true,
     "semi": false
-  }
+  },
+  "dependencies": {}
 }

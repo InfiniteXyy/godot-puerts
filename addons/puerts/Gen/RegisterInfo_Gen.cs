@@ -5396,7 +5396,7 @@ namespace PuertsStaticWrap
                 }
             };
         }
-        public static RegisterInfo GetRegisterInfo_JsComponent_Wrap() 
+        public static RegisterInfo GetRegisterInfo_Godot_Label_Wrap() 
         {
             return new RegisterInfo 
             {
@@ -5409,57 +5409,401 @@ namespace PuertsStaticWrap
                     
                     {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Constructor = JsComponent_Wrap.Constructor
+                    , Constructor = Godot_Label_Wrap.Constructor
 #endif
                     }},
-                    {"_Ready", new MemberRegisterInfo { Name = "_Ready", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"SetHorizontalAlignment", new MemberRegisterInfo { Name = "SetHorizontalAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Method = JsComponent_Wrap.M__Ready
+                    , Method = Godot_Label_Wrap.M_SetHorizontalAlignment
 #endif
                     }},
-                    {"_Process", new MemberRegisterInfo { Name = "_Process", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GetHorizontalAlignment", new MemberRegisterInfo { Name = "GetHorizontalAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Method = JsComponent_Wrap.M__Process
+                    , Method = Godot_Label_Wrap.M_GetHorizontalAlignment
 #endif
                     }},
-                    {"_PhysicsProcess", new MemberRegisterInfo { Name = "_PhysicsProcess", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"SetVerticalAlignment", new MemberRegisterInfo { Name = "SetVerticalAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Method = JsComponent_Wrap.M__PhysicsProcess
+                    , Method = Godot_Label_Wrap.M_SetVerticalAlignment
 #endif
                     }},
-                    {"_Input", new MemberRegisterInfo { Name = "_Input", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"GetVerticalAlignment", new MemberRegisterInfo { Name = "GetVerticalAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Method = JsComponent_Wrap.M__Input
+                    , Method = Godot_Label_Wrap.M_GetVerticalAlignment
 #endif
                     }},
-                    {"_ExitTree", new MemberRegisterInfo { Name = "_ExitTree", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+                    {"SetText", new MemberRegisterInfo { Name = "SetText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , Method = JsComponent_Wrap.M__ExitTree
+                    , Method = Godot_Label_Wrap.M_SetText
 #endif
                     }},
-                    {"jsOnReady", new MemberRegisterInfo { Name = "jsOnReady", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"GetText", new MemberRegisterInfo { Name = "GetText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , PropertyGetter = JsComponent_Wrap.G_jsOnReady, PropertySetter = JsComponent_Wrap.S_jsOnReady
+                    , Method = Godot_Label_Wrap.M_GetText
 #endif
                     }},
-                    {"jsOnProcess", new MemberRegisterInfo { Name = "jsOnProcess", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"SetLabelSettings", new MemberRegisterInfo { Name = "SetLabelSettings", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , PropertyGetter = JsComponent_Wrap.G_jsOnProcess, PropertySetter = JsComponent_Wrap.S_jsOnProcess
+                    , Method = Godot_Label_Wrap.M_SetLabelSettings
 #endif
                     }},
-                    {"jsOnPhysicsProcess", new MemberRegisterInfo { Name = "jsOnPhysicsProcess", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"GetLabelSettings", new MemberRegisterInfo { Name = "GetLabelSettings", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , PropertyGetter = JsComponent_Wrap.G_jsOnPhysicsProcess, PropertySetter = JsComponent_Wrap.S_jsOnPhysicsProcess
+                    , Method = Godot_Label_Wrap.M_GetLabelSettings
 #endif
                     }},
-                    {"jsOnInput", new MemberRegisterInfo { Name = "jsOnInput", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"SetTextDirection", new MemberRegisterInfo { Name = "SetTextDirection", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , PropertyGetter = JsComponent_Wrap.G_jsOnInput, PropertySetter = JsComponent_Wrap.S_jsOnInput
+                    , Method = Godot_Label_Wrap.M_SetTextDirection
 #endif
                     }},
-                    {"jsOnExitTree", new MemberRegisterInfo { Name = "jsOnExitTree", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+                    {"GetTextDirection", new MemberRegisterInfo { Name = "GetTextDirection", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
 #if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
-                    , PropertyGetter = JsComponent_Wrap.G_jsOnExitTree, PropertySetter = JsComponent_Wrap.S_jsOnExitTree
+                    , Method = Godot_Label_Wrap.M_GetTextDirection
+#endif
+                    }},
+                    {"SetLanguage", new MemberRegisterInfo { Name = "SetLanguage", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetLanguage
+#endif
+                    }},
+                    {"GetLanguage", new MemberRegisterInfo { Name = "GetLanguage", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetLanguage
+#endif
+                    }},
+                    {"SetParagraphSeparator", new MemberRegisterInfo { Name = "SetParagraphSeparator", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetParagraphSeparator
+#endif
+                    }},
+                    {"GetParagraphSeparator", new MemberRegisterInfo { Name = "GetParagraphSeparator", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetParagraphSeparator
+#endif
+                    }},
+                    {"SetAutowrapMode", new MemberRegisterInfo { Name = "SetAutowrapMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetAutowrapMode
+#endif
+                    }},
+                    {"GetAutowrapMode", new MemberRegisterInfo { Name = "GetAutowrapMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetAutowrapMode
+#endif
+                    }},
+                    {"SetAutowrapTrimFlags", new MemberRegisterInfo { Name = "SetAutowrapTrimFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetAutowrapTrimFlags
+#endif
+                    }},
+                    {"GetAutowrapTrimFlags", new MemberRegisterInfo { Name = "GetAutowrapTrimFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetAutowrapTrimFlags
+#endif
+                    }},
+                    {"SetJustificationFlags", new MemberRegisterInfo { Name = "SetJustificationFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetJustificationFlags
+#endif
+                    }},
+                    {"GetJustificationFlags", new MemberRegisterInfo { Name = "GetJustificationFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetJustificationFlags
+#endif
+                    }},
+                    {"SetClipText", new MemberRegisterInfo { Name = "SetClipText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetClipText
+#endif
+                    }},
+                    {"IsClippingText", new MemberRegisterInfo { Name = "IsClippingText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_IsClippingText
+#endif
+                    }},
+                    {"SetTabStops", new MemberRegisterInfo { Name = "SetTabStops", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetTabStops
+#endif
+                    }},
+                    {"GetTabStops", new MemberRegisterInfo { Name = "GetTabStops", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetTabStops
+#endif
+                    }},
+                    {"SetTextOverrunBehavior", new MemberRegisterInfo { Name = "SetTextOverrunBehavior", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetTextOverrunBehavior
+#endif
+                    }},
+                    {"GetTextOverrunBehavior", new MemberRegisterInfo { Name = "GetTextOverrunBehavior", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetTextOverrunBehavior
+#endif
+                    }},
+                    {"SetEllipsisChar", new MemberRegisterInfo { Name = "SetEllipsisChar", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetEllipsisChar
+#endif
+                    }},
+                    {"GetEllipsisChar", new MemberRegisterInfo { Name = "GetEllipsisChar", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetEllipsisChar
+#endif
+                    }},
+                    {"SetUppercase", new MemberRegisterInfo { Name = "SetUppercase", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetUppercase
+#endif
+                    }},
+                    {"IsUppercase", new MemberRegisterInfo { Name = "IsUppercase", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_IsUppercase
+#endif
+                    }},
+                    {"GetLineHeight", new MemberRegisterInfo { Name = "GetLineHeight", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetLineHeight
+#endif
+                    }},
+                    {"GetLineCount", new MemberRegisterInfo { Name = "GetLineCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetLineCount
+#endif
+                    }},
+                    {"GetVisibleLineCount", new MemberRegisterInfo { Name = "GetVisibleLineCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetVisibleLineCount
+#endif
+                    }},
+                    {"GetTotalCharacterCount", new MemberRegisterInfo { Name = "GetTotalCharacterCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetTotalCharacterCount
+#endif
+                    }},
+                    {"SetVisibleCharacters", new MemberRegisterInfo { Name = "SetVisibleCharacters", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetVisibleCharacters
+#endif
+                    }},
+                    {"GetVisibleCharacters", new MemberRegisterInfo { Name = "GetVisibleCharacters", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetVisibleCharacters
+#endif
+                    }},
+                    {"GetVisibleCharactersBehavior", new MemberRegisterInfo { Name = "GetVisibleCharactersBehavior", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetVisibleCharactersBehavior
+#endif
+                    }},
+                    {"SetVisibleCharactersBehavior", new MemberRegisterInfo { Name = "SetVisibleCharactersBehavior", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetVisibleCharactersBehavior
+#endif
+                    }},
+                    {"SetVisibleRatio", new MemberRegisterInfo { Name = "SetVisibleRatio", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetVisibleRatio
+#endif
+                    }},
+                    {"GetVisibleRatio", new MemberRegisterInfo { Name = "GetVisibleRatio", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetVisibleRatio
+#endif
+                    }},
+                    {"SetLinesSkipped", new MemberRegisterInfo { Name = "SetLinesSkipped", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetLinesSkipped
+#endif
+                    }},
+                    {"GetLinesSkipped", new MemberRegisterInfo { Name = "GetLinesSkipped", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetLinesSkipped
+#endif
+                    }},
+                    {"SetMaxLinesVisible", new MemberRegisterInfo { Name = "SetMaxLinesVisible", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetMaxLinesVisible
+#endif
+                    }},
+                    {"GetMaxLinesVisible", new MemberRegisterInfo { Name = "GetMaxLinesVisible", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetMaxLinesVisible
+#endif
+                    }},
+                    {"SetStructuredTextBidiOverride", new MemberRegisterInfo { Name = "SetStructuredTextBidiOverride", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetStructuredTextBidiOverride
+#endif
+                    }},
+                    {"GetStructuredTextBidiOverride", new MemberRegisterInfo { Name = "GetStructuredTextBidiOverride", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetStructuredTextBidiOverride
+#endif
+                    }},
+                    {"SetStructuredTextBidiOverrideOptions", new MemberRegisterInfo { Name = "SetStructuredTextBidiOverrideOptions", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_SetStructuredTextBidiOverrideOptions
+#endif
+                    }},
+                    {"GetStructuredTextBidiOverrideOptions", new MemberRegisterInfo { Name = "GetStructuredTextBidiOverrideOptions", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetStructuredTextBidiOverrideOptions
+#endif
+                    }},
+                    {"GetCharacterBounds", new MemberRegisterInfo { Name = "GetCharacterBounds", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Label_Wrap.M_GetCharacterBounds
+#endif
+                    }},
+                    {"Text", new MemberRegisterInfo { Name = "Text", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_Text, PropertySetter = Godot_Label_Wrap.S_Text
+#endif
+                    }},
+                    {"LabelSettings", new MemberRegisterInfo { Name = "LabelSettings", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_LabelSettings, PropertySetter = Godot_Label_Wrap.S_LabelSettings
+#endif
+                    }},
+                    {"HorizontalAlignment", new MemberRegisterInfo { Name = "HorizontalAlignment", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_HorizontalAlignment, PropertySetter = Godot_Label_Wrap.S_HorizontalAlignment
+#endif
+                    }},
+                    {"VerticalAlignment", new MemberRegisterInfo { Name = "VerticalAlignment", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_VerticalAlignment, PropertySetter = Godot_Label_Wrap.S_VerticalAlignment
+#endif
+                    }},
+                    {"AutowrapMode", new MemberRegisterInfo { Name = "AutowrapMode", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_AutowrapMode, PropertySetter = Godot_Label_Wrap.S_AutowrapMode
+#endif
+                    }},
+                    {"AutowrapTrimFlags", new MemberRegisterInfo { Name = "AutowrapTrimFlags", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_AutowrapTrimFlags, PropertySetter = Godot_Label_Wrap.S_AutowrapTrimFlags
+#endif
+                    }},
+                    {"JustificationFlags", new MemberRegisterInfo { Name = "JustificationFlags", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_JustificationFlags, PropertySetter = Godot_Label_Wrap.S_JustificationFlags
+#endif
+                    }},
+                    {"ParagraphSeparator", new MemberRegisterInfo { Name = "ParagraphSeparator", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_ParagraphSeparator, PropertySetter = Godot_Label_Wrap.S_ParagraphSeparator
+#endif
+                    }},
+                    {"ClipText", new MemberRegisterInfo { Name = "ClipText", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_ClipText, PropertySetter = Godot_Label_Wrap.S_ClipText
+#endif
+                    }},
+                    {"TextOverrunBehavior", new MemberRegisterInfo { Name = "TextOverrunBehavior", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_TextOverrunBehavior, PropertySetter = Godot_Label_Wrap.S_TextOverrunBehavior
+#endif
+                    }},
+                    {"EllipsisChar", new MemberRegisterInfo { Name = "EllipsisChar", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_EllipsisChar, PropertySetter = Godot_Label_Wrap.S_EllipsisChar
+#endif
+                    }},
+                    {"Uppercase", new MemberRegisterInfo { Name = "Uppercase", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_Uppercase, PropertySetter = Godot_Label_Wrap.S_Uppercase
+#endif
+                    }},
+                    {"TabStops", new MemberRegisterInfo { Name = "TabStops", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_TabStops, PropertySetter = Godot_Label_Wrap.S_TabStops
+#endif
+                    }},
+                    {"LinesSkipped", new MemberRegisterInfo { Name = "LinesSkipped", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_LinesSkipped, PropertySetter = Godot_Label_Wrap.S_LinesSkipped
+#endif
+                    }},
+                    {"MaxLinesVisible", new MemberRegisterInfo { Name = "MaxLinesVisible", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_MaxLinesVisible, PropertySetter = Godot_Label_Wrap.S_MaxLinesVisible
+#endif
+                    }},
+                    {"VisibleCharacters", new MemberRegisterInfo { Name = "VisibleCharacters", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_VisibleCharacters, PropertySetter = Godot_Label_Wrap.S_VisibleCharacters
+#endif
+                    }},
+                    {"VisibleCharactersBehavior", new MemberRegisterInfo { Name = "VisibleCharactersBehavior", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_VisibleCharactersBehavior, PropertySetter = Godot_Label_Wrap.S_VisibleCharactersBehavior
+#endif
+                    }},
+                    {"VisibleRatio", new MemberRegisterInfo { Name = "VisibleRatio", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_VisibleRatio, PropertySetter = Godot_Label_Wrap.S_VisibleRatio
+#endif
+                    }},
+                    {"TextDirection", new MemberRegisterInfo { Name = "TextDirection", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_TextDirection, PropertySetter = Godot_Label_Wrap.S_TextDirection
+#endif
+                    }},
+                    {"Language", new MemberRegisterInfo { Name = "Language", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_Language, PropertySetter = Godot_Label_Wrap.S_Language
+#endif
+                    }},
+                    {"StructuredTextBidiOverride", new MemberRegisterInfo { Name = "StructuredTextBidiOverride", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_StructuredTextBidiOverride, PropertySetter = Godot_Label_Wrap.S_StructuredTextBidiOverride
+#endif
+                    }},
+                    {"StructuredTextBidiOverrideOptions", new MemberRegisterInfo { Name = "StructuredTextBidiOverrideOptions", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Label_Wrap.G_StructuredTextBidiOverrideOptions, PropertySetter = Godot_Label_Wrap.S_StructuredTextBidiOverrideOptions
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_IJsComponent_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {"JsOnReady", new MemberRegisterInfo { Name = "JsOnReady", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = IJsComponent_Wrap.G_JsOnReady, PropertySetter = IJsComponent_Wrap.S_JsOnReady
+#endif
+                    }},
+                    {"JsOnProcess", new MemberRegisterInfo { Name = "JsOnProcess", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = IJsComponent_Wrap.G_JsOnProcess, PropertySetter = IJsComponent_Wrap.S_JsOnProcess
+#endif
+                    }},
+                    {"JsOnPhysicsProcess", new MemberRegisterInfo { Name = "JsOnPhysicsProcess", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = IJsComponent_Wrap.G_JsOnPhysicsProcess, PropertySetter = IJsComponent_Wrap.S_JsOnPhysicsProcess
+#endif
+                    }},
+                    {"JsOnInput", new MemberRegisterInfo { Name = "JsOnInput", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = IJsComponent_Wrap.G_JsOnInput, PropertySetter = IJsComponent_Wrap.S_JsOnInput
+#endif
+                    }},
+                    {"JsOnExitTree", new MemberRegisterInfo { Name = "JsOnExitTree", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = IJsComponent_Wrap.G_JsOnExitTree, PropertySetter = IJsComponent_Wrap.S_JsOnExitTree
 #endif
                     }},
                 }
@@ -5487,7 +5831,8 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Texture2D), GetRegisterInfo_Godot_Texture2D_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Color), GetRegisterInfo_Godot_Color_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.CanvasItem), GetRegisterInfo_Godot_CanvasItem_Wrap);
-                jsEnv.AddRegisterInfoGetter(typeof(JsComponent), GetRegisterInfo_JsComponent_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Label), GetRegisterInfo_Godot_Label_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(IJsComponent), GetRegisterInfo_IJsComponent_Wrap);
         }
     }
 }

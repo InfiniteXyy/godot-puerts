@@ -5395,6 +5395,175 @@
         {
             protected [__keep_incompatibility]: never;
         }
+        /**  instead.
+        */
+        class Label extends Godot.Control implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** The text to display on screen.
+            */
+            public get Text(): string;
+            public set Text(value: string);
+            /**  nodes. Takes priority over theme properties.
+            */
+            public get LabelSettings(): Godot.LabelSettings;
+            public set LabelSettings(value: Godot.LabelSettings);
+            /** Controls the text's horizontal alignment. Supports left, center, right, and fill (also known as justify).
+            */
+            public get HorizontalAlignment(): Godot.HorizontalAlignment;
+            public set HorizontalAlignment(value: Godot.HorizontalAlignment);
+            /** Controls the text's vertical alignment. Supports top, center, bottom, and fill.
+            */
+            public get VerticalAlignment(): Godot.VerticalAlignment;
+            public set VerticalAlignment(value: Godot.VerticalAlignment);
+            /** , the text gets wrapped inside the node's bounding rectangle. If you resize the node, it will change its height automatically to show all the text.
+            */
+            public get AutowrapMode(): Godot.TextServer.AutowrapMode;
+            public set AutowrapMode(value: Godot.TextServer.AutowrapMode);
+            /**  for more info.
+            */
+            public get AutowrapTrimFlags(): Godot.TextServer.LineBreakFlag;
+            public set AutowrapTrimFlags(value: Godot.TextServer.LineBreakFlag);
+            /** Line fill alignment rules.
+            */
+            public get JustificationFlags(): Godot.TextServer.JustificationFlag;
+            public set JustificationFlags(value: Godot.TextServer.JustificationFlag);
+            /** String used as a paragraph separator. Each paragraph is processed independently, in its own BiDi context.
+            */
+            public get ParagraphSeparator(): string;
+            public set ParagraphSeparator(value: string);
+            /** , the Label only shows the text that fits inside its bounding rectangle and will clip text horizontally.
+            */
+            public get ClipText(): boolean;
+            public set ClipText(value: boolean);
+            /** The clipping behavior when the text exceeds the node's bounding rectangle.
+            */
+            public get TextOverrunBehavior(): Godot.TextServer.OverrunBehavior;
+            public set TextOverrunBehavior(value: Godot.TextServer.OverrunBehavior);
+            /** Ellipsis character used for text clipping.
+            */
+            public get EllipsisChar(): string;
+            public set EllipsisChar(value: string);
+            /** , all the text displays as UPPERCASE.
+            */
+            public get Uppercase(): boolean;
+            public set Uppercase(value: boolean);
+            /** Aligns text to the given tab-stops.
+            */
+            public get TabStops(): System.Array$1<number>;
+            public set TabStops(value: System.Array$1<number>);
+            /**  value.
+            */
+            public get LinesSkipped(): number;
+            public set LinesSkipped(value: number);
+            /** Limits the lines of text the node shows on screen.
+            */
+            public get MaxLinesVisible(): number;
+            public set MaxLinesVisible(value: number);
+            /**
+            * , all characters are displayed. This can be useful when animating the text appearing in a dialog box.
+            *  accordingly.
+            */
+            public get VisibleCharacters(): number;
+            public set VisibleCharacters(value: number);
+            /**  is set.
+            */
+            public get VisibleCharactersBehavior(): Godot.TextServer.VisibleCharactersBehavior;
+            public set VisibleCharactersBehavior(value: Godot.TextServer.VisibleCharactersBehavior);
+            /**
+            * , only half of the characters will be displayed. This can be useful when animating the text appearing in a dialog box.
+            *  accordingly.
+            */
+            public get VisibleRatio(): number;
+            public set VisibleRatio(value: number);
+            /** Base text writing direction.
+            */
+            public get TextDirection(): Godot.Control.TextDirection;
+            public set TextDirection(value: Godot.Control.TextDirection);
+            /** Language code used for line-breaking and text shaping algorithms, if left empty current locale is used instead.
+            */
+            public get Language(): string;
+            public set Language(value: string);
+            /** Set BiDi algorithm override for the structured text.
+            */
+            public get StructuredTextBidiOverride(): Godot.TextServer.StructuredTextParser;
+            public set StructuredTextBidiOverride(value: Godot.TextServer.StructuredTextParser);
+            /** Set additional options for BiDi override.
+            */
+            public get StructuredTextBidiOverrideOptions(): Godot.Collections.Array;
+            public set StructuredTextBidiOverrideOptions(value: Godot.Collections.Array);
+            public SetHorizontalAlignment ($alignment: Godot.HorizontalAlignment) : void
+            public GetHorizontalAlignment () : Godot.HorizontalAlignment
+            public SetVerticalAlignment ($alignment: Godot.VerticalAlignment) : void
+            public GetVerticalAlignment () : Godot.VerticalAlignment
+            public SetText ($text: string) : void
+            public GetText () : string
+            public SetLabelSettings ($settings: Godot.LabelSettings) : void
+            public GetLabelSettings () : Godot.LabelSettings
+            public SetTextDirection ($direction: Godot.Control.TextDirection) : void
+            public GetTextDirection () : Godot.Control.TextDirection
+            public SetLanguage ($language: string) : void
+            public GetLanguage () : string
+            public SetParagraphSeparator ($paragraphSeparator: string) : void
+            public GetParagraphSeparator () : string
+            public SetAutowrapMode ($autowrapMode: Godot.TextServer.AutowrapMode) : void
+            public GetAutowrapMode () : Godot.TextServer.AutowrapMode
+            public SetAutowrapTrimFlags ($autowrapTrimFlags: Godot.TextServer.LineBreakFlag) : void
+            public GetAutowrapTrimFlags () : Godot.TextServer.LineBreakFlag
+            public SetJustificationFlags ($justificationFlags: Godot.TextServer.JustificationFlag) : void
+            public GetJustificationFlags () : Godot.TextServer.JustificationFlag
+            public SetClipText ($enable: boolean) : void
+            public IsClippingText () : boolean
+            public SetTabStops ($tabStops: System.Array$1<number>) : void
+            public GetTabStops () : System.Array$1<number>
+            public SetTextOverrunBehavior ($overrunBehavior: Godot.TextServer.OverrunBehavior) : void
+            public GetTextOverrunBehavior () : Godot.TextServer.OverrunBehavior
+            public SetEllipsisChar ($char: string) : void
+            public GetEllipsisChar () : string
+            public SetUppercase ($enable: boolean) : void
+            public IsUppercase () : boolean
+            /**
+            * .
+            * , returns the biggest line height.
+            * If there are no lines, returns font size in pixels.
+            */
+            public GetLineHeight ($line?: number) : number
+            /** Returns the number of lines of text the Label has.
+            */
+            public GetLineCount () : number
+            /** 's height cannot currently display all lines.
+            */
+            public GetVisibleLineCount () : number
+            /** Returns the total number of printable characters in the text (excluding spaces and newlines).
+            */
+            public GetTotalCharacterCount () : number
+            public SetVisibleCharacters ($amount: number) : void
+            public GetVisibleCharacters () : number
+            public GetVisibleCharactersBehavior () : Godot.TextServer.VisibleCharactersBehavior
+            public SetVisibleCharactersBehavior ($behavior: Godot.TextServer.VisibleCharactersBehavior) : void
+            public SetVisibleRatio ($ratio: number) : void
+            public GetVisibleRatio () : number
+            public SetLinesSkipped ($linesSkipped: number) : void
+            public GetLinesSkipped () : number
+            public SetMaxLinesVisible ($linesVisible: number) : void
+            public GetMaxLinesVisible () : number
+            public SetStructuredTextBidiOverride ($parser: Godot.TextServer.StructuredTextParser) : void
+            public GetStructuredTextBidiOverride () : Godot.TextServer.StructuredTextParser
+            public SetStructuredTextBidiOverrideOptions ($args: Godot.Collections.Array) : void
+            public GetStructuredTextBidiOverrideOptions () : Godot.Collections.Array
+            /**  is returned. If the character is a part of a composite grapheme, the bounding rectangle of the whole grapheme is returned.
+            */
+            public GetCharacterBounds ($pos: number) : Godot.Rect2
+            public constructor ()
+        }
+        /** . The resource can be shared between multiple labels and changed on the fly, so it's convenient and flexible way to setup text style.
+        */
+        class LabelSettings extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        enum VerticalAlignment
+        { Top = 0, Center = 1, Bottom = 2, Fill = 3 }
     }
     namespace System.Numerics {
         interface IBinaryInteger$1<TSelf> extends System.Numerics.IBinaryNumber$1<TSelf>, System.Numerics.IBitwiseOperators$3<TSelf, TSelf, TSelf>, System.Numerics.INumber$1<TSelf>, System.IComparable, System.IComparable$1<TSelf>, System.Numerics.IComparisonOperators$3<TSelf, TSelf, boolean>, System.Numerics.IEqualityOperators$3<TSelf, TSelf, boolean>, System.Numerics.IModulusOperators$3<TSelf, TSelf, TSelf>, System.Numerics.INumberBase$1<TSelf>, System.Numerics.IAdditionOperators$3<TSelf, TSelf, TSelf>, System.Numerics.IAdditiveIdentity$2<TSelf, TSelf>, System.Numerics.IDecrementOperators$1<TSelf>, System.Numerics.IDivisionOperators$3<TSelf, TSelf, TSelf>, System.IEquatable$1<TSelf>, System.Numerics.IIncrementOperators$1<TSelf>, System.Numerics.IMultiplicativeIdentity$2<TSelf, TSelf>, System.Numerics.IMultiplyOperators$3<TSelf, TSelf, TSelf>, System.ISpanFormattable, System.IFormattable, System.ISpanParsable$1<TSelf>, System.IParsable$1<TSelf>, System.Numerics.ISubtractionOperators$3<TSelf, TSelf, TSelf>, System.Numerics.IUnaryPlusOperators$2<TSelf, TSelf>, System.Numerics.IUnaryNegationOperators$2<TSelf, TSelf>, System.IUtf8SpanFormattable, System.IUtf8SpanParsable$1<TSelf>, System.Numerics.IShiftOperators$3<TSelf, number, TSelf>
@@ -5854,16 +6023,26 @@
         { Horizontal = 0, Vertical = 1 }
         enum LineBreakFlag
         { None = 0, Mandatory = 1, WordBound = 2, GraphemeBound = 4, Adaptive = 8, TrimEdgeSpaces = 16, TrimIndent = 32, TrimStartEdgeSpaces = 64, TrimEndEdgeSpaces = 128 }
+        enum AutowrapMode
+        { Off = 0, Arbitrary = 1, Word = 2, WordSmart = 3 }
+        enum OverrunBehavior
+        { NoTrimming = 0, TrimChar = 1, TrimWord = 2, TrimEllipsis = 3, TrimWordEllipsis = 4, TrimEllipsisForce = 5, TrimWordEllipsisForce = 6 }
+        enum VisibleCharactersBehavior
+        { CharsBeforeShaping = 0, CharsAfterShaping = 1, GlyphsAuto = 2, GlyphsLtr = 3, GlyphsRtl = 4 }
+        enum StructuredTextParser
+        { Default = 0, Uri = 1, File = 2, Email = 3, List = 4, Gdscript = 5, Custom = 6 }
     }
-        class JsComponent extends Godot.Sprite2D implements System.IDisposable
+    namespace Godot.Control {
+        enum TextDirection
+        { Inherited = 3, Auto = 0, Ltr = 1, Rtl = 2 }
+    }
+        interface IJsComponent
         {
-            protected [__keep_incompatibility]: never;
-            public jsOnReady : System.Action
-            public jsOnProcess : System.Action$1<number>
-            public jsOnPhysicsProcess : System.Action$1<number>
-            public jsOnInput : System.Action$1<Godot.InputEvent>
-            public jsOnExitTree : System.Action
-            public constructor ()
+            JsOnReady : System.Action
+            JsOnProcess : System.Action$1<number>
+            JsOnPhysicsProcess : System.Action$1<number>
+            JsOnInput : System.Action$1<Godot.InputEvent>
+            JsOnExitTree : System.Action
         }
         namespace System.Runtime.InteropServices {
         class StructLayoutAttribute extends System.Attribute

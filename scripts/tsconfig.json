@@ -2,10 +2,11 @@
   "compilerOptions": {
     // Environment setup & latest features
     "lib": ["ESNext"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "allowJs": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+
+    "rewriteRelativeImportExtensions": true,
     "typeRoots": ["./node_modules/@types", "../addons/puerts/Gen/Typing"],
 
     // Best practices
