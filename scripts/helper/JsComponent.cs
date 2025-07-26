@@ -11,6 +11,9 @@ public partial class JsComponent : Sprite2D
 
   public Action jsOnReady;
   public Action<double> jsOnProcess;
+  public Action<double> jsOnPhysicsProcess;
+  public Action<InputEvent> jsOnInput;
+  public Action jsOnExitTree;
 
   private JsEnv scriptEnv;
 
@@ -24,9 +27,7 @@ public partial class JsComponent : Sprite2D
 
     scriptEnv = new JsEnv(new GodotDefaultLoader());
     var init = scriptEnv.ExecuteModule<Action<JsComponent>>(jsPath, "default");
-
     init(this);
-
     jsOnReady?.Invoke();
   }
 
@@ -34,5 +35,21 @@ public partial class JsComponent : Sprite2D
   {
     jsOnProcess?.Invoke(delta);
     scriptEnv.Tick();
+  }
+
+  public override void _PhysicsProcess(double delta)
+  {
+    jsOnPhysicsProcess?.Invoke(delta);
+  }
+
+  public override void _Input(InputEvent @event)
+  {
+    jsOnInput?.Invoke(@event);
+  }
+
+  public override void _ExitTree()
+  {
+    scriptEnv.Dispose();
+    jsOnExitTree?.Invoke();
   }
 }

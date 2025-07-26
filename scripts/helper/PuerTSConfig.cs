@@ -15,9 +15,12 @@ public class PuerTSConfig
             {
                 typeof(Godot.GD),
                 typeof(Godot.StringName),
+                typeof(Godot.Viewport),
                 typeof(Godot.NodePath),
                 typeof(Godot.Input),
                 typeof(Godot.InputEvent),
+                typeof(Godot.InputEventMouse),
+                typeof(Godot.InputEventMouseButton),
                 typeof(Godot.Node),
                 typeof(Godot.Node2D),
                 typeof(Godot.Vector2),

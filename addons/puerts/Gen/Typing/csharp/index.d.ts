@@ -309,10 +309,6 @@
         {
             protected [__keep_incompatibility]: never;
         }
-        class Nullable$1<T> extends System.ValueType
-        {
-            protected [__keep_incompatibility]: never;
-        }
         class Delegate extends System.Object implements System.ICloneable, System.Runtime.Serialization.ISerializable
         {
             protected [__keep_incompatibility]: never;
@@ -323,16 +319,20 @@
         Invoke?: (...args:any[]) => any;
         }
         var MulticastDelegate: { new (func: (...args:any[]) => any): MulticastDelegate; }
-        class ReadOnlySpan$1<T> extends System.ValueType
-        {
-            protected [__keep_incompatibility]: never;
-        }
         interface Action
         { 
         () : void; 
         Invoke?: () => void;
         }
         var Action: { new (func: () => void): Action; }
+        class Nullable$1<T> extends System.ValueType
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        class ReadOnlySpan$1<T> extends System.ValueType
+        {
+            protected [__keep_incompatibility]: never;
+        }
         interface Action$1<T>
         { 
         (obj: T) : void; 
@@ -2091,507 +2091,6 @@
             public constructor ($name: string)
         }
         /**
-        * A pre-parsed relative or absolute path in a scene tree,
-        * for use with
-        * and similar functions.
-        * It can reference a node, a resource within a node, or a property
-        * of a node or resource.
-        * For instance,
-        * "Path2D/PathFollow2D/Sprite2D:texture:size"
-        * would refer to the
-        * size
-        * property of the
-        * texture
-        * resource on the node named
-        * "Sprite2D"
-        * which is a child of
-        * the other named nodes in the path.
-        * You will usually just pass a string to
-        * and it will be automatically converted, but you may occasionally
-        * want to parse a path ahead of time with NodePath.
-        * Exporting a NodePath variable will give you a node selection widget
-        * in the properties panel of the editor, which can often be useful.
-        * A NodePath is composed of a list of slash-separated node names
-        * (like a filesystem path) and an optional colon-separated list of
-        * "subnames" which can be resources or properties.
-        * Note: In the editor, NodePath properties are automatically updated when moving,
-        * renaming or deleting a node in the scene tree, but they are never updated at runtime.
-        */
-        class NodePath extends System.Object implements System.IDisposable, System.IEquatable$1<Godot.NodePath>
-        {
-            protected [__keep_incompatibility]: never;
-            /**
-            * Returns
-            * if the node path is empty.
-            * @returns If the  is empty.
-            */
-            public get IsEmpty(): boolean;
-            /**
-            * Disposes of this
-            * .
-            */
-            public Dispose () : void
-            public Dispose ($disposing: boolean) : void
-            public static op_Implicit ($from: string) : Godot.NodePath
-            public static op_Implicit ($from: Godot.NodePath) : string
-            /**
-            * Returns a node path with a colon character (
-            * :
-            * ) prepended,
-            * transforming it to a pure property path with no node name (defaults
-            * to resolving from the current node).
-            * @returns The  as a pure property path.
-            */
-            public GetAsPropertyPath () : Godot.NodePath
-            /**
-            * Returns all names concatenated with a slash character (
-            * /
-            * ).
-            * @returns The names concatenated with /.
-            */
-            public GetConcatenatedNames () : string
-            /**
-            * Returns all subnames concatenated with a colon character (
-            * :
-            * )
-            * as separator, i.e. the right side of the first colon in a node path.
-            * @returns The subnames concatenated with :.
-            */
-            public GetConcatenatedSubNames () : string
-            /**
-            * Gets the node name indicated by
-            * (0 to
-            * ).
-            * @param $idx The name index.
-            * @returns The name at the given index .
-            */
-            public GetName ($idx: number) : string
-            /**
-            * Gets the number of node names which make up the path.
-            * Subnames (see
-            * ) are not included.
-            * For example,
-            * "Path2D/PathFollow2D/Sprite2D"
-            * has 3 names.
-            * @returns The number of node names which make up the path.
-            */
-            public GetNameCount () : number
-            /**
-            * Gets the resource or property name indicated by
-            * (0 to
-            * ).
-            * @param $idx The subname index.
-            * @returns The subname at the given index .
-            */
-            public GetSubName ($idx: number) : string
-            /**
-            * Gets the number of resource or property names ("subnames") in the path.
-            * Each subname is listed after a colon character (
-            * :
-            * ) in the node path.
-            * For example,
-            * "Path2D/PathFollow2D/Sprite2D:texture:load_path"
-            * has 2 subnames.
-            * @returns The number of subnames in the path.
-            */
-            public GetSubNameCount () : number
-            /**
-            * Returns
-            * if the node path is absolute (as opposed to relative),
-            * which means that it starts with a slash character (
-            * /
-            * ). Absolute node paths can
-            * be used to access the root node (
-            * "/root"
-            * ) or autoloads (e.g.
-            * "/global"
-            * if a "global" autoload was registered).
-            * @returns If the  is an absolute path.
-            */
-            public IsAbsolute () : boolean
-            public static op_Equality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
-            public static op_Inequality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
-            public Equals ($other: Godot.NodePath) : boolean
-            public Equals ($obj: any) : boolean
-            public constructor ()
-            public constructor ($path: string)
-        }
-        /**
-        *  class.
-        * .
-        */
-        class Input extends System.Object
-        {
-            protected [__keep_incompatibility]: never;
-            /** Controls the mouse mode.
-            */
-            public static get MouseMode(): Godot.Input.MouseModeEnum;
-            public static set MouseMode(value: Godot.Input.MouseModeEnum);
-            /**
-            * , similar input events sent by the operating system are accumulated. When input accumulation is enabled, all input events generated during a frame will be merged and emitted when the frame is done rendering. Therefore, this limits the number of input method calls per second to the rendering FPS.
-            * Input accumulation can be disabled to get slightly more precise/reactive input at the cost of increased CPU usage. In applications where drawing freehand lines is required, input accumulation should generally be disabled while the user is drawing the line to get results that closely follow the actual input.
-            *  by default.
-            */
-            public static get UseAccumulatedInput(): boolean;
-            public static set UseAccumulatedInput(value: boolean);
-            /** .
-            */
-            public static get EmulateMouseFromTouch(): boolean;
-            public static set EmulateMouseFromTouch(value: boolean);
-            /** .
-            */
-            public static get EmulateTouchFromMouse(): boolean;
-            public static set EmulateTouchFromMouse(value: boolean);
-            public static get Singleton(): Godot.InputInstance;
-            /** .
-            */
-            public static IsAnythingPressed () : boolean
-            /**
-            *  constant.
-            * .
-            *  in the documentation for more information.
-            */
-            public static IsKeyPressed ($keycode: Godot.Key) : boolean
-            /**
-            *  constant.
-            * .
-            *  in the documentation for more information.
-            */
-            public static IsPhysicalKeyPressed ($keycode: Godot.Key) : boolean
-            /**  constant or any Unicode character code.
-            */
-            public static IsKeyLabelPressed ($keycode: Godot.Key) : boolean
-            /** .
-            */
-            public static IsMouseButtonPressed ($button: Godot.MouseButton) : boolean
-            /** .
-            */
-            public static IsJoyButtonPressed ($device: number, $button: Godot.JoyButton) : boolean
-            /**
-            *  if you are pressing the action event.
-            *  events.
-            *  in the documentation for more information.
-            */
-            public static IsActionPressed ($action: Godot.StringName, $exactMatch?: boolean) : boolean
-            /**
-            *  on the frame or tick that the user pressed down the button.
-            * This is useful for code that needs to run only once when an action is pressed, instead of every frame while it's pressed.
-            *  events.
-            *  will still be returned so as not to miss input.
-            *  in the documentation for more information.
-            *  instead to query the action state of the current event.
-            */
-            public static IsActionJustPressed ($action: Godot.StringName, $exactMatch?: boolean) : boolean
-            /**
-            *  on the frame or tick that the user releases the button.
-            *  will still be returned so as not to miss input.
-            *  events.
-            *  instead to query the action state of the current event.
-            */
-            public static IsActionJustReleased ($action: Godot.StringName, $exactMatch?: boolean) : boolean
-            /**
-            * Returns a value between 0 and 1 representing the intensity of the given action. In a joypad, for example, the further away the axis (analog sticks or L2, R2 triggers) is from the dead zone, the closer the value will be to 1. If the action is mapped to a control that has no axis such as the keyboard, the value returned will be 0 or 1.
-            *  events.
-            */
-            public static GetActionStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
-            /**
-            *  instead.
-            *  events.
-            */
-            public static GetActionRawStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
-            /**
-            * Get axis input by specifying two actions, one negative and one positive.
-            * .
-            */
-            public static GetAxis ($negativeAction: Godot.StringName, $positiveAction: Godot.StringName) : number
-            /**
-            * Gets an input vector by specifying four actions for the positive and negative X and Y axes.
-            * This method is useful when getting vector input, such as from a joystick, directional pad, arrows, or WASD. The vector has its length limited to 1 and has a circular deadzone, which is useful for using vector input as movement.
-            * By default, the deadzone is automatically calculated from the average of the action deadzones. However, you can override the deadzone to be whatever you want (on the range of 0 to 1).
-            */
-            public static GetVector ($negativeX: Godot.StringName, $positiveX: Godot.StringName, $negativeY: Godot.StringName, $positiveY: Godot.StringName, $deadzone?: number) : Godot.Vector2
-            /** Adds a new mapping entry (in SDL2 format) to the mapping database. Optionally update already connected devices.
-            */
-            public static AddJoyMapping ($mapping: string, $updateExisting?: boolean) : void
-            /**
-            * Removes all mappings from the internal database that match the given GUID. All currently connected joypads that use this GUID will become unmapped.
-            * On Android, Godot will map to an internal fallback mapping.
-            */
-            public static RemoveJoyMapping ($guid: string) : void
-            /**  if the system knows the specified device. This means that it sets all button and axis indices. Unknown joypads are not expected to match these constants, but you can still retrieve events from them.
-            */
-            public static IsJoyKnown ($device: number) : boolean
-            /** .
-            */
-            public static GetJoyAxis ($device: number, $axis: Godot.JoyAxis) : number
-            /**  to determine gamepad names.
-            */
-            public static GetJoyName ($device: number) : string
-            /**
-            *  to determine gamepad names and mappings based on this GUID.
-            * , because their mappings are the same.
-            */
-            public static GetJoyGuid ($device: number) : string
-            /**
-            * Returns a dictionary with extra platform-specific information about the device, e.g. the raw gamepad name from the OS or the Steam Input index.
-            * On Windows, the dictionary contains the following fields:
-            * : The index of the controller in the XInput system. Undefined for DirectInput devices.
-            * : The USB vendor ID of the device.
-            * : The USB product ID of the device.
-            * On Linux:
-            * : The name of the controller as it came from the OS, before getting renamed by the godot controller database.
-            * : The USB vendor ID of the device.
-            * : The USB product ID of the device.
-            * : The Steam Input gamepad index, if the device is not a Steam Input device this key won't be present.
-            *  The returned dictionary is always empty on Web, iOS, Android, and macOS.
-            */
-            public static GetJoyInfo ($device: number) : Godot.Collections.Dictionary
-            /**
-            *  for more information.
-            *  creates virtual devices from physical devices for remapping purposes. To avoid handling the same input device twice, the original device is added to the ignore list.
-            */
-            public static ShouldIgnoreDevice ($vendorId: number, $productId: number) : boolean
-            /**  containing the device IDs of all currently connected joypads.
-            */
-            public static GetConnectedJoypads () : Godot.Collections.Array$1<number>
-            /** Returns the strength of the joypad vibration: x is the strength of the weak motor, and y is the strength of the strong motor.
-            */
-            public static GetJoyVibrationStrength ($device: number) : Godot.Vector2
-            /** Returns the duration of the current vibration effect in seconds.
-            */
-            public static GetJoyVibrationDuration ($device: number) : number
-            /**
-            * .
-            *  Not every hardware is compatible with long effect durations; it is recommended to restart an effect if it has to be played for more than a few seconds.
-            *  For macOS, vibration is only supported in macOS 11 and later.
-            */
-            public static StartJoyVibration ($device: number, $weakMagnitude: number, $strongMagnitude: number, $duration?: number) : void
-            /** .
-            */
-            public static StopJoyVibration ($device: number) : void
-            /**
-            * Vibrate the handheld device for the specified duration in milliseconds.
-            * , the default vibration strength of the device is used.
-            *  This method is implemented on Android, iOS, and Web. It has no effect on other platforms.
-            *  will have no effect.
-            *  For iOS, specifying the duration is only supported in iOS 13 and later.
-            *  For Web, the amplitude cannot be changed.
-            * .
-            */
-            public static VibrateHandheld ($durationMs?: number, $amplitude?: number) : void
-            /**
-            * .
-            * .
-            *  must be enabled.
-            */
-            public static GetGravity () : Godot.Vector3
-            /**
-            * .
-            *  when running from the editor even when your device has an accelerometer. You must export your project to a supported device to read values from the accelerometer.
-            * .
-            *  must be enabled.
-            */
-            public static GetAccelerometer () : Godot.Vector3
-            /**
-            * .
-            * .
-            *  must be enabled.
-            */
-            public static GetMagnetometer () : Godot.Vector3
-            /**
-            * .
-            * .
-            *  must be enabled.
-            */
-            public static GetGyroscope () : Godot.Vector3
-            /**
-            * Sets the gravity value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
-            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
-            */
-            public static SetGravity ($value: Godot.Vector3) : void
-            /**
-            * Sets the acceleration value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
-            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
-            */
-            public static SetAccelerometer ($value: Godot.Vector3) : void
-            /**
-            * Sets the value of the magnetic field of the magnetometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
-            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
-            */
-            public static SetMagnetometer ($value: Godot.Vector3) : void
-            /**
-            * Sets the value of the rotation rate of the gyroscope sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
-            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
-            */
-            public static SetGyroscope ($value: Godot.Vector3) : void
-            /** Returns the last mouse velocity. To provide a precise and jitter-free velocity, mouse velocity is only calculated every 0.1s. Therefore, mouse velocity will lag mouse movements.
-            */
-            public static GetLastMouseVelocity () : Godot.Vector2
-            /** Returns the last mouse velocity in screen coordinates. To provide a precise and jitter-free velocity, mouse velocity is only calculated every 0.1s. Therefore, mouse velocity will lag mouse movements.
-            */
-            public static GetLastMouseScreenVelocity () : Godot.Vector2
-            /** .
-            */
-            public static GetMouseButtonMask () : Godot.MouseButtonMask
-            public static SetMouseMode ($mode: Godot.Input.MouseModeEnum) : void
-            public static GetMouseMode () : Godot.Input.MouseModeEnum
-            /**
-            * Sets the mouse position to the specified vector, provided in pixels and relative to an origin at the upper left corner of the currently focused Window Manager game window.
-            * .
-            *  is only supported on Windows, macOS and Linux. It has no effect on Android, iOS and Web.
-            */
-            public static WarpMouse ($position: Godot.Vector2) : void
-            /**
-            * This will simulate pressing the specified action.
-            * The strength can be used for non-boolean actions, it's ranged between 0 and 1 representing the intensity of the given action.
-            *  instead.
-            */
-            public static ActionPress ($action: Godot.StringName, $strength?: number) : void
-            /** If the specified action is already pressed, this will release it.
-            */
-            public static ActionRelease ($action: Godot.StringName) : void
-            public static SetDefaultCursorShape ($shape?: Godot.Input.CursorShape) : void
-            /** Returns the currently assigned cursor shape.
-            */
-            public static GetCurrentCursorShape () : Godot.Input.CursorShape
-            public static SetCustomMouseCursor ($image: Godot.Resource, $shape?: Godot.Input.CursorShape, $hotspot?: Godot.Vector2 | null) : void
-            /**
-            *  calls.
-            * 
-            var cancelEvent = new InputEventAction();
-            cancelEvent.Action = "ui_cancel";
-            cancelEvent.Pressed = true;
-            Input.ParseInputEvent(cancelEvent);
-            *  won't toggle between active windows.
-            */
-            public static ParseInputEvent ($event: Godot.InputEvent) : void
-            public static SetUseAccumulatedInput ($enable: boolean) : void
-            public static IsUsingAccumulatedInput () : boolean
-            /**
-            * ).
-            * The engine will already do this itself at key execution points (at least once per frame). However, this can be useful in advanced cases where you want precise control over the timing of event handling.
-            */
-            public static FlushBufferedEvents () : void
-            public static SetEmulateMouseFromTouch ($enable: boolean) : void
-            public static IsEmulatingMouseFromTouch () : boolean
-            public static SetEmulateTouchFromMouse ($enable: boolean) : void
-            public static IsEmulatingTouchFromMouse () : boolean
-            /**
-            * Vibrate the handheld device for the specified duration in milliseconds.
-            * , the default vibration strength of the device is used.
-            *  This method is implemented on Android, iOS, and Web. It has no effect on other platforms.
-            *  will have no effect.
-            *  For iOS, specifying the duration is only supported in iOS 13 and later.
-            *  For Web, the amplitude cannot be changed.
-            * .
-            */
-            public static VibrateHandheld ($durationMs: number) : void
-            public static add_JoyConnectionChanged ($value: Godot.Input.JoyConnectionChangedEventHandler) : void
-            public static remove_JoyConnectionChanged ($value: Godot.Input.JoyConnectionChangedEventHandler) : void
-        }
-        /**
-        *  class.
-        * .
-        */
-        class InputInstance extends Godot.GodotObject implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        enum Key
-        { None = 0, Special = 4194304, Escape = 4194305, Tab = 4194306, Backtab = 4194307, Backspace = 4194308, Enter = 4194309, KpEnter = 4194310, Insert = 4194311, Delete = 4194312, Pause = 4194313, Print = 4194314, Sysreq = 4194315, Clear = 4194316, Home = 4194317, End = 4194318, Left = 4194319, Up = 4194320, Right = 4194321, Down = 4194322, Pageup = 4194323, Pagedown = 4194324, Shift = 4194325, Ctrl = 4194326, Meta = 4194327, Alt = 4194328, Capslock = 4194329, Numlock = 4194330, Scrolllock = 4194331, F1 = 4194332, F2 = 4194333, F3 = 4194334, F4 = 4194335, F5 = 4194336, F6 = 4194337, F7 = 4194338, F8 = 4194339, F9 = 4194340, F10 = 4194341, F11 = 4194342, F12 = 4194343, F13 = 4194344, F14 = 4194345, F15 = 4194346, F16 = 4194347, F17 = 4194348, F18 = 4194349, F19 = 4194350, F20 = 4194351, F21 = 4194352, F22 = 4194353, F23 = 4194354, F24 = 4194355, F25 = 4194356, F26 = 4194357, F27 = 4194358, F28 = 4194359, F29 = 4194360, F30 = 4194361, F31 = 4194362, F32 = 4194363, F33 = 4194364, F34 = 4194365, F35 = 4194366, KpMultiply = 4194433, KpDivide = 4194434, KpSubtract = 4194435, KpPeriod = 4194436, KpAdd = 4194437, Kp0 = 4194438, Kp1 = 4194439, Kp2 = 4194440, Kp3 = 4194441, Kp4 = 4194442, Kp5 = 4194443, Kp6 = 4194444, Kp7 = 4194445, Kp8 = 4194446, Kp9 = 4194447, Menu = 4194370, Hyper = 4194371, Help = 4194373, Back = 4194376, Forward = 4194377, Stop = 4194378, Refresh = 4194379, Volumedown = 4194380, Volumemute = 4194381, Volumeup = 4194382, Mediaplay = 4194388, Mediastop = 4194389, Mediaprevious = 4194390, Medianext = 4194391, Mediarecord = 4194392, Homepage = 4194393, Favorites = 4194394, Search = 4194395, Standby = 4194396, Openurl = 4194397, Launchmail = 4194398, Launchmedia = 4194399, Launch0 = 4194400, Launch1 = 4194401, Launch2 = 4194402, Launch3 = 4194403, Launch4 = 4194404, Launch5 = 4194405, Launch6 = 4194406, Launch7 = 4194407, Launch8 = 4194408, Launch9 = 4194409, Launcha = 4194410, Launchb = 4194411, Launchc = 4194412, Launchd = 4194413, Launche = 4194414, Launchf = 4194415, Globe = 4194416, Keyboard = 4194417, JisEisu = 4194418, JisKana = 4194419, Unknown = 8388607, Space = 32, Exclam = 33, Quotedbl = 34, Numbersign = 35, Dollar = 36, Percent = 37, Ampersand = 38, Apostrophe = 39, Parenleft = 40, Parenright = 41, Asterisk = 42, Plus = 43, Comma = 44, Minus = 45, Period = 46, Slash = 47, Key0 = 48, Key1 = 49, Key2 = 50, Key3 = 51, Key4 = 52, Key5 = 53, Key6 = 54, Key7 = 55, Key8 = 56, Key9 = 57, Colon = 58, Semicolon = 59, Less = 60, Equal = 61, Greater = 62, Question = 63, At = 64, A = 65, B = 66, C = 67, D = 68, E = 69, F = 70, G = 71, H = 72, I = 73, J = 74, K = 75, L = 76, M = 77, N = 78, O = 79, P = 80, Q = 81, R = 82, S = 83, T = 84, U = 85, V = 86, W = 87, X = 88, Y = 89, Z = 90, Bracketleft = 91, Backslash = 92, Bracketright = 93, Asciicircum = 94, Underscore = 95, Quoteleft = 96, Braceleft = 123, Bar = 124, Braceright = 125, Asciitilde = 126, Yen = 165, Section = 167 }
-        enum MouseButton
-        { None = 0, Left = 1, Right = 2, Middle = 3, WheelUp = 4, WheelDown = 5, WheelLeft = 6, WheelRight = 7, Xbutton1 = 8, Xbutton2 = 9 }
-        enum JoyButton
-        { Invalid = -1, A = 0, B = 1, X = 2, Y = 3, Back = 4, Guide = 5, Start = 6, LeftStick = 7, RightStick = 8, LeftShoulder = 9, RightShoulder = 10, DpadUp = 11, DpadDown = 12, DpadLeft = 13, DpadRight = 14, Misc1 = 15, Paddle1 = 16, Paddle2 = 17, Paddle3 = 18, Paddle4 = 19, Touchpad = 20, SdlMax = 21, Max = 128 }
-        enum JoyAxis
-        { Invalid = -1, LeftX = 0, LeftY = 1, RightX = 2, RightY = 3, TriggerLeft = 4, TriggerRight = 5, SdlMax = 6, Max = 10 }
-        enum MouseButtonMask
-        { Left = 1, Right = 2, Middle = 4, MbXbutton1 = 128, MbXbutton2 = 256 }
-        /** .
-        */
-        class InputEvent extends Godot.Resource implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-            /** Device ID used for emulated mouse input from a touchscreen, or for emulated touch input from a mouse. This can be used to distinguish emulated mouse input from physical mouse input, or emulated touch input from physical touch input.
-            */
-            public static DeviceIdEmulation : bigint
-            /**
-            * The event's device ID.
-            * .
-            */
-            public get Device(): number;
-            public set Device(value: number);
-            public SetDevice ($device: number) : void
-            public GetDevice () : number
-            /**
-            *  if this input event matches a pre-defined action of any type.
-            *  events.
-            */
-            public IsAction ($action: Godot.StringName, $exactMatch?: boolean) : boolean
-            /**
-            * .
-            *  events.
-            *  in the documentation for more information.
-            */
-            public IsActionPressed ($action: Godot.StringName, $allowEcho?: boolean, $exactMatch?: boolean) : boolean
-            /**
-            * .
-            *  events.
-            */
-            public IsActionReleased ($action: Godot.StringName, $exactMatch?: boolean) : boolean
-            /**
-            * .
-            *  events.
-            */
-            public GetActionStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
-            /**  if this input event has been canceled.
-            */
-            public IsCanceled () : boolean
-            /**
-            * .
-            *  in the documentation for more information.
-            */
-            public IsPressed () : boolean
-            /** .
-            */
-            public IsReleased () : boolean
-            /**
-            * .
-            *  The rate at which echo events are sent is typically around 20 events per second (after holding down the key for roughly half a second). However, the key repeat delay/speed can be changed by the user or disabled entirely in the operating system settings. To ensure your project works correctly on all configurations, do not assume the user has a specific key repeat configuration in your project's behavior.
-            */
-            public IsEcho () : boolean
-            /**  representation of the event.
-            */
-            public AsText () : string
-            /**
-            * ) events.
-            *  events.
-            * .
-            */
-            public IsMatch ($event: Godot.InputEvent, $exactMatch?: boolean) : boolean
-            /**  if this input event's type is one that can be assigned to an input action.
-            */
-            public IsActionType () : boolean
-            /**
-            * ).
-            *  is a sum of both events. Both events' modifiers have to be identical.
-            */
-            public Accumulate ($withEvent: Godot.InputEvent) : boolean
-            public XformedBy ($xform: Godot.Transform2D, $localOfs?: Godot.Vector2 | null) : Godot.InputEvent
-        }
-        /**
-        * 2×3 matrix (2 rows, 3 columns) used for 2D linear transformations.
-        * It can represent transformations such as translation, rotation, or scaling.
-        * It consists of a three
-        * values: x, y, and the origin.
-        * For more information, read this documentation article:
-        * https://docs.godotengine.org/en/latest/tutorials/math/matrices_and_transforms.html
-        */
-        class Transform2D extends System.ValueType implements System.IEquatable$1<Godot.Transform2D>
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
         * Nodes are Godot's building blocks. They can be assigned as the child of another node, resulting in a tree arrangement. A given node can contain any number of nodes as children with the requirement that all siblings (direct children of a node) should have unique names.
         * . Scenes can be saved to the disk and then instantiated into other scenes. This allows for very high flexibility in the architecture and data model of Godot projects.
         *  callback of a parent node will be triggered before its child's.
@@ -3518,12 +3017,626 @@
             public constructor ()
         }
         /**
-        * .
-        *  has a reference to an implementation of this class and uses it to provide multiplayer capabilities (i.e. RPCs) across the whole scene.
-        *  method, effectively allowing to run both client and server in the same scene.
-        *  for the details about the default implementation.
+        *  creates a different view into the screen, or a sub-view inside another viewport. Child 2D nodes will display on it, and child Camera3D 3D nodes will render on it too.
+        * Optionally, a viewport can have its own 2D or 3D world, so it doesn't share what it draws with other viewports.
+        * Viewports can also choose to be audio listeners, so they generate positional audio depending on a 2D or 3D camera child of it.
+        * Also, viewports can be assigned to different screens in case the devices have multiple screens.
+        * Finally, viewports can also behave as render targets, in which case they will not be visible unless the associated texture is used to draw.
         */
-        class MultiplayerApi extends Godot.RefCounted implements System.IDisposable
+        class Viewport extends Godot.Node implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** Disable 3D rendering (but keep 2D rendering).
+            */
+            public get Disable3D(): boolean;
+            public set Disable3D(value: boolean);
+            /** , the viewport will use the primary XR interface to render XR output. When applicable this can result in a stereoscopic image and the resulting render being output to a headset.
+            */
+            public get UseXR(): boolean;
+            public set UseXR(value: boolean);
+            /** .
+            */
+            public get OwnWorld3D(): boolean;
+            public set OwnWorld3D(value: boolean);
+            /**  which can be used as 3D environment source.
+            */
+            public get World3D(): Godot.World3D;
+            public set World3D(value: Godot.World3D);
+            /**  which can be used as 2D environment source.
+            */
+            public get World2D(): Godot.World2D;
+            public set World2D(value: Godot.World2D);
+            /** , the viewport should render its background as transparent.
+            */
+            public get TransparentBg(): boolean;
+            public set TransparentBg(value: boolean);
+            /**
+            * , this is instead done by the first parent viewport that is set to handle input locally.
+            *  contained inside of it.
+            * .
+            */
+            public get HandleInputLocally(): boolean;
+            public set HandleInputLocally(value: boolean);
+            /**  smoothing is enabled.
+            */
+            public get Snap2DTransformsToPixel(): boolean;
+            public set Snap2DTransformsToPixel(value: boolean);
+            /**  smoothing is enabled.
+            */
+            public get Snap2DVerticesToPixel(): boolean;
+            public set Snap2DVerticesToPixel(value: boolean);
+            /**
+            *  is best unless targeting very high-end systems. This has no effect on shader-induced aliasing or texture aliasing.
+            * .
+            */
+            public get Msaa2D(): Godot.Viewport.Msaa;
+            public set Msaa2D(value: Godot.Viewport.Msaa);
+            /**
+            *  for supersampling, which provides higher quality but is much more expensive. This has no effect on shader-induced aliasing or texture aliasing.
+            * .
+            */
+            public get Msaa3D(): Godot.Viewport.Msaa;
+            public set Msaa3D(value: Godot.Viewport.Msaa);
+            /**
+            * Sets the screen-space antialiasing method used. Screen-space antialiasing works by selectively blurring edges in a post-process shader. It differs from MSAA which takes multiple coverage samples while rendering objects. Screen-space AA methods are typically faster than MSAA and will smooth out specular aliasing, but tend to make scenes appear blurry.
+            * .
+            */
+            public get ScreenSpaceAA(): Godot.Viewport.ScreenSpaceAAEnum;
+            public set ScreenSpaceAA(value: Godot.Viewport.ScreenSpaceAAEnum);
+            /**
+            * Enables temporal antialiasing for this viewport. TAA works by jittering the camera and accumulating the images of the last rendered frames, motion vector rendering is used to account for camera and object motion.
+            *  The implementation is not complete yet, some visual instances such as particles and skinned meshes may show artifacts.
+            * .
+            */
+            public get UseTaa(): boolean;
+            public set UseTaa(value: boolean);
+            /**
+            * .
+            * In some cases, debanding may introduce a slightly noticeable dithering pattern. It's recommended to enable debanding only when actually needed since the dithering pattern will make lossless-compressed screenshots larger.
+            * .
+            */
+            public get UseDebanding(): boolean;
+            public set UseDebanding(value: boolean);
+            /**
+            *  instead.
+            * ) compared to occlusion culling.
+            * .
+            */
+            public get UseOcclusionCulling(): boolean;
+            public set UseOcclusionCulling(value: boolean);
+            /**
+            *  to improve performance at the cost of geometry detail.
+            *  project setting.
+            *  visibility ranges (also known as "manual" LOD or hierarchical LOD).
+            */
+            public get MeshLodThreshold(): number;
+            public set MeshLodThreshold(value: number);
+            /** The overlay mode for test rendered geometry in debug purposes.
+            */
+            public get DebugDraw(): Godot.Viewport.DebugDrawEnum;
+            public set DebugDraw(value: Godot.Viewport.DebugDrawEnum);
+            /**
+            *  range and can be used in 3D rendering without color space adjustments. This allows 2D rendering to take advantage of effects requiring high dynamic range (e.g. 2D glow) as well as substantially improves the appearance of effects requiring highly detailed gradients.
+            *  This setting will have no effect when using the Compatibility renderer, which always renders in low dynamic range for performance reasons.
+            */
+            public get UseHdr2D(): boolean;
+            public set UseHdr2D(value: boolean);
+            /**
+            * Sets scaling 3D mode. Bilinear scaling renders at different resolution to either undersample or supersample the viewport. FidelityFX Super Resolution 1.0, abbreviated to FSR, is an upscaling technology that produces high quality images at fast framerates by using a spatially aware upscaling algorithm. FSR is slightly more expensive than bilinear, but it produces significantly higher image quality. FSR should be used where possible.
+            *  project setting.
+            */
+            public get Scaling3DMode(): Godot.Viewport.Scaling3DModeEnum;
+            public set Scaling3DMode(value: Godot.Viewport.Scaling3DModeEnum);
+            /**
+            *  for multi-sample antialiasing, which is significantly cheaper but only smooths the edges of polygons.
+            * When using FSR upscaling, AMD recommends exposing the following values as preset options to users "Ultra Quality: 0.77", "Quality: 0.67", "Balanced: 0.59", "Performance: 0.5" instead of exposing the entire scale.
+            *  project setting.
+            */
+            public get Scaling3DScale(): number;
+            public set Scaling3DScale(value: number);
+            /**
+            * Affects the final texture sharpness by reading from a lower or higher mipmap (also called "texture LOD bias"). Negative values make mipmapped textures sharper but grainier when viewed at a distance, while positive values make mipmapped textures blurrier (even when up close).
+            *  is applied to this value.
+            * .
+            *  project setting.
+            */
+            public get TextureMipmapBias(): number;
+            public set TextureMipmapBias(value: number);
+            /**
+            *  forcibly disables anisotropic filtering, even on materials where it is enabled.
+            * .
+            *  on materials.
+            * ). However, anisotropic filtering is rarely useful in 2D, so only enable it for textures in 2D if it makes a meaningful visual difference.
+            */
+            public get AnisotropicFilteringLevel(): Godot.Viewport.AnisotropicFiltering;
+            public set AnisotropicFilteringLevel(value: Godot.Viewport.AnisotropicFiltering);
+            /**
+            * Determines how sharp the upscaled image will be when using the FSR upscaling mode. Sharpness halves with every whole number. Values go from 0.0 (sharpest) to 2.0. Values above 2.0 won't make a visible difference.
+            *  project setting.
+            */
+            public get FsrSharpness(): number;
+            public set FsrSharpness(value: number);
+            /** The Variable Rate Shading (VRS) mode that is used for this viewport. Note, if hardware does not support VRS this property is ignored.
+            */
+            public get VrsMode(): Godot.Viewport.VrsModeEnum;
+            public set VrsMode(value: Godot.Viewport.VrsModeEnum);
+            /** Sets the update mode for Variable Rate Shading (VRS) for the viewport. VRS requires the input texture to be converted to the format usable by the VRS method supported by the hardware. The update mode defines how often this happens. If the GPU does not support VRS, or VRS is not enabled, this property is ignored.
+            */
+            public get VrsUpdateMode(): Godot.Viewport.VrsUpdateModeEnum;
+            public set VrsUpdateMode(value: Godot.Viewport.VrsUpdateModeEnum);
+            /**
+            * .
+            *  use a lossless compression format so that colors can be matched precisely. The following VRS densities are mapped to various colors, with brighter colors representing a lower level of shading precision:
+            * 
+            - 1×1 = rgb(0, 0, 0)     - #000000
+            - 1×2 = rgb(0, 85, 0)    - #005500
+            - 2×1 = rgb(85, 0, 0)    - #550000
+            - 2×2 = rgb(85, 85, 0)   - #555500
+            - 2×4 = rgb(85, 170, 0)  - #55aa00
+            - 4×2 = rgb(170, 85, 0)  - #aa5500
+            - 4×4 = rgb(170, 170, 0) - #aaaa00
+            - 4×8 = rgb(170, 255, 0) - #aaff00 - Not supported on most hardware
+            - 8×4 = rgb(255, 170, 0) - #ffaa00 - Not supported on most hardware
+            - 8×8 = rgb(255, 255, 0) - #ffff00 - Not supported on most hardware
+            */
+            public get VrsTexture(): Godot.Texture2D;
+            public set VrsTexture(value: Godot.Texture2D);
+            /** s in this Viewport.
+            */
+            public get CanvasItemDefaultTextureFilter(): Godot.Viewport.DefaultCanvasItemTextureFilter;
+            public set CanvasItemDefaultTextureFilter(value: Godot.Viewport.DefaultCanvasItemTextureFilter);
+            /** s in this Viewport.
+            */
+            public get CanvasItemDefaultTextureRepeat(): Godot.Viewport.DefaultCanvasItemTextureRepeat;
+            public set CanvasItemDefaultTextureRepeat(value: Godot.Viewport.DefaultCanvasItemTextureRepeat);
+            /** , the viewport will process 2D audio streams.
+            */
+            public get AudioListenerEnable2D(): boolean;
+            public set AudioListenerEnable2D(value: boolean);
+            /** , the viewport will process 3D audio streams.
+            */
+            public get AudioListenerEnable3D(): boolean;
+            public set AudioListenerEnable3D(value: boolean);
+            /**
+            * , the objects rendered by viewport become subjects of mouse picking process.
+            *  The number of simultaneously pickable objects is limited to 64 and they are selected in a non-deterministic order, which can be different in each picking process.
+            */
+            public get PhysicsObjectPicking(): boolean;
+            public set PhysicsObjectPicking(value: boolean);
+            /**
+            * , the order is undetermined.
+            *  This setting is disabled by default because of its potential expensive computational cost.
+            *  receives the picking event.
+            */
+            public get PhysicsObjectPickingSort(): boolean;
+            public set PhysicsObjectPickingSort(value: boolean);
+            /**
+            * .
+            * , an input_event signal will be sent to all physics objects in the mouse picking process.
+            * This applies to 2D CanvasItem object picking only.
+            */
+            public get PhysicsObjectPickingFirstOnly(): boolean;
+            public set PhysicsObjectPickingFirstOnly(value: boolean);
+            /** , the viewport will not receive input events.
+            */
+            public get GuiDisableInput(): boolean;
+            public set GuiDisableInput(value: boolean);
+            /** , the GUI controls on the viewport will lay pixel perfectly.
+            */
+            public get GuiSnapControlsToPixels(): boolean;
+            public set GuiSnapControlsToPixels(value: boolean);
+            /** , they will appear as separate windows handled by the operating system.
+            */
+            public get GuiEmbedSubwindows(): boolean;
+            public set GuiEmbedSubwindows(value: boolean);
+            /**
+            * s as the occluders leave the viewport, increase this setting.
+            * , the signed distance field will cover 20% of the viewport's size outside the viewport on each side (top, right, bottom, left).
+            */
+            public get SdfOversize(): Godot.Viewport.SdfOversizeEnum;
+            public set SdfOversize(value: Godot.Viewport.SdfOversizeEnum);
+            /** The resolution scale to use for the 2D signed distance field. Higher values lead to a more precise and more stable signed distance field as the camera moves, at the cost of performance.
+            */
+            public get SdfScale(): Godot.Viewport.SdfScaleEnum;
+            public set SdfScale(value: Godot.Viewport.SdfScaleEnum);
+            /**
+            * The shadow atlas' resolution (used for omni and spot lights). The value is rounded up to the nearest power of 2.
+            * , no positional shadows will be visible at all. This can improve performance significantly on low-end systems by reducing both the CPU and GPU load (as fewer draw calls are needed to draw the scene without shadows).
+            */
+            public get PositionalShadowAtlasSize(): number;
+            public set PositionalShadowAtlasSize(value: number);
+            /** Use 16 bits for the omni/spot shadow depth map. Enabling this results in shadows having less precision and may result in shadow acne, but can lead to performance improvements on some devices.
+            */
+            public get PositionalShadowAtlas16Bits(): boolean;
+            public set PositionalShadowAtlas16Bits(value: boolean);
+            /** The subdivision amount of the first quadrant on the shadow atlas.
+            */
+            public get PositionalShadowAtlasQuad0(): Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv;
+            public set PositionalShadowAtlasQuad0(value: Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv);
+            /** The subdivision amount of the second quadrant on the shadow atlas.
+            */
+            public get PositionalShadowAtlasQuad1(): Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv;
+            public set PositionalShadowAtlasQuad1(value: Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv);
+            /** The subdivision amount of the third quadrant on the shadow atlas.
+            */
+            public get PositionalShadowAtlasQuad2(): Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv;
+            public set PositionalShadowAtlasQuad2(value: Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv);
+            /** The subdivision amount of the fourth quadrant on the shadow atlas.
+            */
+            public get PositionalShadowAtlasQuad3(): Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv;
+            public set PositionalShadowAtlasQuad3(value: Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv);
+            /** s. This is relative to the global canvas transform of the viewport.
+            */
+            public get CanvasTransform(): Godot.Transform2D;
+            public set CanvasTransform(value: Godot.Transform2D);
+            /** The global canvas transform of the viewport. The canvas transform is relative to this.
+            */
+            public get GlobalCanvasTransform(): Godot.Transform2D;
+            public set GlobalCanvasTransform(value: Godot.Transform2D);
+            /**  nodes.
+            */
+            public get CanvasCullMask(): number;
+            public set CanvasCullMask(value: number);
+            /**  oversampling is enabled.
+            */
+            public get Oversampling(): boolean;
+            public set Oversampling(value: boolean);
+            /** If greater than zero, this value is used as the font oversampling factor, otherwise oversampling is equal to viewport scale.
+            */
+            public get OversamplingOverride(): number;
+            public set OversamplingOverride(value: number);
+            public SetWorld2D ($world2D: Godot.World2D) : void
+            public GetWorld2D () : Godot.World2D
+            /**  property of itself and any Viewport ancestor.
+            */
+            public FindWorld2D () : Godot.World2D
+            public SetCanvasTransform ($xform: Godot.Transform2D) : void
+            public GetCanvasTransform () : Godot.Transform2D
+            public SetGlobalCanvasTransform ($xform: Godot.Transform2D) : void
+            public GetGlobalCanvasTransform () : Godot.Transform2D
+            /**
+            *  to be pixel-perfect regardless of the automatically computed scale factor.
+            * .
+            */
+            public GetStretchTransform () : Godot.Transform2D
+            /** Returns the transform from the viewport's coordinate system to the embedder's coordinate system.
+            */
+            public GetFinalTransform () : Godot.Transform2D
+            /** Returns the transform from the Viewport's coordinates to the screen coordinates of the containing window manager window.
+            */
+            public GetScreenTransform () : Godot.Transform2D
+            /** Returns the visible rectangle in global screen coordinates.
+            */
+            public GetVisibleRect () : Godot.Rect2
+            public SetTransparentBackground ($enable: boolean) : void
+            public HasTransparentBackground () : boolean
+            public SetUseHdr2D ($enable: boolean) : void
+            public IsUsingHdr2D () : boolean
+            public SetMsaa2D ($msaa: Godot.Viewport.Msaa) : void
+            public GetMsaa2D () : Godot.Viewport.Msaa
+            public SetMsaa3D ($msaa: Godot.Viewport.Msaa) : void
+            public GetMsaa3D () : Godot.Viewport.Msaa
+            public SetScreenSpaceAA ($screenSpaceAA: Godot.Viewport.ScreenSpaceAAEnum) : void
+            public GetScreenSpaceAA () : Godot.Viewport.ScreenSpaceAAEnum
+            public SetUseTaa ($enable: boolean) : void
+            public IsUsingTaa () : boolean
+            public SetUseDebanding ($enable: boolean) : void
+            public IsUsingDebanding () : boolean
+            public SetUseOcclusionCulling ($enable: boolean) : void
+            public IsUsingOcclusionCulling () : boolean
+            public SetDebugDraw ($debugDraw: Godot.Viewport.DebugDrawEnum) : void
+            public GetDebugDraw () : Godot.Viewport.DebugDrawEnum
+            public SetUseOversampling ($enable: boolean) : void
+            public IsUsingOversampling () : boolean
+            public SetOversamplingOverride ($oversampling: number) : void
+            public GetOversamplingOverride () : number
+            /** Returns viewport oversampling factor.
+            */
+            public GetOversampling () : number
+            public GetRenderInfo ($type: Godot.Viewport.RenderInfoType, $info: Godot.Viewport.RenderInfo) : number
+            /**
+            * Returns the viewport's texture.
+            *  signal.
+            * 
+            func _ready():
+            await RenderingServer.frame_post_draw
+            $Viewport.get_texture().get_image().save_png("user://Screenshot.png")
+            *  the returned texture will be an HDR image encoded in linear space.
+            */
+            public GetTexture () : Godot.ViewportTexture
+            public SetPhysicsObjectPicking ($enable: boolean) : void
+            public GetPhysicsObjectPicking () : boolean
+            public SetPhysicsObjectPickingSort ($enable: boolean) : void
+            public GetPhysicsObjectPickingSort () : boolean
+            public SetPhysicsObjectPickingFirstOnly ($enable: boolean) : void
+            public GetPhysicsObjectPickingFirstOnly () : boolean
+            /** .
+            */
+            public GetViewportRid () : Godot.Rid
+            /** ).
+            */
+            public PushTextInput ($text: string) : void
+            /**
+            *  between viewports, or to locally apply inputs that were sent over the network or saved to a file.
+            * , the event's position is in viewport coordinates.
+            * .
+            * Calling this method will propagate calls to child nodes for following methods in the given order:
+            * - 
+            *  nodes
+            * - 
+            * - 
+            * - 
+            * , any later method in this list will not be called.
+            * , the event is used for physics object picking.
+            */
+            public PushInput ($event: Godot.InputEvent, $inLocalCoords?: boolean) : void
+            /**
+            * .
+            *  that forwards input events.
+            */
+            public NotifyMouseEntered () : void
+            /**
+            * .
+            *  that forwards input events.
+            */
+            public NotifyMouseExited () : void
+            /** .
+            */
+            public GetMousePosition () : Godot.Vector2
+            /**
+            * .
+            *  is only supported on Windows, macOS and Linux. It has no effect on Android, iOS and Web.
+            */
+            public WarpMouse ($position: Godot.Vector2) : void
+            /**  counterparts.
+            */
+            public UpdateMouseCursorState () : void
+            /** .
+            */
+            public GuiCancelDrag () : void
+            /** .
+            */
+            public GuiGetDragData () : Godot.Variant
+            /** Returns the drag data human-readable description.
+            */
+            public GuiGetDragDescription () : string
+            /** Sets the drag data human-readable description.
+            */
+            public GuiSetDragDescription ($description: string) : void
+            /**
+            *  if a drag operation is currently ongoing and where the drop action could happen in this viewport.
+            *  when you prefer polling the value.
+            */
+            public GuiIsDragging () : boolean
+            /**  if the drag operation is successful.
+            */
+            public GuiIsDragSuccessful () : boolean
+            /**  has the focus, does nothing.
+            */
+            public GuiReleaseFocus () : void
+            /** .
+            */
+            public GuiGetFocusOwner () : Godot.Control
+            /**
+            * .
+            *  to find if the mouse is within a control tree.
+            */
+            public GuiGetHoveredControl () : Godot.Control
+            public SetDisableInput ($disable: boolean) : void
+            public IsInputDisabled () : boolean
+            public SetPositionalShadowAtlasSize ($size: number) : void
+            public GetPositionalShadowAtlasSize () : number
+            public SetPositionalShadowAtlas16Bits ($enable: boolean) : void
+            public GetPositionalShadowAtlas16Bits () : boolean
+            public SetSnapControlsToPixels ($enabled: boolean) : void
+            public IsSnapControlsToPixelsEnabled () : boolean
+            public SetSnap2DTransformsToPixel ($enabled: boolean) : void
+            public IsSnap2DTransformsToPixelEnabled () : boolean
+            public SetSnap2DVerticesToPixel ($enabled: boolean) : void
+            public IsSnap2DVerticesToPixelEnabled () : boolean
+            public SetPositionalShadowAtlasQuadrantSubdiv ($quadrant: number, $subdiv: Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv) : void
+            /** Returns the positional shadow atlas quadrant subdivision of the specified quadrant.
+            */
+            public GetPositionalShadowAtlasQuadrantSubdiv ($quadrant: number) : Godot.Viewport.PositionalShadowAtlasQuadrantSubdiv
+            /**
+            * .
+            * , only the way events are propagated.
+            */
+            public SetInputAsHandled () : void
+            /**
+            * .
+            *  or others, as well as in corresponding signal handlers.
+            *  instead.
+            */
+            public IsInputHandled () : boolean
+            public SetHandleInputLocally ($enable: boolean) : void
+            public IsHandlingInputLocally () : boolean
+            public SetDefaultCanvasItemTextureFilter ($mode: Godot.Viewport.DefaultCanvasItemTextureFilter) : void
+            public GetDefaultCanvasItemTextureFilter () : Godot.Viewport.DefaultCanvasItemTextureFilter
+            public SetEmbeddingSubwindows ($enable: boolean) : void
+            public IsEmbeddingSubwindows () : boolean
+            /**
+            * s inside the viewport.
+            * s inside other viewports will not be listed.
+            */
+            public GetEmbeddedSubwindows () : Godot.Collections.Array$1<Godot.Window>
+            public SetCanvasCullMask ($mask: number) : void
+            public GetCanvasCullMask () : number
+            /** 's layers.
+            */
+            public SetCanvasCullMaskBit ($layer: number, $enable: boolean) : void
+            /** Returns an individual bit on the rendering layer mask.
+            */
+            public GetCanvasCullMaskBit ($layer: number) : boolean
+            public SetDefaultCanvasItemTextureRepeat ($mode: Godot.Viewport.DefaultCanvasItemTextureRepeat) : void
+            public GetDefaultCanvasItemTextureRepeat () : Godot.Viewport.DefaultCanvasItemTextureRepeat
+            public SetSdfOversize ($oversize: Godot.Viewport.SdfOversizeEnum) : void
+            public GetSdfOversize () : Godot.Viewport.SdfOversizeEnum
+            public SetSdfScale ($scale: Godot.Viewport.SdfScaleEnum) : void
+            public GetSdfScale () : Godot.Viewport.SdfScaleEnum
+            public SetMeshLodThreshold ($pixels: number) : void
+            public GetMeshLodThreshold () : number
+            public SetAsAudioListener2D ($enable: boolean) : void
+            public IsAudioListener2D () : boolean
+            /**  if there are no active 2D audio listeners, in which case the active 2D camera will be treated as listener.
+            */
+            public GetAudioListener2D () : Godot.AudioListener2D
+            /**  if there are no active cameras.
+            */
+            public GetCamera2D () : Godot.Camera2D
+            public SetWorld3D ($world3D: Godot.World3D) : void
+            public GetWorld3D () : Godot.World3D
+            /**  property of itself and any Viewport ancestor.
+            */
+            public FindWorld3D () : Godot.World3D
+            public SetUseOwnWorld3D ($enable: boolean) : void
+            public IsUsingOwnWorld3D () : boolean
+            /**  if there are no active 3D audio listeners, in which case the active 3D camera will be treated as listener.
+            */
+            public GetAudioListener3D () : Godot.AudioListener3D
+            /** Returns the currently active 3D camera.
+            */
+            public GetCamera3D () : Godot.Camera3D
+            public SetAsAudioListener3D ($enable: boolean) : void
+            public IsAudioListener3D () : boolean
+            public SetDisable3D ($disable: boolean) : void
+            public Is3DDisabled () : boolean
+            public SetUseXR ($use: boolean) : void
+            public IsUsingXR () : boolean
+            public SetScaling3DMode ($scaling3DMode: Godot.Viewport.Scaling3DModeEnum) : void
+            public GetScaling3DMode () : Godot.Viewport.Scaling3DModeEnum
+            public SetScaling3DScale ($scale: number) : void
+            public GetScaling3DScale () : number
+            public SetFsrSharpness ($fsrSharpness: number) : void
+            public GetFsrSharpness () : number
+            public SetTextureMipmapBias ($textureMipmapBias: number) : void
+            public GetTextureMipmapBias () : number
+            public SetAnisotropicFilteringLevel ($anisotropicFilteringLevel: Godot.Viewport.AnisotropicFiltering) : void
+            public GetAnisotropicFilteringLevel () : Godot.Viewport.AnisotropicFiltering
+            public SetVrsMode ($mode: Godot.Viewport.VrsModeEnum) : void
+            public GetVrsMode () : Godot.Viewport.VrsModeEnum
+            public SetVrsUpdateMode ($mode: Godot.Viewport.VrsUpdateModeEnum) : void
+            public GetVrsUpdateMode () : Godot.Viewport.VrsUpdateModeEnum
+            public SetVrsTexture ($texture: Godot.Texture2D) : void
+            public GetVrsTexture () : Godot.Texture2D
+            public add_SizeChanged ($value: System.Action) : void
+            public remove_SizeChanged ($value: System.Action) : void
+            public add_GuiFocusChanged ($value: Godot.Viewport.GuiFocusChangedEventHandler) : void
+            public remove_GuiFocusChanged ($value: Godot.Viewport.GuiFocusChangedEventHandler) : void
+        }
+        /** Class that has everything pertaining to a world: A physics space, a visual scenario, and a sound space. 3D nodes register their resources into the current 3D world.
+        */
+        class World3D extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /** Class that has everything pertaining to a 2D world: A physics space, a canvas, and a sound space. 2D nodes register their resources into the current 2D world.
+        */
+        class World2D extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /** .
+        */
+        class Texture extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public constructor ()
+        }
+        /**
+        * .
+        * .
+        *  is a base for other resources. It cannot be used directly.
+        *  The maximum texture size is 16384×16384 pixels due to graphics hardware limitations. Larger textures may fail to import.
+        */
+        class Texture2D extends Godot.Texture implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            *  specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).
+            *  This is only used in 2D rendering, not 3D.
+            */
+            public _Draw ($toCanvasItem: Godot.Rid, $pos: Godot.Vector2, $modulate: Godot.Color, $transpose: boolean) : void
+            /**
+            *  specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).
+            *  This is only used in 2D rendering, not 3D.
+            */
+            public _DrawRect ($toCanvasItem: Godot.Rid, $rect: Godot.Rect2, $tile: boolean, $modulate: Godot.Color, $transpose: boolean) : void
+            /**
+            *  specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).
+            *  This is only used in 2D rendering, not 3D.
+            */
+            public _DrawRectRegion ($toCanvasItem: Godot.Rid, $rect: Godot.Rect2, $srcRect: Godot.Rect2, $modulate: Godot.Color, $transpose: boolean, $clipUV: boolean) : void
+            /** 's height is queried.
+            */
+            public _GetHeight () : number
+            /** 's width is queried.
+            */
+            public _GetWidth () : number
+            /**  is queried.
+            */
+            public _HasAlpha () : boolean
+            /**  position.
+            */
+            public _IsPixelOpaque ($x: number, $y: number) : boolean
+            /** Returns the texture width in pixels.
+            */
+            public GetWidth () : number
+            /** Returns the texture height in pixels.
+            */
+            public GetHeight () : number
+            /** Returns the texture size in pixels.
+            */
+            public GetSize () : Godot.Vector2
+            /**  has an alpha channel.
+            */
+            public HasAlpha () : boolean
+            public Draw ($canvasItem: Godot.Rid, $position: Godot.Vector2, $modulate?: Godot.Color | null, $transpose?: boolean) : void
+            public DrawRect ($canvasItem: Godot.Rid, $rect: Godot.Rect2, $tile: boolean, $modulate?: Godot.Color | null, $transpose?: boolean) : void
+            public DrawRectRegion ($canvasItem: Godot.Rid, $rect: Godot.Rect2, $srcRect: Godot.Rect2, $modulate?: Godot.Color | null, $transpose?: boolean, $clipUV?: boolean) : void
+            /**
+            * s can be accessed and manipulated directly.
+            *  is invalid.
+            *  every frame, especially on large textures.
+            */
+            public GetImage () : Godot.Image
+            /** ).
+            */
+            public CreatePlaceholder () : Godot.Resource
+            public constructor ()
+        }
+        /**
+        * 2×3 matrix (2 rows, 3 columns) used for 2D linear transformations.
+        * It can represent transformations such as translation, rotation, or scaling.
+        * It consists of a three
+        * values: x, y, and the origin.
+        * For more information, read this documentation article:
+        * https://docs.godotengine.org/en/latest/tutorials/math/matrices_and_transforms.html
+        */
+        class Transform2D extends System.ValueType implements System.IEquatable$1<Godot.Transform2D>
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * 2D axis-aligned bounding box. Rect2 consists of a position, a size, and
+        * several utility functions. It is typically used for fast overlap tests.
+        */
+        class Rect2 extends System.ValueType implements System.IEquatable$1<Godot.Rect2>
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * .
+        *  method on the target viewport.
+        * ).
+        *  may cause noticeable stutter.
+        * , the returned texture will be an HDR image encoded in linear space. This may look darker than normal when displayed directly on screen. To convert to gamma space, you can do the following:
+        * 
+        img.convert(Image.FORMAT_RGBA8)
+        imb.linear_to_srgb()
+        * . This conversion is a slow operation, so it should not be performed every frame.
+        */
+        class ViewportTexture extends Godot.Texture2D implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
         }
@@ -3543,115 +3656,78 @@
         {
             protected [__keep_incompatibility]: never;
         }
-        /**
-        *  creates a different view into the screen, or a sub-view inside another viewport. Child 2D nodes will display on it, and child Camera3D 3D nodes will render on it too.
-        * Optionally, a viewport can have its own 2D or 3D world, so it doesn't share what it draws with other viewports.
-        * Viewports can also choose to be audio listeners, so they generate positional audio depending on a 2D or 3D camera child of it.
-        * Also, viewports can be assigned to different screens in case the devices have multiple screens.
-        * Finally, viewports can also behave as render targets, in which case they will not be visible unless the associated texture is used to draw.
+        /** .
         */
-        class Viewport extends Godot.Node implements System.IDisposable
+        class InputEvent extends Godot.Resource implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
+            /** Device ID used for emulated mouse input from a touchscreen, or for emulated touch input from a mouse. This can be used to distinguish emulated mouse input from physical mouse input, or emulated touch input from physical touch input.
+            */
+            public static DeviceIdEmulation : bigint
+            /**
+            * The event's device ID.
+            * .
+            */
+            public get Device(): number;
+            public set Device(value: number);
+            public SetDevice ($device: number) : void
+            public GetDevice () : number
+            /**
+            *  if this input event matches a pre-defined action of any type.
+            *  events.
+            */
+            public IsAction ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            * .
+            *  events.
+            *  in the documentation for more information.
+            */
+            public IsActionPressed ($action: Godot.StringName, $allowEcho?: boolean, $exactMatch?: boolean) : boolean
+            /**
+            * .
+            *  events.
+            */
+            public IsActionReleased ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            * .
+            *  events.
+            */
+            public GetActionStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
+            /**  if this input event has been canceled.
+            */
+            public IsCanceled () : boolean
+            /**
+            * .
+            *  in the documentation for more information.
+            */
+            public IsPressed () : boolean
+            /** .
+            */
+            public IsReleased () : boolean
+            /**
+            * .
+            *  The rate at which echo events are sent is typically around 20 events per second (after holding down the key for roughly half a second). However, the key repeat delay/speed can be changed by the user or disabled entirely in the operating system settings. To ensure your project works correctly on all configurations, do not assume the user has a specific key repeat configuration in your project's behavior.
+            */
+            public IsEcho () : boolean
+            /**  representation of the event.
+            */
+            public AsText () : string
+            /**
+            * ) events.
+            *  events.
+            * .
+            */
+            public IsMatch ($event: Godot.InputEvent, $exactMatch?: boolean) : boolean
+            /**  if this input event's type is one that can be assigned to an input action.
+            */
+            public IsActionType () : boolean
+            /**
+            * ).
+            *  is a sum of both events. Both events' modifiers have to be identical.
+            */
+            public Accumulate ($withEvent: Godot.InputEvent) : boolean
+            public XformedBy ($xform: Godot.Transform2D, $localOfs?: Godot.Vector2 | null) : Godot.InputEvent
         }
-        /**
-        * ).
-        *  signal (this applies both to pressing the close button and clicking outside of a popup).
-        */
-        class Window extends Godot.Viewport implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
-        *  subclass instead of the scene tree.
-        *  project setting is overwritten.
-        * :
-        * 
-        using Godot;
-        [GlobalClass]
-        public partial class CustomMainLoop : MainLoop
-        {
-        private double _timeElapsed = 0;
-        public override void _Initialize()
-        {
-        GD.Print("Initialized:");
-        GD.Print($"  Starting Time: {_timeElapsed}");
-        }
-        public override bool _Process(double delta)
-        {
-        _timeElapsed += delta;
-        // Return true to end the main loop.
-        return Input.GetMouseButtonMask() != 0 || Input.IsKeyPressed(Key.Escape);
-        }
-        private void _Finalize()
-        {
-        GD.Print("Finalized:");
-        GD.Print($"  End Time: {_timeElapsed}");
-        }
-        }
-        */
-        class MainLoop extends Godot.GodotObject implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
-        *  manages the hierarchy of nodes in a scene, as well as scenes themselves. Nodes can be added, fetched and removed. The whole scene tree (and thus the current scene) can be paused. Scenes can be loaded, switched and reloaded.
-        * : every node can be added to as many groups as you want to create, e.g. an "enemy" group. You can then iterate these groups or even call methods and set properties on all the nodes belonging to any given group.
-        *  implementation used by the engine, and is thus in charge of the game loop.
-        */
-        class SceneTree extends Godot.MainLoop implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
-        *  is called tweening.
-        *  with a delay.
-        * ) are invalid and can't be used for tweening values.
-        * :
-        * 
-        Tween tween = GetTree().CreateTween();
-        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
-        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
-        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
-        * .
-        * :
-        * 
-        Tween tween = GetTree().CreateTween();
-        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f).SetTrans(Tween.TransitionType.Sine);
-        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f).SetTrans(Tween.TransitionType.Bounce);
-        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
-        * s:
-        * 
-        var tween = GetTree().CreateTween().BindNode(this).SetTrans(Tween.TransitionType.Elastic);
-        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
-        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
-        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
-        * s is animating arbitrary sets of objects:
-        * 
-        Tween tween = CreateTween();
-        foreach (Node sprite in GetChildren())
-        tween.TweenProperty(sprite, "position", Vector2.Zero, 1.0f);
-        * .
-        *  to a variable:
-        * 
-        private Tween _tween;
-        public void Animate()
-        {
-        if (_tween != null)
-        _tween.Kill(); // Abort the previous animation
-        _tween = CreateTween();
-        }
-        * , and use the one that looks best.
-        * Tween easing and transition types cheatsheet
-        *  Tweens are not designed to be reused and trying to do so results in an undefined behavior. Create a new Tween for each animation and every time you replay an animation from start. Keep in mind that Tweens start immediately, so only create a Tween when you want to start animating.
-        * ).
-        */
-        class Tween extends Godot.RefCounted implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        enum Error
-        { Ok = 0, Failed = 1, Unavailable = 2, Unconfigured = 3, Unauthorized = 4, ParameterRangeError = 5, OutOfMemory = 6, FileNotFound = 7, FileBadDrive = 8, FileBadPath = 9, FileNoPermission = 10, FileAlreadyInUse = 11, FileCantOpen = 12, FileCantWrite = 13, FileCantRead = 14, FileUnrecognized = 15, FileCorrupt = 16, FileMissingDependencies = 17, FileEof = 18, CantOpen = 19, CantCreate = 20, QueryFailed = 21, AlreadyInUse = 22, Locked = 23, Timeout = 24, CantConnect = 25, CantResolve = 26, ConnectionError = 27, CantAcquireResource = 28, CantFork = 29, InvalidData = 30, InvalidParameter = 31, AlreadyExists = 32, DoesNotExist = 33, DatabaseCantRead = 34, DatabaseCantWrite = 35, CompilationFailed = 36, MethodNotFound = 37, LinkFailed = 38, ScriptFailed = 39, CyclicLink = 40, InvalidDeclaration = 41, DuplicateSymbol = 42, ParseError = 43, Busy = 44, Skip = 45, Help = 46, Bug = 47, PrinterOnFire = 48 }
         /**
         *  for 2D game objects.
         *  signal.
@@ -4062,6 +4138,31 @@
             public remove_ItemRectChanged ($value: System.Action) : void
         }
         /**
+        *  features a bounding rectangle that defines its extents, an anchor position relative to its parent control or the current viewport, and offsets relative to the anchor. The offsets update automatically when the node, any of its parents, or the screen size change.
+        *  nodes.
+        *  properties.
+        * User Interface nodes and input
+        * , this already happens automatically for all UI elements in your game.
+        * , focus, or if the event was inside of the control's bounding box.
+        *  will not process it.
+        *  nodes lose focus when another node grabs it, or if you hide the node in focus.
+        *  node to ignore mouse or touch events. You'll need it if you place an icon on top of a button.
+        * . You can also override theme items in the Inspector.
+        *  methods provided by this class.
+        */
+        class Control extends Godot.CanvasItem implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * ).
+        *  signal (this applies both to pressing the close button and clicking outside of a popup).
+        */
+        class Window extends Godot.Viewport implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
         * A 2D game object, with a transform (position, rotation, and scale). All 2D nodes, including physics objects and sprites, inherit from Node2D. Use Node2D as a parent node to move, scale and rotate children in a 2D project. Also gives control of the node's render order.
         *  properties.
         */
@@ -4184,6 +4285,642 @@
             public GetRelativeTransformToParent ($parent: Godot.Node) : Godot.Transform2D
             public constructor ()
         }
+        /**
+        * .
+        *  to function.
+        */
+        class AudioListener2D extends Godot.Node2D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * -based nodes.
+        *  node (when ascending the tree). Only one camera can be active per viewport. If no viewport is available ascending the tree, the camera will register in the global viewport.
+        * ).
+        *  to get the current rotation of the screen.
+        */
+        class Camera2D extends Godot.Node2D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  node is the base representation of a node in 3D space. All other 3D nodes inherit from this class.
+        * .
+        * .
+        * .
+        */
+        class Node3D extends Godot.Node implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /** .
+        */
+        class AudioListener3D extends Godot.Node3D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**  (or higher viewports) can't be displayed.
+        */
+        class Camera3D extends Godot.Node3D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * A pre-parsed relative or absolute path in a scene tree,
+        * for use with
+        * and similar functions.
+        * It can reference a node, a resource within a node, or a property
+        * of a node or resource.
+        * For instance,
+        * "Path2D/PathFollow2D/Sprite2D:texture:size"
+        * would refer to the
+        * size
+        * property of the
+        * texture
+        * resource on the node named
+        * "Sprite2D"
+        * which is a child of
+        * the other named nodes in the path.
+        * You will usually just pass a string to
+        * and it will be automatically converted, but you may occasionally
+        * want to parse a path ahead of time with NodePath.
+        * Exporting a NodePath variable will give you a node selection widget
+        * in the properties panel of the editor, which can often be useful.
+        * A NodePath is composed of a list of slash-separated node names
+        * (like a filesystem path) and an optional colon-separated list of
+        * "subnames" which can be resources or properties.
+        * Note: In the editor, NodePath properties are automatically updated when moving,
+        * renaming or deleting a node in the scene tree, but they are never updated at runtime.
+        */
+        class NodePath extends System.Object implements System.IDisposable, System.IEquatable$1<Godot.NodePath>
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            * Returns
+            * if the node path is empty.
+            * @returns If the  is empty.
+            */
+            public get IsEmpty(): boolean;
+            /**
+            * Disposes of this
+            * .
+            */
+            public Dispose () : void
+            public Dispose ($disposing: boolean) : void
+            public static op_Implicit ($from: string) : Godot.NodePath
+            public static op_Implicit ($from: Godot.NodePath) : string
+            /**
+            * Returns a node path with a colon character (
+            * :
+            * ) prepended,
+            * transforming it to a pure property path with no node name (defaults
+            * to resolving from the current node).
+            * @returns The  as a pure property path.
+            */
+            public GetAsPropertyPath () : Godot.NodePath
+            /**
+            * Returns all names concatenated with a slash character (
+            * /
+            * ).
+            * @returns The names concatenated with /.
+            */
+            public GetConcatenatedNames () : string
+            /**
+            * Returns all subnames concatenated with a colon character (
+            * :
+            * )
+            * as separator, i.e. the right side of the first colon in a node path.
+            * @returns The subnames concatenated with :.
+            */
+            public GetConcatenatedSubNames () : string
+            /**
+            * Gets the node name indicated by
+            * (0 to
+            * ).
+            * @param $idx The name index.
+            * @returns The name at the given index .
+            */
+            public GetName ($idx: number) : string
+            /**
+            * Gets the number of node names which make up the path.
+            * Subnames (see
+            * ) are not included.
+            * For example,
+            * "Path2D/PathFollow2D/Sprite2D"
+            * has 3 names.
+            * @returns The number of node names which make up the path.
+            */
+            public GetNameCount () : number
+            /**
+            * Gets the resource or property name indicated by
+            * (0 to
+            * ).
+            * @param $idx The subname index.
+            * @returns The subname at the given index .
+            */
+            public GetSubName ($idx: number) : string
+            /**
+            * Gets the number of resource or property names ("subnames") in the path.
+            * Each subname is listed after a colon character (
+            * :
+            * ) in the node path.
+            * For example,
+            * "Path2D/PathFollow2D/Sprite2D:texture:load_path"
+            * has 2 subnames.
+            * @returns The number of subnames in the path.
+            */
+            public GetSubNameCount () : number
+            /**
+            * Returns
+            * if the node path is absolute (as opposed to relative),
+            * which means that it starts with a slash character (
+            * /
+            * ). Absolute node paths can
+            * be used to access the root node (
+            * "/root"
+            * ) or autoloads (e.g.
+            * "/global"
+            * if a "global" autoload was registered).
+            * @returns If the  is an absolute path.
+            */
+            public IsAbsolute () : boolean
+            public static op_Equality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
+            public static op_Inequality ($left: Godot.NodePath, $right: Godot.NodePath) : boolean
+            public Equals ($other: Godot.NodePath) : boolean
+            public Equals ($obj: any) : boolean
+            public constructor ()
+            public constructor ($path: string)
+        }
+        /**
+        *  class.
+        * .
+        */
+        class Input extends System.Object
+        {
+            protected [__keep_incompatibility]: never;
+            /** Controls the mouse mode.
+            */
+            public static get MouseMode(): Godot.Input.MouseModeEnum;
+            public static set MouseMode(value: Godot.Input.MouseModeEnum);
+            /**
+            * , similar input events sent by the operating system are accumulated. When input accumulation is enabled, all input events generated during a frame will be merged and emitted when the frame is done rendering. Therefore, this limits the number of input method calls per second to the rendering FPS.
+            * Input accumulation can be disabled to get slightly more precise/reactive input at the cost of increased CPU usage. In applications where drawing freehand lines is required, input accumulation should generally be disabled while the user is drawing the line to get results that closely follow the actual input.
+            *  by default.
+            */
+            public static get UseAccumulatedInput(): boolean;
+            public static set UseAccumulatedInput(value: boolean);
+            /** .
+            */
+            public static get EmulateMouseFromTouch(): boolean;
+            public static set EmulateMouseFromTouch(value: boolean);
+            /** .
+            */
+            public static get EmulateTouchFromMouse(): boolean;
+            public static set EmulateTouchFromMouse(value: boolean);
+            public static get Singleton(): Godot.InputInstance;
+            /** .
+            */
+            public static IsAnythingPressed () : boolean
+            /**
+            *  constant.
+            * .
+            *  in the documentation for more information.
+            */
+            public static IsKeyPressed ($keycode: Godot.Key) : boolean
+            /**
+            *  constant.
+            * .
+            *  in the documentation for more information.
+            */
+            public static IsPhysicalKeyPressed ($keycode: Godot.Key) : boolean
+            /**  constant or any Unicode character code.
+            */
+            public static IsKeyLabelPressed ($keycode: Godot.Key) : boolean
+            /** .
+            */
+            public static IsMouseButtonPressed ($button: Godot.MouseButton) : boolean
+            /** .
+            */
+            public static IsJoyButtonPressed ($device: number, $button: Godot.JoyButton) : boolean
+            /**
+            *  if you are pressing the action event.
+            *  events.
+            *  in the documentation for more information.
+            */
+            public static IsActionPressed ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            *  on the frame or tick that the user pressed down the button.
+            * This is useful for code that needs to run only once when an action is pressed, instead of every frame while it's pressed.
+            *  events.
+            *  will still be returned so as not to miss input.
+            *  in the documentation for more information.
+            *  instead to query the action state of the current event.
+            */
+            public static IsActionJustPressed ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            *  on the frame or tick that the user releases the button.
+            *  will still be returned so as not to miss input.
+            *  events.
+            *  instead to query the action state of the current event.
+            */
+            public static IsActionJustReleased ($action: Godot.StringName, $exactMatch?: boolean) : boolean
+            /**
+            * Returns a value between 0 and 1 representing the intensity of the given action. In a joypad, for example, the further away the axis (analog sticks or L2, R2 triggers) is from the dead zone, the closer the value will be to 1. If the action is mapped to a control that has no axis such as the keyboard, the value returned will be 0 or 1.
+            *  events.
+            */
+            public static GetActionStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
+            /**
+            *  instead.
+            *  events.
+            */
+            public static GetActionRawStrength ($action: Godot.StringName, $exactMatch?: boolean) : number
+            /**
+            * Get axis input by specifying two actions, one negative and one positive.
+            * .
+            */
+            public static GetAxis ($negativeAction: Godot.StringName, $positiveAction: Godot.StringName) : number
+            /**
+            * Gets an input vector by specifying four actions for the positive and negative X and Y axes.
+            * This method is useful when getting vector input, such as from a joystick, directional pad, arrows, or WASD. The vector has its length limited to 1 and has a circular deadzone, which is useful for using vector input as movement.
+            * By default, the deadzone is automatically calculated from the average of the action deadzones. However, you can override the deadzone to be whatever you want (on the range of 0 to 1).
+            */
+            public static GetVector ($negativeX: Godot.StringName, $positiveX: Godot.StringName, $negativeY: Godot.StringName, $positiveY: Godot.StringName, $deadzone?: number) : Godot.Vector2
+            /** Adds a new mapping entry (in SDL2 format) to the mapping database. Optionally update already connected devices.
+            */
+            public static AddJoyMapping ($mapping: string, $updateExisting?: boolean) : void
+            /**
+            * Removes all mappings from the internal database that match the given GUID. All currently connected joypads that use this GUID will become unmapped.
+            * On Android, Godot will map to an internal fallback mapping.
+            */
+            public static RemoveJoyMapping ($guid: string) : void
+            /**  if the system knows the specified device. This means that it sets all button and axis indices. Unknown joypads are not expected to match these constants, but you can still retrieve events from them.
+            */
+            public static IsJoyKnown ($device: number) : boolean
+            /** .
+            */
+            public static GetJoyAxis ($device: number, $axis: Godot.JoyAxis) : number
+            /**  to determine gamepad names.
+            */
+            public static GetJoyName ($device: number) : string
+            /**
+            *  to determine gamepad names and mappings based on this GUID.
+            * , because their mappings are the same.
+            */
+            public static GetJoyGuid ($device: number) : string
+            /**
+            * Returns a dictionary with extra platform-specific information about the device, e.g. the raw gamepad name from the OS or the Steam Input index.
+            * On Windows, the dictionary contains the following fields:
+            * : The index of the controller in the XInput system. Undefined for DirectInput devices.
+            * : The USB vendor ID of the device.
+            * : The USB product ID of the device.
+            * On Linux:
+            * : The name of the controller as it came from the OS, before getting renamed by the godot controller database.
+            * : The USB vendor ID of the device.
+            * : The USB product ID of the device.
+            * : The Steam Input gamepad index, if the device is not a Steam Input device this key won't be present.
+            *  The returned dictionary is always empty on Web, iOS, Android, and macOS.
+            */
+            public static GetJoyInfo ($device: number) : Godot.Collections.Dictionary
+            /**
+            *  for more information.
+            *  creates virtual devices from physical devices for remapping purposes. To avoid handling the same input device twice, the original device is added to the ignore list.
+            */
+            public static ShouldIgnoreDevice ($vendorId: number, $productId: number) : boolean
+            /**  containing the device IDs of all currently connected joypads.
+            */
+            public static GetConnectedJoypads () : Godot.Collections.Array$1<number>
+            /** Returns the strength of the joypad vibration: x is the strength of the weak motor, and y is the strength of the strong motor.
+            */
+            public static GetJoyVibrationStrength ($device: number) : Godot.Vector2
+            /** Returns the duration of the current vibration effect in seconds.
+            */
+            public static GetJoyVibrationDuration ($device: number) : number
+            /**
+            * .
+            *  Not every hardware is compatible with long effect durations; it is recommended to restart an effect if it has to be played for more than a few seconds.
+            *  For macOS, vibration is only supported in macOS 11 and later.
+            */
+            public static StartJoyVibration ($device: number, $weakMagnitude: number, $strongMagnitude: number, $duration?: number) : void
+            /** .
+            */
+            public static StopJoyVibration ($device: number) : void
+            /**
+            * Vibrate the handheld device for the specified duration in milliseconds.
+            * , the default vibration strength of the device is used.
+            *  This method is implemented on Android, iOS, and Web. It has no effect on other platforms.
+            *  will have no effect.
+            *  For iOS, specifying the duration is only supported in iOS 13 and later.
+            *  For Web, the amplitude cannot be changed.
+            * .
+            */
+            public static VibrateHandheld ($durationMs?: number, $amplitude?: number) : void
+            /**
+            * .
+            * .
+            *  must be enabled.
+            */
+            public static GetGravity () : Godot.Vector3
+            /**
+            * .
+            *  when running from the editor even when your device has an accelerometer. You must export your project to a supported device to read values from the accelerometer.
+            * .
+            *  must be enabled.
+            */
+            public static GetAccelerometer () : Godot.Vector3
+            /**
+            * .
+            * .
+            *  must be enabled.
+            */
+            public static GetMagnetometer () : Godot.Vector3
+            /**
+            * .
+            * .
+            *  must be enabled.
+            */
+            public static GetGyroscope () : Godot.Vector3
+            /**
+            * Sets the gravity value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetGravity ($value: Godot.Vector3) : void
+            /**
+            * Sets the acceleration value of the accelerometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetAccelerometer ($value: Godot.Vector3) : void
+            /**
+            * Sets the value of the magnetic field of the magnetometer sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetMagnetometer ($value: Godot.Vector3) : void
+            /**
+            * Sets the value of the rotation rate of the gyroscope sensor. Can be used for debugging on devices without a hardware sensor, for example in an editor on a PC.
+            *  This value can be immediately overwritten by the hardware sensor value on Android and iOS.
+            */
+            public static SetGyroscope ($value: Godot.Vector3) : void
+            /** Returns the last mouse velocity. To provide a precise and jitter-free velocity, mouse velocity is only calculated every 0.1s. Therefore, mouse velocity will lag mouse movements.
+            */
+            public static GetLastMouseVelocity () : Godot.Vector2
+            /** Returns the last mouse velocity in screen coordinates. To provide a precise and jitter-free velocity, mouse velocity is only calculated every 0.1s. Therefore, mouse velocity will lag mouse movements.
+            */
+            public static GetLastMouseScreenVelocity () : Godot.Vector2
+            /** .
+            */
+            public static GetMouseButtonMask () : Godot.MouseButtonMask
+            public static SetMouseMode ($mode: Godot.Input.MouseModeEnum) : void
+            public static GetMouseMode () : Godot.Input.MouseModeEnum
+            /**
+            * Sets the mouse position to the specified vector, provided in pixels and relative to an origin at the upper left corner of the currently focused Window Manager game window.
+            * .
+            *  is only supported on Windows, macOS and Linux. It has no effect on Android, iOS and Web.
+            */
+            public static WarpMouse ($position: Godot.Vector2) : void
+            /**
+            * This will simulate pressing the specified action.
+            * The strength can be used for non-boolean actions, it's ranged between 0 and 1 representing the intensity of the given action.
+            *  instead.
+            */
+            public static ActionPress ($action: Godot.StringName, $strength?: number) : void
+            /** If the specified action is already pressed, this will release it.
+            */
+            public static ActionRelease ($action: Godot.StringName) : void
+            public static SetDefaultCursorShape ($shape?: Godot.Input.CursorShape) : void
+            /** Returns the currently assigned cursor shape.
+            */
+            public static GetCurrentCursorShape () : Godot.Input.CursorShape
+            public static SetCustomMouseCursor ($image: Godot.Resource, $shape?: Godot.Input.CursorShape, $hotspot?: Godot.Vector2 | null) : void
+            /**
+            *  calls.
+            * 
+            var cancelEvent = new InputEventAction();
+            cancelEvent.Action = "ui_cancel";
+            cancelEvent.Pressed = true;
+            Input.ParseInputEvent(cancelEvent);
+            *  won't toggle between active windows.
+            */
+            public static ParseInputEvent ($event: Godot.InputEvent) : void
+            public static SetUseAccumulatedInput ($enable: boolean) : void
+            public static IsUsingAccumulatedInput () : boolean
+            /**
+            * ).
+            * The engine will already do this itself at key execution points (at least once per frame). However, this can be useful in advanced cases where you want precise control over the timing of event handling.
+            */
+            public static FlushBufferedEvents () : void
+            public static SetEmulateMouseFromTouch ($enable: boolean) : void
+            public static IsEmulatingMouseFromTouch () : boolean
+            public static SetEmulateTouchFromMouse ($enable: boolean) : void
+            public static IsEmulatingTouchFromMouse () : boolean
+            /**
+            * Vibrate the handheld device for the specified duration in milliseconds.
+            * , the default vibration strength of the device is used.
+            *  This method is implemented on Android, iOS, and Web. It has no effect on other platforms.
+            *  will have no effect.
+            *  For iOS, specifying the duration is only supported in iOS 13 and later.
+            *  For Web, the amplitude cannot be changed.
+            * .
+            */
+            public static VibrateHandheld ($durationMs: number) : void
+            public static add_JoyConnectionChanged ($value: Godot.Input.JoyConnectionChangedEventHandler) : void
+            public static remove_JoyConnectionChanged ($value: Godot.Input.JoyConnectionChangedEventHandler) : void
+        }
+        /**
+        *  class.
+        * .
+        */
+        class InputInstance extends Godot.GodotObject implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        enum Key
+        { None = 0, Special = 4194304, Escape = 4194305, Tab = 4194306, Backtab = 4194307, Backspace = 4194308, Enter = 4194309, KpEnter = 4194310, Insert = 4194311, Delete = 4194312, Pause = 4194313, Print = 4194314, Sysreq = 4194315, Clear = 4194316, Home = 4194317, End = 4194318, Left = 4194319, Up = 4194320, Right = 4194321, Down = 4194322, Pageup = 4194323, Pagedown = 4194324, Shift = 4194325, Ctrl = 4194326, Meta = 4194327, Alt = 4194328, Capslock = 4194329, Numlock = 4194330, Scrolllock = 4194331, F1 = 4194332, F2 = 4194333, F3 = 4194334, F4 = 4194335, F5 = 4194336, F6 = 4194337, F7 = 4194338, F8 = 4194339, F9 = 4194340, F10 = 4194341, F11 = 4194342, F12 = 4194343, F13 = 4194344, F14 = 4194345, F15 = 4194346, F16 = 4194347, F17 = 4194348, F18 = 4194349, F19 = 4194350, F20 = 4194351, F21 = 4194352, F22 = 4194353, F23 = 4194354, F24 = 4194355, F25 = 4194356, F26 = 4194357, F27 = 4194358, F28 = 4194359, F29 = 4194360, F30 = 4194361, F31 = 4194362, F32 = 4194363, F33 = 4194364, F34 = 4194365, F35 = 4194366, KpMultiply = 4194433, KpDivide = 4194434, KpSubtract = 4194435, KpPeriod = 4194436, KpAdd = 4194437, Kp0 = 4194438, Kp1 = 4194439, Kp2 = 4194440, Kp3 = 4194441, Kp4 = 4194442, Kp5 = 4194443, Kp6 = 4194444, Kp7 = 4194445, Kp8 = 4194446, Kp9 = 4194447, Menu = 4194370, Hyper = 4194371, Help = 4194373, Back = 4194376, Forward = 4194377, Stop = 4194378, Refresh = 4194379, Volumedown = 4194380, Volumemute = 4194381, Volumeup = 4194382, Mediaplay = 4194388, Mediastop = 4194389, Mediaprevious = 4194390, Medianext = 4194391, Mediarecord = 4194392, Homepage = 4194393, Favorites = 4194394, Search = 4194395, Standby = 4194396, Openurl = 4194397, Launchmail = 4194398, Launchmedia = 4194399, Launch0 = 4194400, Launch1 = 4194401, Launch2 = 4194402, Launch3 = 4194403, Launch4 = 4194404, Launch5 = 4194405, Launch6 = 4194406, Launch7 = 4194407, Launch8 = 4194408, Launch9 = 4194409, Launcha = 4194410, Launchb = 4194411, Launchc = 4194412, Launchd = 4194413, Launche = 4194414, Launchf = 4194415, Globe = 4194416, Keyboard = 4194417, JisEisu = 4194418, JisKana = 4194419, Unknown = 8388607, Space = 32, Exclam = 33, Quotedbl = 34, Numbersign = 35, Dollar = 36, Percent = 37, Ampersand = 38, Apostrophe = 39, Parenleft = 40, Parenright = 41, Asterisk = 42, Plus = 43, Comma = 44, Minus = 45, Period = 46, Slash = 47, Key0 = 48, Key1 = 49, Key2 = 50, Key3 = 51, Key4 = 52, Key5 = 53, Key6 = 54, Key7 = 55, Key8 = 56, Key9 = 57, Colon = 58, Semicolon = 59, Less = 60, Equal = 61, Greater = 62, Question = 63, At = 64, A = 65, B = 66, C = 67, D = 68, E = 69, F = 70, G = 71, H = 72, I = 73, J = 74, K = 75, L = 76, M = 77, N = 78, O = 79, P = 80, Q = 81, R = 82, S = 83, T = 84, U = 85, V = 86, W = 87, X = 88, Y = 89, Z = 90, Bracketleft = 91, Backslash = 92, Bracketright = 93, Asciicircum = 94, Underscore = 95, Quoteleft = 96, Braceleft = 123, Bar = 124, Braceright = 125, Asciitilde = 126, Yen = 165, Section = 167 }
+        enum MouseButton
+        { None = 0, Left = 1, Right = 2, Middle = 3, WheelUp = 4, WheelDown = 5, WheelLeft = 6, WheelRight = 7, Xbutton1 = 8, Xbutton2 = 9 }
+        enum JoyButton
+        { Invalid = -1, A = 0, B = 1, X = 2, Y = 3, Back = 4, Guide = 5, Start = 6, LeftStick = 7, RightStick = 8, LeftShoulder = 9, RightShoulder = 10, DpadUp = 11, DpadDown = 12, DpadLeft = 13, DpadRight = 14, Misc1 = 15, Paddle1 = 16, Paddle2 = 17, Paddle3 = 18, Paddle4 = 19, Touchpad = 20, SdlMax = 21, Max = 128 }
+        enum JoyAxis
+        { Invalid = -1, LeftX = 0, LeftY = 1, RightX = 2, RightY = 3, TriggerLeft = 4, TriggerRight = 5, SdlMax = 6, Max = 10 }
+        enum MouseButtonMask
+        { Left = 1, Right = 2, Middle = 4, MbXbutton1 = 128, MbXbutton2 = 256 }
+        /** InputEventFromWindow represents events specifically received by windows. This includes mouse events, keyboard events in focused windows or touch screen actions.
+        */
+        class InputEventFromWindow extends Godot.InputEvent implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * .
+        *  if the key is pressed on its own.
+        */
+        class InputEventWithModifiers extends Godot.InputEventFromWindow implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /** Stores general information about mouse events.
+        */
+        class InputEventMouse extends Godot.InputEventWithModifiers implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /**  button masks.
+            */
+            public get ButtonMask(): Godot.MouseButtonMask;
+            public set ButtonMask(value: Godot.MouseButtonMask);
+            /**
+            * .
+            * .
+            */
+            public get Position(): Godot.Vector2;
+            public set Position(value: Godot.Vector2);
+            /**
+            * .
+            * .
+            */
+            public get GlobalPosition(): Godot.Vector2;
+            public set GlobalPosition(value: Godot.Vector2);
+            public SetButtonMask ($buttonMask: Godot.MouseButtonMask) : void
+            public GetButtonMask () : Godot.MouseButtonMask
+            public SetPosition ($position: Godot.Vector2) : void
+            public GetPosition () : Godot.Vector2
+            public SetGlobalPosition ($globalPosition: Godot.Vector2) : void
+            public GetGlobalPosition () : Godot.Vector2
+        }
+        /**
+        * .
+        *  setting.
+        */
+        class InputEventMouseButton extends Godot.InputEventMouse implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /**  if not supported.
+            */
+            public get Factor(): number;
+            public set Factor(value: number);
+            /**  button or button wheel constants.
+            */
+            public get ButtonIndex(): Godot.MouseButton;
+            public set ButtonIndex(value: Godot.MouseButton);
+            /** , the mouse button event has been canceled.
+            */
+            public get Canceled(): boolean;
+            public set Canceled(value: boolean);
+            /** , the mouse button's state is released.
+            */
+            public get Pressed(): boolean;
+            public set Pressed(value: boolean);
+            /** , the mouse button's state is a double-click.
+            */
+            public get DoubleClick(): boolean;
+            public set DoubleClick(value: boolean);
+            public SetFactor ($factor: number) : void
+            public GetFactor () : number
+            public SetButtonIndex ($buttonIndex: Godot.MouseButton) : void
+            public GetButtonIndex () : Godot.MouseButton
+            public SetPressed ($pressed: boolean) : void
+            public SetCanceled ($canceled: boolean) : void
+            public SetDoubleClick ($doubleClick: boolean) : void
+            public IsDoubleClick () : boolean
+            public constructor ()
+        }
+        /**
+        * .
+        *  has a reference to an implementation of this class and uses it to provide multiplayer capabilities (i.e. RPCs) across the whole scene.
+        *  method, effectively allowing to run both client and server in the same scene.
+        *  for the details about the default implementation.
+        */
+        class MultiplayerApi extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  subclass instead of the scene tree.
+        *  project setting is overwritten.
+        * :
+        * 
+        using Godot;
+        [GlobalClass]
+        public partial class CustomMainLoop : MainLoop
+        {
+        private double _timeElapsed = 0;
+        public override void _Initialize()
+        {
+        GD.Print("Initialized:");
+        GD.Print($"  Starting Time: {_timeElapsed}");
+        }
+        public override bool _Process(double delta)
+        {
+        _timeElapsed += delta;
+        // Return true to end the main loop.
+        return Input.GetMouseButtonMask() != 0 || Input.IsKeyPressed(Key.Escape);
+        }
+        private void _Finalize()
+        {
+        GD.Print("Finalized:");
+        GD.Print($"  End Time: {_timeElapsed}");
+        }
+        }
+        */
+        class MainLoop extends Godot.GodotObject implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  manages the hierarchy of nodes in a scene, as well as scenes themselves. Nodes can be added, fetched and removed. The whole scene tree (and thus the current scene) can be paused. Scenes can be loaded, switched and reloaded.
+        * : every node can be added to as many groups as you want to create, e.g. an "enemy" group. You can then iterate these groups or even call methods and set properties on all the nodes belonging to any given group.
+        *  implementation used by the engine, and is thus in charge of the game loop.
+        */
+        class SceneTree extends Godot.MainLoop implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  is called tweening.
+        *  with a delay.
+        * ) are invalid and can't be used for tweening values.
+        * :
+        * 
+        Tween tween = GetTree().CreateTween();
+        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
+        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
+        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
+        * .
+        * :
+        * 
+        Tween tween = GetTree().CreateTween();
+        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f).SetTrans(Tween.TransitionType.Sine);
+        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f).SetTrans(Tween.TransitionType.Bounce);
+        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
+        * s:
+        * 
+        var tween = GetTree().CreateTween().BindNode(this).SetTrans(Tween.TransitionType.Elastic);
+        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
+        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
+        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
+        * s is animating arbitrary sets of objects:
+        * 
+        Tween tween = CreateTween();
+        foreach (Node sprite in GetChildren())
+        tween.TweenProperty(sprite, "position", Vector2.Zero, 1.0f);
+        * .
+        *  to a variable:
+        * 
+        private Tween _tween;
+        public void Animate()
+        {
+        if (_tween != null)
+        _tween.Kill(); // Abort the previous animation
+        _tween = CreateTween();
+        }
+        * , and use the one that looks best.
+        * Tween easing and transition types cheatsheet
+        *  Tweens are not designed to be reused and trying to do so results in an undefined behavior. Create a new Tween for each animation and every time you replay an animation from start. Keep in mind that Tweens start immediately, so only create a Tween when you want to start animating.
+        * ).
+        */
+        class Tween extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        enum Error
+        { Ok = 0, Failed = 1, Unavailable = 2, Unconfigured = 3, Unauthorized = 4, ParameterRangeError = 5, OutOfMemory = 6, FileNotFound = 7, FileBadDrive = 8, FileBadPath = 9, FileNoPermission = 10, FileAlreadyInUse = 11, FileCantOpen = 12, FileCantWrite = 13, FileCantRead = 14, FileUnrecognized = 15, FileCorrupt = 16, FileMissingDependencies = 17, FileEof = 18, CantOpen = 19, CantCreate = 20, QueryFailed = 21, AlreadyInUse = 22, Locked = 23, Timeout = 24, CantConnect = 25, CantResolve = 26, ConnectionError = 27, CantAcquireResource = 28, CantFork = 29, InvalidData = 30, InvalidParameter = 31, AlreadyExists = 32, DoesNotExist = 33, DatabaseCantRead = 34, DatabaseCantWrite = 35, CompilationFailed = 36, MethodNotFound = 37, LinkFailed = 38, ScriptFailed = 39, CyclicLink = 40, InvalidDeclaration = 41, DuplicateSymbol = 42, ParseError = 43, Busy = 44, Skip = 45, Help = 46, Bug = 47, PrinterOnFire = 48 }
         /**
         *  methods.
         * ) are supported. The behavior of collisions between objects in different canvases is undefined.
@@ -4589,83 +5326,6 @@
             public remove_TextureChanged ($value: System.Action) : void
             public constructor ()
         }
-        /** .
-        */
-        class Texture extends Godot.Resource implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-            public constructor ()
-        }
-        /**
-        * .
-        * .
-        *  is a base for other resources. It cannot be used directly.
-        *  The maximum texture size is 16384×16384 pixels due to graphics hardware limitations. Larger textures may fail to import.
-        */
-        class Texture2D extends Godot.Texture implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-            /**
-            *  specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).
-            *  This is only used in 2D rendering, not 3D.
-            */
-            public _Draw ($toCanvasItem: Godot.Rid, $pos: Godot.Vector2, $modulate: Godot.Color, $transpose: boolean) : void
-            /**
-            *  specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).
-            *  This is only used in 2D rendering, not 3D.
-            */
-            public _DrawRect ($toCanvasItem: Godot.Rid, $rect: Godot.Rect2, $tile: boolean, $modulate: Godot.Color, $transpose: boolean) : void
-            /**
-            *  specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).
-            *  This is only used in 2D rendering, not 3D.
-            */
-            public _DrawRectRegion ($toCanvasItem: Godot.Rid, $rect: Godot.Rect2, $srcRect: Godot.Rect2, $modulate: Godot.Color, $transpose: boolean, $clipUV: boolean) : void
-            /** 's height is queried.
-            */
-            public _GetHeight () : number
-            /** 's width is queried.
-            */
-            public _GetWidth () : number
-            /**  is queried.
-            */
-            public _HasAlpha () : boolean
-            /**  position.
-            */
-            public _IsPixelOpaque ($x: number, $y: number) : boolean
-            /** Returns the texture width in pixels.
-            */
-            public GetWidth () : number
-            /** Returns the texture height in pixels.
-            */
-            public GetHeight () : number
-            /** Returns the texture size in pixels.
-            */
-            public GetSize () : Godot.Vector2
-            /**  has an alpha channel.
-            */
-            public HasAlpha () : boolean
-            public Draw ($canvasItem: Godot.Rid, $position: Godot.Vector2, $modulate?: Godot.Color | null, $transpose?: boolean) : void
-            public DrawRect ($canvasItem: Godot.Rid, $rect: Godot.Rect2, $tile: boolean, $modulate?: Godot.Color | null, $transpose?: boolean) : void
-            public DrawRectRegion ($canvasItem: Godot.Rid, $rect: Godot.Rect2, $srcRect: Godot.Rect2, $modulate?: Godot.Color | null, $transpose?: boolean, $clipUV?: boolean) : void
-            /**
-            * s can be accessed and manipulated directly.
-            *  is invalid.
-            *  every frame, especially on large textures.
-            */
-            public GetImage () : Godot.Image
-            /** ).
-            */
-            public CreatePlaceholder () : Godot.Resource
-            public constructor ()
-        }
-        /**
-        * 2D axis-aligned bounding box. Rect2 consists of a position, a size, and
-        * several utility functions. It is typically used for fast overlap tests.
-        */
-        class Rect2 extends System.ValueType implements System.IEquatable$1<Godot.Rect2>
-        {
-            protected [__keep_incompatibility]: never;
-        }
         /**
         * Abstract base class for all 2D shapes, intended for use in physics.
         *  is the slowest.
@@ -4732,12 +5392,6 @@
         *  you want it to be drawn on.
         */
         class CanvasLayer extends Godot.Node implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /** Class that has everything pertaining to a 2D world: A physics space, a canvas, and a sound space. 2D nodes register their resources into the current 2D world.
-        */
-        class World2D extends Godot.Resource implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
         }
@@ -4980,19 +5634,51 @@
             protected [__keep_incompatibility]: never;
         }
     }
-    namespace Godot.Input {
-        enum MouseModeEnum
-        { Visible = 0, Hidden = 1, Captured = 2, Confined = 3, ConfinedHidden = 4, Max = 5 }
-        enum CursorShape
-        { Arrow = 0, Ibeam = 1, PointingHand = 2, Cross = 3, Wait = 4, Busy = 5, Drag = 6, CanDrop = 7, Forbidden = 8, Vsize = 9, Hsize = 10, Bdiagsize = 11, Fdiagsize = 12, Move = 13, Vsplit = 14, Hsplit = 15, Help = 16 }
-        interface JoyConnectionChangedEventHandler
+    namespace Godot.Viewport {
+        enum Msaa
+        { Disabled = 0, Msaa2X = 1, Msaa4X = 2, Msaa8X = 3, Max = 4 }
+        enum ScreenSpaceAAEnum
+        { Disabled = 0, Fxaa = 1, Smaa = 2, Max = 3 }
+        enum DebugDrawEnum
+        { Disabled = 0, Unshaded = 1, Lighting = 2, Overdraw = 3, Wireframe = 4, NormalBuffer = 5, VoxelGIAlbedo = 6, VoxelGILighting = 7, VoxelGIEmission = 8, ShadowAtlas = 9, DirectionalShadowAtlas = 10, SceneLuminance = 11, Ssao = 12, Ssil = 13, PssmSplits = 14, DecalAtlas = 15, Sdfgi = 16, SdfgiProbes = 17, GIBuffer = 18, DisableLod = 19, ClusterOmniLights = 20, ClusterSpotLights = 21, ClusterDecals = 22, ClusterReflectionProbes = 23, Occluders = 24, MotionVectors = 25, InternalBuffer = 26 }
+        enum Scaling3DModeEnum
+        { Bilinear = 0, Fsr = 1, Fsr2 = 2, MetalfxSpatial = 3, MetalfxTemporal = 4, Max = 5 }
+        enum AnisotropicFiltering
+        { Disabled = 0, Anisotropy2X = 1, Anisotropy4X = 2, Anisotropy8X = 3, Anisotropy16X = 4, Max = 5 }
+        enum VrsModeEnum
+        { Disabled = 0, Texture = 1, XR = 2, Max = 3 }
+        enum VrsUpdateModeEnum
+        { Disabled = 0, Once = 1, Always = 2, Max = 3 }
+        enum DefaultCanvasItemTextureFilter
+        { Nearest = 0, Linear = 1, LinearWithMipmaps = 2, NearestWithMipmaps = 3, Max = 4 }
+        enum DefaultCanvasItemTextureRepeat
+        { Disabled = 0, Enabled = 1, Mirror = 2, Max = 3 }
+        enum SdfOversizeEnum
+        { Oversize100Percent = 0, Oversize120Percent = 1, Oversize150Percent = 2, Oversize200Percent = 3, Max = 4 }
+        enum SdfScaleEnum
+        { Scale100Percent = 0, Scale50Percent = 1, Scale25Percent = 2, Max = 3 }
+        enum PositionalShadowAtlasQuadrantSubdiv
+        { Disabled = 0, Subdiv1 = 1, Subdiv4 = 2, Subdiv16 = 3, Subdiv64 = 4, Subdiv256 = 5, Subdiv1024 = 6, Max = 7 }
+        enum RenderInfoType
+        { Visible = 0, Shadow = 1, Canvas = 2, Max = 3 }
+        enum RenderInfo
+        { ObjectsInFrame = 0, PrimitivesInFrame = 1, DrawCallsInFrame = 2, Max = 3 }
+        interface GuiFocusChangedEventHandler
         { 
-        (device: bigint, connected: boolean) : void; 
-        Invoke?: (device: bigint, connected: boolean) => void;
+        (node: Godot.Control) : void; 
+        Invoke?: (node: Godot.Control) => void;
         }
-        var JoyConnectionChangedEventHandler: { new (func: (device: bigint, connected: boolean) => void): JoyConnectionChangedEventHandler; }
+        var GuiFocusChangedEventHandler: { new (func: (node: Godot.Control) => void): GuiFocusChangedEventHandler; }
     }
     namespace Godot.Collections {
+        class Array$1<T> extends System.Object implements System.Collections.Generic.IList$1<T>, System.Collections.Generic.ICollection$1<T>, System.Collections.Generic.IEnumerable$1<T>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyList$1<T>, System.Collections.Generic.IReadOnlyCollection$1<T>, Godot.Collections.IGenericGodotArray
+        {
+            protected [__keep_incompatibility]: never;
+            public [Symbol.iterator]() : IterableIterator<T>
+        }
+        interface IGenericGodotArray
+        {
+        }
         /**
         * Wrapper around Godot's Dictionary class, a dictionary of Variant
         * typed elements allocated in the engine in C++. Useful when
@@ -5001,14 +5687,6 @@
         class Dictionary extends System.Object implements System.Collections.Generic.IDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.ICollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.Generic.IEnumerable$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.IReadOnlyCollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.IDisposable
         {
             protected [__keep_incompatibility]: never;
-        }
-        class Array$1<T> extends System.Object implements System.Collections.Generic.IList$1<T>, System.Collections.Generic.ICollection$1<T>, System.Collections.Generic.IEnumerable$1<T>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyList$1<T>, System.Collections.Generic.IReadOnlyCollection$1<T>, Godot.Collections.IGenericGodotArray
-        {
-            protected [__keep_incompatibility]: never;
-            public [Symbol.iterator]() : IterableIterator<T>
-        }
-        interface IGenericGodotArray
-        {
         }
         /**
         * Wrapper around Godot's Array class, an array of Variant
@@ -5030,6 +5708,18 @@
         interface IDeserializationCallback
         {
         }
+    }
+    namespace Godot.Input {
+        enum MouseModeEnum
+        { Visible = 0, Hidden = 1, Captured = 2, Confined = 3, ConfinedHidden = 4, Max = 5 }
+        enum CursorShape
+        { Arrow = 0, Ibeam = 1, PointingHand = 2, Cross = 3, Wait = 4, Busy = 5, Drag = 6, CanDrop = 7, Forbidden = 8, Vsize = 9, Hsize = 10, Bdiagsize = 11, Fdiagsize = 12, Move = 13, Vsplit = 14, Hsplit = 15, Help = 16 }
+        interface JoyConnectionChangedEventHandler
+        { 
+        (device: bigint, connected: boolean) : void; 
+        Invoke?: (device: bigint, connected: boolean) => void;
+        }
+        var JoyConnectionChangedEventHandler: { new (func: (device: bigint, connected: boolean) => void): JoyConnectionChangedEventHandler; }
     }
     namespace Godot.Node {
         enum ProcessModeEnum
@@ -5170,6 +5860,9 @@
             protected [__keep_incompatibility]: never;
             public jsOnReady : System.Action
             public jsOnProcess : System.Action$1<number>
+            public jsOnPhysicsProcess : System.Action$1<number>
+            public jsOnInput : System.Action$1<Godot.InputEvent>
+            public jsOnExitTree : System.Action
             public constructor ()
         }
         namespace System.Runtime.InteropServices {

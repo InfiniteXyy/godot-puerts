@@ -8,5 +8,10 @@
   "devDependencies": {},
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "semi": false
   }
 }
