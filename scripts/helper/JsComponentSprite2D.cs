@@ -5,7 +5,7 @@ using Puerts;
 public partial class JsComponentSprite2D : Sprite2D, IJsComponent
 {
   [Export]
-  private string jsPath = "scripts/dist/";
+  private JsSource jsSource;
 
   public Action JsOnReady { get; set; }
   public Action<double> JsOnProcess { get; set; }
@@ -15,7 +15,7 @@ public partial class JsComponentSprite2D : Sprite2D, IJsComponent
 
   public override void _Ready()
   {
-    JsMachine.GetScriptEnv().ExecuteModule<Action<JsComponentSprite2D>>(jsPath, "default")(this);
+    JsMachine.GetScriptEnv().ExecuteModule<Action<JsComponentSprite2D>>(jsSource.jsPath, "default")(this);
     JsOnReady?.Invoke();
   }
 

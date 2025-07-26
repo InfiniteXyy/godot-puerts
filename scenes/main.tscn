@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca3tpbomkekmx"]
+[gd_scene load_steps=9 format=3 uid="uid://ca3tpbomkekmx"]
 
 [ext_resource type="Texture2D" uid="uid://1aj8cngpv4hl" path="res://icon.svg" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://d8lc442qasvd" path="res://scripts/helper/JsComponentSprite2D.cs" id="2_sugp2"]
 [ext_resource type="Script" uid="uid://b6vlvfr4d4p3u" path="res://scripts/helper/JsComponentLabel.cs" id="3_jyhfs"]
+[ext_resource type="Resource" path="res://scripts/dist/Icon.tres" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://c0yaadnl7vcqk" path="res://scripts/helper/JsMachine.cs" id="4_jyhfs"]
+[ext_resource type="Resource" path="res://scripts/dist/CountLabel.tres" id="5_o6xl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(128, 126)
@@ -17,7 +19,7 @@ font_size = 40
 position = Vector2(484, 329)
 texture = ExtResource("1_o5qli")
 script = ExtResource("2_sugp2")
-jsPath = "scripts/dist/Icon.js"
+jsSource = ExtResource("3_tefeu")
 
 [node name="Area2D" type="Area2D" parent="Icon"]
 
@@ -28,7 +30,7 @@ shape = SubResource("RectangleShape2D_0wfyh")
 position = Vector2(165, 491)
 texture = ExtResource("1_o5qli")
 script = ExtResource("2_sugp2")
-jsPath = "scripts/dist/Icon.js"
+jsSource = ExtResource("3_tefeu")
 
 [node name="Area2D" type="Area2D" parent="Icon2"]
 
@@ -39,7 +41,7 @@ shape = SubResource("RectangleShape2D_0wfyh")
 position = Vector2(856, 428)
 texture = ExtResource("1_o5qli")
 script = ExtResource("2_sugp2")
-jsPath = "scripts/dist/Icon.js"
+jsSource = ExtResource("3_tefeu")
 
 [node name="Area2D" type="Area2D" parent="Icon3"]
 
@@ -50,7 +52,7 @@ shape = SubResource("RectangleShape2D_0wfyh")
 position = Vector2(192, 120)
 texture = ExtResource("1_o5qli")
 script = ExtResource("2_sugp2")
-jsPath = "scripts/dist/Icon.js"
+jsSource = ExtResource("3_tefeu")
 
 [node name="Area2D" type="Area2D" parent="Icon4"]
 
@@ -65,7 +67,7 @@ offset_bottom = 53.0
 text = "Has dragged 0 icon"
 label_settings = SubResource("LabelSettings_0wfyh")
 script = ExtResource("3_jyhfs")
-jsPath = "scripts/dist/CountLabel.js"
+jsSource = ExtResource("5_o6xl0")
 
 [node name="JsMachine" type="Node" parent="."]
 script = ExtResource("4_jyhfs")
