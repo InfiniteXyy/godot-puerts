@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://db3glh6wnd8sr" path="res://scenes/icon.tscn" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://u7gi5vpf6t3t" path="res://scripts/src/CountLabel.cs" id="2_0wfyh"]
-[ext_resource type="Resource" path="res://scripts/dist/CountLabel.tres" id="5_o6xl0"]
+[ext_resource type="Script" uid="uid://b42jrv02qiyyr" path="res://scripts/src/ClickButton.cs" id="3_sugp2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wfyh"]
 font_size = 40
@@ -29,4 +29,16 @@ offset_bottom = 53.0
 text = "Has dragged 0 icon"
 label_settings = SubResource("LabelSettings_0wfyh")
 script = ExtResource("2_0wfyh")
-jsSource = ExtResource("5_o6xl0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -65.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Add"
+script = ExtResource("3_sugp2")

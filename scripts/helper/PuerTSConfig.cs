@@ -36,6 +36,10 @@ public class PuerTSConfig
                 typeof(Godot.Color),
                 typeof(Godot.CanvasItem),
                 typeof(Godot.Label),
+                typeof(Godot.BaseButton),
+                typeof(Godot.Button),
+                typeof(Godot.HBoxContainer),
+                typeof(Godot.VBoxContainer),
                 typeof(JsComponentHook<Node>),
             };
     }

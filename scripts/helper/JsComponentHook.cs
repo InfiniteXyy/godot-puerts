@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Godot;
 
 
-public class JsComponentHook<T>(T owner, JsSource jsSource) where T : Node
+public class JsComponentHook<T>(T owner, string jsPath) where T : Node
 {
   public Action JsOnReady { get; set; }
   public Action<double> JsOnProcess { get; set; }
@@ -17,7 +17,7 @@ public class JsComponentHook<T>(T owner, JsSource jsSource) where T : Node
 
     // FIX: Should filter out unrelated code change events;
     JsOnExitTree?.Invoke();
-    JsMachine.GetScriptEnv().ExecuteModule<Action<JsComponentHook<T>, T>>(jsSource.jsPath, "default")(this, owner);
+    JsMachine.GetScriptEnv().ExecuteModule<Action<JsComponentHook<T>, T>>(jsPath, "default")(this, owner);
     JsOnReady?.Invoke();
   }
 

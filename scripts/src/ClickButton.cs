@@ -1,14 +1,14 @@
 using Godot;
 
-public partial class Icon : Sprite2D
+public partial class ClickButton : Button
 {
-  private string jsPath = "scripts/dist/Icon.mjs";
+  private string jsPath = "scripts/dist/ClickButton.mjs";
 
-  private JsComponentHook<Sprite2D> jsComponentHook;
+  private JsComponentHook<Button> jsComponentHook;
 
   public override void _Ready()
   {
-    jsComponentHook = new JsComponentHook<Sprite2D>(this, jsPath);
+    jsComponentHook = new JsComponentHook<Button>(this, jsPath);
     jsComponentHook._Ready();
   }
 

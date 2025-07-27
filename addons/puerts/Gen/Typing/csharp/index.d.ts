@@ -6123,6 +6123,280 @@
         }
         enum VerticalAlignment
         { Top = 0, Center = 1, Bottom = 2, Fill = 3 }
+        /**  is an abstract base class for GUI buttons. It doesn't display anything by itself.
+        */
+        class BaseButton extends Godot.Control implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** , the button is in disabled state and can't be clicked or toggled.
+            */
+            public get Disabled(): boolean;
+            public set Disabled(value: boolean);
+            /** , the button is in toggle mode. Makes the button flip state between pressed and unpressed each time its area is clicked.
+            */
+            public get ToggleMode(): boolean;
+            public set ToggleMode(value: boolean);
+            /**
+            * .
+            * .
+            */
+            public get ButtonPressed(): boolean;
+            public set ButtonPressed(value: boolean);
+            /** Determines when the button is considered clicked.
+            */
+            public get ActionMode(): Godot.BaseButton.ActionModeEnum;
+            public set ActionMode(value: Godot.BaseButton.ActionModeEnum);
+            /**
+            * Binary mask to choose which mouse buttons this button will respond to.
+            * .
+            */
+            public get ButtonMask(): Godot.MouseButtonMask;
+            public set ButtonMask(value: Godot.MouseButtonMask);
+            /**
+            * , the button stays pressed when moving the cursor outside the button while pressing it.
+            *  This property only affects the button's visual appearance. Signals will be emitted at the same moment regardless of this property's value.
+            */
+            public get KeepPressedOutside(): boolean;
+            public set KeepPressedOutside(value: boolean);
+            /**
+            *  associated with the button. Not to be confused with node groups.
+            *  is assigned to it.
+            */
+            public get ButtonGroup(): Godot.ButtonGroup;
+            public set ButtonGroup(value: Godot.ButtonGroup);
+            /**  associated to the button.
+            */
+            public get Shortcut(): Godot.Shortcut;
+            public set Shortcut(value: Godot.Shortcut);
+            /** , the shortcut will activate without any visual feedback.
+            */
+            public get ShortcutFeedback(): boolean;
+            public set ShortcutFeedback(value: boolean);
+            /**
+            * , the button will add information about its shortcut in the tooltip.
+            * .
+            */
+            public get ShortcutInTooltip(): boolean;
+            public set ShortcutInTooltip(value: boolean);
+            /**  instead.
+            */
+            public _Pressed () : void
+            /**  is active).
+            */
+            public _Toggled ($toggledOn: boolean) : void
+            public SetPressed ($pressed: boolean) : void
+            public IsPressed () : boolean
+            /**
+            * .
+            * .
+            */
+            public SetPressedNoSignal ($pressed: boolean) : void
+            /**  if the mouse has entered the button and has not left it yet.
+            */
+            public IsHovered () : boolean
+            public SetToggleMode ($enabled: boolean) : void
+            public IsToggleMode () : boolean
+            public SetShortcutInTooltip ($enabled: boolean) : void
+            public IsShortcutInTooltipEnabled () : boolean
+            public SetDisabled ($disabled: boolean) : void
+            public IsDisabled () : boolean
+            public SetActionMode ($mode: Godot.BaseButton.ActionModeEnum) : void
+            public GetActionMode () : Godot.BaseButton.ActionModeEnum
+            public SetButtonMask ($mask: Godot.MouseButtonMask) : void
+            public GetButtonMask () : Godot.MouseButtonMask
+            /**  enum.
+            */
+            public GetDrawMode () : Godot.BaseButton.DrawMode
+            public SetKeepPressedOutside ($enabled: boolean) : void
+            public IsKeepPressedOutside () : boolean
+            public SetShortcutFeedback ($enabled: boolean) : void
+            public IsShortcutFeedback () : boolean
+            public SetShortcut ($shortcut: Godot.Shortcut) : void
+            public GetShortcut () : Godot.Shortcut
+            public SetButtonGroup ($buttonGroup: Godot.ButtonGroup) : void
+            public GetButtonGroup () : Godot.ButtonGroup
+            public add_Pressed ($value: System.Action) : void
+            public remove_Pressed ($value: System.Action) : void
+            public add_ButtonUp ($value: System.Action) : void
+            public remove_ButtonUp ($value: System.Action) : void
+            public add_ButtonDown ($value: System.Action) : void
+            public remove_ButtonDown ($value: System.Action) : void
+            public add_Toggled ($value: Godot.BaseButton.ToggledEventHandler) : void
+            public remove_Toggled ($value: Godot.BaseButton.ToggledEventHandler) : void
+            public constructor ()
+        }
+        /**
+        * ) may have a special appearance in this state.
+        * .
+        */
+        class ButtonGroup extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * .
+        *  resources, making it possible to trigger one action with multiple different inputs.
+        *  resource:
+        * 
+        using Godot;
+        public partial class MyNode : Node
+        {
+        private readonly Shortcut _saveShortcut = new Shortcut();
+        public override void _Ready()
+        {
+        InputEventKey keyEvent = new InputEventKey
+        {
+        Keycode = Key.S,
+        CtrlPressed = true,
+        CommandOrControlAutoremap = true, // Swaps Ctrl for Command on Mac.
+        };
+        _saveShortcut.Events = [keyEvent];
+        }
+        public override void _Input(InputEvent @event)
+        {
+        if (@event is InputEventKey keyEvent &&
+        _saveShortcut.MatchesEvent(@event) &&
+        keyEvent.Pressed && !keyEvent.Echo)
+        {
+        GD.Print("Save shortcut pressed!");
+        GetViewport().SetInputAsHandled();
+        }
+        }
+        }
+        */
+        class Shortcut extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * .
+        *  Create a button and connect a method that will be called when the button is pressed:
+        * 
+        public override void _Ready()
+        {
+        var button = new Button();
+        button.Text = "Click me";
+        button.Pressed += ButtonPressed;
+        AddChild(button);
+        }
+        private void ButtonPressed()
+        {
+        GD.Print("Hello world!");
+        }
+        *  which contains common properties and methods associated with this node.
+        *  for buttons that trigger gameplay movement or actions.
+        */
+        class Button extends Godot.BaseButton implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** The button's text that will be displayed inside the button's area.
+            */
+            public get Text(): string;
+            public set Text(value: string);
+            /**
+            * Button's icon, if text is present the icon will be placed before the text.
+            * es.
+            */
+            public get Icon(): Godot.Texture2D;
+            public set Icon(value: Godot.Texture2D);
+            /** Flat buttons don't display decoration.
+            */
+            public get Flat(): boolean;
+            public set Flat(value: boolean);
+            /** Text alignment policy for the button's text.
+            */
+            public get Alignment(): Godot.HorizontalAlignment;
+            public set Alignment(value: Godot.HorizontalAlignment);
+            /** Sets the clipping behavior when the text exceeds the node's bounding rectangle.
+            */
+            public get TextOverrunBehavior(): Godot.TextServer.OverrunBehavior;
+            public set TextOverrunBehavior(value: Godot.TextServer.OverrunBehavior);
+            /** , the text gets wrapped inside the node's bounding rectangle.
+            */
+            public get AutowrapMode(): Godot.TextServer.AutowrapMode;
+            public set AutowrapMode(value: Godot.TextServer.AutowrapMode);
+            /**  for more info.
+            */
+            public get AutowrapTrimFlags(): Godot.TextServer.LineBreakFlag;
+            public set AutowrapTrimFlags(value: Godot.TextServer.LineBreakFlag);
+            /** , the button will always be wide enough to hold the text. The text is not vertically clipped, and the button's height is not affected by this property.
+            */
+            public get ClipText(): boolean;
+            public set ClipText(value: boolean);
+            /**  constants as the text alignment. If centered horizontally and vertically, text will draw on top of the icon.
+            */
+            public get IconAlignment(): Godot.HorizontalAlignment;
+            public set IconAlignment(value: Godot.HorizontalAlignment);
+            /**  constants as the text alignment. If centered horizontally and vertically, text will draw on top of the icon.
+            */
+            public get VerticalIconAlignment(): Godot.VerticalAlignment;
+            public set VerticalIconAlignment(value: Godot.VerticalAlignment);
+            /** .
+            */
+            public get ExpandIcon(): boolean;
+            public set ExpandIcon(value: boolean);
+            /** Base text writing direction.
+            */
+            public get TextDirection(): Godot.Control.TextDirection;
+            public set TextDirection(value: Godot.Control.TextDirection);
+            /** Language code used for line-breaking and text shaping algorithms, if left empty current locale is used instead.
+            */
+            public get Language(): string;
+            public set Language(value: string);
+            public SetText ($text: string) : void
+            public GetText () : string
+            public SetTextOverrunBehavior ($overrunBehavior: Godot.TextServer.OverrunBehavior) : void
+            public GetTextOverrunBehavior () : Godot.TextServer.OverrunBehavior
+            public SetAutowrapMode ($autowrapMode: Godot.TextServer.AutowrapMode) : void
+            public GetAutowrapMode () : Godot.TextServer.AutowrapMode
+            public SetAutowrapTrimFlags ($autowrapTrimFlags: Godot.TextServer.LineBreakFlag) : void
+            public GetAutowrapTrimFlags () : Godot.TextServer.LineBreakFlag
+            public SetTextDirection ($direction: Godot.Control.TextDirection) : void
+            public GetTextDirection () : Godot.Control.TextDirection
+            public SetLanguage ($language: string) : void
+            public GetLanguage () : string
+            public SetButtonIcon ($texture: Godot.Texture2D) : void
+            public GetButtonIcon () : Godot.Texture2D
+            public SetFlat ($enabled: boolean) : void
+            public IsFlat () : boolean
+            public SetClipText ($enabled: boolean) : void
+            public GetClipText () : boolean
+            public SetTextAlignment ($alignment: Godot.HorizontalAlignment) : void
+            public GetTextAlignment () : Godot.HorizontalAlignment
+            public SetIconAlignment ($iconAlignment: Godot.HorizontalAlignment) : void
+            public GetIconAlignment () : Godot.HorizontalAlignment
+            public SetVerticalIconAlignment ($verticalIconAlignment: Godot.VerticalAlignment) : void
+            public GetVerticalIconAlignment () : Godot.VerticalAlignment
+            public SetExpandIcon ($enabled: boolean) : void
+            public IsExpandIcon () : boolean
+            public constructor ()
+        }
+        /**  automatically arranges its child controls in a certain way. This class can be inherited to make custom container types.
+        */
+        class Container extends Godot.Control implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /** A container that arranges its child controls horizontally or vertically, rearranging them automatically when their minimum size changes.
+        */
+        class BoxContainer extends Godot.Container implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**  that can only arrange its child controls horizontally. Child controls are rearranged automatically when their minimum size changes.
+        */
+        class HBoxContainer extends Godot.BoxContainer implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public constructor ()
+        }
+        /**  that can only arrange its child controls vertically. Child controls are rearranged automatically when their minimum size changes.
+        */
+        class VBoxContainer extends Godot.BoxContainer implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public constructor ()
+        }
     }
     namespace System.Numerics {
         interface IBinaryInteger$1<TSelf> extends System.Numerics.IBinaryNumber$1<TSelf>, System.Numerics.IBitwiseOperators$3<TSelf, TSelf, TSelf>, System.Numerics.INumber$1<TSelf>, System.IComparable, System.IComparable$1<TSelf>, System.Numerics.IComparisonOperators$3<TSelf, TSelf, boolean>, System.Numerics.IEqualityOperators$3<TSelf, TSelf, boolean>, System.Numerics.IModulusOperators$3<TSelf, TSelf, TSelf>, System.Numerics.INumberBase$1<TSelf>, System.Numerics.IAdditionOperators$3<TSelf, TSelf, TSelf>, System.Numerics.IAdditiveIdentity$2<TSelf, TSelf>, System.Numerics.IDecrementOperators$1<TSelf>, System.Numerics.IDivisionOperators$3<TSelf, TSelf, TSelf>, System.IEquatable$1<TSelf>, System.Numerics.IIncrementOperators$1<TSelf>, System.Numerics.IMultiplicativeIdentity$2<TSelf, TSelf>, System.Numerics.IMultiplyOperators$3<TSelf, TSelf, TSelf>, System.ISpanFormattable, System.IFormattable, System.ISpanParsable$1<TSelf>, System.IParsable$1<TSelf>, System.Numerics.ISubtractionOperators$3<TSelf, TSelf, TSelf>, System.Numerics.IUnaryPlusOperators$2<TSelf, TSelf>, System.Numerics.IUnaryNegationOperators$2<TSelf, TSelf>, System.IUtf8SpanFormattable, System.IUtf8SpanParsable$1<TSelf>, System.Numerics.IShiftOperators$3<TSelf, number, TSelf>
@@ -6625,6 +6899,18 @@
         enum TextDirection
         { Inherited = 3, Auto = 0, Ltr = 1, Rtl = 2 }
     }
+    namespace Godot.BaseButton {
+        enum ActionModeEnum
+        { Press = 0, Release = 1 }
+        enum DrawMode
+        { Normal = 0, Pressed = 1, Hover = 2, Disabled = 3, HoverPressed = 4 }
+        interface ToggledEventHandler
+        { 
+        (toggledOn: boolean) : void; 
+        Invoke?: (toggledOn: boolean) => void;
+        }
+        var ToggledEventHandler: { new (func: (toggledOn: boolean) => void): ToggledEventHandler; }
+    }
         class JsComponentHook$1<T> extends System.Object
         {
             protected [__keep_incompatibility]: never;
@@ -6643,11 +6929,7 @@
             public _PhysicsProcess ($delta: number) : void
             public _Input ($event: Godot.InputEvent) : void
             public _ExitTree () : void
-            public constructor ($owner: T, $jsSource: JsSource)
-        }
-        class JsSource extends Godot.Resource implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
+            public constructor ($owner: T, $jsPath: string)
         }
         namespace System.Runtime.InteropServices {
         class StructLayoutAttribute extends System.Attribute

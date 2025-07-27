@@ -2,13 +2,15 @@
   "name": "scripts",
   "private": true,
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch"
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "devDependencies": {
     "@preact/signals-core": "^1.11.0",
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.3.0",
     "glob": "^11.0.3",
-    "tsdown": "^0.13.0"
+    "tsup": "^8.5.0"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -17,6 +19,5 @@
     "printWidth": 120,
     "singleQuote": true,
     "semi": false
-  },
-  "dependencies": {}
+  }
 }

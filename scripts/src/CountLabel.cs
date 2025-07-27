@@ -2,14 +2,13 @@ using Godot;
 
 public partial class CountLabel : Label
 {
-  [Export]
-  private JsSource jsSource;
+  private string jsPath = "scripts/dist/CountLabel.mjs";
 
   private JsComponentHook<Label> jsComponentHook;
 
   public override void _Ready()
   {
-    jsComponentHook = new JsComponentHook<Label>(this, jsSource);
+    jsComponentHook = new JsComponentHook<Label>(this, jsPath);
     jsComponentHook._Ready();
   }
 

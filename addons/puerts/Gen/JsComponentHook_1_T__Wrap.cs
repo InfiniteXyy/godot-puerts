@@ -27,7 +27,7 @@ namespace PuertsStaticWrap
 
                     {
                         Godot.Node arg0 = argobj0 != null ? (Godot.Node)argobj0 : StaticTranslate<Godot.Node>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
-                        JsSource arg1 = argobj1 != null ? (JsSource)argobj1 : StaticTranslate<JsSource>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        string arg1 = (string)PuertsDLL.GetStringFromValue(isolate, v8Value1, false);
                         var result = new JsComponentHook<T>(arg0, arg1);
 
 

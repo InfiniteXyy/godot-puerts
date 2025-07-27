@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://db3glh6wnd8sr"]
+[gd_scene load_steps=4 format=3 uid="uid://db3glh6wnd8sr"]
 
 [ext_resource type="Texture2D" uid="uid://1aj8cngpv4hl" path="res://icon.svg" id="1_3dybq"]
 [ext_resource type="Script" uid="uid://d1if38ywxmr35" path="res://scripts/src/Icon.cs" id="2_3dybq"]
-[ext_resource type="Resource" path="res://scripts/dist/Icon.tres" id="3_6tejy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(128, 126)
@@ -10,7 +9,6 @@ size = Vector2(128, 126)
 [node name="Icon" type="Sprite2D"]
 texture = ExtResource("1_3dybq")
 script = ExtResource("2_3dybq")
-jsSource = ExtResource("3_6tejy")
 
 [node name="Area2D" type="Area2D" parent="."]
 

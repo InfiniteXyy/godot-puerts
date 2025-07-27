@@ -6621,6 +6621,492 @@ namespace PuertsStaticWrap
                 }
             };
         }
+        public static RegisterInfo GetRegisterInfo_Godot_BaseButton_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_BaseButton_Wrap.Constructor
+#endif
+                    }},
+                    {"_Pressed", new MemberRegisterInfo { Name = "_Pressed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M__Pressed
+#endif
+                    }},
+                    {"_Toggled", new MemberRegisterInfo { Name = "_Toggled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M__Toggled
+#endif
+                    }},
+                    {"SetPressed", new MemberRegisterInfo { Name = "SetPressed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetPressed
+#endif
+                    }},
+                    {"IsPressed", new MemberRegisterInfo { Name = "IsPressed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsPressed
+#endif
+                    }},
+                    {"SetPressedNoSignal", new MemberRegisterInfo { Name = "SetPressedNoSignal", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetPressedNoSignal
+#endif
+                    }},
+                    {"IsHovered", new MemberRegisterInfo { Name = "IsHovered", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsHovered
+#endif
+                    }},
+                    {"SetToggleMode", new MemberRegisterInfo { Name = "SetToggleMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetToggleMode
+#endif
+                    }},
+                    {"IsToggleMode", new MemberRegisterInfo { Name = "IsToggleMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsToggleMode
+#endif
+                    }},
+                    {"SetShortcutInTooltip", new MemberRegisterInfo { Name = "SetShortcutInTooltip", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetShortcutInTooltip
+#endif
+                    }},
+                    {"IsShortcutInTooltipEnabled", new MemberRegisterInfo { Name = "IsShortcutInTooltipEnabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsShortcutInTooltipEnabled
+#endif
+                    }},
+                    {"SetDisabled", new MemberRegisterInfo { Name = "SetDisabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetDisabled
+#endif
+                    }},
+                    {"IsDisabled", new MemberRegisterInfo { Name = "IsDisabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsDisabled
+#endif
+                    }},
+                    {"SetActionMode", new MemberRegisterInfo { Name = "SetActionMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetActionMode
+#endif
+                    }},
+                    {"GetActionMode", new MemberRegisterInfo { Name = "GetActionMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_GetActionMode
+#endif
+                    }},
+                    {"SetButtonMask", new MemberRegisterInfo { Name = "SetButtonMask", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetButtonMask
+#endif
+                    }},
+                    {"GetButtonMask", new MemberRegisterInfo { Name = "GetButtonMask", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_GetButtonMask
+#endif
+                    }},
+                    {"GetDrawMode", new MemberRegisterInfo { Name = "GetDrawMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_GetDrawMode
+#endif
+                    }},
+                    {"SetKeepPressedOutside", new MemberRegisterInfo { Name = "SetKeepPressedOutside", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetKeepPressedOutside
+#endif
+                    }},
+                    {"IsKeepPressedOutside", new MemberRegisterInfo { Name = "IsKeepPressedOutside", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsKeepPressedOutside
+#endif
+                    }},
+                    {"SetShortcutFeedback", new MemberRegisterInfo { Name = "SetShortcutFeedback", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetShortcutFeedback
+#endif
+                    }},
+                    {"IsShortcutFeedback", new MemberRegisterInfo { Name = "IsShortcutFeedback", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_IsShortcutFeedback
+#endif
+                    }},
+                    {"SetShortcut", new MemberRegisterInfo { Name = "SetShortcut", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetShortcut
+#endif
+                    }},
+                    {"GetShortcut", new MemberRegisterInfo { Name = "GetShortcut", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_GetShortcut
+#endif
+                    }},
+                    {"SetButtonGroup", new MemberRegisterInfo { Name = "SetButtonGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_SetButtonGroup
+#endif
+                    }},
+                    {"GetButtonGroup", new MemberRegisterInfo { Name = "GetButtonGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.M_GetButtonGroup
+#endif
+                    }},
+                    {"add_Pressed", new MemberRegisterInfo { Name = "add_Pressed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.A_Pressed
+#endif
+                    }},
+                    {"remove_Pressed", new MemberRegisterInfo { Name = "remove_Pressed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.R_Pressed
+#endif
+                    }},
+                    {"add_ButtonUp", new MemberRegisterInfo { Name = "add_ButtonUp", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.A_ButtonUp
+#endif
+                    }},
+                    {"remove_ButtonUp", new MemberRegisterInfo { Name = "remove_ButtonUp", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.R_ButtonUp
+#endif
+                    }},
+                    {"add_ButtonDown", new MemberRegisterInfo { Name = "add_ButtonDown", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.A_ButtonDown
+#endif
+                    }},
+                    {"remove_ButtonDown", new MemberRegisterInfo { Name = "remove_ButtonDown", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.R_ButtonDown
+#endif
+                    }},
+                    {"add_Toggled", new MemberRegisterInfo { Name = "add_Toggled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.A_Toggled
+#endif
+                    }},
+                    {"remove_Toggled", new MemberRegisterInfo { Name = "remove_Toggled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_BaseButton_Wrap.R_Toggled
+#endif
+                    }},
+                    {"Disabled", new MemberRegisterInfo { Name = "Disabled", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_Disabled, PropertySetter = Godot_BaseButton_Wrap.S_Disabled
+#endif
+                    }},
+                    {"ToggleMode", new MemberRegisterInfo { Name = "ToggleMode", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ToggleMode, PropertySetter = Godot_BaseButton_Wrap.S_ToggleMode
+#endif
+                    }},
+                    {"ButtonPressed", new MemberRegisterInfo { Name = "ButtonPressed", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ButtonPressed, PropertySetter = Godot_BaseButton_Wrap.S_ButtonPressed
+#endif
+                    }},
+                    {"ActionMode", new MemberRegisterInfo { Name = "ActionMode", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ActionMode, PropertySetter = Godot_BaseButton_Wrap.S_ActionMode
+#endif
+                    }},
+                    {"ButtonMask", new MemberRegisterInfo { Name = "ButtonMask", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ButtonMask, PropertySetter = Godot_BaseButton_Wrap.S_ButtonMask
+#endif
+                    }},
+                    {"KeepPressedOutside", new MemberRegisterInfo { Name = "KeepPressedOutside", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_KeepPressedOutside, PropertySetter = Godot_BaseButton_Wrap.S_KeepPressedOutside
+#endif
+                    }},
+                    {"ButtonGroup", new MemberRegisterInfo { Name = "ButtonGroup", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ButtonGroup, PropertySetter = Godot_BaseButton_Wrap.S_ButtonGroup
+#endif
+                    }},
+                    {"Shortcut", new MemberRegisterInfo { Name = "Shortcut", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_Shortcut, PropertySetter = Godot_BaseButton_Wrap.S_Shortcut
+#endif
+                    }},
+                    {"ShortcutFeedback", new MemberRegisterInfo { Name = "ShortcutFeedback", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ShortcutFeedback, PropertySetter = Godot_BaseButton_Wrap.S_ShortcutFeedback
+#endif
+                    }},
+                    {"ShortcutInTooltip", new MemberRegisterInfo { Name = "ShortcutInTooltip", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_BaseButton_Wrap.G_ShortcutInTooltip, PropertySetter = Godot_BaseButton_Wrap.S_ShortcutInTooltip
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_Button_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_Button_Wrap.Constructor
+#endif
+                    }},
+                    {"SetText", new MemberRegisterInfo { Name = "SetText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetText
+#endif
+                    }},
+                    {"GetText", new MemberRegisterInfo { Name = "GetText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetText
+#endif
+                    }},
+                    {"SetTextOverrunBehavior", new MemberRegisterInfo { Name = "SetTextOverrunBehavior", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetTextOverrunBehavior
+#endif
+                    }},
+                    {"GetTextOverrunBehavior", new MemberRegisterInfo { Name = "GetTextOverrunBehavior", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetTextOverrunBehavior
+#endif
+                    }},
+                    {"SetAutowrapMode", new MemberRegisterInfo { Name = "SetAutowrapMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetAutowrapMode
+#endif
+                    }},
+                    {"GetAutowrapMode", new MemberRegisterInfo { Name = "GetAutowrapMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetAutowrapMode
+#endif
+                    }},
+                    {"SetAutowrapTrimFlags", new MemberRegisterInfo { Name = "SetAutowrapTrimFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetAutowrapTrimFlags
+#endif
+                    }},
+                    {"GetAutowrapTrimFlags", new MemberRegisterInfo { Name = "GetAutowrapTrimFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetAutowrapTrimFlags
+#endif
+                    }},
+                    {"SetTextDirection", new MemberRegisterInfo { Name = "SetTextDirection", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetTextDirection
+#endif
+                    }},
+                    {"GetTextDirection", new MemberRegisterInfo { Name = "GetTextDirection", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetTextDirection
+#endif
+                    }},
+                    {"SetLanguage", new MemberRegisterInfo { Name = "SetLanguage", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetLanguage
+#endif
+                    }},
+                    {"GetLanguage", new MemberRegisterInfo { Name = "GetLanguage", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetLanguage
+#endif
+                    }},
+                    {"SetButtonIcon", new MemberRegisterInfo { Name = "SetButtonIcon", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetButtonIcon
+#endif
+                    }},
+                    {"GetButtonIcon", new MemberRegisterInfo { Name = "GetButtonIcon", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetButtonIcon
+#endif
+                    }},
+                    {"SetFlat", new MemberRegisterInfo { Name = "SetFlat", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetFlat
+#endif
+                    }},
+                    {"IsFlat", new MemberRegisterInfo { Name = "IsFlat", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_IsFlat
+#endif
+                    }},
+                    {"SetClipText", new MemberRegisterInfo { Name = "SetClipText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetClipText
+#endif
+                    }},
+                    {"GetClipText", new MemberRegisterInfo { Name = "GetClipText", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetClipText
+#endif
+                    }},
+                    {"SetTextAlignment", new MemberRegisterInfo { Name = "SetTextAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetTextAlignment
+#endif
+                    }},
+                    {"GetTextAlignment", new MemberRegisterInfo { Name = "GetTextAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetTextAlignment
+#endif
+                    }},
+                    {"SetIconAlignment", new MemberRegisterInfo { Name = "SetIconAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetIconAlignment
+#endif
+                    }},
+                    {"GetIconAlignment", new MemberRegisterInfo { Name = "GetIconAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetIconAlignment
+#endif
+                    }},
+                    {"SetVerticalIconAlignment", new MemberRegisterInfo { Name = "SetVerticalIconAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetVerticalIconAlignment
+#endif
+                    }},
+                    {"GetVerticalIconAlignment", new MemberRegisterInfo { Name = "GetVerticalIconAlignment", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_GetVerticalIconAlignment
+#endif
+                    }},
+                    {"SetExpandIcon", new MemberRegisterInfo { Name = "SetExpandIcon", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_SetExpandIcon
+#endif
+                    }},
+                    {"IsExpandIcon", new MemberRegisterInfo { Name = "IsExpandIcon", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Button_Wrap.M_IsExpandIcon
+#endif
+                    }},
+                    {"Text", new MemberRegisterInfo { Name = "Text", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_Text, PropertySetter = Godot_Button_Wrap.S_Text
+#endif
+                    }},
+                    {"Icon", new MemberRegisterInfo { Name = "Icon", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_Icon, PropertySetter = Godot_Button_Wrap.S_Icon
+#endif
+                    }},
+                    {"Flat", new MemberRegisterInfo { Name = "Flat", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_Flat, PropertySetter = Godot_Button_Wrap.S_Flat
+#endif
+                    }},
+                    {"Alignment", new MemberRegisterInfo { Name = "Alignment", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_Alignment, PropertySetter = Godot_Button_Wrap.S_Alignment
+#endif
+                    }},
+                    {"TextOverrunBehavior", new MemberRegisterInfo { Name = "TextOverrunBehavior", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_TextOverrunBehavior, PropertySetter = Godot_Button_Wrap.S_TextOverrunBehavior
+#endif
+                    }},
+                    {"AutowrapMode", new MemberRegisterInfo { Name = "AutowrapMode", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_AutowrapMode, PropertySetter = Godot_Button_Wrap.S_AutowrapMode
+#endif
+                    }},
+                    {"AutowrapTrimFlags", new MemberRegisterInfo { Name = "AutowrapTrimFlags", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_AutowrapTrimFlags, PropertySetter = Godot_Button_Wrap.S_AutowrapTrimFlags
+#endif
+                    }},
+                    {"ClipText", new MemberRegisterInfo { Name = "ClipText", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_ClipText, PropertySetter = Godot_Button_Wrap.S_ClipText
+#endif
+                    }},
+                    {"IconAlignment", new MemberRegisterInfo { Name = "IconAlignment", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_IconAlignment, PropertySetter = Godot_Button_Wrap.S_IconAlignment
+#endif
+                    }},
+                    {"VerticalIconAlignment", new MemberRegisterInfo { Name = "VerticalIconAlignment", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_VerticalIconAlignment, PropertySetter = Godot_Button_Wrap.S_VerticalIconAlignment
+#endif
+                    }},
+                    {"ExpandIcon", new MemberRegisterInfo { Name = "ExpandIcon", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_ExpandIcon, PropertySetter = Godot_Button_Wrap.S_ExpandIcon
+#endif
+                    }},
+                    {"TextDirection", new MemberRegisterInfo { Name = "TextDirection", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_TextDirection, PropertySetter = Godot_Button_Wrap.S_TextDirection
+#endif
+                    }},
+                    {"Language", new MemberRegisterInfo { Name = "Language", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Button_Wrap.G_Language, PropertySetter = Godot_Button_Wrap.S_Language
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_HBoxContainer_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_HBoxContainer_Wrap.Constructor
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_VBoxContainer_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_VBoxContainer_Wrap.Constructor
+#endif
+                    }},
+                }
+            };
+        }
         public static RegisterInfo GetRegisterInfo_JsComponentHook_1_Godot_Node__Wrap() 
         {
             return new RegisterInfo 
@@ -6717,6 +7203,10 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Color), GetRegisterInfo_Godot_Color_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.CanvasItem), GetRegisterInfo_Godot_CanvasItem_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Label), GetRegisterInfo_Godot_Label_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.BaseButton), GetRegisterInfo_Godot_BaseButton_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Button), GetRegisterInfo_Godot_Button_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.HBoxContainer), GetRegisterInfo_Godot_HBoxContainer_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.VBoxContainer), GetRegisterInfo_Godot_VBoxContainer_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(JsComponentHook<Godot.Node>), GetRegisterInfo_JsComponentHook_1_Godot_Node__Wrap);
         }
     }
