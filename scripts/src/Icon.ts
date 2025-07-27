@@ -38,7 +38,7 @@ export default defineComponent<CS.Godot.Sprite2D>(function () {
     onReady() {
       const interval = setInterval(() => (isMovingRight = !isMovingRight), 1000)
 
-      const area = this.GetNode(new Godot.NodePath('Area2D')) as CS.Godot.CollisionObject2D
+      const area = this.getNode<CS.Godot.CollisionObject2D>('Area2D')
       const onHovered = () => {
         this.Modulate = new Godot.Color(1, 0, 0, 1) // Change color to red
         isHovered = true

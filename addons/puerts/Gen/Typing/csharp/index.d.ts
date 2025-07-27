@@ -5452,6 +5452,440 @@
             public constructor ()
         }
         /**
+        *  to manage animation lists. It also has general properties and methods for playback and blending.
+        * .
+        */
+        class AnimationMixer extends Godot.Node implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  resources and custom blend times between animation transitions.
+        * . If the library's key is an empty string (known as the default library), the forward slash is omitted, being the same key used by the library.
+        *  if the animation track editor is more convenient than doing it in code.
+        * Updating the target properties of animations occurs at the process frame.
+        */
+        class AnimationPlayer extends Godot.AnimationMixer implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public get MethodCallMode(): Godot.AnimationPlayer.AnimationMethodCallMode;
+            public set MethodCallMode(value: Godot.AnimationPlayer.AnimationMethodCallMode);
+            public get PlaybackActive(): boolean;
+            public set PlaybackActive(value: boolean);
+            public get PlaybackProcessMode(): Godot.AnimationPlayer.AnimationProcessCallback;
+            public set PlaybackProcessMode(value: Godot.AnimationPlayer.AnimationProcessCallback);
+            /**
+            *  for more information on playing animations.
+            * .
+            */
+            public get CurrentAnimation(): string;
+            public set CurrentAnimation(value: string);
+            /** .
+            */
+            public get AssignedAnimation(): string;
+            public set AssignedAnimation(value: string);
+            /** The key of the animation to play when the scene loads.
+            */
+            public get Autoplay(): string;
+            public set Autoplay(value: string);
+            /** The length (in seconds) of the currently playing animation.
+            */
+            public get CurrentAnimationLength(): number;
+            /** The position (in seconds) of the currently playing animation.
+            */
+            public get CurrentAnimationPosition(): number;
+            /**
+            * .
+            * .
+            */
+            public get PlaybackAutoCapture(): boolean;
+            public set PlaybackAutoCapture(value: boolean);
+            /**
+            * .
+            *  is negative value, the duration is set to the interval between the current position and the first key.
+            */
+            public get PlaybackAutoCaptureDuration(): number;
+            public set PlaybackAutoCaptureDuration(value: number);
+            /** .
+            */
+            public get PlaybackAutoCaptureTransitionType(): Godot.Tween.TransitionType;
+            public set PlaybackAutoCaptureTransitionType(value: Godot.Tween.TransitionType);
+            /** .
+            */
+            public get PlaybackAutoCaptureEaseType(): Godot.Tween.EaseType;
+            public set PlaybackAutoCaptureEaseType(value: Godot.Tween.EaseType);
+            /** The default time in which to blend animations. Ranges from 0 to 4096 with 0.01 precision.
+            */
+            public get PlaybackDefaultBlendTime(): number;
+            public set PlaybackDefaultBlendTime(value: number);
+            /**
+            * , then it plays at double speed.
+            * , the animation will not advance.
+            */
+            public get SpeedScale(): number;
+            public set SpeedScale(value: number);
+            /**
+            * . A message is printed when the engine quits for this reason.
+            *  signal, so it will not quit the engine if the animation is set to be looping.
+            */
+            public get MovieQuitOnFinish(): boolean;
+            public set MovieQuitOnFinish(value: boolean);
+            /**  animation completes.
+            */
+            public AnimationSetNext ($animationFrom: Godot.StringName, $animationTo: Godot.StringName) : void
+            /**  animation.
+            */
+            public AnimationGetNext ($animationFrom: Godot.StringName) : Godot.StringName
+            /** Specifies a blend time (in seconds) between two animations, referenced by their keys.
+            */
+            public SetBlendTime ($animationFrom: Godot.StringName, $animationTo: Godot.StringName, $sec: number) : void
+            /** Returns the blend time (in seconds) between two animations, referenced by their keys.
+            */
+            public GetBlendTime ($animationFrom: Godot.StringName, $animationTo: Godot.StringName) : number
+            public SetDefaultBlendTime ($sec: number) : void
+            public GetDefaultBlendTime () : number
+            public SetAutoCapture ($autoCapture: boolean) : void
+            public IsAutoCapture () : boolean
+            public SetAutoCaptureDuration ($autoCaptureDuration: number) : void
+            public GetAutoCaptureDuration () : number
+            public SetAutoCaptureTransitionType ($autoCaptureTransitionType: Godot.Tween.TransitionType) : void
+            public GetAutoCaptureTransitionType () : Godot.Tween.TransitionType
+            public SetAutoCaptureEaseType ($autoCaptureEaseType: Godot.Tween.EaseType) : void
+            public GetAutoCaptureEaseType () : Godot.Tween.EaseType
+            /**
+            * . Custom blend times and speed can be set.
+            * ).
+            *  parameter, the assigned animation will resume playing if it was paused.
+            * .
+            */
+            public Play ($name?: Godot.StringName, $customBlend?: number, $customSpeed?: number, $fromEnd?: boolean) : void
+            /**
+            * .
+            * .
+            */
+            public PlaySectionWithMarkers ($name?: Godot.StringName, $startMarker?: Godot.StringName, $endMarker?: Godot.StringName, $customBlend?: number, $customSpeed?: number, $fromEnd?: boolean) : void
+            /**
+            * .
+            * .
+            */
+            public PlaySection ($name?: Godot.StringName, $startTime?: number, $endTime?: number, $customBlend?: number, $customSpeed?: number, $fromEnd?: boolean) : void
+            /**
+            *  in reverse.
+            * , so see its description for more information.
+            */
+            public PlayBackwards ($name?: Godot.StringName, $customBlend?: number) : void
+            /**
+            *  in reverse.
+            * , see its description for more information.
+            */
+            public PlaySectionWithMarkersBackwards ($name?: Godot.StringName, $startMarker?: Godot.StringName, $endMarker?: Godot.StringName, $customBlend?: number) : void
+            /**
+            *  in reverse.
+            * , see its description for more information.
+            */
+            public PlaySectionBackwards ($name?: Godot.StringName, $startTime?: number, $endTime?: number, $customBlend?: number) : void
+            public PlayWithCapture ($name?: Godot.StringName, $duration?: number, $customBlend?: number, $customSpeed?: number, $fromEnd?: boolean, $transType?: Godot.Tween.TransitionType, $easeType?: Godot.Tween.EaseType) : void
+            /**
+            *  will resume the animation.
+            * .
+            */
+            public Pause () : void
+            /**
+            * .
+            * , the animation state is not updated visually.
+            *  The method / audio / animation playback tracks will not be processed by this method.
+            */
+            public Stop ($keepState?: boolean) : void
+            /** ).
+            */
+            public IsPlaying () : boolean
+            public SetCurrentAnimation ($animation: string) : void
+            public GetCurrentAnimation () : string
+            public SetAssignedAnimation ($animation: string) : void
+            public GetAssignedAnimation () : string
+            /**
+            * Queues an animation for playback once the current animation and all previously queued animations are done.
+            *  If a looped animation is currently playing, the queued animation will never play unless the looped animation is stopped somehow.
+            */
+            public Queue ($name: Godot.StringName) : void
+            /** Returns a list of the animation keys that are currently queued to play.
+            */
+            public GetQueue () : System.Array$1<string>
+            /** Clears all queued, unplayed animations.
+            */
+            public ClearQueue () : void
+            public SetSpeedScale ($speed: number) : void
+            public GetSpeedScale () : number
+            /**
+            *  method.
+            * Returns a negative value if the current animation is playing backwards.
+            */
+            public GetPlayingSpeed () : number
+            public SetAutoplay ($name: string) : void
+            public GetAutoplay () : string
+            public SetMovieQuitOnFinishEnabled ($enabled: boolean) : void
+            public IsMovieQuitOnFinishEnabled () : boolean
+            public GetCurrentAnimationPosition () : number
+            public GetCurrentAnimationLength () : number
+            /**
+            * .
+            * If the argument is empty, the section uses the beginning or end of the animation. If both are empty, it means that the section is not set.
+            */
+            public SetSectionWithMarkers ($startMarker?: Godot.StringName, $endMarker?: Godot.StringName) : void
+            /** .
+            */
+            public SetSection ($startTime?: number, $endTime?: number) : void
+            /** Resets the current section. Does nothing if a section has not been set.
+            */
+            public ResetSection () : void
+            /** Returns the start time of the section currently being played.
+            */
+            public GetSectionStartTime () : number
+            /** Returns the end time of the section currently being played.
+            */
+            public GetSectionEndTime () : number
+            /**  if an animation is currently playing with a section.
+            */
+            public HasSection () : boolean
+            /**
+            *  are skipped.
+            * , the method / audio / animation playback tracks will not be processed.
+            * .
+            */
+            public Seek ($seconds: number, $update?: boolean, $updateOnly?: boolean) : void
+            /**
+            *  are skipped.
+            * , the method / audio / animation playback tracks will not be processed.
+            * .
+            */
+            public Seek ($seconds: number, $update: boolean) : void
+            public add_CurrentAnimationChanged ($value: Godot.AnimationPlayer.CurrentAnimationChangedEventHandler) : void
+            public remove_CurrentAnimationChanged ($value: Godot.AnimationPlayer.CurrentAnimationChangedEventHandler) : void
+            public add_AnimationChanged ($value: Godot.AnimationPlayer.AnimationChangedEventHandler) : void
+            public remove_AnimationChanged ($value: Godot.AnimationPlayer.AnimationChangedEventHandler) : void
+            public constructor ()
+        }
+        /**  is an abstract base class for 2D game objects affected by physics. All 2D physics bodies inherit from it.
+        */
+        class PhysicsBody2D extends Godot.CollisionObject2D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            * .
+            * , which contains information about the collision when stopped, or when touching another body along the motion.
+            * , the body does not move but the would-be collision information is given.
+            *  for more details).
+            *  for improving floor detection during floor snapping.
+            */
+            public MoveAndCollide ($motion: Godot.Vector2, $testOnly?: boolean, $safeMargin?: number, $recoveryAsCollision?: boolean) : Godot.KinematicCollision2D
+            /**
+            * .
+            *  if a collision would stop the body from moving along the whole path.
+            * , which contains additional information about the collision when stopped, or when touching another body along the motion.
+            *  for more details).
+            *  any other bodies.
+            */
+            public TestMove ($from: Godot.Transform2D, $motion: Godot.Vector2, $collision?: Godot.KinematicCollision2D, $safeMargin?: number, $recoveryAsCollision?: boolean) : boolean
+            /**  nodes and the global world gravity.
+            */
+            public GetGravity () : Godot.Vector2
+            /** Returns an array of nodes that were added as collision exceptions for this body.
+            */
+            public GetCollisionExceptions () : Godot.Collections.Array$1<Godot.PhysicsBody2D>
+            /** Adds a body to the list of bodies that this body can't collide with.
+            */
+            public AddCollisionExceptionWith ($body: Godot.Node) : void
+            /** Removes a body from the list of bodies that this body can't collide with.
+            */
+            public RemoveCollisionExceptionWith ($body: Godot.Node) : void
+        }
+        /**
+        *  object is returned.
+        * The collision data includes the colliding object, the remaining motion, and the collision position. This data can be used to determine a custom response to the collision.
+        */
+        class KinematicCollision2D extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * . This makes it useful for highly configurable physics bodies that must move in specific ways and collide with the world, as is often the case with user-controlled characters.
+        *  is simpler to configure.
+        */
+        class CharacterBody2D extends Godot.PhysicsBody2D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** .
+            */
+            public get MotionMode(): Godot.CharacterBody2D.MotionModeEnum;
+            public set MotionMode(value: Godot.CharacterBody2D.MotionModeEnum);
+            /** .
+            */
+            public get UpDirection(): Godot.Vector2;
+            public set UpDirection(value: Godot.Vector2);
+            /** .
+            */
+            public get Velocity(): Godot.Vector2;
+            public set Velocity(value: Godot.Vector2);
+            /**  it will be stopped and will fall vertically.
+            */
+            public get SlideOnCeiling(): boolean;
+            public set SlideOnCeiling(value: boolean);
+            /** . Must be greater than zero.
+            */
+            public get MaxSlides(): number;
+            public set MaxSlides(value: number);
+            /** .
+            */
+            public get WallMinSlideAngle(): number;
+            public set WallMinSlideAngle(value: number);
+            /**
+            *  when the body is standing still.
+            *  applies a downward force.
+            */
+            public get FloorStopOnSlope(): boolean;
+            public set FloorStopOnSlope(value: boolean);
+            /**
+            *  (by default), the body will move faster on downward slopes and slower on upward slopes.
+            *  to stick along a downward slope at constant speed.
+            */
+            public get FloorConstantSpeed(): boolean;
+            public set FloorConstantSpeed(value: boolean);
+            /** , the body will be able to move on the floor only. This option avoids to be able to walk on walls, it will however allow to slide down along them.
+            */
+            public get FloorBlockOnWall(): boolean;
+            public set FloorBlockOnWall(value: boolean);
+            /** . The default value equals 45 degrees.
+            */
+            public get FloorMaxAngle(): number;
+            public set FloorMaxAngle(value: number);
+            /**
+            * .
+            * .
+            */
+            public get FloorSnapLength(): number;
+            public set FloorSnapLength(value: number);
+            /** Sets the behavior to apply when you leave a moving platform. By default, to be physically accurate, when you leave the last platform velocity is applied.
+            */
+            public get PlatformOnLeave(): Godot.CharacterBody2D.PlatformOnLeaveEnum;
+            public set PlatformOnLeave(value: Godot.CharacterBody2D.PlatformOnLeaveEnum);
+            /** . By default, all floor bodies are detected and propagate their velocity.
+            */
+            public get PlatformFloorLayers(): number;
+            public set PlatformFloorLayers(value: number);
+            /** . By default, all wall bodies are ignored.
+            */
+            public get PlatformWallLayers(): number;
+            public set PlatformWallLayers(value: number);
+            /**
+            * .
+            * If the body is at least this close to another body, it will consider them to be colliding and will be pushed away before performing the actual motion.
+            * A higher value means it's more flexible for detecting collision, which helps with consistently detecting walls and floors.
+            * A lower value forces the collision algorithm to use more exact detection, so it can be used in cases that specifically require precision, e.g at very low scale to avoid visible jittering, or for stability with a stack of character bodies.
+            */
+            public get SafeMargin(): number;
+            public set SafeMargin(value: number);
+            /**
+            * , it will also be affected by the motion of the other body. You can use this to make moving and rotating platforms, or to make nodes push other nodes.
+            * .
+            * When the body touches a moving platform, the platform's velocity is automatically added to the body motion. If a collision occurs due to the platform's motion, it will always be first in the slide collisions.
+            * .
+            * .
+            */
+            public MoveAndSlide () : boolean
+            /** .
+            */
+            public ApplyFloorSnap () : void
+            public SetVelocity ($velocity: Godot.Vector2) : void
+            public GetVelocity () : Godot.Vector2
+            public SetSafeMargin ($margin: number) : void
+            public GetSafeMargin () : number
+            public IsFloorStopOnSlopeEnabled () : boolean
+            public SetFloorStopOnSlopeEnabled ($enabled: boolean) : void
+            public SetFloorConstantSpeedEnabled ($enabled: boolean) : void
+            public IsFloorConstantSpeedEnabled () : boolean
+            public SetFloorBlockOnWallEnabled ($enabled: boolean) : void
+            public IsFloorBlockOnWallEnabled () : boolean
+            public SetSlideOnCeilingEnabled ($enabled: boolean) : void
+            public IsSlideOnCeilingEnabled () : boolean
+            public SetPlatformFloorLayers ($excludeLayer: number) : void
+            public GetPlatformFloorLayers () : number
+            public SetPlatformWallLayers ($excludeLayer: number) : void
+            public GetPlatformWallLayers () : number
+            public GetMaxSlides () : number
+            public SetMaxSlides ($maxSlides: number) : void
+            public GetFloorMaxAngle () : number
+            public SetFloorMaxAngle ($radians: number) : void
+            public GetFloorSnapLength () : number
+            public SetFloorSnapLength ($floorSnapLength: number) : void
+            public GetWallMinSlideAngle () : number
+            public SetWallMinSlideAngle ($radians: number) : void
+            public GetUpDirection () : Godot.Vector2
+            public SetUpDirection ($upDirection: Godot.Vector2) : void
+            public SetMotionMode ($mode: Godot.CharacterBody2D.MotionModeEnum) : void
+            public GetMotionMode () : Godot.CharacterBody2D.MotionModeEnum
+            public SetPlatformOnLeave ($onLeaveApplyVelocity: Godot.CharacterBody2D.PlatformOnLeaveEnum) : void
+            public GetPlatformOnLeave () : Godot.CharacterBody2D.PlatformOnLeaveEnum
+            /**  are used to determine whether a surface is "floor" or not.
+            */
+            public IsOnFloor () : boolean
+            /**  are used to determine whether a surface is "floor" or not.
+            */
+            public IsOnFloorOnly () : boolean
+            /**  are used to determine whether a surface is "ceiling" or not.
+            */
+            public IsOnCeiling () : boolean
+            /**  are used to determine whether a surface is "ceiling" or not.
+            */
+            public IsOnCeilingOnly () : boolean
+            /**  are used to determine whether a surface is "wall" or not.
+            */
+            public IsOnWall () : boolean
+            /**  are used to determine whether a surface is "wall" or not.
+            */
+            public IsOnWallOnly () : boolean
+            /**
+            * .
+            *  The collision normal is not always the same as the surface normal.
+            */
+            public GetFloorNormal () : Godot.Vector2
+            /**
+            * .
+            *  The collision normal is not always the same as the surface normal.
+            */
+            public GetWallNormal () : Godot.Vector2
+            /** . The movement can be split into multiple motions when sliding occurs, and this method return the last one, which is useful to retrieve the current direction of the movement.
+            */
+            public GetLastMotion () : Godot.Vector2
+            /** .
+            */
+            public GetPositionDelta () : Godot.Vector2
+            /**  which returns the requested velocity.
+            */
+            public GetRealVelocity () : Godot.Vector2
+            public GetFloorAngle ($upDirection?: Godot.Vector2 | null) : number
+            /** .
+            */
+            public GetPlatformVelocity () : Godot.Vector2
+            /** .
+            */
+            public GetSlideCollisionCount () : number
+            /**
+            *  - 1).
+            *  loop:
+            * 
+            for (int i = 0; i < GetSlideCollisionCount(); i++)
+            {
+            KinematicCollision2D collision = GetSlideCollision(i);
+            GD.Print("Collided with: ", (collision.GetCollider() as Node).Name);
+            }
+            */
+            public GetSlideCollision ($slideIdx: number) : Godot.KinematicCollision2D
+            /** .
+            */
+            public GetLastSlideCollision () : Godot.KinematicCollision2D
+            public constructor ()
+        }
+        /**
         * Abstract base class for all 2D shapes, intended for use in physics.
         *  is the slowest.
         */
@@ -6109,6 +6543,36 @@
         }
         var AreaExitedEventHandler: { new (func: (area: Godot.Area2D) => void): AreaExitedEventHandler; }
     }
+    namespace Godot.AnimationPlayer {
+        enum AnimationMethodCallMode
+        { Deferred = 0, Immediate = 1 }
+        enum AnimationProcessCallback
+        { Physics = 0, Idle = 1, Manual = 2 }
+        interface CurrentAnimationChangedEventHandler
+        { 
+        (name: string) : void; 
+        Invoke?: (name: string) => void;
+        }
+        var CurrentAnimationChangedEventHandler: { new (func: (name: string) => void): CurrentAnimationChangedEventHandler; }
+        interface AnimationChangedEventHandler
+        { 
+        (oldName: Godot.StringName, newName: Godot.StringName) : void; 
+        Invoke?: (oldName: Godot.StringName, newName: Godot.StringName) => void;
+        }
+        var AnimationChangedEventHandler: { new (func: (oldName: Godot.StringName, newName: Godot.StringName) => void): AnimationChangedEventHandler; }
+    }
+    namespace Godot.Tween {
+        enum TransitionType
+        { Linear = 0, Sine = 1, Quint = 2, Quart = 3, Quad = 4, Expo = 5, Elastic = 6, Cubic = 7, Circ = 8, Bounce = 9, Back = 10, Spring = 11 }
+        enum EaseType
+        { In = 0, Out = 1, InOut = 2, OutIn = 3 }
+    }
+    namespace Godot.CharacterBody2D {
+        enum MotionModeEnum
+        { Grounded = 0, Floating = 1 }
+        enum PlatformOnLeaveEnum
+        { AddVelocity = 0, AddUpwardVelocity = 1, DoNothing = 2 }
+    }
     namespace Godot.CollisionObject2D {
         enum DisableModeEnum
         { Remove = 0, MakeStatic = 1, KeepActive = 2 }
@@ -6161,13 +6625,29 @@
         enum TextDirection
         { Inherited = 3, Auto = 0, Ltr = 1, Rtl = 2 }
     }
-        interface IJsComponent
+        class JsComponentHook$1<T> extends System.Object
         {
-            JsOnReady : System.Action
-            JsOnProcess : System.Action$1<number>
-            JsOnPhysicsProcess : System.Action$1<number>
-            JsOnInput : System.Action$1<Godot.InputEvent>
-            JsOnExitTree : System.Action
+            protected [__keep_incompatibility]: never;
+            public get JsOnReady(): System.Action;
+            public set JsOnReady(value: System.Action);
+            public get JsOnProcess(): System.Action$1<number>;
+            public set JsOnProcess(value: System.Action$1<number>);
+            public get JsOnPhysicsProcess(): System.Action$1<number>;
+            public set JsOnPhysicsProcess(value: System.Action$1<number>);
+            public get JsOnInput(): System.Action$1<Godot.InputEvent>;
+            public set JsOnInput(value: System.Action$1<Godot.InputEvent>);
+            public get JsOnExitTree(): System.Action;
+            public set JsOnExitTree(value: System.Action);
+            public _Ready () : void
+            public _Process ($delta: number) : void
+            public _PhysicsProcess ($delta: number) : void
+            public _Input ($event: Godot.InputEvent) : void
+            public _ExitTree () : void
+            public constructor ($owner: T, $jsSource: JsSource)
+        }
+        class JsSource extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
         }
         namespace System.Runtime.InteropServices {
         class StructLayoutAttribute extends System.Attribute

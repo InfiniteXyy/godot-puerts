@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca3tpbomkekmx"]
 
 [ext_resource type="PackedScene" uid="uid://db3glh6wnd8sr" path="res://scenes/icon.tscn" id="1_sugp2"]
-[ext_resource type="Script" uid="uid://b6vlvfr4d4p3u" path="res://scripts/helper/JsComponentLabel.cs" id="3_jyhfs"]
+[ext_resource type="Script" uid="uid://u7gi5vpf6t3t" path="res://scripts/src/CountLabel.cs" id="2_0wfyh"]
 [ext_resource type="Resource" path="res://scripts/dist/CountLabel.tres" id="5_o6xl0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wfyh"]
@@ -28,5 +28,5 @@ offset_right = 393.0
 offset_bottom = 53.0
 text = "Has dragged 0 icon"
 label_settings = SubResource("LabelSettings_0wfyh")
-script = ExtResource("3_jyhfs")
+script = ExtResource("2_0wfyh")
 jsSource = ExtResource("5_o6xl0")

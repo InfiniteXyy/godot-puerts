@@ -3,15 +3,6 @@ using System.IO;
 using Godot;
 using Puerts;
 
-public interface IJsComponent
-{
-  Action JsOnReady { get; set; }
-  Action<double> JsOnProcess { get; set; }
-  Action<double> JsOnPhysicsProcess { get; set; }
-  Action<InputEvent> JsOnInput { get; set; }
-  Action JsOnExitTree { get; set; }
-}
-
 public partial class JsMachine : Node
 {
   [Export]
@@ -75,6 +66,13 @@ public partial class JsMachine : Node
 
   public override void _Process(double delta)
   {
+    if (isCodeDirty)
+    {
+      isCodeDirty = false;
+      scriptEnv?.ClearModuleCache();
+      CodeChanged?.Invoke("");
+      GD.Print("File changed, force reload");
+    }
     scriptEnv?.Tick();
   }
 

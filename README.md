@@ -9,3 +9,4 @@
 - [x] Generate tres files for js script
 - [ ] Hot Reload on demand
 - [ ] Create addon
+- [ ] use JSX to define a scene?

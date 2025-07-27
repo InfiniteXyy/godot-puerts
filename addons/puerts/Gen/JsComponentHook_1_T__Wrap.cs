@@ -8,7 +8,7 @@ namespace PuertsStaticWrap
 #if !PUERTS_GENERAL
     [UnityEngine.Scripting.Preserve]
 #endif
-    public static class IJsComponent_Wrap 
+    public static class JsComponentHook_1_T__Wrap<T> where T : Godot.Node
     {
     
         [Puerts.MonoPInvokeCallback(typeof(Puerts.V8ConstructorCallback))]
@@ -17,7 +17,24 @@ namespace PuertsStaticWrap
             try
             {
 
-                Puerts.PuertsDLL.ThrowException(isolate, "invalid arguments to " + typeof(IJsComponent).GetFriendlyName() + " constructor");
+                {
+                    IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
+                    object argobj0 = null;
+                    ;
+                    IntPtr v8Value1 = PuertsDLL.GetArgumentValue(isolate, info, 1);
+                    object argobj1 = null;
+                    ;
+
+                    {
+                        Godot.Node arg0 = argobj0 != null ? (Godot.Node)argobj0 : StaticTranslate<Godot.Node>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
+                        JsSource arg1 = argobj1 != null ? (JsSource)argobj1 : StaticTranslate<JsSource>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value1, false);;
+                        var result = new JsComponentHook<T>(arg0, arg1);
+
+
+                        return Puerts.Utils.GetObjectPtr((int)data, typeof(JsComponentHook<T>), result);
+                    }
+                }
+
             } catch (Exception e) {
                 Puerts.PuertsDLL.ThrowException(isolate, "c# exception:" + e.Message + ",stack:" + e.StackTrace);
             }
@@ -34,7 +51,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 var result = obj.JsOnReady;
                 Puerts.ResultHelper.Set((int)data, isolate, info, result);
             }
@@ -48,7 +65,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                 object argobj0 = null;
                 System.Action arg0 = argobj0 != null ? (System.Action)argobj0 : StaticTranslate<System.Action>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
@@ -64,7 +81,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 var result = obj.JsOnProcess;
                 Puerts.ResultHelper.Set((int)data, isolate, info, result);
             }
@@ -78,7 +95,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                 object argobj0 = null;
                 System.Action<double> arg0 = argobj0 != null ? (System.Action<double>)argobj0 : StaticTranslate<System.Action<double>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
@@ -94,7 +111,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 var result = obj.JsOnPhysicsProcess;
                 Puerts.ResultHelper.Set((int)data, isolate, info, result);
             }
@@ -108,7 +125,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                 object argobj0 = null;
                 System.Action<double> arg0 = argobj0 != null ? (System.Action<double>)argobj0 : StaticTranslate<System.Action<double>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
@@ -124,7 +141,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 var result = obj.JsOnInput;
                 Puerts.ResultHelper.Set((int)data, isolate, info, result);
             }
@@ -138,7 +155,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                 object argobj0 = null;
                 System.Action<Godot.InputEvent> arg0 = argobj0 != null ? (System.Action<Godot.InputEvent>)argobj0 : StaticTranslate<System.Action<Godot.InputEvent>>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;
@@ -154,7 +171,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 var result = obj.JsOnExitTree;
                 Puerts.ResultHelper.Set((int)data, isolate, info, result);
             }
@@ -168,7 +185,7 @@ namespace PuertsStaticWrap
         {
             try
             {
-                var obj = Puerts.Utils.GetSelf((int)data, self) as IJsComponent;
+                var obj = Puerts.Utils.GetSelf((int)data, self) as JsComponentHook<T>;
                 IntPtr v8Value0 = PuertsDLL.GetArgumentValue(isolate, info, 0);
                 object argobj0 = null;
                 System.Action arg0 = argobj0 != null ? (System.Action)argobj0 : StaticTranslate<System.Action>.Get((int)data, isolate, NativeValueApi.GetValueFromArgument, v8Value0, false);;

@@ -27,13 +27,16 @@ public class PuerTSConfig
                 typeof(Godot.Vector2),
                 typeof(Godot.Area2D),
                 typeof(Godot.Sprite2D),
+                typeof(Godot.AnimationPlayer),
+                typeof(Godot.PhysicsBody2D),
+                typeof(Godot.CharacterBody2D),
                 typeof(Godot.CollisionObject2D),
                 typeof(Godot.Texture),
                 typeof(Godot.Texture2D),
                 typeof(Godot.Color),
                 typeof(Godot.CanvasItem),
                 typeof(Godot.Label),
-                typeof(IJsComponent)
+                typeof(JsComponentHook<Node>),
             };
     }
   }
