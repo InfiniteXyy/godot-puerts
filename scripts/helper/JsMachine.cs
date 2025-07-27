@@ -75,13 +75,6 @@ public partial class JsMachine : Node
 
   public override void _Process(double delta)
   {
-    if (isCodeDirty || Input.IsActionJustPressed("ui_accept"))
-    {
-      isCodeDirty = false;
-      scriptEnv?.ClearModuleCache();
-      CodeChanged?.Invoke("");
-      GD.Print("File changed, force reload");
-    }
     scriptEnv?.Tick();
   }
 
