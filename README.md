@@ -6,7 +6,7 @@
 - [x] Share jsMachine between nodes
 - [x] Hot Reload
 - [x] Generate tres files for js script
-- [ ] Improve DX by automatically generate cs file and connect to js file when creating a js component
+- [x] Improve DX by automatically generate cs file and connect to js file when creating a js component
 - [ ] Hot Reload on demand
 - [ ] Create addon
 - [ ] use JSX to define a scene?
