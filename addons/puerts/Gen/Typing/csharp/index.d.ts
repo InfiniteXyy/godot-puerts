@@ -4669,6 +4669,139 @@
         {
             protected [__keep_incompatibility]: never;
         }
+        /** . The resource can be shared between multiple labels and changed on the fly, so it's convenient and flexible way to setup text style.
+        */
+        class LabelSettings extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /** Additional vertical spacing between lines (in pixels), spacing is added to line descent. This value can be negative.
+            */
+            public get LineSpacing(): number;
+            public set LineSpacing(value: number);
+            /** .
+            */
+            public get ParagraphSpacing(): number;
+            public set ParagraphSpacing(value: number);
+            /**  used for the text.
+            */
+            public get Font(): Godot.Font;
+            public set Font(value: Godot.Font);
+            /** Size of the text.
+            */
+            public get FontSize(): number;
+            public set FontSize(value: number);
+            /** Color of the text.
+            */
+            public get FontColor(): Godot.Color;
+            public set FontColor(value: Godot.Color);
+            /** Text outline size.
+            */
+            public get OutlineSize(): number;
+            public set OutlineSize(value: number);
+            /** The color of the outline.
+            */
+            public get OutlineColor(): Godot.Color;
+            public set OutlineColor(value: Godot.Color);
+            /** Size of the shadow effect.
+            */
+            public get ShadowSize(): number;
+            public set ShadowSize(value: number);
+            /** , no shadow will be drawn.
+            */
+            public get ShadowColor(): Godot.Color;
+            public set ShadowColor(value: Godot.Color);
+            /** Offset of the shadow effect, in pixels.
+            */
+            public get ShadowOffset(): Godot.Vector2;
+            public set ShadowOffset(value: Godot.Vector2);
+            /** The number of stacked outlines.
+            */
+            public get StackedOutlineCount(): number;
+            public set StackedOutlineCount(value: number);
+            /** The number of stacked shadows.
+            */
+            public get StackedShadowCount(): number;
+            public set StackedShadowCount(value: number);
+            public SetLineSpacing ($spacing: number) : void
+            public GetLineSpacing () : number
+            public SetParagraphSpacing ($spacing: number) : void
+            public GetParagraphSpacing () : number
+            public SetFont ($font: Godot.Font) : void
+            public GetFont () : Godot.Font
+            public SetFontSize ($size: number) : void
+            public GetFontSize () : number
+            public SetFontColor ($color: Godot.Color) : void
+            public GetFontColor () : Godot.Color
+            public SetOutlineSize ($size: number) : void
+            public GetOutlineSize () : number
+            public SetOutlineColor ($color: Godot.Color) : void
+            public GetOutlineColor () : Godot.Color
+            public SetShadowSize ($size: number) : void
+            public GetShadowSize () : number
+            public SetShadowColor ($color: Godot.Color) : void
+            public GetShadowColor () : Godot.Color
+            public SetShadowOffset ($offset: Godot.Vector2) : void
+            public GetShadowOffset () : Godot.Vector2
+            public GetStackedOutlineCount () : number
+            public SetStackedOutlineCount ($count: number) : void
+            /** , the new stacked outline will be added at the end of the list.
+            */
+            public AddStackedOutline ($index?: number) : void
+            /**  in the array.
+            */
+            public MoveStackedOutline ($fromIndex: number, $toPosition: number) : void
+            /** .
+            */
+            public RemoveStackedOutline ($index: number) : void
+            /** .
+            */
+            public SetStackedOutlineSize ($index: number, $size: number) : void
+            /** .
+            */
+            public GetStackedOutlineSize ($index: number) : number
+            /** .
+            */
+            public SetStackedOutlineColor ($index: number, $color: Godot.Color) : void
+            /** .
+            */
+            public GetStackedOutlineColor ($index: number) : Godot.Color
+            public GetStackedShadowCount () : number
+            public SetStackedShadowCount ($count: number) : void
+            /** , the new stacked shadow will be added at the end of the list.
+            */
+            public AddStackedShadow ($index?: number) : void
+            /**  in the array.
+            */
+            public MoveStackedShadow ($fromIndex: number, $toPosition: number) : void
+            /** .
+            */
+            public RemoveStackedShadow ($index: number) : void
+            /** .
+            */
+            public SetStackedShadowOffset ($index: number, $offset: Godot.Vector2) : void
+            /** .
+            */
+            public GetStackedShadowOffset ($index: number) : Godot.Vector2
+            /** .
+            */
+            public SetStackedShadowColor ($index: number, $color: Godot.Color) : void
+            /** .
+            */
+            public GetStackedShadowColor ($index: number) : Godot.Color
+            /** .
+            */
+            public SetStackedShadowOutlineSize ($index: number, $size: number) : void
+            /** .
+            */
+            public GetStackedShadowOutlineSize ($index: number) : number
+            public constructor ()
+        }
+        /** Abstract base class for different font types. It has methods for drawing text and font character introspection.
+        */
+        class Font extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
         /**
         * A singleton used to load resource files from the filesystem.
         *  classes registered in the engine (either built-in or from a plugin) to load files into memory and convert them to a format that can be used by the engine.
@@ -6915,12 +7048,6 @@
         {
             protected [__keep_incompatibility]: never;
         }
-        /** Abstract base class for different font types. It has methods for drawing text and font character introspection.
-        */
-        class Font extends Godot.Resource implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
         enum HorizontalAlignment
         { Left = 0, Center = 1, Right = 2, Fill = 3 }
         /** .
@@ -7111,12 +7238,6 @@
             */
             public GetCharacterBounds ($pos: number) : Godot.Rect2
             public constructor ()
-        }
-        /** . The resource can be shared between multiple labels and changed on the fly, so it's convenient and flexible way to setup text style.
-        */
-        class LabelSettings extends Godot.Resource implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
         }
         enum VerticalAlignment
         { Top = 0, Center = 1, Bottom = 2, Fill = 3 }

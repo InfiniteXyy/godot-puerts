@@ -1310,6 +1310,285 @@ namespace PuertsStaticWrap
                 }
             };
         }
+        public static RegisterInfo GetRegisterInfo_Godot_LabelSettings_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_LabelSettings_Wrap.Constructor
+#endif
+                    }},
+                    {"SetLineSpacing", new MemberRegisterInfo { Name = "SetLineSpacing", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetLineSpacing
+#endif
+                    }},
+                    {"GetLineSpacing", new MemberRegisterInfo { Name = "GetLineSpacing", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetLineSpacing
+#endif
+                    }},
+                    {"SetParagraphSpacing", new MemberRegisterInfo { Name = "SetParagraphSpacing", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetParagraphSpacing
+#endif
+                    }},
+                    {"GetParagraphSpacing", new MemberRegisterInfo { Name = "GetParagraphSpacing", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetParagraphSpacing
+#endif
+                    }},
+                    {"SetFont", new MemberRegisterInfo { Name = "SetFont", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetFont
+#endif
+                    }},
+                    {"GetFont", new MemberRegisterInfo { Name = "GetFont", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetFont
+#endif
+                    }},
+                    {"SetFontSize", new MemberRegisterInfo { Name = "SetFontSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetFontSize
+#endif
+                    }},
+                    {"GetFontSize", new MemberRegisterInfo { Name = "GetFontSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetFontSize
+#endif
+                    }},
+                    {"SetFontColor", new MemberRegisterInfo { Name = "SetFontColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetFontColor
+#endif
+                    }},
+                    {"GetFontColor", new MemberRegisterInfo { Name = "GetFontColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetFontColor
+#endif
+                    }},
+                    {"SetOutlineSize", new MemberRegisterInfo { Name = "SetOutlineSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetOutlineSize
+#endif
+                    }},
+                    {"GetOutlineSize", new MemberRegisterInfo { Name = "GetOutlineSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetOutlineSize
+#endif
+                    }},
+                    {"SetOutlineColor", new MemberRegisterInfo { Name = "SetOutlineColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetOutlineColor
+#endif
+                    }},
+                    {"GetOutlineColor", new MemberRegisterInfo { Name = "GetOutlineColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetOutlineColor
+#endif
+                    }},
+                    {"SetShadowSize", new MemberRegisterInfo { Name = "SetShadowSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetShadowSize
+#endif
+                    }},
+                    {"GetShadowSize", new MemberRegisterInfo { Name = "GetShadowSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetShadowSize
+#endif
+                    }},
+                    {"SetShadowColor", new MemberRegisterInfo { Name = "SetShadowColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetShadowColor
+#endif
+                    }},
+                    {"GetShadowColor", new MemberRegisterInfo { Name = "GetShadowColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetShadowColor
+#endif
+                    }},
+                    {"SetShadowOffset", new MemberRegisterInfo { Name = "SetShadowOffset", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetShadowOffset
+#endif
+                    }},
+                    {"GetShadowOffset", new MemberRegisterInfo { Name = "GetShadowOffset", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetShadowOffset
+#endif
+                    }},
+                    {"GetStackedOutlineCount", new MemberRegisterInfo { Name = "GetStackedOutlineCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedOutlineCount
+#endif
+                    }},
+                    {"SetStackedOutlineCount", new MemberRegisterInfo { Name = "SetStackedOutlineCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedOutlineCount
+#endif
+                    }},
+                    {"AddStackedOutline", new MemberRegisterInfo { Name = "AddStackedOutline", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_AddStackedOutline
+#endif
+                    }},
+                    {"MoveStackedOutline", new MemberRegisterInfo { Name = "MoveStackedOutline", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_MoveStackedOutline
+#endif
+                    }},
+                    {"RemoveStackedOutline", new MemberRegisterInfo { Name = "RemoveStackedOutline", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_RemoveStackedOutline
+#endif
+                    }},
+                    {"SetStackedOutlineSize", new MemberRegisterInfo { Name = "SetStackedOutlineSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedOutlineSize
+#endif
+                    }},
+                    {"GetStackedOutlineSize", new MemberRegisterInfo { Name = "GetStackedOutlineSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedOutlineSize
+#endif
+                    }},
+                    {"SetStackedOutlineColor", new MemberRegisterInfo { Name = "SetStackedOutlineColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedOutlineColor
+#endif
+                    }},
+                    {"GetStackedOutlineColor", new MemberRegisterInfo { Name = "GetStackedOutlineColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedOutlineColor
+#endif
+                    }},
+                    {"GetStackedShadowCount", new MemberRegisterInfo { Name = "GetStackedShadowCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedShadowCount
+#endif
+                    }},
+                    {"SetStackedShadowCount", new MemberRegisterInfo { Name = "SetStackedShadowCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedShadowCount
+#endif
+                    }},
+                    {"AddStackedShadow", new MemberRegisterInfo { Name = "AddStackedShadow", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_AddStackedShadow
+#endif
+                    }},
+                    {"MoveStackedShadow", new MemberRegisterInfo { Name = "MoveStackedShadow", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_MoveStackedShadow
+#endif
+                    }},
+                    {"RemoveStackedShadow", new MemberRegisterInfo { Name = "RemoveStackedShadow", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_RemoveStackedShadow
+#endif
+                    }},
+                    {"SetStackedShadowOffset", new MemberRegisterInfo { Name = "SetStackedShadowOffset", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedShadowOffset
+#endif
+                    }},
+                    {"GetStackedShadowOffset", new MemberRegisterInfo { Name = "GetStackedShadowOffset", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedShadowOffset
+#endif
+                    }},
+                    {"SetStackedShadowColor", new MemberRegisterInfo { Name = "SetStackedShadowColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedShadowColor
+#endif
+                    }},
+                    {"GetStackedShadowColor", new MemberRegisterInfo { Name = "GetStackedShadowColor", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedShadowColor
+#endif
+                    }},
+                    {"SetStackedShadowOutlineSize", new MemberRegisterInfo { Name = "SetStackedShadowOutlineSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_SetStackedShadowOutlineSize
+#endif
+                    }},
+                    {"GetStackedShadowOutlineSize", new MemberRegisterInfo { Name = "GetStackedShadowOutlineSize", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_LabelSettings_Wrap.M_GetStackedShadowOutlineSize
+#endif
+                    }},
+                    {"LineSpacing", new MemberRegisterInfo { Name = "LineSpacing", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_LineSpacing, PropertySetter = Godot_LabelSettings_Wrap.S_LineSpacing
+#endif
+                    }},
+                    {"ParagraphSpacing", new MemberRegisterInfo { Name = "ParagraphSpacing", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_ParagraphSpacing, PropertySetter = Godot_LabelSettings_Wrap.S_ParagraphSpacing
+#endif
+                    }},
+                    {"Font", new MemberRegisterInfo { Name = "Font", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_Font, PropertySetter = Godot_LabelSettings_Wrap.S_Font
+#endif
+                    }},
+                    {"FontSize", new MemberRegisterInfo { Name = "FontSize", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_FontSize, PropertySetter = Godot_LabelSettings_Wrap.S_FontSize
+#endif
+                    }},
+                    {"FontColor", new MemberRegisterInfo { Name = "FontColor", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_FontColor, PropertySetter = Godot_LabelSettings_Wrap.S_FontColor
+#endif
+                    }},
+                    {"OutlineSize", new MemberRegisterInfo { Name = "OutlineSize", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_OutlineSize, PropertySetter = Godot_LabelSettings_Wrap.S_OutlineSize
+#endif
+                    }},
+                    {"OutlineColor", new MemberRegisterInfo { Name = "OutlineColor", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_OutlineColor, PropertySetter = Godot_LabelSettings_Wrap.S_OutlineColor
+#endif
+                    }},
+                    {"ShadowSize", new MemberRegisterInfo { Name = "ShadowSize", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_ShadowSize, PropertySetter = Godot_LabelSettings_Wrap.S_ShadowSize
+#endif
+                    }},
+                    {"ShadowColor", new MemberRegisterInfo { Name = "ShadowColor", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_ShadowColor, PropertySetter = Godot_LabelSettings_Wrap.S_ShadowColor
+#endif
+                    }},
+                    {"ShadowOffset", new MemberRegisterInfo { Name = "ShadowOffset", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_ShadowOffset, PropertySetter = Godot_LabelSettings_Wrap.S_ShadowOffset
+#endif
+                    }},
+                    {"StackedOutlineCount", new MemberRegisterInfo { Name = "StackedOutlineCount", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_StackedOutlineCount, PropertySetter = Godot_LabelSettings_Wrap.S_StackedOutlineCount
+#endif
+                    }},
+                    {"StackedShadowCount", new MemberRegisterInfo { Name = "StackedShadowCount", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_LabelSettings_Wrap.G_StackedShadowCount, PropertySetter = Godot_LabelSettings_Wrap.S_StackedShadowCount
+#endif
+                    }},
+                }
+            };
+        }
         public static RegisterInfo GetRegisterInfo_Godot_ResourceLoader_Wrap() 
         {
             return new RegisterInfo 
@@ -8266,6 +8545,7 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.StringName), GetRegisterInfo_Godot_StringName_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Viewport), GetRegisterInfo_Godot_Viewport_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Resource), GetRegisterInfo_Godot_Resource_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.LabelSettings), GetRegisterInfo_Godot_LabelSettings_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.ResourceLoader), GetRegisterInfo_Godot_ResourceLoader_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.PackedScene), GetRegisterInfo_Godot_PackedScene_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Rect2), GetRegisterInfo_Godot_Rect2_Wrap);

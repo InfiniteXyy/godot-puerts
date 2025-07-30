@@ -1,13 +1,15 @@
 import { count$ } from './CountLabel'
 import { defineComponent, Godot } from './utils'
 
+export const text: string = 'Hello, Godot with JS!'
+
 export default defineComponent<CS.Godot.Sprite2D>(function () {
   let isMovingRight = true
   let isDragging = false
   let isHovered = false
 
   const textLabel = new Godot.Label()
-  textLabel.Text = 'Hello, Godot with JS!'
+  textLabel.Text = text
 
   const originalPosition = this.Position
 

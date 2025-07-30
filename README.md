@@ -7,6 +7,7 @@
 - [x] Hot Reload
 - [x] Generate tres files for js script
 - [x] Improve DX by automatically generate cs file and connect to js file when creating a js component
-- [ ] Hot Reload on demand
+- [x] Hot Reload on demand
+- [ ] experiment: Use parser to generate export in csharp?
+- [ ] experiment: use JSX to define a scene?
 - [ ] Create addon
-- [ ] use JSX to define a scene?

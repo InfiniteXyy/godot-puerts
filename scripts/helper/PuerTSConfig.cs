@@ -17,6 +17,7 @@ public class PuerTSConfig
                 typeof(Godot.StringName),
                 typeof(Godot.Viewport),
                 typeof(Godot.Resource),
+                typeof(Godot.LabelSettings),
                 typeof(Godot.ResourceLoader),
                 typeof(Godot.PackedScene),
                 typeof(Godot.Rect2),

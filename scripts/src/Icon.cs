@@ -4,6 +4,9 @@ public partial class Icon : Sprite2D
 {
   private string jsPath = "scripts/dist/Icon.mjs";
 
+  [Export]
+  private string text = "Hello, Godot with JS!";
+
   private JsComponentHook<Sprite2D> jsComponentHook;
 
   public override void _Ready()
