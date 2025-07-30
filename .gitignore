@@ -2,9 +2,6 @@
 .godot/
 /android/
 
-# PuerTS specific ignores
-libpuerts.dylib
-
 # Nodejs
 node_modules
 

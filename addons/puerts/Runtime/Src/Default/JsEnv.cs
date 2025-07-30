@@ -1,6 +1,6 @@
 ﻿/*
 * Tencent is pleased to support the open source community by making Puerts available.
-* Copyright (C) 2020 Tencent.  All rights reserved.
+* Copyright (C) 2020 THL A29 Limited, a Tencent company.  All rights reserved.
 * Puerts is licensed under the BSD 3-Clause License, except for the third-party components listed in the file 'LICENSE' which may be subject to their corresponding license terms. 
 * This file is subject to the terms and conditions defined in file 'LICENSE', which is part of this source code package.
 */
@@ -99,7 +99,7 @@ namespace Puerts
 #if !UNITY_EDITOR && UNITY_WEBGL
             if (jsEnvs.Count == 0) PuertsDLL.InitPuertsWebGL();
 #endif
-            const int libVersionExpect = 35;
+            const int libVersionExpect = 34;
             int libVersion = PuertsDLL.GetApiLevel();
             if (libVersion != libVersionExpect)
             {
@@ -218,12 +218,12 @@ namespace Puerts
             try 
             {
                 ExecuteModule("puerts/init.mjs");
+                ExecuteModule("puerts/log.mjs");
                 ExecuteModule("puerts/csharp.mjs");
                 ExecuteModule("puerts/events.mjs");
                 
                 if (externalContext == IntPtr.Zero || externalRuntime == IntPtr.Zero) 
                 {
-                    ExecuteModule("puerts/log.mjs");
                     ExecuteModule("puerts/timer.mjs");
                     ExecuteModule("puerts/promises.mjs");
                 }

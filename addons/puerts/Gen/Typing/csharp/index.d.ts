@@ -3091,7 +3091,7 @@
             public get UseTaa(): boolean;
             public set UseTaa(value: boolean);
             /**
-            * .
+            *  and will affect all 2D and 3D rendering, including canvas items.
             * In some cases, debanding may introduce a slightly noticeable dithering pattern. It's recommended to enable debanding only when actually needed since the dithering pattern will make lossless-compressed screenshots larger.
             * .
             */

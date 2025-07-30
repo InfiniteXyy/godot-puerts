@@ -1,6 +1,6 @@
 /*
 * Tencent is pleased to support the open source community by making Puerts available.
-* Copyright (C) 2020 Tencent.  All rights reserved.
+* Copyright (C) 2020 THL A29 Limited, a Tencent company.  All rights reserved.
 * Puerts is licensed under the BSD 3-Clause License, except for the third-party components listed in the file 'LICENSE' which may be subject to their corresponding license terms. 
 * This file is subject to the terms and conditions defined in file 'LICENSE', which is part of this source code package.
 */
@@ -256,22 +256,6 @@ namespace PuertsIl2cpp.Editor
                     return unityIsOptimizeSize;
                 }
             }
-
-            class SignatureInfoEqualityComparer : IEqualityComparer<SignatureInfo>
-            {
-                public bool Equals(SignatureInfo x, SignatureInfo y)
-                {
-                    if (x == null || y == null)
-                        return false;
-                    return x.Signature == y.Signature;
-                }
-
-                public int GetHashCode(SignatureInfo obj)
-                {
-                    return obj.Signature?.GetHashCode() ?? 0;
-                }
-            }
-
             public static void GenCPPWrap(string saveTo, bool onlyConfigure = false, bool noWrapper = false)
             {
                 Utils.SetFilters(Puerts.Configure.GetFilters());
@@ -340,7 +324,7 @@ namespace PuertsIl2cpp.Editor
                         }
                         catch (Exception e)
                         {
-                            UnityEngine.Debug.LogWarning(string.Format("get instructions of {0} ({2}:{3}) throw {1}", mb, e.Message, mb.DeclaringType == null ? "" : mb.DeclaringType.Assembly.Location, mb.DeclaringType));
+                            UnityEngine.Debug.LogWarning(string.Format("get instructions of {0} ({2}:{3}) throw {1}", mb, e.Message, mb.DeclaringType == null ? "" : mb.DeclaringType.Assembly.GetName().Name, mb.DeclaringType));
                             return new MethodBase[] { };
                         }
                     });
@@ -387,6 +371,7 @@ namespace PuertsIl2cpp.Editor
                     .GroupBy(s => s.Signature)
                     .Select(s => s.FirstOrDefault())
                     .ToList();
+                bridgeInfos.Sort((x, y) => string.CompareOrdinal(x.Signature, y.Signature));
 
                 var genWrapperCtor = ctorToWrapper;
                 var genWrapperMethod = methodToWrap;
@@ -409,52 +394,36 @@ namespace PuertsIl2cpp.Editor
                         .Select(s => s.FirstOrDefault())
                         .ToList();
                 }
-
-                Action<string, string, List<string>> addBridgeInfo = (returnSignature, csName, parameterSignatureList) =>
+                else if (onlyConfigure)
                 {
-                    bridgeInfos.Add(new SignatureInfo()
-                    {
-                        Signature = returnSignature + string.Join("", parameterSignatureList),
-                        CsName = csName,
-                        ReturnSignature = returnSignature,
-                        ThisSignature = null,
-                        ParameterSignatures = parameterSignatureList.ToList()
+                    var configure = Puerts.Configure.GetConfigureByTags(new List<string>() {
+                        "Puerts.BindingAttribute",
                     });
-                };
-                if (onlyConfigure)
-                {
-                    var configureTypes = new List<Type>();
-                    if (!noWrapper)
-                    {
-                        var configure = Puerts.Configure.GetConfigureByTags(new List<string>() {
-                            "Puerts.BindingAttribute",
-                        });
 
-                        configureTypes = configure["Puerts.BindingAttribute"].Select(kv => kv.Key)
-                            .Where(o => o is Type)
-                            .Cast<Type>()
-                            .Where(t => !typeof(MulticastDelegate).IsAssignableFrom(t))
-                            .Where(t => !t.IsGenericTypeDefinition && !t.Name.StartsWith("<"))
-                            .Distinct()
-                            .ToList();
+                    var configureTypes = new HashSet<Type>(configure["Puerts.BindingAttribute"].Select(kv => kv.Key)
+                        .Where(o => o is Type)
+                        .Cast<Type>()
+                        .Where(t => !typeof(MulticastDelegate).IsAssignableFrom(t))
+                        .Where(t => !t.IsGenericTypeDefinition && !t.Name.StartsWith("<"))
+                        .Distinct()
+                        .ToList());
 
-                        // configureTypes.Clear();
+                    // configureTypes.Clear();
 
-                        genWrapperCtor = configureTypes
-                            .SelectMany(t => t.GetConstructors(flag))
-                            .Where(m => !Utils.IsNotSupportedMember(m, true))
-                            .Where(m => Utils.getBindingMode(m) != Puerts.BindingMode.DontBinding);
+                    genWrapperCtor = configureTypes
+                        .SelectMany(t => t.GetConstructors(flag))
+                        .Where(m => !Utils.IsNotSupportedMember(m, true))
+                        .Where(m => Utils.getBindingMode(m) != Puerts.BindingMode.DontBinding);
 
-                        genWrapperMethod = configureTypes
-                            .SelectMany(t => t.GetMethods(flag))
-                            .Where(m => !Utils.IsNotSupportedMember(m, true))
-                            .Where(m => Utils.getBindingMode(m) != Puerts.BindingMode.DontBinding);
+                    genWrapperMethod = configureTypes
+                        .SelectMany(t => t.GetMethods(flag))
+                        .Where(m => !Utils.IsNotSupportedMember(m, true))
+                        .Where(m => Utils.getBindingMode(m) != Puerts.BindingMode.DontBinding);
 
-                        genWrapperField = configureTypes
-                            .SelectMany(t => t.GetFields(flag))
-                            .Where(m => !Utils.IsNotSupportedMember(m, true))
-                            .Where(m => Utils.getBindingMode(m) != Puerts.BindingMode.DontBinding);
-                    }
+                    genWrapperField = configureTypes
+                        .SelectMany(t => t.GetFields(flag))
+                        .Where(m => !Utils.IsNotSupportedMember(m, true))
+                        .Where(m => Utils.getBindingMode(m) != Puerts.BindingMode.DontBinding);
 
                     var configureUsedTypes = configureTypes
                         .Concat(genWrapperCtor.SelectMany(c => c.GetParameters()).Select(pi => GetUnrefParameterType(pi)))
@@ -464,70 +433,11 @@ namespace PuertsIl2cpp.Editor
                         .Distinct();
                     
                     valueTypeInfos = new List<ValueTypeInfo>();
-                    foreach (var type in configureUsedTypes)
+                    foreach (var type in configureUsedTypes.Concat(delegateUsedTypes))
                     {
                         IterateAllValueType(type, valueTypeInfos);
                     }
-
-
-                    var allTypeMayContainUsing = from assembly in AppDomain.CurrentDomain.GetAssemblies()
-                                                 where !(assembly.ManifestModule is System.Reflection.Emit.ModuleBuilder)
-                                                 from type in assembly.GetTypes()
-                                                 where !type.IsGenericTypeDefinition
-                                                 select type;
-
-                    var usingDecls = allTypeMayContainUsing.SelectMany(t =>
-                        {
-                            var flag = BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
-                            return t.GetMethods(flag).Cast<MethodBase>().Concat(t.GetConstructors(flag));
-                        })
-                        .Where(m => m.GetMethodBody() != null && !m.IsGenericMethodDefinition && !m.IsAbstract).SelectMany(
-                        mb =>
-                        {
-                            try
-                            {
-                                return mb.GetInstructions();
-                            }
-                            catch { }
-                            return new List<Instruction>();
-                        }).Select(i => i.Operand).Where(o => o is MethodInfo)
-                        .Cast<MethodInfo>().Where(mb => mb.IsGenericMethod && mb.DeclaringType == typeof(Puerts.JsEnv) && (mb.Name == "UsingAction" || mb.Name == "UsingFunc"));
-
-                    bridgeInfos = new List<SignatureInfo>();
-                    foreach (var decl in usingDecls)
-                    {
-                        string returnSignature = null;
-                        string parametersSignature = "";
-                        List<string> parameterSignatureList = new List<string>();
-                        var genericArguments = decl.GetGenericArguments();
-                        if (decl.Name == "UsingAction")
-                        {
-                            returnSignature = "v";
-                            foreach (var ga in genericArguments)
-                            {
-                                var sig = TypeUtils.GetTypeSignature(ga);
-                                parametersSignature += sig;
-                                parameterSignatureList.Add(sig);
-                            }
-                        }
-                        else
-                        {
-                            returnSignature = TypeUtils.GetTypeSignature(genericArguments.Last());
-                            foreach (var ga in (genericArguments.Take(genericArguments.Length - 1)))
-                            {
-                                var sig = TypeUtils.GetTypeSignature(ga);
-                                parametersSignature += sig;
-                                parameterSignatureList.Add(sig);
-                            }
-                        }
-                        foreach (var ga in genericArguments)
-                        {
-                            IterateAllValueType(ga, valueTypeInfos);
-                        }
-
-                        addBridgeInfo(returnSignature, decl.ToString(), parameterSignatureList);
-                    }
-
+                    
                     valueTypeInfos = valueTypeInfos
                         .GroupBy(s => s.Signature)
                         .Select(s => s.FirstOrDefault())
@@ -535,19 +445,6 @@ namespace PuertsIl2cpp.Editor
 
                     Utils.SetFilters(null);
                 }
-
-                var ps = new List<string>();
-                var vs = TypeUtils.GetTypeSignature(typeof(void));
-                var os = TypeUtils.GetTypeSignature(typeof(Console));
-                for (int i = 0; i < 10; ++i)
-                {
-                    addBridgeInfo(vs, "Action_Shared_" + ps.Count, ps);
-                    addBridgeInfo(os, "Func_Shared_" + ps.Count, ps);
-                    ps.Add(os);
-                }
-
-                bridgeInfos = bridgeInfos.Distinct(new SignatureInfoEqualityComparer()).ToList();
-                bridgeInfos.Sort((x, y) => string.CompareOrdinal(x.Signature, y.Signature));
 
                 var wrapperInfos = genWrapperMethod
                     .Where(m => !m.IsGenericMethodDefinition && !m.IsAbstract)
@@ -768,7 +665,7 @@ namespace PuertsIl2cpp.Editor
 #if UNITY_6000_0_OR_NEWER
                         "UNITY_6000_0_OR_NEWER",
 #endif
-#if !UNITY_IPHONE && !UNITY_WEBGL && !UNITY_SWITCH
+#if !UNITY_IPHONE && !UNITY_WEBGL
                         "PUERTS_SHARED",
 #endif
                     };
