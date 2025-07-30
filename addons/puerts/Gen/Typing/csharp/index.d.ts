@@ -325,11 +325,11 @@
         Invoke?: () => void;
         }
         var Action: { new (func: () => void): Action; }
-        class Nullable$1<T> extends System.ValueType
+        class ReadOnlySpan$1<T> extends System.ValueType
         {
             protected [__keep_incompatibility]: never;
         }
-        class ReadOnlySpan$1<T> extends System.ValueType
+        class Nullable$1<T> extends System.ValueType
         {
             protected [__keep_incompatibility]: never;
         }
@@ -862,6 +862,118 @@
         class Resource extends Godot.RefCounted implements System.IDisposable
         {
             protected [__keep_incompatibility]: never;
+            /**
+            * ).
+            *  Changing this property at run-time has no effect on already created duplicate resources.
+            */
+            public get ResourceLocalToScene(): boolean;
+            public set ResourceLocalToScene(value: boolean);
+            /**
+            * 's filepath, followed by a unique identifier.
+            * .
+            */
+            public get ResourcePath(): string;
+            public set ResourcePath(value: string);
+            /**
+            * An optional name for this resource. When defined, its value is displayed to represent the resource in the Inspector dock. For built-in scripts, the name is displayed as part of the tab name in the script editor.
+            *  Some resource formats do not support resource names. You can still set the name in the editor or via code, but it will be lost when the resource is reloaded. For example, only built-in scripts can have a resource name, while scripts stored in separate files cannot.
+            */
+            public get ResourceName(): string;
+            public set ResourceName(value: string);
+            /**
+            * . If the resource is not inside a scene, this property is empty by default.
+            * .
+            *  signal.
+            *  When setting, the ID must only consist of letters, numbers, and underscores. Otherwise, it will fail and default to a randomly generated ID.
+            */
+            public get ResourceSceneUniqueId(): string;
+            public set ResourceSceneUniqueId(value: string);
+            /**  is called.
+            */
+            public _GetRid () : Godot.Rid
+            /** , this method must be implemented to clear them.
+            */
+            public _ResetState () : void
+            /**  is called on this object.
+            */
+            public _SetPathCache ($path: string) : void
+            /**
+            * .
+            *  value to every local resource from an instantiated scene:
+            * 
+            extends Resource
+            var damage = 0
+            func _setup_local_to_scene():
+            damage = randi_range(10, 40)
+            */
+            public _SetupLocalToScene () : void
+            public SetPath ($path: string) : void
+            /** , potentially overriding an existing cache entry for this path. Further attempts to load an overridden resource by path will instead return this resource.
+            */
+            public TakeOverPath ($path: string) : void
+            public GetPath () : string
+            /** .
+            */
+            public SetPathCache ($path: string) : void
+            public SetName ($name: string) : void
+            public GetName () : string
+            /** .
+            */
+            public GetRid () : Godot.Rid
+            public SetLocalToScene ($enable: boolean) : void
+            public IsLocalToScene () : boolean
+            /** .
+            */
+            public GetLocalScene () : Godot.Node
+            /** .
+            */
+            public ResetState () : void
+            /**
+            * .
+            *  This method is only implemented when running in an editor context.
+            */
+            public SetIdForPath ($path: string, $id: string) : void
+            /**
+            * .
+            *  This method is only implemented when running in an editor context. At runtime, it returns an empty string.
+            */
+            public GetIdForPath ($path: string) : string
+            /**  if the resource is saved on disk as a part of another resource's file.
+            */
+            public IsBuiltIn () : boolean
+            /** .
+            */
+            public static GenerateSceneUniqueId () : string
+            public SetSceneUniqueId ($id: string) : void
+            public GetSceneUniqueId () : string
+            /**
+            *  signal. This method is called automatically for some built-in resources.
+            * s depending on the resource are properly updated.
+            * 
+            var damage:
+            set(new_value):
+            if damage != new_value:
+            damage = new_value
+            emit_changed()
+            */
+            public EmitChanged () : void
+            /**
+            *  properties copied from the original.
+            *  properties are not duplicated and are shared with the original resource.
+            * .
+            * The following exceptions apply:
+            * ).
+            *  flag are never duplicated.
+            *  has been defined with required parameters.
+            * , each resource found, including the one on which this method is called, will be only duplicated once and referenced as many times as needed in the duplicate. For instance, if you are duplicating resource A that happens to have resource B referenced twice, you'll get a new resource A' referencing a new resource B' twice.
+            */
+            public Duplicate ($deep?: boolean) : Godot.Resource
+            public DuplicateDeep ($deepSubresourcesMode?: Godot.Resource.DeepDuplicateMode) : Godot.Resource
+            public add_Changed ($value: System.Action) : void
+            public remove_Changed ($value: System.Action) : void
+            public add_SetupLocalToSceneRequested ($value: System.Action) : void
+            public remove_SetupLocalToSceneRequested ($value: System.Action) : void
+            public constructor ()
         }
         /**
         * A color represented by red, green, blue, and alpha (RGBA) components.
@@ -3624,6 +3736,238 @@
         class Rect2 extends System.ValueType implements System.IEquatable$1<Godot.Rect2>
         {
             protected [__keep_incompatibility]: never;
+            /**
+            * Beginning corner. Typically has values lower than
+            * .
+            */
+            public get Position(): Godot.Vector2;
+            public set Position(value: Godot.Vector2);
+            /**
+            * Size from
+            * to
+            * . Typically all components are positive.
+            * If the size is negative, you can use
+            * to fix it.
+            */
+            public get Size(): Godot.Vector2;
+            public set Size(value: Godot.Vector2);
+            /**
+            * Ending corner. This is calculated as
+            * plus
+            * .
+            * Setting this value will change the size.
+            */
+            public get End(): Godot.Vector2;
+            public set End(value: Godot.Vector2);
+            /**
+            * The area of this
+            * .
+            * See also
+            * .
+            */
+            public get Area(): number;
+            /**
+            * Returns a
+            * with equivalent position and size, modified so that
+            * the top-left corner is the origin and width and height are positive.
+            * @returns The modified .
+            */
+            public Abs () : Godot.Rect2
+            /**
+            * Returns the intersection of this
+            * and
+            * .
+            * If the rectangles do not intersect, an empty
+            * is returned.
+            * @param $b The other .
+            * @returns 
+            The intersection of this  and ,
+            or an empty  if they do not intersect.
+            */
+            public Intersection ($b: Godot.Rect2) : Godot.Rect2
+            /**
+            * Returns
+            * if this
+            * is finite, by calling
+            * on each component.
+            * @returns Whether this vector is finite or not.
+            */
+            public IsFinite () : boolean
+            /**
+            * Returns
+            * if this
+            * completely encloses another one.
+            * @param $b The other  that may be enclosed.
+            * @returns 
+            A  for whether or not this  encloses .
+            */
+            public Encloses ($b: Godot.Rect2) : boolean
+            /**
+            * Returns this
+            * expanded to include a given point.
+            * @param $to The point to include.
+            * @returns The expanded .
+            */
+            public Expand ($to: Godot.Vector2) : Godot.Rect2
+            /**
+            * Returns the center of the
+            * , which is equal
+            * to
+            * + (
+            * / 2).
+            * @returns The center.
+            */
+            public GetCenter () : Godot.Vector2
+            /**
+            * Returns the support point in a given direction.
+            * This is useful for collision detection algorithms.
+            * @param $direction The direction to find support for.
+            * @returns A vector representing the support.
+            */
+            public GetSupport ($direction: Godot.Vector2) : Godot.Vector2
+            /**
+            * Returns a copy of the
+            * grown by the specified amount
+            * on all sides.
+            * @param $by The amount to grow by.
+            * @returns The grown .
+            */
+            public Grow ($by: number) : Godot.Rect2
+            /**
+            * Returns a copy of the
+            * grown by the specified amount
+            * on each side individually.
+            * @param $left The amount to grow by on the left side.
+            * @param $top The amount to grow by on the top side.
+            * @param $right The amount to grow by on the right side.
+            * @param $bottom The amount to grow by on the bottom side.
+            * @returns The grown .
+            */
+            public GrowIndividual ($left: number, $top: number, $right: number, $bottom: number) : Godot.Rect2
+            /**
+            * Returns a copy of the
+            * grown by the specified amount
+            * on the specified
+            * .
+            * @param $side The side to grow.
+            * @param $by The amount to grow by.
+            * @returns The grown .
+            */
+            public GrowSide ($side: Godot.Side, $by: number) : Godot.Rect2
+            /**
+            * Returns
+            * if the
+            * has
+            * area, and
+            * if the
+            * is linear, empty, or has a negative
+            * .
+            * See also
+            * .
+            * @returns 
+            A  for whether or not the  has area.
+            */
+            public HasArea () : boolean
+            /**
+            * Returns
+            * if the
+            * contains a point,
+            * or
+            * otherwise.
+            * @param $point The point to check.
+            * @returns 
+            A  for whether or not the  contains .
+            */
+            public HasPoint ($point: Godot.Vector2) : boolean
+            /**
+            * Returns
+            * if the
+            * overlaps with
+            * (i.e. they have at least one point in common).
+            * If
+            * is
+            * ,
+            * they will also be considered overlapping if their borders touch,
+            * even without intersection.
+            * @param $b The other  to check for intersections with.
+            * @param $includeBorders Whether or not to consider borders.
+            * @returns A  for whether or not they are intersecting.
+            */
+            public Intersects ($b: Godot.Rect2, $includeBorders?: boolean) : boolean
+            /**
+            * Returns a larger
+            * that contains this
+            * and
+            * .
+            * @param $b The other .
+            * @returns The merged .
+            */
+            public Merge ($b: Godot.Rect2) : Godot.Rect2
+            /**
+            * Returns
+            * if the
+            * s are exactly equal.
+            * Note: Due to floating-point precision errors, consider using
+            * instead, which is more reliable.
+            * @param $left The left rect.
+            * @param $right The right rect.
+            * @returns Whether or not the rects are exactly equal.
+            */
+            public static op_Equality ($left: Godot.Rect2, $right: Godot.Rect2) : boolean
+            /**
+            * Returns
+            * if the
+            * s are not equal.
+            * Note: Due to floating-point precision errors, consider using
+            * instead, which is more reliable.
+            * @param $left The left rect.
+            * @param $right The right rect.
+            * @returns Whether or not the rects are not equal.
+            */
+            public static op_Inequality ($left: Godot.Rect2, $right: Godot.Rect2) : boolean
+            /**
+            * Returns
+            * if this rect and
+            * are equal.
+            * @param $obj The other object to compare.
+            * @returns Whether or not the rect and the other object are exactly equal.
+            */
+            public Equals ($obj: any) : boolean
+            /**
+            * Returns
+            * if this rect and
+            * are equal.
+            * @param $other The other rect to compare.
+            * @returns Whether or not the rects are exactly equal.
+            */
+            public Equals ($other: Godot.Rect2) : boolean
+            /**
+            * Returns
+            * if this rect and
+            * are approximately equal,
+            * by running
+            * on each component.
+            * @param $other The other rect to compare.
+            * @returns Whether or not the rects are approximately equal.
+            */
+            public IsEqualApprox ($other: Godot.Rect2) : boolean
+            /**
+            * Converts this
+            * to a string.
+            * @returns A string representation of this rect.
+            */
+            public ToString () : string
+            /**
+            * Converts this
+            * to a string with the given
+            * .
+            * @returns A string representation of this rect.
+            */
+            public ToString ($format: string) : string
+            public constructor ($position: Godot.Vector2, $size: Godot.Vector2)
+            public constructor ($position: Godot.Vector2, $width: number, $height: number)
+            public constructor ($x: number, $y: number, $size: Godot.Vector2)
+            public constructor ($x: number, $y: number, $width: number, $height: number)
         }
         /**
         * .
@@ -4326,6 +4670,700 @@
             protected [__keep_incompatibility]: never;
         }
         /**
+        * A singleton used to load resource files from the filesystem.
+        *  classes registered in the engine (either built-in or from a plugin) to load files into memory and convert them to a format that can be used by the engine.
+        * .
+        *  class description for instructions on exporting them).
+        */
+        class ResourceLoader extends System.Object
+        {
+            protected [__keep_incompatibility]: never;
+            public static get Singleton(): Godot.ResourceLoaderInstance;
+            public static LoadThreadedRequest ($path: string, $typeHint?: string, $useSubThreads?: boolean, $cacheMode?: Godot.ResourceLoader.CacheMode) : Godot.Error
+            /**
+            * .
+            * ).
+            * , instead of a loop).
+            */
+            public static LoadThreadedGetStatus ($path: string, $progress?: Godot.Collections.Array) : Godot.ResourceLoader.ThreadLoadStatus
+            /**
+            * .
+            *  to known when the load has actually completed.
+            */
+            public static LoadThreadedGet ($path: string) : Godot.Resource
+            public static Load ($path: string, $typeHint?: string, $cacheMode?: Godot.ResourceLoader.CacheMode) : Godot.Resource
+            /** Returns the list of recognized extensions for a resource type.
+            */
+            public static GetRecognizedExtensionsForType ($type: string) : System.Array$1<string>
+            /**
+            * .
+            *  for more information).
+            */
+            public static AddResourceFormatLoader ($formatLoader: Godot.ResourceFormatLoader, $atFront?: boolean) : void
+            /** .
+            */
+            public static RemoveResourceFormatLoader ($formatLoader: Godot.ResourceFormatLoader) : void
+            /** Changes the behavior on missing sub-resources. The default behavior is to abort loading.
+            */
+            public static SetAbortOnMissingResources ($abort: boolean) : void
+            /**
+            * .
+            * . There can be either one section or three sections, with the second section always being empty. When there is one section, it contains the file path. When there are three sections, the first section contains the UID and the third section contains the fallback path.
+            * 
+            for dependency in ResourceLoader.get_dependencies(path):
+            if dependency.contains("::"):
+            print(dependency.get_slice("::", 0)) # Prints the UID.
+            print(dependency.get_slice("::", 2)) # Prints the fallback path.
+            else:
+            print(dependency) # Prints the path.
+            */
+            public static GetDependencies ($path: string) : System.Array$1<string>
+            /**
+            * .
+            *  on a new resource for that same path.
+            */
+            public static HasCached ($path: string) : boolean
+            /**
+            * .
+            *  will be invalid.
+            */
+            public static GetCachedRef ($path: string) : Godot.Resource
+            /**
+            * .
+            * .
+            *  for the taken path even if the resource wasn't saved (i.e. exists only in resource cache).
+            */
+            public static Exists ($path: string, $typeHint?: string) : boolean
+            /**  when no such ID exists.
+            */
+            public static GetResourceUid ($path: string) : bigint
+            /**
+            *  appended.
+            * 
+            # Prints ["extra_data/", "model.gltf", "model.tscn", "model_slime.png"]
+            print(ResourceLoader.list_directory("res://assets/enemies/slime"))
+            *  The order of files and directories returned by this method is not deterministic, and can vary between operating systems.
+            * .
+            */
+            public static ListDirectory ($directoryPath: string) : System.Array$1<string>
+        }
+        /**
+        * A singleton used to load resource files from the filesystem.
+        *  classes registered in the engine (either built-in or from a plugin) to load files into memory and convert them to a format that can be used by the engine.
+        * .
+        *  class description for instructions on exporting them).
+        */
+        class ResourceLoaderInstance extends Godot.GodotObject implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        enum Error
+        { Ok = 0, Failed = 1, Unavailable = 2, Unconfigured = 3, Unauthorized = 4, ParameterRangeError = 5, OutOfMemory = 6, FileNotFound = 7, FileBadDrive = 8, FileBadPath = 9, FileNoPermission = 10, FileAlreadyInUse = 11, FileCantOpen = 12, FileCantWrite = 13, FileCantRead = 14, FileUnrecognized = 15, FileCorrupt = 16, FileMissingDependencies = 17, FileEof = 18, CantOpen = 19, CantCreate = 20, QueryFailed = 21, AlreadyInUse = 22, Locked = 23, Timeout = 24, CantConnect = 25, CantResolve = 26, ConnectionError = 27, CantAcquireResource = 28, CantFork = 29, InvalidData = 30, InvalidParameter = 31, AlreadyExists = 32, DoesNotExist = 33, DatabaseCantRead = 34, DatabaseCantWrite = 35, CompilationFailed = 36, MethodNotFound = 37, LinkFailed = 38, ScriptFailed = 39, CyclicLink = 40, InvalidDeclaration = 41, DuplicateSymbol = 42, ParseError = 43, Busy = 44, Skip = 45, Help = 46, Bug = 47, PrinterOnFire = 48 }
+        /**
+        *  singleton, or when a resource with internal dependencies is loaded. Each file type may load as a different resource type, so multiple ResourceFormatLoaders are registered in the engine.
+        * .
+        * ) first, so they can be loaded with better efficiency on the graphics card.
+        */
+        class ResourceFormatLoader extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * A simplified interface to a scene file. Provides access to operations and checks that can be performed on the scene resource itself.
+        *  property).
+        *  The node doesn't need to own itself.
+        *  Load a saved scene:
+        * 
+        // C# has no preload, so you have to always use ResourceLoader.Load<PackedScene>().
+        var scene = ResourceLoader.Load<PackedScene>("res://scene.tscn").Instantiate();
+        // Add the node as a child of the node the script is attached to.
+        AddChild(scene);
+        * .
+        * 
+        // Create the objects.
+        var node = new Node2D();
+        var body = new RigidBody2D();
+        var collision = new CollisionShape2D();
+        // Create the object hierarchy.
+        body.AddChild(collision);
+        node.AddChild(body);
+        // Change owner of `body`, but not of `collision`.
+        body.Owner = node;
+        var scene = new PackedScene();
+        // Only `node` and `body` are now packed.
+        Error result = scene.Pack(node);
+        if (result == Error.Ok)
+        {
+        Error error = ResourceSaver.Save(scene, "res://path/name.tscn"); // Or "user://..."
+        if (error != Error.Ok)
+        {
+        GD.PushError("An error occurred while saving the scene to disk.");
+        }
+        }
+        */
+        class PackedScene extends Godot.Resource implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public get _Bundled(): Godot.Collections.Dictionary;
+            public set _Bundled(value: Godot.Collections.Dictionary);
+            /** .
+            */
+            public Pack ($path: Godot.Node) : Godot.Error
+            public Instantiate ($editState?: Godot.PackedScene.GenEditState) : Godot.Node
+            /**  if the scene file has nodes.
+            */
+            public CanInstantiate () : boolean
+            /**  representing the scene file contents.
+            */
+            public GetState () : Godot.SceneState
+            public constructor ()
+        }
+        /**
+        *  contains without instantiating it.
+        * .
+        */
+        class SceneState extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        enum Side
+        { Left = 0, Top = 1, Right = 2, Bottom = 3 }
+        /**
+        *  subclass instead of the scene tree.
+        *  project setting is overwritten.
+        * :
+        * 
+        using Godot;
+        [GlobalClass]
+        public partial class CustomMainLoop : MainLoop
+        {
+        private double _timeElapsed = 0;
+        public override void _Initialize()
+        {
+        GD.Print("Initialized:");
+        GD.Print($"  Starting Time: {_timeElapsed}");
+        }
+        public override bool _Process(double delta)
+        {
+        _timeElapsed += delta;
+        // Return true to end the main loop.
+        return Input.GetMouseButtonMask() != 0 || Input.IsKeyPressed(Key.Escape);
+        }
+        private void _Finalize()
+        {
+        GD.Print("Finalized:");
+        GD.Print($"  End Time: {_timeElapsed}");
+        }
+        }
+        */
+        class MainLoop extends Godot.GodotObject implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  manages the hierarchy of nodes in a scene, as well as scenes themselves. Nodes can be added, fetched and removed. The whole scene tree (and thus the current scene) can be paused. Scenes can be loaded, switched and reloaded.
+        * : every node can be added to as many groups as you want to create, e.g. an "enemy" group. You can then iterate these groups or even call methods and set properties on all the nodes belonging to any given group.
+        *  implementation used by the engine, and is thus in charge of the game loop.
+        */
+        class SceneTree extends Godot.MainLoop implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            * , the application automatically accepts quitting requests.
+            * .
+            */
+            public get AutoAcceptQuit(): boolean;
+            public set AutoAcceptQuit(value: boolean);
+            /**
+            * , the application quits automatically when navigating back (e.g. using the system "Back" button on Android).
+            * .
+            */
+            public get QuitOnGoBack(): boolean;
+            public set QuitOnGoBack(value: boolean);
+            /**
+            * , collision shapes will be visible when running the game from the editor for debugging purposes.
+            *  while the project is running will not have the desired effect.
+            */
+            public get DebugCollisionsHint(): boolean;
+            public set DebugCollisionsHint(value: boolean);
+            /**
+            *  nodes will be visible when running the game from the editor for debugging purposes.
+            *  while the project is running will not have the desired effect.
+            */
+            public get DebugPathsHint(): boolean;
+            public set DebugPathsHint(value: boolean);
+            /**
+            * , navigation polygons will be visible when running the game from the editor for debugging purposes.
+            *  while the project is running will not have the desired effect.
+            */
+            public get DebugNavigationHint(): boolean;
+            public set DebugNavigationHint(value: boolean);
+            /**
+            * , the scene tree is considered paused. This causes the following behavior:
+            * - 2D and 3D physics will be stopped, as well as collision detection and related signals.
+            *  callback methods may not called anymore.
+            */
+            public get Paused(): boolean;
+            public set Paused(value: boolean);
+            /**
+            * .
+            *  This property does nothing in release builds.
+            */
+            public get EditedSceneRoot(): Godot.Node;
+            public set EditedSceneRoot(value: Godot.Node);
+            /**
+            * .
+            *  add or remove any nodes from this tree.
+            */
+            public get CurrentScene(): Godot.Node;
+            public set CurrentScene(value: Godot.Node);
+            /**
+            *  configured in the Project Settings.
+            *  Do not delete this node. This will result in unstable behavior, followed by a crash.
+            */
+            public get Root(): Godot.Window;
+            /**
+            * .
+            *  from threads.
+            */
+            public get MultiplayerPoll(): boolean;
+            public set MultiplayerPoll(value: boolean);
+            /**
+            * , the renderer will interpolate the transforms of objects (both physics and non-physics) between the last two transforms, so that smooth motion is seen even when physics ticks do not coincide with rendered frames.
+            * .
+            * .
+            */
+            public get PhysicsInterpolation(): boolean;
+            public set PhysicsInterpolation(value: boolean);
+            public GetRoot () : Godot.Window
+            /**  exists in the tree.
+            */
+            public HasGroup ($name: Godot.StringName) : boolean
+            /**  if accessibility features are enabled, and accessibility information updates are actively processed.
+            */
+            public IsAccessibilityEnabled () : boolean
+            /**  if accessibility features are supported by the OS and enabled in project settings.
+            */
+            public IsAccessibilitySupported () : boolean
+            public IsAutoAcceptQuit () : boolean
+            public SetAutoAcceptQuit ($enabled: boolean) : void
+            public IsQuitOnGoBack () : boolean
+            public SetQuitOnGoBack ($enabled: boolean) : void
+            public SetDebugCollisionsHint ($enable: boolean) : void
+            public IsDebuggingCollisionsHint () : boolean
+            public SetDebugPathsHint ($enable: boolean) : void
+            public IsDebuggingPathsHint () : boolean
+            public SetDebugNavigationHint ($enable: boolean) : void
+            public IsDebuggingNavigationHint () : boolean
+            public SetEditedSceneRoot ($scene: Godot.Node) : void
+            public GetEditedSceneRoot () : Godot.Node
+            public SetPause ($enable: boolean) : void
+            public IsPaused () : boolean
+            /**
+            *  and will be automatically freed.
+            * .
+            * , the timer will update at the end of the physics frame, instead of the process frame.
+            *  and update with the real, elapsed time.
+            * This method is commonly used to create a one-shot delay timer, as in the following example:
+            * 
+            public async Task SomeFunction()
+            {
+            GD.Print("start");
+            await ToSignal(GetTree().CreateTimer(1.0f), SceneTreeTimer.SignalName.Timeout);
+            GD.Print("end");
+            }
+            * ).
+            */
+            public CreateTimer ($timeSec: number, $processAlways?: boolean, $processInPhysics?: boolean, $ignoreTimeScale?: boolean) : Godot.SceneTreeTimer
+            /**
+            * ).
+            * .
+            */
+            public CreateTween () : Godot.Tween
+            /** s in the tree, including paused tweens.
+            */
+            public GetProcessedTweens () : Godot.Collections.Array$1<Godot.Tween>
+            /** Returns the number of nodes inside this tree.
+            */
+            public GetNodeCount () : number
+            /** .
+            */
+            public GetFrame () : bigint
+            /**
+            * .
+            *  (inclusive).
+            * , the user is expected to close apps via the Home button.
+            */
+            public Quit ($exitCode?: number) : void
+            public SetPhysicsInterpolationEnabled ($enabled: boolean) : void
+            public IsPhysicsInterpolationEnabled () : boolean
+            /** .
+            */
+            public QueueDelete ($obj: Godot.GodotObject) : void
+            /**
+            *  (either because the method doesn't exist or the arguments do not match) are ignored.
+            * 
+            # Calls "hide" to all nodes of the "enemies" group, at the end of the frame and in reverse tree order.
+            get_tree().call_group_flags(
+            SceneTree.GROUP_CALL_DEFERRED | SceneTree.GROUP_CALL_REVERSE,
+            "enemies", "hide")
+            *  on each call.
+            */
+            public CallGroupFlags ($flags: bigint, $group: Godot.StringName, $method: Godot.StringName, ...args: Godot.Variant[]) : void
+            /** ).
+            */
+            public NotifyGroupFlags ($callFlags: number, $group: Godot.StringName, $notification: number) : void
+            /**
+            * ).
+            *  on each call.
+            */
+            public SetGroupFlags ($callFlags: number, $group: Godot.StringName, $property: string, $value: Godot.Variant) : void
+            /**
+            * .
+            *  This method acts immediately on all selected nodes at once, which may cause stuttering in some performance-intensive situations.
+            *  on each call.
+            */
+            public CallGroup ($group: Godot.StringName, $method: Godot.StringName, ...args: Godot.Variant[]) : void
+            /**
+            * .
+            *  This method acts immediately on all selected nodes at once, which may cause stuttering in some performance-intensive situations.
+            */
+            public NotifyGroup ($group: Godot.StringName, $notification: number) : void
+            /**
+            * .
+            *  This method acts immediately on all selected nodes at once, which may cause stuttering in some performance-intensive situations.
+            *  on each call.
+            */
+            public SetGroup ($group: Godot.StringName, $property: string, $value: Godot.Variant) : void
+            /** , in scene hierarchy order.
+            */
+            public GetNodesInGroup ($group: Godot.StringName) : Godot.Collections.Array$1<Godot.Node>
+            /** .
+            */
+            public GetFirstNodeInGroup ($group: Godot.StringName) : Godot.Node
+            /** Returns the number of nodes assigned to the given group.
+            */
+            public GetNodeCountInGroup ($group: Godot.StringName) : number
+            public SetCurrentScene ($childNode: Godot.Node) : void
+            public GetCurrentScene () : Godot.Node
+            /**
+            *  and creating a new instance.
+            *  if that scene cannot be instantiated.
+            *  for details on the order of operations.
+            */
+            public ChangeSceneToFile ($path: string) : Godot.Error
+            /**
+            *  (which must be valid).
+            *  if the scene is invalid.
+            *  is called:
+            * , too, because the new scene is not available yet.
+            *  will be back to working as usual.
+            * .
+            *  signal.
+            */
+            public ChangeSceneToPacked ($packedScene: Godot.PackedScene) : Godot.Error
+            /**
+            * .
+            *  if the scene cannot be instantiated.
+            */
+            public ReloadCurrentScene () : Godot.Error
+            /** If a current scene is loaded, calling this method will unload it.
+            */
+            public UnloadCurrentScene () : void
+            /**
+            *  is empty.
+            *  will cause an error.
+            *  are added to the tree before the custom multiplayer API is set, they will not work.
+            */
+            public SetMultiplayer ($multiplayer: Godot.MultiplayerApi, $rootPath?: Godot.NodePath) : void
+            /** .
+            */
+            public GetMultiplayer ($forPath?: Godot.NodePath) : Godot.MultiplayerApi
+            public SetMultiplayerPollEnabled ($enabled: boolean) : void
+            public IsMultiplayerPollEnabled () : boolean
+            public add_TreeChanged ($value: System.Action) : void
+            public remove_TreeChanged ($value: System.Action) : void
+            public add_SceneChanged ($value: System.Action) : void
+            public remove_SceneChanged ($value: System.Action) : void
+            public add_TreeProcessModeChanged ($value: System.Action) : void
+            public remove_TreeProcessModeChanged ($value: System.Action) : void
+            public add_NodeAdded ($value: Godot.SceneTree.NodeAddedEventHandler) : void
+            public remove_NodeAdded ($value: Godot.SceneTree.NodeAddedEventHandler) : void
+            public add_NodeRemoved ($value: Godot.SceneTree.NodeRemovedEventHandler) : void
+            public remove_NodeRemoved ($value: Godot.SceneTree.NodeRemovedEventHandler) : void
+            public add_NodeRenamed ($value: Godot.SceneTree.NodeRenamedEventHandler) : void
+            public remove_NodeRenamed ($value: Godot.SceneTree.NodeRenamedEventHandler) : void
+            public add_NodeConfigurationWarningChanged ($value: Godot.SceneTree.NodeConfigurationWarningChangedEventHandler) : void
+            public remove_NodeConfigurationWarningChanged ($value: Godot.SceneTree.NodeConfigurationWarningChangedEventHandler) : void
+            public add_ProcessFrame ($value: System.Action) : void
+            public remove_ProcessFrame ($value: System.Action) : void
+            public add_PhysicsFrame ($value: System.Action) : void
+            public remove_PhysicsFrame ($value: System.Action) : void
+            public constructor ()
+        }
+        /**
+        * .
+        * , it does not require the instantiation of a node. Commonly used to create a one-shot delay timer as in the following example:
+        * 
+        public async Task SomeFunction()
+        {
+        GD.Print("Timer started.");
+        await ToSignal(GetTree().CreateTimer(1.0f), SceneTreeTimer.SignalName.Timeout);
+        GD.Print("Timer ended.");
+        }
+        * .
+        * ).
+        */
+        class SceneTreeTimer extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  is called tweening.
+        *  with a delay.
+        * ) are invalid and can't be used for tweening values.
+        * :
+        * 
+        Tween tween = GetTree().CreateTween();
+        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
+        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
+        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
+        * .
+        * :
+        * 
+        Tween tween = GetTree().CreateTween();
+        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f).SetTrans(Tween.TransitionType.Sine);
+        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f).SetTrans(Tween.TransitionType.Bounce);
+        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
+        * s:
+        * 
+        var tween = GetTree().CreateTween().BindNode(this).SetTrans(Tween.TransitionType.Elastic);
+        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
+        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
+        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
+        * s is animating arbitrary sets of objects:
+        * 
+        Tween tween = CreateTween();
+        foreach (Node sprite in GetChildren())
+        tween.TweenProperty(sprite, "position", Vector2.Zero, 1.0f);
+        * .
+        *  to a variable:
+        * 
+        private Tween _tween;
+        public void Animate()
+        {
+        if (_tween != null)
+        _tween.Kill(); // Abort the previous animation
+        _tween = CreateTween();
+        }
+        * , and use the one that looks best.
+        * Tween easing and transition types cheatsheet
+        *  Tweens are not designed to be reused and trying to do so results in an undefined behavior. Create a new Tween for each animation and every time you replay an animation from start. Keep in mind that Tweens start immediately, so only create a Tween when you want to start animating.
+        * ).
+        */
+        class Tween extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            /**
+            *  starts.
+            * 
+            Tween tween = CreateTween();
+            tween.TweenProperty(GetNode("Sprite"), "position", new Vector2(100.0f, 200.0f), 1.0f);
+            tween.TweenProperty(GetNode("Sprite"), "position", new Vector2(200.0f, 300.0f), 1.0f);
+            *  to see how the tweening can be tweaked further.
+            * ), where it would only apply to that particular component.
+            *  Moving an object twice from the same position, with different transition types:
+            * 
+            Tween tween = CreateTween();
+            tween.TweenProperty(GetNode("Sprite"), "position", Vector2.Right * 300.0f, 1.0f).AsRelative().SetTrans(Tween.TransitionType.Sine);
+            tween.TweenProperty(GetNode("Sprite"), "position", Vector2.Right * 300.0f, 1.0f).AsRelative().FromCurrent().SetTrans(Tween.TransitionType.Expo);
+            */
+            public TweenProperty ($object: Godot.GodotObject, $property: Godot.NodePath, $finalVal: Godot.Variant, $duration: number) : Godot.PropertyTweener
+            /**
+            *  is the length of the interval, in seconds.
+            *  Creating an interval in code execution:
+            * 
+            // ... some code
+            await ToSignal(CreateTween().TweenInterval(2.0f), Tween.SignalName.Finished);
+            // ... more code
+            *  Creating an object that moves back and forth and jumps every few seconds:
+            * 
+            Tween tween = CreateTween().SetLoops();
+            tween.TweenProperty(GetNode("Sprite"), "position:x", 200.0f, 1.0f).AsRelative();
+            tween.TweenCallback(Callable.From(Jump));
+            tween.TweenInterval(2.0f);
+            tween.TweenProperty(GetNode("Sprite"), "position:x", -200.0f, 1.0f).AsRelative();
+            tween.TweenCallback(Callable.From(Jump));
+            tween.TweenInterval(2.0f);
+            */
+            public TweenInterval ($time: number) : Godot.IntervalTweener
+            /**
+            *  to bind additional arguments for the call.
+            *  Object that keeps shooting every 1 second:
+            * 
+            Tween tween = GetTree().CreateTween().SetLoops();
+            tween.TweenCallback(Callable.From(Shoot)).SetDelay(1.0f);
+            *  Turning a sprite red and then blue, with 2 second delay:
+            * 
+            Tween tween = GetTree().CreateTween();
+            Sprite2D sprite = GetNode<Sprite2D>("Sprite");
+            tween.TweenCallback(Callable.From(() => sprite.Modulate = Colors.Red)).SetDelay(2.0f);
+            tween.TweenCallback(Callable.From(() => sprite.Modulate = Colors.Blue)).SetDelay(2.0f);
+            */
+            public TweenCallback ($callback: Godot.Callable) : Godot.CallbackTweener
+            /**
+            *  to delay the tweening.
+            *  Making a 3D object look from one point to another point:
+            * 
+            Tween tween = CreateTween();
+            tween.TweenMethod(Callable.From((Vector3 target) => LookAt(target, Vector3.Up)), new Vector3(-1.0f, 0.0f, -1.0f), new Vector3(1.0f, 0.0f, -1.0f), 1.0f); // Use lambdas to bind additional arguments for the call.
+            * , using an intermediate method and after a delay:
+            * 
+            public override void _Ready()
+            {
+            base._Ready();
+            Tween tween = CreateTween();
+            tween.TweenMethod(Callable.From<int>(SetLabelText), 0.0f, 10.0f, 1.0f).SetDelay(1.0f);
+            }
+            private void SetLabelText(int value)
+            {
+            GetNode<Label>("Label").Text = $"Counting {value}";
+            }
+            */
+            public TweenMethod ($method: Godot.Callable, $from: Godot.Variant, $to: Godot.Variant, $duration: number) : Godot.MethodTweener
+            /**
+            * , allowing for the creation of more complex and composable sequences.
+            * 
+            # Subtween will rotate the object.
+            var subtween = create_tween()
+            subtween.tween_property(self, "rotation_degrees", 45.0, 1.0)
+            subtween.tween_property(self, "rotation_degrees", 0.0, 1.0)
+            # Parent tween will execute the subtween as one of its steps.
+            var tween = create_tween()
+            tween.tween_property(self, "position:x", 500, 3.0)
+            tween.tween_subtween(subtween)
+            tween.tween_property(self, "position:x", 300, 2.0)
+            *  to get stuck on the subtween step; see the documentation for those methods for more information.
+            * 's settings.
+            */
+            public TweenSubtween ($subtween: Godot.Tween) : Godot.SubtweenTweener
+            /**
+            *  animation.
+            * s that haven't finished.
+            */
+            public CustomStep ($delta: number) : boolean
+            /**
+            * s.
+            *  first started.
+            * 
+            var tween = create_tween()
+            # Will move from 0 to 500 over 1 second.
+            position.x = 0.0
+            tween.tween_property(self, "position:x", 500, 1.0)
+            # Will be at (about) 250 when the timer finishes.
+            await get_tree().create_timer(0.5).timeout
+            # Will now move from (about) 250 to 500 over 1 second,
+            # thus at half the speed as before.
+            tween.stop()
+            tween.play()
+            * .
+            */
+            public Stop () : void
+            /**
+            * .
+            * .
+            */
+            public Pause () : void
+            /** .
+            */
+            public Play () : void
+            /** .
+            */
+            public Kill () : void
+            /**
+            * .
+            *  duration.
+            */
+            public GetTotalElapsedTime () : number
+            /**  is currently running, i.e. it wasn't paused and it's not finished.
+            */
+            public IsRunning () : boolean
+            /** s appended.
+            */
+            public IsValid () : boolean
+            /**
+            *  will make the pausing behavior dependent on the bound node.
+            * .
+            */
+            public BindNode ($node: Godot.Node) : Godot.Tween
+            public SetProcessMode ($mode: Godot.Tween.TweenProcessMode) : Godot.Tween
+            public SetPauseMode ($mode: Godot.Tween.TweenPauseMode) : Godot.Tween
+            /** .
+            */
+            public SetIgnoreTimeScale ($ignore?: boolean) : Godot.Tween
+            /**
+            * s appended after this method will by default run simultaneously, as opposed to sequentially.
+            * , the tweener added right before this method will also be part of the parallel step.
+            * 
+            tween.tween_property(self, "position", Vector2(300, 0), 0.5)
+            tween.set_parallel()
+            tween.tween_property(self, "modulate", Color.GREEN, 0.5) # Runs together with the position tweener.
+            */
+            public SetParallel ($parallel?: boolean) : Godot.Tween
+            /**
+            *  will run the animation twice.
+            * 's bound node is freed, or all the animated objects have been freed (which makes further animation impossible).
+            * .
+            */
+            public SetLoops ($loops?: number) : Godot.Tween
+            /**  has already finished.
+            */
+            public GetLoopsLeft () : number
+            /** s and their delays.
+            */
+            public SetSpeedScale ($speed: number) : Godot.Tween
+            public SetTrans ($trans: Godot.Tween.TransitionType) : Godot.Tween
+            public SetEase ($ease: Godot.Tween.EaseType) : Godot.Tween
+            /**
+            *  run parallelly to the previous one.
+            * 
+            Tween tween = CreateTween();
+            tween.TweenProperty(...);
+            tween.Parallel().TweenProperty(...);
+            tween.Parallel().TweenProperty(...);
+            * s in the example will run at the same time.
+            * .
+            */
+            public Parallel () : Godot.Tween
+            /**
+            * .
+            * 
+            Tween tween = CreateTween().SetParallel(true);
+            tween.TweenProperty(...);
+            tween.TweenProperty(...); // Will run parallelly with above.
+            tween.Chain().TweenProperty(...); // Will run after two above are finished.
+            */
+            public Chain () : Godot.Tween
+            public static InterpolateValue ($initialValue: Godot.Variant, $deltaValue: Godot.Variant, $elapsedTime: number, $duration: number, $transType: Godot.Tween.TransitionType, $easeType: Godot.Tween.EaseType) : Godot.Variant
+            public add_StepFinished ($value: Godot.Tween.StepFinishedEventHandler) : void
+            public remove_StepFinished ($value: Godot.Tween.StepFinishedEventHandler) : void
+            public add_LoopFinished ($value: Godot.Tween.LoopFinishedEventHandler) : void
+            public remove_LoopFinished ($value: Godot.Tween.LoopFinishedEventHandler) : void
+            public add_Finished ($value: System.Action) : void
+            public remove_Finished ($value: System.Action) : void
+            public constructor ()
+        }
+        /**
+        * .
+        *  has a reference to an implementation of this class and uses it to provide multiplayer capabilities (i.e. RPCs) across the whole scene.
+        *  method, effectively allowing to run both client and server in the same scene.
+        *  for the details about the default implementation.
+        */
+        class MultiplayerApi extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
         * A pre-parsed relative or absolute path in a scene tree,
         * for use with
         * and similar functions.
@@ -4450,6 +5488,65 @@
             public Equals ($obj: any) : boolean
             public constructor ()
             public constructor ($path: string)
+        }
+        /** .
+        */
+        class Tweener extends Godot.RefCounted implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public add_Finished ($value: System.Action) : void
+            public remove_Finished ($value: System.Action) : void
+        }
+        /**
+        *  for more usage information.
+        * The tweener will finish automatically if the target object is freed.
+        *  created manually will not function correctly.
+        */
+        class PropertyTweener extends Godot.Tweener implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  for more usage information.
+        *  created manually will not function correctly.
+        */
+        class IntervalTweener extends Godot.Tweener implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  for more usage information.
+        * The tweener will finish automatically if the callback's target object is freed.
+        *  created manually will not function correctly.
+        */
+        class CallbackTweener extends Godot.Tweener implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        * Callable is a first class object which can be held in variables and passed to functions.
+        * It represents a given method in an Object, and is typically used for signal callbacks.
+        */
+        class Callable extends System.ValueType
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  for more usage information.
+        * The tweener will finish automatically if the callback's target object is freed.
+        *  created manually will not function correctly.
+        */
+        class MethodTweener extends Godot.Tweener implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
+        /**
+        *  for more usage information.
+        *  created manually will not function correctly.
+        */
+        class SubtweenTweener extends Godot.Tweener implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
         }
         /**
         *  class.
@@ -4946,106 +6043,6 @@
         {
             protected [__keep_incompatibility]: never;
         }
-        /**
-        * .
-        *  has a reference to an implementation of this class and uses it to provide multiplayer capabilities (i.e. RPCs) across the whole scene.
-        *  method, effectively allowing to run both client and server in the same scene.
-        *  for the details about the default implementation.
-        */
-        class MultiplayerApi extends Godot.RefCounted implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
-        *  subclass instead of the scene tree.
-        *  project setting is overwritten.
-        * :
-        * 
-        using Godot;
-        [GlobalClass]
-        public partial class CustomMainLoop : MainLoop
-        {
-        private double _timeElapsed = 0;
-        public override void _Initialize()
-        {
-        GD.Print("Initialized:");
-        GD.Print($"  Starting Time: {_timeElapsed}");
-        }
-        public override bool _Process(double delta)
-        {
-        _timeElapsed += delta;
-        // Return true to end the main loop.
-        return Input.GetMouseButtonMask() != 0 || Input.IsKeyPressed(Key.Escape);
-        }
-        private void _Finalize()
-        {
-        GD.Print("Finalized:");
-        GD.Print($"  End Time: {_timeElapsed}");
-        }
-        }
-        */
-        class MainLoop extends Godot.GodotObject implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
-        *  manages the hierarchy of nodes in a scene, as well as scenes themselves. Nodes can be added, fetched and removed. The whole scene tree (and thus the current scene) can be paused. Scenes can be loaded, switched and reloaded.
-        * : every node can be added to as many groups as you want to create, e.g. an "enemy" group. You can then iterate these groups or even call methods and set properties on all the nodes belonging to any given group.
-        *  implementation used by the engine, and is thus in charge of the game loop.
-        */
-        class SceneTree extends Godot.MainLoop implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
-        *  is called tweening.
-        *  with a delay.
-        * ) are invalid and can't be used for tweening values.
-        * :
-        * 
-        Tween tween = GetTree().CreateTween();
-        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
-        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
-        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
-        * .
-        * :
-        * 
-        Tween tween = GetTree().CreateTween();
-        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f).SetTrans(Tween.TransitionType.Sine);
-        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f).SetTrans(Tween.TransitionType.Bounce);
-        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
-        * s:
-        * 
-        var tween = GetTree().CreateTween().BindNode(this).SetTrans(Tween.TransitionType.Elastic);
-        tween.TweenProperty(GetNode("Sprite"), "modulate", Colors.Red, 1.0f);
-        tween.TweenProperty(GetNode("Sprite"), "scale", Vector2.Zero, 1.0f);
-        tween.TweenCallback(Callable.From(GetNode("Sprite").QueueFree));
-        * s is animating arbitrary sets of objects:
-        * 
-        Tween tween = CreateTween();
-        foreach (Node sprite in GetChildren())
-        tween.TweenProperty(sprite, "position", Vector2.Zero, 1.0f);
-        * .
-        *  to a variable:
-        * 
-        private Tween _tween;
-        public void Animate()
-        {
-        if (_tween != null)
-        _tween.Kill(); // Abort the previous animation
-        _tween = CreateTween();
-        }
-        * , and use the one that looks best.
-        * Tween easing and transition types cheatsheet
-        *  Tweens are not designed to be reused and trying to do so results in an undefined behavior. Create a new Tween for each animation and every time you replay an animation from start. Keep in mind that Tweens start immediately, so only create a Tween when you want to start animating.
-        * ).
-        */
-        class Tween extends Godot.RefCounted implements System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        enum Error
-        { Ok = 0, Failed = 1, Unavailable = 2, Unconfigured = 3, Unauthorized = 4, ParameterRangeError = 5, OutOfMemory = 6, FileNotFound = 7, FileBadDrive = 8, FileBadPath = 9, FileNoPermission = 10, FileAlreadyInUse = 11, FileCantOpen = 12, FileCantWrite = 13, FileCantRead = 14, FileUnrecognized = 15, FileCorrupt = 16, FileMissingDependencies = 17, FileEof = 18, CantOpen = 19, CantCreate = 20, QueryFailed = 21, AlreadyInUse = 22, Locked = 23, Timeout = 24, CantConnect = 25, CantResolve = 26, ConnectionError = 27, CantAcquireResource = 28, CantFork = 29, InvalidData = 30, InvalidParameter = 31, AlreadyExists = 32, DoesNotExist = 33, DatabaseCantRead = 34, DatabaseCantWrite = 35, CompilationFailed = 36, MethodNotFound = 37, LinkFailed = 38, ScriptFailed = 39, CyclicLink = 40, InvalidDeclaration = 41, DuplicateSymbol = 42, ParseError = 43, Busy = 44, Skip = 45, Help = 46, Bug = 47, PrinterOnFire = 48 }
         /**
         *  methods.
         * ) are supported. The behavior of collisions between objects in different canvases is undefined.
@@ -6682,15 +7679,6 @@
         {
         }
         /**
-        * Wrapper around Godot's Dictionary class, a dictionary of Variant
-        * typed elements allocated in the engine in C++. Useful when
-        * interfacing with the engine.
-        */
-        class Dictionary extends System.Object implements System.Collections.Generic.IDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.ICollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.Generic.IEnumerable$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.IReadOnlyCollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.IDisposable
-        {
-            protected [__keep_incompatibility]: never;
-        }
-        /**
         * Wrapper around Godot's Array class, an array of Variant
         * typed elements allocated in the engine in C++. Useful when
         * interfacing with the engine. Otherwise prefer .NET collections
@@ -6702,6 +7690,15 @@
         {
             protected [__keep_incompatibility]: never;
         }
+        /**
+        * Wrapper around Godot's Dictionary class, a dictionary of Variant
+        * typed elements allocated in the engine in C++. Useful when
+        * interfacing with the engine.
+        */
+        class Dictionary extends System.Object implements System.Collections.Generic.IDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.ICollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.Generic.IEnumerable$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.Collections.IEnumerable, System.Collections.Generic.IReadOnlyDictionary$2<Godot.Variant, Godot.Variant>, System.Collections.Generic.IReadOnlyCollection$1<System.Collections.Generic.KeyValuePair$2<Godot.Variant, Godot.Variant>>, System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+        }
     }
     namespace System.Runtime.Serialization {
         interface ISerializable
@@ -6710,6 +7707,68 @@
         interface IDeserializationCallback
         {
         }
+    }
+    namespace Godot.Resource {
+        enum DeepDuplicateMode
+        { None = 0, Internal = 1, All = 2 }
+    }
+    namespace Godot.ResourceLoader {
+        enum CacheMode
+        { Ignore = 0, Reuse = 1, Replace = 2, IgnoreDeep = 3, ReplaceDeep = 4 }
+        enum ThreadLoadStatus
+        { InvalidResource = 0, InProgress = 1, Failed = 2, Loaded = 3 }
+    }
+    namespace Godot.PackedScene {
+        enum GenEditState
+        { Disabled = 0, Instance = 1, Main = 2, MainInherited = 3 }
+    }
+    namespace Godot.SceneTree {
+        interface NodeAddedEventHandler
+        { 
+        (node: Godot.Node) : void; 
+        Invoke?: (node: Godot.Node) => void;
+        }
+        var NodeAddedEventHandler: { new (func: (node: Godot.Node) => void): NodeAddedEventHandler; }
+        interface NodeRemovedEventHandler
+        { 
+        (node: Godot.Node) : void; 
+        Invoke?: (node: Godot.Node) => void;
+        }
+        var NodeRemovedEventHandler: { new (func: (node: Godot.Node) => void): NodeRemovedEventHandler; }
+        interface NodeRenamedEventHandler
+        { 
+        (node: Godot.Node) : void; 
+        Invoke?: (node: Godot.Node) => void;
+        }
+        var NodeRenamedEventHandler: { new (func: (node: Godot.Node) => void): NodeRenamedEventHandler; }
+        interface NodeConfigurationWarningChangedEventHandler
+        { 
+        (node: Godot.Node) : void; 
+        Invoke?: (node: Godot.Node) => void;
+        }
+        var NodeConfigurationWarningChangedEventHandler: { new (func: (node: Godot.Node) => void): NodeConfigurationWarningChangedEventHandler; }
+    }
+    namespace Godot.Tween {
+        enum TweenProcessMode
+        { Physics = 0, Idle = 1 }
+        enum TweenPauseMode
+        { Bound = 0, Stop = 1, Process = 2 }
+        enum TransitionType
+        { Linear = 0, Sine = 1, Quint = 2, Quart = 3, Quad = 4, Expo = 5, Elastic = 6, Cubic = 7, Circ = 8, Bounce = 9, Back = 10, Spring = 11 }
+        enum EaseType
+        { In = 0, Out = 1, InOut = 2, OutIn = 3 }
+        interface StepFinishedEventHandler
+        { 
+        (idx: bigint) : void; 
+        Invoke?: (idx: bigint) => void;
+        }
+        var StepFinishedEventHandler: { new (func: (idx: bigint) => void): StepFinishedEventHandler; }
+        interface LoopFinishedEventHandler
+        { 
+        (loopCount: bigint) : void; 
+        Invoke?: (loopCount: bigint) => void;
+        }
+        var LoopFinishedEventHandler: { new (func: (loopCount: bigint) => void): LoopFinishedEventHandler; }
     }
     namespace Godot.Input {
         enum MouseModeEnum
@@ -6835,12 +7894,6 @@
         }
         var AnimationChangedEventHandler: { new (func: (oldName: Godot.StringName, newName: Godot.StringName) => void): AnimationChangedEventHandler; }
     }
-    namespace Godot.Tween {
-        enum TransitionType
-        { Linear = 0, Sine = 1, Quint = 2, Quart = 3, Quad = 4, Expo = 5, Elastic = 6, Cubic = 7, Circ = 8, Bounce = 9, Back = 10, Spring = 11 }
-        enum EaseType
-        { In = 0, Out = 1, InOut = 2, OutIn = 3 }
-    }
     namespace Godot.CharacterBody2D {
         enum MotionModeEnum
         { Grounded = 0, Floating = 1 }
@@ -6930,6 +7983,11 @@
             public _Input ($event: Godot.InputEvent) : void
             public _ExitTree () : void
             public constructor ($owner: T, $jsPath: string)
+        }
+        class Icon extends Godot.Sprite2D implements System.IDisposable
+        {
+            protected [__keep_incompatibility]: never;
+            public constructor ()
         }
         namespace System.Runtime.InteropServices {
         class StructLayoutAttribute extends System.Attribute

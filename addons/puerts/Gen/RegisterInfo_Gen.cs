@@ -1141,6 +1141,1044 @@ namespace PuertsStaticWrap
                 }
             };
         }
+        public static RegisterInfo GetRegisterInfo_Godot_Resource_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_Resource_Wrap.Constructor
+#endif
+                    }},
+                    {"_GetRid", new MemberRegisterInfo { Name = "_GetRid", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M__GetRid
+#endif
+                    }},
+                    {"_ResetState", new MemberRegisterInfo { Name = "_ResetState", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M__ResetState
+#endif
+                    }},
+                    {"_SetPathCache", new MemberRegisterInfo { Name = "_SetPathCache", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M__SetPathCache
+#endif
+                    }},
+                    {"_SetupLocalToScene", new MemberRegisterInfo { Name = "_SetupLocalToScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M__SetupLocalToScene
+#endif
+                    }},
+                    {"SetPath", new MemberRegisterInfo { Name = "SetPath", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_SetPath
+#endif
+                    }},
+                    {"TakeOverPath", new MemberRegisterInfo { Name = "TakeOverPath", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_TakeOverPath
+#endif
+                    }},
+                    {"GetPath", new MemberRegisterInfo { Name = "GetPath", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_GetPath
+#endif
+                    }},
+                    {"SetPathCache", new MemberRegisterInfo { Name = "SetPathCache", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_SetPathCache
+#endif
+                    }},
+                    {"SetName", new MemberRegisterInfo { Name = "SetName", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_SetName
+#endif
+                    }},
+                    {"GetName", new MemberRegisterInfo { Name = "GetName", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_GetName
+#endif
+                    }},
+                    {"GetRid", new MemberRegisterInfo { Name = "GetRid", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_GetRid
+#endif
+                    }},
+                    {"SetLocalToScene", new MemberRegisterInfo { Name = "SetLocalToScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_SetLocalToScene
+#endif
+                    }},
+                    {"IsLocalToScene", new MemberRegisterInfo { Name = "IsLocalToScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_IsLocalToScene
+#endif
+                    }},
+                    {"GetLocalScene", new MemberRegisterInfo { Name = "GetLocalScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_GetLocalScene
+#endif
+                    }},
+                    {"ResetState", new MemberRegisterInfo { Name = "ResetState", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_ResetState
+#endif
+                    }},
+                    {"SetIdForPath", new MemberRegisterInfo { Name = "SetIdForPath", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_SetIdForPath
+#endif
+                    }},
+                    {"GetIdForPath", new MemberRegisterInfo { Name = "GetIdForPath", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_GetIdForPath
+#endif
+                    }},
+                    {"IsBuiltIn", new MemberRegisterInfo { Name = "IsBuiltIn", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_IsBuiltIn
+#endif
+                    }},
+                    {"SetSceneUniqueId", new MemberRegisterInfo { Name = "SetSceneUniqueId", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_SetSceneUniqueId
+#endif
+                    }},
+                    {"GetSceneUniqueId", new MemberRegisterInfo { Name = "GetSceneUniqueId", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_GetSceneUniqueId
+#endif
+                    }},
+                    {"EmitChanged", new MemberRegisterInfo { Name = "EmitChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_EmitChanged
+#endif
+                    }},
+                    {"Duplicate", new MemberRegisterInfo { Name = "Duplicate", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_Duplicate
+#endif
+                    }},
+                    {"DuplicateDeep", new MemberRegisterInfo { Name = "DuplicateDeep", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.M_DuplicateDeep
+#endif
+                    }},
+                    {"add_Changed", new MemberRegisterInfo { Name = "add_Changed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.A_Changed
+#endif
+                    }},
+                    {"remove_Changed", new MemberRegisterInfo { Name = "remove_Changed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.R_Changed
+#endif
+                    }},
+                    {"ResourceLocalToScene", new MemberRegisterInfo { Name = "ResourceLocalToScene", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Resource_Wrap.G_ResourceLocalToScene, PropertySetter = Godot_Resource_Wrap.S_ResourceLocalToScene
+#endif
+                    }},
+                    {"ResourcePath", new MemberRegisterInfo { Name = "ResourcePath", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Resource_Wrap.G_ResourcePath, PropertySetter = Godot_Resource_Wrap.S_ResourcePath
+#endif
+                    }},
+                    {"ResourceName", new MemberRegisterInfo { Name = "ResourceName", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Resource_Wrap.G_ResourceName, PropertySetter = Godot_Resource_Wrap.S_ResourceName
+#endif
+                    }},
+                    {"ResourceSceneUniqueId", new MemberRegisterInfo { Name = "ResourceSceneUniqueId", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Resource_Wrap.G_ResourceSceneUniqueId, PropertySetter = Godot_Resource_Wrap.S_ResourceSceneUniqueId
+#endif
+                    }},
+                    {"GenerateSceneUniqueId_static", new MemberRegisterInfo { Name = "GenerateSceneUniqueId", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Resource_Wrap.F_GenerateSceneUniqueId
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_ResourceLoader_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {"LoadThreadedRequest_static", new MemberRegisterInfo { Name = "LoadThreadedRequest", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_LoadThreadedRequest
+#endif
+                    }},
+                    {"LoadThreadedGetStatus_static", new MemberRegisterInfo { Name = "LoadThreadedGetStatus", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_LoadThreadedGetStatus
+#endif
+                    }},
+                    {"LoadThreadedGet_static", new MemberRegisterInfo { Name = "LoadThreadedGet", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_LoadThreadedGet
+#endif
+                    }},
+                    {"Load_static", new MemberRegisterInfo { Name = "Load", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_Load
+#endif
+                    }},
+                    {"GetRecognizedExtensionsForType_static", new MemberRegisterInfo { Name = "GetRecognizedExtensionsForType", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_GetRecognizedExtensionsForType
+#endif
+                    }},
+                    {"AddResourceFormatLoader_static", new MemberRegisterInfo { Name = "AddResourceFormatLoader", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_AddResourceFormatLoader
+#endif
+                    }},
+                    {"RemoveResourceFormatLoader_static", new MemberRegisterInfo { Name = "RemoveResourceFormatLoader", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_RemoveResourceFormatLoader
+#endif
+                    }},
+                    {"SetAbortOnMissingResources_static", new MemberRegisterInfo { Name = "SetAbortOnMissingResources", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_SetAbortOnMissingResources
+#endif
+                    }},
+                    {"GetDependencies_static", new MemberRegisterInfo { Name = "GetDependencies", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_GetDependencies
+#endif
+                    }},
+                    {"HasCached_static", new MemberRegisterInfo { Name = "HasCached", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_HasCached
+#endif
+                    }},
+                    {"GetCachedRef_static", new MemberRegisterInfo { Name = "GetCachedRef", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_GetCachedRef
+#endif
+                    }},
+                    {"Exists_static", new MemberRegisterInfo { Name = "Exists", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_Exists
+#endif
+                    }},
+                    {"GetResourceUid_static", new MemberRegisterInfo { Name = "GetResourceUid", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_GetResourceUid
+#endif
+                    }},
+                    {"ListDirectory_static", new MemberRegisterInfo { Name = "ListDirectory", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_ResourceLoader_Wrap.F_ListDirectory
+#endif
+                    }},
+                    {"Singleton_static", new MemberRegisterInfo { Name = "Singleton", IsStatic = true, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_ResourceLoader_Wrap.G_Singleton
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_PackedScene_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_PackedScene_Wrap.Constructor
+#endif
+                    }},
+                    {"Pack", new MemberRegisterInfo { Name = "Pack", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_PackedScene_Wrap.M_Pack
+#endif
+                    }},
+                    {"Instantiate", new MemberRegisterInfo { Name = "Instantiate", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_PackedScene_Wrap.M_Instantiate
+#endif
+                    }},
+                    {"CanInstantiate", new MemberRegisterInfo { Name = "CanInstantiate", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_PackedScene_Wrap.M_CanInstantiate
+#endif
+                    }},
+                    {"GetState", new MemberRegisterInfo { Name = "GetState", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_PackedScene_Wrap.M_GetState
+#endif
+                    }},
+                    {"_Bundled", new MemberRegisterInfo { Name = "_Bundled", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_PackedScene_Wrap.G__Bundled, PropertySetter = Godot_PackedScene_Wrap.S__Bundled
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_Rect2_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_Rect2_Wrap.Constructor
+#endif
+                    }},
+                    {"Abs", new MemberRegisterInfo { Name = "Abs", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Abs
+#endif
+                    }},
+                    {"Intersection", new MemberRegisterInfo { Name = "Intersection", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Intersection
+#endif
+                    }},
+                    {"IsFinite", new MemberRegisterInfo { Name = "IsFinite", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_IsFinite
+#endif
+                    }},
+                    {"Encloses", new MemberRegisterInfo { Name = "Encloses", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Encloses
+#endif
+                    }},
+                    {"Expand", new MemberRegisterInfo { Name = "Expand", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Expand
+#endif
+                    }},
+                    {"GetCenter", new MemberRegisterInfo { Name = "GetCenter", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_GetCenter
+#endif
+                    }},
+                    {"GetSupport", new MemberRegisterInfo { Name = "GetSupport", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_GetSupport
+#endif
+                    }},
+                    {"Grow", new MemberRegisterInfo { Name = "Grow", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Grow
+#endif
+                    }},
+                    {"GrowIndividual", new MemberRegisterInfo { Name = "GrowIndividual", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_GrowIndividual
+#endif
+                    }},
+                    {"GrowSide", new MemberRegisterInfo { Name = "GrowSide", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_GrowSide
+#endif
+                    }},
+                    {"HasArea", new MemberRegisterInfo { Name = "HasArea", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_HasArea
+#endif
+                    }},
+                    {"HasPoint", new MemberRegisterInfo { Name = "HasPoint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_HasPoint
+#endif
+                    }},
+                    {"Intersects", new MemberRegisterInfo { Name = "Intersects", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Intersects
+#endif
+                    }},
+                    {"Merge", new MemberRegisterInfo { Name = "Merge", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Merge
+#endif
+                    }},
+                    {"op_Equality_static", new MemberRegisterInfo { Name = "op_Equality", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.O_op_Equality
+#endif
+                    }},
+                    {"op_Inequality_static", new MemberRegisterInfo { Name = "op_Inequality", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.O_op_Inequality
+#endif
+                    }},
+                    {"Equals", new MemberRegisterInfo { Name = "Equals", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_Equals
+#endif
+                    }},
+                    {"IsEqualApprox", new MemberRegisterInfo { Name = "IsEqualApprox", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_IsEqualApprox
+#endif
+                    }},
+                    {"GetHashCode", new MemberRegisterInfo { Name = "GetHashCode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_GetHashCode
+#endif
+                    }},
+                    {"ToString", new MemberRegisterInfo { Name = "ToString", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Rect2_Wrap.M_ToString
+#endif
+                    }},
+                    {"Position", new MemberRegisterInfo { Name = "Position", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Rect2_Wrap.G_Position, PropertySetter = Godot_Rect2_Wrap.S_Position
+#endif
+                    }},
+                    {"Size", new MemberRegisterInfo { Name = "Size", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Rect2_Wrap.G_Size, PropertySetter = Godot_Rect2_Wrap.S_Size
+#endif
+                    }},
+                    {"End", new MemberRegisterInfo { Name = "End", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Rect2_Wrap.G_End, PropertySetter = Godot_Rect2_Wrap.S_End
+#endif
+                    }},
+                    {"Area", new MemberRegisterInfo { Name = "Area", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_Rect2_Wrap.G_Area
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_SceneTree_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_SceneTree_Wrap.Constructor
+#endif
+                    }},
+                    {"GetRoot", new MemberRegisterInfo { Name = "GetRoot", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetRoot
+#endif
+                    }},
+                    {"HasGroup", new MemberRegisterInfo { Name = "HasGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_HasGroup
+#endif
+                    }},
+                    {"IsAccessibilityEnabled", new MemberRegisterInfo { Name = "IsAccessibilityEnabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsAccessibilityEnabled
+#endif
+                    }},
+                    {"IsAccessibilitySupported", new MemberRegisterInfo { Name = "IsAccessibilitySupported", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsAccessibilitySupported
+#endif
+                    }},
+                    {"IsAutoAcceptQuit", new MemberRegisterInfo { Name = "IsAutoAcceptQuit", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsAutoAcceptQuit
+#endif
+                    }},
+                    {"SetAutoAcceptQuit", new MemberRegisterInfo { Name = "SetAutoAcceptQuit", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetAutoAcceptQuit
+#endif
+                    }},
+                    {"IsQuitOnGoBack", new MemberRegisterInfo { Name = "IsQuitOnGoBack", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsQuitOnGoBack
+#endif
+                    }},
+                    {"SetQuitOnGoBack", new MemberRegisterInfo { Name = "SetQuitOnGoBack", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetQuitOnGoBack
+#endif
+                    }},
+                    {"SetDebugCollisionsHint", new MemberRegisterInfo { Name = "SetDebugCollisionsHint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetDebugCollisionsHint
+#endif
+                    }},
+                    {"IsDebuggingCollisionsHint", new MemberRegisterInfo { Name = "IsDebuggingCollisionsHint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsDebuggingCollisionsHint
+#endif
+                    }},
+                    {"SetDebugPathsHint", new MemberRegisterInfo { Name = "SetDebugPathsHint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetDebugPathsHint
+#endif
+                    }},
+                    {"IsDebuggingPathsHint", new MemberRegisterInfo { Name = "IsDebuggingPathsHint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsDebuggingPathsHint
+#endif
+                    }},
+                    {"SetDebugNavigationHint", new MemberRegisterInfo { Name = "SetDebugNavigationHint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetDebugNavigationHint
+#endif
+                    }},
+                    {"IsDebuggingNavigationHint", new MemberRegisterInfo { Name = "IsDebuggingNavigationHint", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsDebuggingNavigationHint
+#endif
+                    }},
+                    {"SetEditedSceneRoot", new MemberRegisterInfo { Name = "SetEditedSceneRoot", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetEditedSceneRoot
+#endif
+                    }},
+                    {"GetEditedSceneRoot", new MemberRegisterInfo { Name = "GetEditedSceneRoot", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetEditedSceneRoot
+#endif
+                    }},
+                    {"SetPause", new MemberRegisterInfo { Name = "SetPause", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetPause
+#endif
+                    }},
+                    {"IsPaused", new MemberRegisterInfo { Name = "IsPaused", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsPaused
+#endif
+                    }},
+                    {"CreateTimer", new MemberRegisterInfo { Name = "CreateTimer", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_CreateTimer
+#endif
+                    }},
+                    {"CreateTween", new MemberRegisterInfo { Name = "CreateTween", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_CreateTween
+#endif
+                    }},
+                    {"GetProcessedTweens", new MemberRegisterInfo { Name = "GetProcessedTweens", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetProcessedTweens
+#endif
+                    }},
+                    {"GetNodeCount", new MemberRegisterInfo { Name = "GetNodeCount", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetNodeCount
+#endif
+                    }},
+                    {"GetFrame", new MemberRegisterInfo { Name = "GetFrame", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetFrame
+#endif
+                    }},
+                    {"Quit", new MemberRegisterInfo { Name = "Quit", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_Quit
+#endif
+                    }},
+                    {"SetPhysicsInterpolationEnabled", new MemberRegisterInfo { Name = "SetPhysicsInterpolationEnabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetPhysicsInterpolationEnabled
+#endif
+                    }},
+                    {"IsPhysicsInterpolationEnabled", new MemberRegisterInfo { Name = "IsPhysicsInterpolationEnabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsPhysicsInterpolationEnabled
+#endif
+                    }},
+                    {"QueueDelete", new MemberRegisterInfo { Name = "QueueDelete", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_QueueDelete
+#endif
+                    }},
+                    {"CallGroupFlags", new MemberRegisterInfo { Name = "CallGroupFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_CallGroupFlags
+#endif
+                    }},
+                    {"NotifyGroupFlags", new MemberRegisterInfo { Name = "NotifyGroupFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_NotifyGroupFlags
+#endif
+                    }},
+                    {"SetGroupFlags", new MemberRegisterInfo { Name = "SetGroupFlags", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetGroupFlags
+#endif
+                    }},
+                    {"CallGroup", new MemberRegisterInfo { Name = "CallGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_CallGroup
+#endif
+                    }},
+                    {"NotifyGroup", new MemberRegisterInfo { Name = "NotifyGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_NotifyGroup
+#endif
+                    }},
+                    {"SetGroup", new MemberRegisterInfo { Name = "SetGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetGroup
+#endif
+                    }},
+                    {"GetNodesInGroup", new MemberRegisterInfo { Name = "GetNodesInGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetNodesInGroup
+#endif
+                    }},
+                    {"GetFirstNodeInGroup", new MemberRegisterInfo { Name = "GetFirstNodeInGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetFirstNodeInGroup
+#endif
+                    }},
+                    {"GetNodeCountInGroup", new MemberRegisterInfo { Name = "GetNodeCountInGroup", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetNodeCountInGroup
+#endif
+                    }},
+                    {"SetCurrentScene", new MemberRegisterInfo { Name = "SetCurrentScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetCurrentScene
+#endif
+                    }},
+                    {"GetCurrentScene", new MemberRegisterInfo { Name = "GetCurrentScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetCurrentScene
+#endif
+                    }},
+                    {"ChangeSceneToFile", new MemberRegisterInfo { Name = "ChangeSceneToFile", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_ChangeSceneToFile
+#endif
+                    }},
+                    {"ChangeSceneToPacked", new MemberRegisterInfo { Name = "ChangeSceneToPacked", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_ChangeSceneToPacked
+#endif
+                    }},
+                    {"ReloadCurrentScene", new MemberRegisterInfo { Name = "ReloadCurrentScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_ReloadCurrentScene
+#endif
+                    }},
+                    {"UnloadCurrentScene", new MemberRegisterInfo { Name = "UnloadCurrentScene", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_UnloadCurrentScene
+#endif
+                    }},
+                    {"SetMultiplayer", new MemberRegisterInfo { Name = "SetMultiplayer", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetMultiplayer
+#endif
+                    }},
+                    {"GetMultiplayer", new MemberRegisterInfo { Name = "GetMultiplayer", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_GetMultiplayer
+#endif
+                    }},
+                    {"SetMultiplayerPollEnabled", new MemberRegisterInfo { Name = "SetMultiplayerPollEnabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_SetMultiplayerPollEnabled
+#endif
+                    }},
+                    {"IsMultiplayerPollEnabled", new MemberRegisterInfo { Name = "IsMultiplayerPollEnabled", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.M_IsMultiplayerPollEnabled
+#endif
+                    }},
+                    {"add_TreeChanged", new MemberRegisterInfo { Name = "add_TreeChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_TreeChanged
+#endif
+                    }},
+                    {"remove_TreeChanged", new MemberRegisterInfo { Name = "remove_TreeChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_TreeChanged
+#endif
+                    }},
+                    {"add_SceneChanged", new MemberRegisterInfo { Name = "add_SceneChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_SceneChanged
+#endif
+                    }},
+                    {"remove_SceneChanged", new MemberRegisterInfo { Name = "remove_SceneChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_SceneChanged
+#endif
+                    }},
+                    {"add_TreeProcessModeChanged", new MemberRegisterInfo { Name = "add_TreeProcessModeChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_TreeProcessModeChanged
+#endif
+                    }},
+                    {"remove_TreeProcessModeChanged", new MemberRegisterInfo { Name = "remove_TreeProcessModeChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_TreeProcessModeChanged
+#endif
+                    }},
+                    {"add_NodeAdded", new MemberRegisterInfo { Name = "add_NodeAdded", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_NodeAdded
+#endif
+                    }},
+                    {"remove_NodeAdded", new MemberRegisterInfo { Name = "remove_NodeAdded", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_NodeAdded
+#endif
+                    }},
+                    {"add_NodeRemoved", new MemberRegisterInfo { Name = "add_NodeRemoved", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_NodeRemoved
+#endif
+                    }},
+                    {"remove_NodeRemoved", new MemberRegisterInfo { Name = "remove_NodeRemoved", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_NodeRemoved
+#endif
+                    }},
+                    {"add_NodeRenamed", new MemberRegisterInfo { Name = "add_NodeRenamed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_NodeRenamed
+#endif
+                    }},
+                    {"remove_NodeRenamed", new MemberRegisterInfo { Name = "remove_NodeRenamed", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_NodeRenamed
+#endif
+                    }},
+                    {"add_NodeConfigurationWarningChanged", new MemberRegisterInfo { Name = "add_NodeConfigurationWarningChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_NodeConfigurationWarningChanged
+#endif
+                    }},
+                    {"remove_NodeConfigurationWarningChanged", new MemberRegisterInfo { Name = "remove_NodeConfigurationWarningChanged", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_NodeConfigurationWarningChanged
+#endif
+                    }},
+                    {"add_ProcessFrame", new MemberRegisterInfo { Name = "add_ProcessFrame", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_ProcessFrame
+#endif
+                    }},
+                    {"remove_ProcessFrame", new MemberRegisterInfo { Name = "remove_ProcessFrame", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_ProcessFrame
+#endif
+                    }},
+                    {"add_PhysicsFrame", new MemberRegisterInfo { Name = "add_PhysicsFrame", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.A_PhysicsFrame
+#endif
+                    }},
+                    {"remove_PhysicsFrame", new MemberRegisterInfo { Name = "remove_PhysicsFrame", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_SceneTree_Wrap.R_PhysicsFrame
+#endif
+                    }},
+                    {"AutoAcceptQuit", new MemberRegisterInfo { Name = "AutoAcceptQuit", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_AutoAcceptQuit, PropertySetter = Godot_SceneTree_Wrap.S_AutoAcceptQuit
+#endif
+                    }},
+                    {"QuitOnGoBack", new MemberRegisterInfo { Name = "QuitOnGoBack", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_QuitOnGoBack, PropertySetter = Godot_SceneTree_Wrap.S_QuitOnGoBack
+#endif
+                    }},
+                    {"DebugCollisionsHint", new MemberRegisterInfo { Name = "DebugCollisionsHint", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_DebugCollisionsHint, PropertySetter = Godot_SceneTree_Wrap.S_DebugCollisionsHint
+#endif
+                    }},
+                    {"DebugPathsHint", new MemberRegisterInfo { Name = "DebugPathsHint", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_DebugPathsHint, PropertySetter = Godot_SceneTree_Wrap.S_DebugPathsHint
+#endif
+                    }},
+                    {"DebugNavigationHint", new MemberRegisterInfo { Name = "DebugNavigationHint", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_DebugNavigationHint, PropertySetter = Godot_SceneTree_Wrap.S_DebugNavigationHint
+#endif
+                    }},
+                    {"Paused", new MemberRegisterInfo { Name = "Paused", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_Paused, PropertySetter = Godot_SceneTree_Wrap.S_Paused
+#endif
+                    }},
+                    {"EditedSceneRoot", new MemberRegisterInfo { Name = "EditedSceneRoot", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_EditedSceneRoot, PropertySetter = Godot_SceneTree_Wrap.S_EditedSceneRoot
+#endif
+                    }},
+                    {"CurrentScene", new MemberRegisterInfo { Name = "CurrentScene", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_CurrentScene, PropertySetter = Godot_SceneTree_Wrap.S_CurrentScene
+#endif
+                    }},
+                    {"Root", new MemberRegisterInfo { Name = "Root", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_Root
+#endif
+                    }},
+                    {"MultiplayerPoll", new MemberRegisterInfo { Name = "MultiplayerPoll", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_MultiplayerPoll, PropertySetter = Godot_SceneTree_Wrap.S_MultiplayerPoll
+#endif
+                    }},
+                    {"PhysicsInterpolation", new MemberRegisterInfo { Name = "PhysicsInterpolation", IsStatic = false, MemberType = MemberType.Property, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , PropertyGetter = Godot_SceneTree_Wrap.G_PhysicsInterpolation, PropertySetter = Godot_SceneTree_Wrap.S_PhysicsInterpolation
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_Tweener_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {"add_Finished", new MemberRegisterInfo { Name = "add_Finished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tweener_Wrap.A_Finished
+#endif
+                    }},
+                    {"remove_Finished", new MemberRegisterInfo { Name = "remove_Finished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tweener_Wrap.R_Finished
+#endif
+                    }},
+                }
+            };
+        }
+        public static RegisterInfo GetRegisterInfo_Godot_Tween_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Godot_Tween_Wrap.Constructor
+#endif
+                    }},
+                    {"TweenProperty", new MemberRegisterInfo { Name = "TweenProperty", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_TweenProperty
+#endif
+                    }},
+                    {"TweenInterval", new MemberRegisterInfo { Name = "TweenInterval", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_TweenInterval
+#endif
+                    }},
+                    {"TweenCallback", new MemberRegisterInfo { Name = "TweenCallback", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_TweenCallback
+#endif
+                    }},
+                    {"TweenMethod", new MemberRegisterInfo { Name = "TweenMethod", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_TweenMethod
+#endif
+                    }},
+                    {"TweenSubtween", new MemberRegisterInfo { Name = "TweenSubtween", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_TweenSubtween
+#endif
+                    }},
+                    {"CustomStep", new MemberRegisterInfo { Name = "CustomStep", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_CustomStep
+#endif
+                    }},
+                    {"Stop", new MemberRegisterInfo { Name = "Stop", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_Stop
+#endif
+                    }},
+                    {"Pause", new MemberRegisterInfo { Name = "Pause", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_Pause
+#endif
+                    }},
+                    {"Play", new MemberRegisterInfo { Name = "Play", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_Play
+#endif
+                    }},
+                    {"Kill", new MemberRegisterInfo { Name = "Kill", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_Kill
+#endif
+                    }},
+                    {"GetTotalElapsedTime", new MemberRegisterInfo { Name = "GetTotalElapsedTime", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_GetTotalElapsedTime
+#endif
+                    }},
+                    {"IsRunning", new MemberRegisterInfo { Name = "IsRunning", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_IsRunning
+#endif
+                    }},
+                    {"IsValid", new MemberRegisterInfo { Name = "IsValid", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_IsValid
+#endif
+                    }},
+                    {"BindNode", new MemberRegisterInfo { Name = "BindNode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_BindNode
+#endif
+                    }},
+                    {"SetProcessMode", new MemberRegisterInfo { Name = "SetProcessMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetProcessMode
+#endif
+                    }},
+                    {"SetPauseMode", new MemberRegisterInfo { Name = "SetPauseMode", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetPauseMode
+#endif
+                    }},
+                    {"SetIgnoreTimeScale", new MemberRegisterInfo { Name = "SetIgnoreTimeScale", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetIgnoreTimeScale
+#endif
+                    }},
+                    {"SetParallel", new MemberRegisterInfo { Name = "SetParallel", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetParallel
+#endif
+                    }},
+                    {"SetLoops", new MemberRegisterInfo { Name = "SetLoops", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetLoops
+#endif
+                    }},
+                    {"GetLoopsLeft", new MemberRegisterInfo { Name = "GetLoopsLeft", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_GetLoopsLeft
+#endif
+                    }},
+                    {"SetSpeedScale", new MemberRegisterInfo { Name = "SetSpeedScale", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetSpeedScale
+#endif
+                    }},
+                    {"SetTrans", new MemberRegisterInfo { Name = "SetTrans", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetTrans
+#endif
+                    }},
+                    {"SetEase", new MemberRegisterInfo { Name = "SetEase", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_SetEase
+#endif
+                    }},
+                    {"Parallel", new MemberRegisterInfo { Name = "Parallel", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_Parallel
+#endif
+                    }},
+                    {"Chain", new MemberRegisterInfo { Name = "Chain", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.M_Chain
+#endif
+                    }},
+                    {"add_StepFinished", new MemberRegisterInfo { Name = "add_StepFinished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.A_StepFinished
+#endif
+                    }},
+                    {"remove_StepFinished", new MemberRegisterInfo { Name = "remove_StepFinished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.R_StepFinished
+#endif
+                    }},
+                    {"add_LoopFinished", new MemberRegisterInfo { Name = "add_LoopFinished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.A_LoopFinished
+#endif
+                    }},
+                    {"remove_LoopFinished", new MemberRegisterInfo { Name = "remove_LoopFinished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.R_LoopFinished
+#endif
+                    }},
+                    {"add_Finished", new MemberRegisterInfo { Name = "add_Finished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.A_Finished
+#endif
+                    }},
+                    {"remove_Finished", new MemberRegisterInfo { Name = "remove_Finished", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.R_Finished
+#endif
+                    }},
+                    {"InterpolateValue_static", new MemberRegisterInfo { Name = "InterpolateValue", IsStatic = true, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Godot_Tween_Wrap.F_InterpolateValue
+#endif
+                    }},
+                }
+            };
+        }
         public static RegisterInfo GetRegisterInfo_Godot_NodePath_Wrap() 
         {
             return new RegisterInfo 
@@ -7176,6 +8214,50 @@ namespace PuertsStaticWrap
                 }
             };
         }
+        public static RegisterInfo GetRegisterInfo_Icon_Wrap() 
+        {
+            return new RegisterInfo 
+            {
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                BlittableCopy = false,
+#endif
+
+                Members = new System.Collections.Generic.Dictionary<string, MemberRegisterInfo>
+                {
+                    
+                    {".ctor", new MemberRegisterInfo { Name = ".ctor", IsStatic = false, MemberType = MemberType.Constructor, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Constructor = Icon_Wrap.Constructor
+#endif
+                    }},
+                    {"_Ready", new MemberRegisterInfo { Name = "_Ready", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Icon_Wrap.M__Ready
+#endif
+                    }},
+                    {"_Process", new MemberRegisterInfo { Name = "_Process", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Icon_Wrap.M__Process
+#endif
+                    }},
+                    {"_PhysicsProcess", new MemberRegisterInfo { Name = "_PhysicsProcess", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Icon_Wrap.M__PhysicsProcess
+#endif
+                    }},
+                    {"_Input", new MemberRegisterInfo { Name = "_Input", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Icon_Wrap.M__Input
+#endif
+                    }},
+                    {"_ExitTree", new MemberRegisterInfo { Name = "_ExitTree", IsStatic = false, MemberType = MemberType.Method, UseBindingMode = BindingMode.FastBinding
+#if PUERTS_DISABLE_IL2CPP_OPTIMIZATION || (!PUERTS_IL2CPP_OPTIMIZATION && UNITY_IPHONE)
+                    , Method = Icon_Wrap.M__ExitTree
+#endif
+                    }},
+                }
+            };
+        }
 
         public static void AddRegisterInfoGetterIntoJsEnv(JsEnv jsEnv)
         {
@@ -7183,6 +8265,13 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.GD), GetRegisterInfo_Godot_GD_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.StringName), GetRegisterInfo_Godot_StringName_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Viewport), GetRegisterInfo_Godot_Viewport_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Resource), GetRegisterInfo_Godot_Resource_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.ResourceLoader), GetRegisterInfo_Godot_ResourceLoader_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.PackedScene), GetRegisterInfo_Godot_PackedScene_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Rect2), GetRegisterInfo_Godot_Rect2_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.SceneTree), GetRegisterInfo_Godot_SceneTree_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Tweener), GetRegisterInfo_Godot_Tweener_Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Godot.Tween), GetRegisterInfo_Godot_Tween_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.NodePath), GetRegisterInfo_Godot_NodePath_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.Input), GetRegisterInfo_Godot_Input_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.InputEvent), GetRegisterInfo_Godot_InputEvent_Wrap);
@@ -7208,6 +8297,7 @@ namespace PuertsStaticWrap
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.HBoxContainer), GetRegisterInfo_Godot_HBoxContainer_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(Godot.VBoxContainer), GetRegisterInfo_Godot_VBoxContainer_Wrap);
                 jsEnv.AddRegisterInfoGetter(typeof(JsComponentHook<Godot.Node>), GetRegisterInfo_JsComponentHook_1_Godot_Node__Wrap);
+                jsEnv.AddRegisterInfoGetter(typeof(Icon), GetRegisterInfo_Icon_Wrap);
         }
     }
 }

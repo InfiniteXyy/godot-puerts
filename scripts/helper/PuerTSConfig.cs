@@ -16,6 +16,13 @@ public class PuerTSConfig
                 typeof(Godot.GD),
                 typeof(Godot.StringName),
                 typeof(Godot.Viewport),
+                typeof(Godot.Resource),
+                typeof(Godot.ResourceLoader),
+                typeof(Godot.PackedScene),
+                typeof(Godot.Rect2),
+                typeof(Godot.SceneTree),
+                typeof(Godot.Tweener),
+                typeof(Godot.Tween),
                 typeof(Godot.NodePath),
                 typeof(Godot.Input),
                 typeof(Godot.InputEvent),
@@ -41,6 +48,7 @@ public class PuerTSConfig
                 typeof(Godot.HBoxContainer),
                 typeof(Godot.VBoxContainer),
                 typeof(JsComponentHook<Node>),
+                typeof(Icon),
             };
     }
   }
