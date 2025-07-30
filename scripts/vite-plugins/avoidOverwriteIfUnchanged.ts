@@ -22,7 +22,6 @@ export function avoidOverwriteIfUnchanged(): Plugin {
             console.log('[skip] Content is the same for', fileName)
           }
         } catch (err) {
-          console.error(err)
           // File does not exist, or other error, just proceed
         }
       }
