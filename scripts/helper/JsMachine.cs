@@ -1,5 +1,8 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Godot;
 using Puerts;
 
@@ -11,13 +14,12 @@ public partial class JsMachine : Node
   [Export]
   private bool watchCodeChanges = true;
 
-  private bool isCodeDirty = false;
-
-  public static event Action<string> CodeChanged;
-
   private static JsEnv scriptEnv;
 
+  private List<string> dirtyCodeList = [];
   private FileSystemWatcher watcher;
+  public static event Action<string> CodeChanged;
+  private double codeChangeThrottleTime = 0;
 
   public static JsEnv GetScriptEnv()
   {
@@ -59,19 +61,25 @@ public partial class JsMachine : Node
 
   private void OnScriptFileChanged(object sender, FileSystemEventArgs e)
   {
-    GD.Print($"[JsMachine] JS file changed: {e.Name} ({e.ChangeType})");
-    isCodeDirty = true;
+    if (codeChangeThrottleTime <= 0)
+    {
+      dirtyCodeList.Add(e.Name);
+      codeChangeThrottleTime = 0.1;
+    }
   }
 
 
   public override void _Process(double delta)
   {
-    if (isCodeDirty)
+    if (codeChangeThrottleTime > 0) codeChangeThrottleTime -= delta;
+    if (dirtyCodeList.Count > 0)
     {
-      isCodeDirty = false;
+      // have to handle scriptEnv in the process
+      var dirtyCodeName = dirtyCodeList[0];
+      dirtyCodeList.RemoveAt(0);
       scriptEnv?.ClearModuleCache();
-      CodeChanged?.Invoke("");
-      GD.Print("File changed, force reload");
+      CodeChanged?.Invoke(dirtyCodeName);
+      GD.Print($"[JsMachine] JS file changed: {dirtyCodeName}");
     }
     scriptEnv?.Tick();
   }

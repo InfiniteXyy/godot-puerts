@@ -14,11 +14,12 @@ public class JsComponentHook<T>(T owner, string jsPath) where T : Node
 
   private void HandleJSReload(string moduleName)
   {
-
-    // FIX: Should filter out unrelated code change events;
-    JsOnExitTree?.Invoke();
-    JsMachine.GetScriptEnv().ExecuteModule<Action<JsComponentHook<T>, T>>(jsPath, "default")(this, owner);
-    JsOnReady?.Invoke();
+    if (moduleName == null || jsPath.Contains(moduleName) || moduleName.Contains("utils.mjs"))
+    {
+      JsOnExitTree?.Invoke();
+      JsMachine.GetScriptEnv().ExecuteModule<Action<JsComponentHook<T>, T>>(jsPath, "default")(this, owner);
+      JsOnReady?.Invoke();
+    }
   }
 
   public void _Ready()

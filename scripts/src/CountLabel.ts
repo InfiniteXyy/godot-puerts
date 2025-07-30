@@ -6,9 +6,10 @@ export const count$ = signal(0)
 export default defineComponent<CS.Godot.Label>(() => {
   return {
     onReady() {
-      effect(() => {
+      const dispose = effect(() => {
         this.Text = `Click Count: ${count$.value}`
       })
+      return () => dispose()
     },
   }
 })

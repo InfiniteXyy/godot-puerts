@@ -2,6 +2,7 @@ export const { Godot } = CS
 export const { GD, Input, StringName, Vector2 } = Godot
 
 console.log = GD.Print
+console.error = GD.PrintErr
 
 type TNodeExtended<T extends CS.Godot.Node> = Omit<T, 'GetNode'> & {
   getNode: <N extends CS.Godot.Node>(path: string) => N

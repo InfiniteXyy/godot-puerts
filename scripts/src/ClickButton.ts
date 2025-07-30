@@ -3,6 +3,7 @@ import { defineComponent } from './utils'
 
 export default defineComponent<CS.Godot.Button>(function () {
   const handleClick = () => {
+    console.log('Clicked')
     count$.value += 1
   }
 
